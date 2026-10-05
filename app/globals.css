@@ -1,26 +1,265 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ============================================================
+   SPACE MAGNUM DESIGN TOKENS
+   Concept: "Vertical Space" — precise, quiet, confident
+   ============================================================ */
+
+@theme {
+  /* --- Colour palette --- */
+  --color-ink-900: #0B1220;
+  --color-ink-800: #111D30;
+  --color-ink-700: #16233B;
+  --color-ink-600: #1E2F4D;
+  --color-ink-500: #2A4066;
+  --color-steel-400: #8A9BB5;
+  --color-steel-300: #C9D3E0;
+  --color-steel-200: #DDE4EE;
+  --color-steel-100: #EEF2F7;
+  --color-steel-50: #F7F9FC;
+  --color-signal: #FF6A1A;
+  --color-signal-glow: #FF9A5C;
+  --color-signal-dark: #CC5514;
+  --color-ok: #1FBF8F;
+  --color-ok-dark: #179970;
+  --color-white: #FFFFFF;
+
+  /* --- Typography --- */
+  --font-heading: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
+  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", "Fira Code", monospace;
+
+  /* --- Spacing extensions --- */
+  --spacing-18: 4.5rem;
+  --spacing-22: 5.5rem;
+  --spacing-128: 32rem;
+
+  /* --- Border radius --- */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* --- Shadows --- */
+  --shadow-signal: 0 0 24px 0 rgba(255, 106, 26, 0.35);
+  --shadow-card: 0 4px 32px 0 rgba(11, 18, 32, 0.18);
+  --shadow-glow: 0 0 48px 0 rgba(255, 106, 26, 0.15);
+
+  /* --- Transitions --- */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ============================================================
+   GLOBAL BASE STYLES
+   ============================================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  background-color: var(--color-white);
+  color: var(--color-ink-900);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   TYPOGRAPHY BASE
+   ============================================================ */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+code, kbd, samp, pre {
+  font-family: var(--font-mono);
+}
+
+/* ============================================================
+   SKIP TO CONTENT (ACCESSIBILITY)
+   ============================================================ */
+
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-signal);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.875rem;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  text-decoration: none;
+  transition: top 0.2s var(--ease-smooth);
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ============================================================
+   ENGINEERING GRID DECORATION
+   (Pure CSS, no performance cost, purely decorative)
+   ============================================================ */
+
+.grid-decoration {
+  position: relative;
+}
+
+.grid-decoration::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201, 211, 224, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 211, 224, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ============================================================
+   MEASURE TICK MARKS (decorative motif)
+   ============================================================ */
+
+.tick-marks-v {
+  position: relative;
+}
+
+.tick-marks-v::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--color-steel-300) 0px,
+    var(--color-steel-300) 1px,
+    transparent 1px,
+    transparent 8px,
+    var(--color-steel-200) 8px,
+    var(--color-steel-200) 9px,
+    transparent 9px,
+    transparent 40px
+  );
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+/* ============================================================
+   FOCUS STYLES (WCAG 2.2 AA)
+   ============================================================ */
+
+:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ============================================================
+   SCROLLBAR STYLING (Webkit)
+   ============================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-steel-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-steel-300);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-signal);
+}
+
+/* ============================================================
+   SELECTION COLOUR
+   ============================================================ */
+
+::selection {
+  background: var(--color-signal);
+  color: #fff;
+}
+
+/* ============================================================
+   UTILITY CLASSES
+   ============================================================ */
+
+.font-heading { font-family: var(--font-heading); }
+.font-body    { font-family: var(--font-body); }
+.font-mono    { font-family: var(--font-mono); }
+
+/* Signal gradient text */
+.text-gradient-signal {
+  background: linear-gradient(135deg, var(--color-signal) 0%, var(--color-signal-glow) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* OK gradient text */
+.text-gradient-ok {
+  background: linear-gradient(135deg, var(--color-ok) 0%, #7FEAD1 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Dark surface base */
+.surface-dark {
+  background-color: var(--color-ink-900);
+  color: var(--color-white);
+}
+
+/* Light surface */
+.surface-light {
+  background-color: var(--color-white);
+  color: var(--color-ink-900);
+}
+
+/* Steel surface */
+.surface-steel {
+  background-color: var(--color-steel-100);
+  color: var(--color-ink-900);
 }
