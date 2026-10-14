@@ -13,7 +13,7 @@ export default function PrivacyPolicyPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 font-sans text-sm text-zinc-300 leading-relaxed">
         <h1 className="font-mono text-3xl font-bold text-zinc-100">Privacy Policy & DPDP Compliance</h1>
         <p>
-          {SITE_CONFIG.legalName} ("Space Magnum", "we", "our") is committed to protecting your privacy in compliance with India's Digital Personal Data Protection (DPDP) Act 2023.
+          {SITE_CONFIG.legalName} (&ldquo;Space Magnum&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;) is committed to protecting your privacy in compliance with India&apos;s Digital Personal Data Protection (DPDP) Act 2023.
         </p>
 
         <h2 className="font-mono text-xl font-bold text-zinc-100 pt-4">1. Data Collected</h2>

@@ -1,30 +1,22 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
   CalculatorInputs,
-  CalculatorResults,
   calculateResults,
   encodeCalculatorInputs,
   decodeCalculatorInputs,
   StorageType,
   DailyPicksBand,
 } from '@/config/calculator'
-import { INDUSTRIES, IndustryId } from '@/config/industries'
-import { Confirm } from '@/components/confirm/Confirm'
+import { INDUSTRIES } from '@/config/industries'
 import {
-  Calculator as CalcIcon,
   ArrowRight,
-  ArrowLeft,
   CheckCircle2,
-  TrendingUp,
   Share2,
-  Copy,
-  Mail,
   RefreshCw,
-  Layers,
   Sparkles,
 } from 'lucide-react'
 
@@ -40,31 +32,27 @@ const DEFAULT_INPUTS: CalculatorInputs = {
 }
 
 export function CalculatorWizard() {
-  const router = useRouter()
   const searchParams = useSearchParams()
+  const dataParam = searchParams.get('data')
+  const [prevDataParam, setPrevDataParam] = useState(dataParam)
 
-  const [step, setStep] = useState<number>(1)
-  const [inputs, setInputs] = useState<CalculatorInputs>(DEFAULT_INPUTS)
-  const [results, setResults] = useState<CalculatorResults | null>(null)
+  const initialDecoded = dataParam ? decodeCalculatorInputs(dataParam) : null
+  const [step, setStep] = useState<number>(() => (initialDecoded ? 9 : 1))
+  const [inputs, setInputs] = useState<CalculatorInputs>(() => initialDecoded || DEFAULT_INPUTS)
   const [copiedShareLink, setCopiedShareLink] = useState(false)
-  const [isUnitMetric, setIsUnitMetric] = useState(false)
 
-  // Restore inputs from base64 query string if present
-  useEffect(() => {
-    const dataParam = searchParams.get('data')
+  if (dataParam !== prevDataParam) {
+    setPrevDataParam(dataParam)
     if (dataParam) {
       const decoded = decodeCalculatorInputs(dataParam)
       if (decoded) {
         setInputs(decoded)
-        setStep(9) // Jump straight to results view
+        setStep(9)
       }
     }
-  }, [searchParams])
+  }
 
-  // Recalculate results whenever inputs change
-  useEffect(() => {
-    setResults(calculateResults(inputs))
-  }, [inputs])
+  const results = calculateResults(inputs)
 
   const updateInput = <K extends keyof CalculatorInputs>(key: K, value: CalculatorInputs[K]) => {
     setInputs((prev) => ({ ...prev, [key]: value }))
@@ -465,18 +453,23 @@ export function CalculatorWizard() {
               <p className="text-xs text-zinc-400 font-mono">
                 Based on ₹{inputs.rentPerSqFtMonthly || 75}/sq.ft monthly opportunity cost
               </p>
+              {results.rentFallbackUsed && (
+                <p className="text-[10px] text-amber-400 font-mono border border-amber-500/30 bg-amber-500/10 rounded px-2 py-1">
+                  ⚠️ Using assumed default of ₹75/sq.ft. Update in Step 8 with your actual rent for a more accurate figure.
+                </p>
+              )}
             </div>
 
-            {/* Card 3: Labour Reduction */}
+            {/* Card 3: Picking Throughput Improvement */}
             <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
               <span className="text-xs font-mono text-zinc-400 uppercase font-bold">
-                Stores Staff Redeployment
+                Picking Throughput Gain
               </span>
               <div className="font-mono text-3xl font-extrabold text-amber-400">
-                {results.labourReductionFte.min} – {results.labourReductionFte.max} <span className="text-sm font-normal text-zinc-400">Operators</span>
+                {results.pickingTimeReductionPct.min}% – {results.pickingTimeReductionPct.max}% <span className="text-sm font-normal text-zinc-400">faster</span>
               </div>
               <p className="text-xs text-zinc-400 font-mono">
-                Travel-free picking reduces required staff hours
+                Based on your {inputs.dailyPicks?.replace(/-/g, ' – ')} daily picks volume
               </p>
             </div>
 
@@ -488,9 +481,23 @@ export function CalculatorWizard() {
               <span className="text-xs font-mono uppercase text-orange-400 font-bold">
                 Recommended ASRS Solution
               </span>
-              <h3 className="font-mono text-2xl font-bold text-zinc-100">
-                STOLIFT Vertical Lift Module + STOMAT Carousel
-              </h3>
+              <div className="space-y-3 mt-2">
+                {results.recommendations.map((rec, i) => (
+                  <div key={rec.productId} className={`flex items-start gap-3 p-3 rounded-lg border ${
+                    rec.confidence === 'primary'
+                      ? 'border-orange-500/50 bg-orange-500/10'
+                      : 'border-zinc-700 bg-zinc-900/50'
+                  }`}>
+                    <span className={`text-[10px] font-mono font-bold uppercase px-1.5 py-0.5 rounded ${
+                      rec.confidence === 'primary' ? 'bg-orange-500 text-zinc-950' : 'bg-zinc-700 text-zinc-300'
+                    }`}>{i === 0 ? 'PRIMARY' : 'ALT'}</span>
+                    <div>
+                      <div className="font-mono text-sm font-bold text-zinc-100 uppercase">{rec.productId.replace(/-/g, ' & ')}</div>
+                      <div className="text-xs text-zinc-400 mt-0.5">{rec.reason}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
 
             <p className="text-xs text-zinc-400 leading-relaxed max-w-3xl">

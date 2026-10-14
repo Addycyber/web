@@ -1,27 +1,36 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useSyncExternalStore } from 'react'
 import { ShieldAlert, Check, X } from 'lucide-react'
 
-export function CookieBanner() {
-  const [showBanner, setShowBanner] = useState(false)
+function subscribe(callback: () => void) {
+  window.addEventListener('storage', callback)
+  window.addEventListener('sm_consent_updated', callback)
+  return () => {
+    window.removeEventListener('storage', callback)
+    window.removeEventListener('sm_consent_updated', callback)
+  }
+}
 
-  useEffect(() => {
-    const consent = localStorage.getItem('sm_cookie_consent')
-    if (!consent) {
-      setShowBanner(true)
-    }
-  }, [])
+function getSnapshot(): string | null {
+  return typeof window !== 'undefined' ? localStorage.getItem('sm_cookie_consent') : 'granted'
+}
+
+function getServerSnapshot(): string | null {
+  return 'granted'
+}
+
+export function CookieBanner() {
+  const consent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  const showBanner = consent === null
 
   const handleAccept = () => {
     localStorage.setItem('sm_cookie_consent', 'granted')
-    setShowBanner(false)
     window.dispatchEvent(new Event('sm_consent_updated'))
   }
 
   const handleDecline = () => {
     localStorage.setItem('sm_cookie_consent', 'denied')
-    setShowBanner(false)
     window.dispatchEvent(new Event('sm_consent_updated'))
   }
 

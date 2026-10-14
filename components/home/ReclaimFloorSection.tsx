@@ -2,90 +2,107 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Calculator, ArrowRight, CheckCircle2, TrendingUp, Maximize2 } from 'lucide-react'
+import { Calculator, ArrowRight, CheckCircle2, TrendingUp } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export function ReclaimFloorSection() {
-  const [floorArea, setFloorArea] = useState<number>(3000) // sq ft
-  const height = 9 // meters
+  const [floorArea, setFloorArea] = useState<number>(3000)
+  const height = 9
 
-  // Calculations: STOMAT reclaims ~85% floor space
   const reclaimedArea = Math.round(floorArea * 0.85)
   const remainingArea = floorArea - reclaimedArea
-  const annualSavingsINR = Math.round(reclaimedArea * 75 * 12) // Assuming avg ₹75/sqft rent
+  const annualSavingsINR = Math.round(reclaimedArea * 75 * 12)
 
   return (
-    <section className="py-24 bg-zinc-900/60 border-b border-zinc-800/80 relative overflow-hidden">
+    <section className="py-28 bg-[#0A0D14] border-b border-white/5 relative overflow-hidden">
+      {/* Background image - full width behind content */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/products/asrs/asrs-2.jpg"
+          alt="ASRS Vertical Storage System"
+          fill
+          className="object-cover opacity-[0.04]"
+          sizes="100vw"
+        />
+      </div>
+      <div className="absolute inset-0 mesh-bg pointer-events-none" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 font-mono text-xs font-bold uppercase tracking-wider">
+          <div className="pill-signal mx-auto w-fit">
             <span>Vertical Space Optimization</span>
           </div>
-          <h2 className="font-mono text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight">
-            Stop Paying Rent for Empty Air Above Your Floor
+          <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+            Stop Paying Rent for{' '}
+            <span className="text-gradient-signal">Empty Air</span>
           </h2>
-          <p className="font-sans text-zinc-400 text-base sm:text-lg leading-relaxed">
-            Conventional shelving wastes up to 80% of vertical building height on wide forklift aisles and unreachable top racks. STOMAT utilizes full ceiling height up to 15+ meters.
+          <p className="font-body text-[#8A9BB5] text-lg leading-relaxed">
+            Conventional shelving wastes up to 80% of vertical building height. STOMAT utilizes full ceiling height up to 15+ meters.
           </p>
         </div>
 
-        {/* Interactive Interactive Space Reclaim Visualizer */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          
-          {/* Controls Column */}
-          <div className="lg:col-span-5 bg-zinc-950 border border-zinc-800 p-6 sm:p-8 rounded-2xl space-y-6 shadow-2xl">
-            <h3 className="font-mono text-lg font-bold text-zinc-200 flex items-center gap-2">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          {/* Left: Calculator */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="lg:col-span-5 card-dark p-6 sm:p-8 space-y-6 shadow-2xl shadow-black/50"
+          >
+            <h3 className="font-heading text-xl font-bold text-white flex items-center gap-2">
               <Calculator className="w-5 h-5 text-orange-500" />
               Quick Footprint Estimator
             </h3>
 
-            {/* Slider 1: Floor Area */}
             <div className="space-y-3">
               <div className="flex justify-between items-center text-sm">
-                <label className="text-zinc-400 font-medium">Current Storage Area:</label>
+                <label className="text-[#8A9BB5] font-body">Current Storage Area:</label>
                 <span className="font-mono font-bold text-orange-400 text-base">{floorArea.toLocaleString()} sq.ft</span>
               </div>
-              <input 
+              <input
                 type="range"
                 min="500"
                 max="20000"
                 step="250"
                 value={floorArea}
                 onChange={(e) => setFloorArea(Number(e.target.value))}
-                className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                className="w-full h-1.5 bg-[#243045] rounded-full appearance-none cursor-pointer accent-orange-500"
               />
-              <div className="flex justify-between text-[11px] font-mono text-zinc-400">
+              <div className="flex justify-between text-[11px] font-mono text-[#6B7FA0]">
                 <span>500 sq.ft</span>
                 <span>20,000 sq.ft</span>
               </div>
             </div>
 
-            {/* Live Metrics Grid */}
-            <div className="grid grid-cols-2 gap-4 pt-4 border-t border-zinc-900">
-              <div className="bg-zinc-900/90 p-4 rounded-xl border border-zinc-800 space-y-1">
-                <span className="text-[11px] font-mono text-zinc-400 uppercase">Floor Space Reclaimed</span>
-                <div className="font-mono text-2xl font-bold text-emerald-400">
-                  {reclaimedArea.toLocaleString()} <span className="text-xs text-zinc-400 font-normal">sq.ft</span>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="bg-[#0F1319] p-4 rounded-xl border border-emerald-500/20 space-y-1">
+                <span className="text-[10px] font-mono text-[#8A9BB5] uppercase tracking-wide">Space Reclaimed</span>
+                <div className="font-heading text-2xl font-bold text-emerald-400">
+                  {reclaimedArea.toLocaleString()}
+                  <span className="text-xs text-[#8A9BB5] font-normal ml-1">sq.ft</span>
                 </div>
-                <span className="text-[10px] text-emerald-500/90 font-mono">85% reduction</span>
+                <span className="text-[10px] text-emerald-500 font-mono">↓ 85% reduction</span>
               </div>
 
-              <div className="bg-zinc-900/90 p-4 rounded-xl border border-zinc-800 space-y-1">
-                <span className="text-[11px] font-mono text-zinc-400 uppercase">New Footprint Needed</span>
-                <div className="font-mono text-2xl font-bold text-orange-400">
-                  {remainingArea.toLocaleString()} <span className="text-xs text-zinc-400 font-normal">sq.ft</span>
+              <div className="bg-[#0F1319] p-4 rounded-xl border border-orange-500/20 space-y-1">
+                <span className="text-[10px] font-mono text-[#8A9BB5] uppercase tracking-wide">New Footprint</span>
+                <div className="font-heading text-2xl font-bold text-orange-400">
+                  {remainingArea.toLocaleString()}
+                  <span className="text-xs text-[#8A9BB5] font-normal ml-1">sq.ft</span>
                 </div>
-                <span className="text-[10px] text-zinc-400 font-mono">Vertical VLM bay</span>
+                <span className="text-[10px] text-[#8A9BB5] font-mono">Vertical VLM bay</span>
               </div>
             </div>
 
-            {/* Estimated Financial Savings */}
-            <div className="p-4 rounded-xl bg-orange-500/10 border border-orange-500/20 flex items-center justify-between">
+            <div className="p-4 rounded-xl bg-gradient-to-r from-orange-500/10 to-amber-500/10 border border-orange-500/20 flex items-center justify-between">
               <div>
-                <span className="text-xs font-mono uppercase text-orange-400 font-bold block">Est. Rent Saved / Year</span>
-                <span className="font-mono text-xl font-extrabold text-zinc-100">
+                <span className="text-xs font-mono uppercase text-orange-400 font-medium block">Est. Rent Saved / Year</span>
+                <span className="font-heading text-2xl font-extrabold text-white">
                   ₹{(annualSavingsINR / 100000).toFixed(2)} Lakhs
                 </span>
               </div>
@@ -99,93 +116,76 @@ export function ReclaimFloorSection() {
               <span>Launch Full 8-Step Space Calculator</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
-          </div>
+          </motion.div>
 
-          {/* Visual Comparison Graphic */}
-          <div className="lg:col-span-7 bg-zinc-950 border border-zinc-800 p-6 sm:p-8 rounded-2xl relative overflow-hidden space-y-6">
-            <div className="flex items-center justify-between pb-4 border-b border-zinc-800">
-              <span className="font-mono text-xs text-zinc-400 uppercase tracking-wider font-bold">
-                Comparison Visualizer
-              </span>
-              <span className="text-xs font-mono text-orange-400 font-semibold">
-                Ceiling Height: {height}m
-              </span>
-            </div>
-
-            {/* Floor Graphic Render */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              
-              {/* Conventional Racking */}
-              <div className="p-4 rounded-xl bg-zinc-900 border border-zinc-800 space-y-3">
-                <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="text-red-400 font-semibold">Conventional Static Racking</span>
-                  <span className="text-zinc-500">15% Volumetric Efficiency</span>
+          {/* Right: Real ASRS Photo + Comparison */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="lg:col-span-7 space-y-6"
+          >
+            {/* ASRS Real Photo */}
+            <div className="relative rounded-2xl overflow-hidden h-72 border border-white/8 shadow-2xl shadow-black/50">
+              <Image
+                src="/images/products/asrs/asrs-1.jpg"
+                alt="STOMAT Vertical Automated Storage System"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 60vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D14]/80 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
+                <div>
+                  <div className="text-orange-400 font-mono text-xs font-medium uppercase tracking-widest mb-1">
+                    STOMAT VLM
+                  </div>
+                  <div className="text-white font-heading font-bold text-lg">
+                    Automated Vertical Storage
+                  </div>
                 </div>
-
-                <div className="h-48 border border-red-500/20 rounded-lg p-2 bg-zinc-950 flex flex-col justify-between relative overflow-hidden">
-                  <div className="grid grid-cols-3 gap-1.5 h-full opacity-60">
-                    {[1, 2, 3, 4, 5, 6].map((idx) => (
-                      <div key={idx} className="border border-zinc-700 bg-zinc-900 rounded p-1 flex flex-col justify-end">
-                        <div className="w-full h-2 bg-red-500/30 rounded" />
-                      </div>
-                    ))}
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                    <span className="text-xs font-mono text-zinc-300 bg-zinc-900/90 px-3 py-1 rounded border border-zinc-700">
-                      Forklift Aisles Waste 70% Space
-                    </span>
-                  </div>
+                <div className="text-right">
+                  <div className="text-emerald-400 font-heading font-bold text-3xl">85%</div>
+                  <div className="text-[#8A9BB5] font-mono text-xs">Space saved</div>
                 </div>
               </div>
+            </div>
 
-              {/* STOMAT VLM Solution */}
-              <div className="p-4 rounded-xl bg-orange-500/5 border border-orange-500/20 space-y-3">
-                <div className="flex items-center justify-between text-xs font-mono">
-                  <span className="text-emerald-400 font-bold">STOMAT Vertical Module</span>
-                  <span className="text-emerald-400 font-semibold">85% Volumetric Efficiency</span>
+            {/* Comparison Cards */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-[#151B25] border border-red-500/15 rounded-xl p-5 space-y-3">
+                <div className="text-red-400 font-mono text-xs font-medium uppercase tracking-wide">
+                  ✗ Conventional Racking
                 </div>
-
-                <div className="h-48 border border-emerald-500/30 rounded-lg p-2 bg-zinc-950 flex items-center justify-center relative">
-                  <div className="w-24 h-40 border-2 border-orange-500 bg-zinc-900 rounded flex flex-col justify-between p-1 shadow-lg shadow-orange-500/20">
-                    <div className="w-full h-1.5 bg-orange-500/80 rounded" />
-                    <div className="space-y-1">
-                      {[1, 2, 3, 4, 5, 6, 7].map((i) => (
-                        <div key={i} className="w-full h-1 bg-zinc-800 rounded" />
-                      ))}
+                <div className="text-[#8A9BB5] text-sm space-y-1.5 font-body">
+                  {['Forklift aisles waste 70% floor', 'Limited to 3-4m reach height', 'Manual picking — error prone', 'Inefficient cubic utilisation'].map((p, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs">
+                      <span className="text-red-500 mt-0.5 flex-shrink-0">—</span>
+                      <span>{p}</span>
                     </div>
-                    <div className="w-full h-3 bg-amber-500 text-[8px] font-mono font-bold text-zinc-950 rounded flex items-center justify-center">
-                      BAY
-                    </div>
-                  </div>
+                  ))}
                 </div>
+                <div className="font-mono text-xs text-[#6B7FA0]">Ceiling: {height}m · Used: ~2m</div>
               </div>
 
-            </div>
-
-            {/* Bullets */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-zinc-300 pt-2 border-t border-zinc-900">
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Goods-to-person delivery at ergonomic height</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Dual tray delivery reduces pick cycle time</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Dust-proof & secure inventory access</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>Integrated WMS / ERP connectivity</span>
+              <div className="bg-[#0D1F18] border border-emerald-500/20 rounded-xl p-5 space-y-3">
+                <div className="text-emerald-400 font-mono text-xs font-medium uppercase tracking-wide">
+                  ✓ STOMAT VLM
+                </div>
+                <div className="text-[#B0BECE] text-sm space-y-1.5 font-body">
+                  {['Full ceiling-height utilisation', 'Goods-to-person delivery', 'PLC-controlled — 99.9% accuracy', 'WMS / ERP integration ready'].map((p, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 mt-0.5 flex-shrink-0" />
+                      <span>{p}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="font-mono text-xs text-emerald-400 font-medium">Ceiling: {height}m · Used: {height}m ✓</div>
               </div>
             </div>
-
-          </div>
-
+          </motion.div>
         </div>
-
       </div>
     </section>
   )

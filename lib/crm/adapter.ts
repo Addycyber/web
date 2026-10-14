@@ -23,10 +23,10 @@ export async function saveLeadToCrm(payload: QuoteLeadPayload): Promise<CrmSaveR
     await fs.mkdir(dataDir, { recursive: true })
     const filePath = path.join(dataDir, 'leads.json')
 
-    let existingLeads: any[] = []
+    let existingLeads: Record<string, unknown>[] = []
     try {
       const fileData = await fs.readFile(filePath, 'utf-8')
-      existingLeads = JSON.parse(fileData)
+      existingLeads = fileData.trim() ? (JSON.parse(fileData) as Record<string, unknown>[]) : []
     } catch {
       existingLeads = []
     }

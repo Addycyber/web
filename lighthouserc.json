@@ -6,16 +6,22 @@
       "url": [
         "http://localhost:3000/",
         "http://localhost:3000/products",
+        "http://localhost:3000/products/stomat",
+        "http://localhost:3000/products/stolift",
         "http://localhost:3000/tools/calculator",
-        "http://localhost:3000/get-a-quote"
+        "http://localhost:3000/tools/simulator",
+        "http://localhost:3000/get-a-quote",
+        "http://localhost:3000/about",
+        "http://localhost:3000/contact",
+        "http://localhost:3000/industries/automotive"
       ]
     },
     "assert": {
       "assertions": {
-        "categories:performance": ["error", { "minScore": 0.9 }],
-        "categories:accessibility": ["error", { "minScore": 0.95 }],
-        "categories:best-practices": ["error", { "minScore": 0.9 }],
-        "categories:seo": ["error", { "minScore": 0.95 }]
+        "categories:performance":      ["error", { "minScore": 0.9 }],
+        "categories:accessibility":    ["error", { "minScore": 0.95 }],
+        "categories:best-practices":   ["error", { "minScore": 0.9 }],
+        "categories:seo":              ["error", { "minScore": 0.95 }]
       }
     },
     "upload": {

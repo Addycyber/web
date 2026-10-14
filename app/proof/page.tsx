@@ -1,8 +1,6 @@
-import Link from 'next'
 import { constructMetadata } from '@/lib/metadata'
-import { SITE_CONFIG } from '@/config/site'
 import { Confirm } from '@/components/confirm/Confirm'
-import { Award, ShieldCheck, Factory, Layers, ArrowRight } from 'lucide-react'
+import { Award, ShieldCheck, Factory } from 'lucide-react'
 
 export const metadata = constructMetadata({
   title: 'Engineering & Quality Proof — Space Magnum ASRS',

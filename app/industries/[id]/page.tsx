@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { constructMetadata } from '@/lib/metadata'
 import { INDUSTRIES_MAP, IndustryId } from '@/config/industries'
 import { Confirm } from '@/components/confirm/Confirm'
-import { ArrowRight, CheckCircle2, ShieldAlert, Calculator, Factory } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Calculator } from 'lucide-react'
 
 interface IndustryPageProps {
   params: Promise<{ id: string }>
@@ -64,7 +64,7 @@ export default async function IndustryDetailPage({ params }: IndustryPageProps) 
           </h1>
 
           <p className="font-sans text-xl text-orange-300 font-medium">
-            "{industry.headline}"
+            &ldquo;{industry.headline}&rdquo;
           </p>
 
           <p className="font-sans text-zinc-400 text-base sm:text-lg leading-relaxed">

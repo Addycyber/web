@@ -27,13 +27,17 @@ export interface Product {
   faqs: { question: string; answer: string }[]
   accentColor: string
   href: string
+  /** Hero image path (relative to /public) */
+  heroImage: string
+  /** Gallery images (relative to /public) */
+  galleryImages: string[]
 }
 
 export const PRODUCTS_MAP: Record<ProductId, Product> = {
   stomat: {
     id: 'stomat',
     name: 'STOMAT',
-    tagline: 'High-Density Automated Storage',
+    tagline: 'High-Density Automated Vertical Carousel',
     description:
       'STOMAT is a high-density automated storage system that uses vertical carousel technology to bring stored items to the operator, eliminating aisle space and dramatically increasing storage density on the same floor footprint.',
     shortDesc: 'Automated Vertical Carousel System for rapid item-to-person retrieval.',
@@ -60,13 +64,21 @@ export const PRODUCTS_MAP: Record<ProductId, Product> = {
           'STOMAT is suitable for a wide range of items including auto components, pharmaceutical products, tools, documents, and general industrial parts.',
       },
     ],
-    accentColor: '#FF6A1A',
+    accentColor: '#F97316',
     href: '/products/stomat',
+    heroImage: '/images/products/asrs/asrs-1.jpg',
+    galleryImages: [
+      '/images/products/asrs/asrs-1.jpg',
+      '/images/products/asrs/asrs-2.jpg',
+      '/images/products/asrs/asrs-3.jpg',
+      '/images/products/asrs/asrs-4.jpg',
+      '/images/products/asrs/asrs-5.jpg',
+    ],
   },
   stolift: {
     id: 'stolift',
     name: 'STOLIFT',
-    tagline: 'Vertical Lift Module',
+    tagline: 'Vertical Lift Module — Ceiling-Height Utilisation',
     description:
       'STOLIFT is a vertical lift module (VLM) that stores items in trays and retrieves them automatically at an ergonomic access opening. It maximises ceiling height utilisation.',
     shortDesc: 'Vertical Lift Module (VLM) utilizing ceiling heights up to 15m.',
@@ -82,13 +94,21 @@ export const PRODUCTS_MAP: Record<ProductId, Product> = {
       { label: 'Max Tray Load', value: '[CONFIRM]', unit: 'kg', isConfirm: true },
     ],
     faqs: [],
-    accentColor: '#1FBF8F',
+    accentColor: '#10B981',
     href: '/products/stolift',
+    heroImage: '/images/products/carousel/carousel-1.jpg',
+    galleryImages: [
+      '/images/products/carousel/carousel-1.jpg',
+      '/images/products/carousel/carousel-2.jpg',
+      '/images/products/carousel/carousel-3.jpg',
+      '/images/products/carousel/carousel-4.jpg',
+      '/images/products/carousel/carousel-5.jpg',
+    ],
   },
   storder: {
     id: 'storder',
     name: 'STORDER',
-    tagline: 'Goods-to-Person Order Picking',
+    tagline: 'Goods-to-Person Order Picking System',
     description:
       'STORDER is a goods-to-person order picking and retrieval system that eliminates operator travel time.',
     shortDesc: 'Goods-to-Person retrieval system maximizing picking throughput.',
@@ -102,14 +122,20 @@ export const PRODUCTS_MAP: Record<ProductId, Product> = {
     faqs: [],
     accentColor: '#4F8EF7',
     href: '/products/storder',
+    heroImage: '/images/products/asrs/asrs-3.jpg',
+    galleryImages: [
+      '/images/products/asrs/asrs-3.jpg',
+      '/images/products/asrs/asrs-4.jpg',
+      '/images/products/carousel/carousel-2.jpg',
+    ],
   },
   'compactors-racking': {
     id: 'compactors-racking',
     name: 'Compactors & Racking',
     tagline: 'Mobile Compactor Systems & Heavy-Duty Racking',
     description:
-      'Space Magnum mobile compactor systems eliminate fixed aisles, doubling usable storage density on the same floor area.',
-    shortDesc: 'Motorized mobile compactor storage eliminating aisle waste.',
+      'Space Magnum mobile compactor systems eliminate fixed aisles, doubling usable storage density on the same floor area. Includes mezzanine floors, cantilever racks, slotted angle, heavy duty pallet racks, and drum storage systems.',
+    shortDesc: 'Motorized mobile compactor storage eliminating aisle waste. Plus mezzanine floors, cantilever, pallet & slotted angle racks.',
     primaryMetric: '2x Density',
     secondaryMetric: 'Heavy payload',
     promise: 'One aisle. All your stock. Wherever you need it.',
@@ -118,8 +144,23 @@ export const PRODUCTS_MAP: Record<ProductId, Product> = {
     labourReductionRange: { min: 10, max: 30, isConfirm: true },
     specs: [],
     faqs: [],
-    accentColor: '#C9D3E0',
+    accentColor: '#B0BECE',
     href: '/products/compactors-racking',
+    heroImage: '/images/products/compactor/compactor-1.jpg',
+    galleryImages: [
+      '/images/products/compactor/compactor-1.jpg',
+      '/images/products/compactor/compactor-2.jpg',
+      '/images/products/compactor/compactor-3.jpg',
+      '/images/products/compactor/heavy-compactor.jpg',
+      '/images/products/mezzanine/mezzanine-1.jpg',
+      '/images/products/mezzanine/mezzanine-2.jpg',
+      '/images/products/pallet/pallet-1.jpg',
+      '/images/products/cantilever/cantilever-1.jpg',
+      '/images/products/cantilever/cantilever-3.jpg',
+      '/images/products/slotted-angle/slotted-1.jpg',
+      '/images/products/slotted-angle/slotted-2.jpg',
+      '/images/products/heavy-duty/heavy-duty-1.jpg',
+    ],
   },
 }
 

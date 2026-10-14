@@ -1,22 +1,11 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { PRODUCTS } from '@/config/products'
 import { INDUSTRIES } from '@/config/industries'
-import { SITE_CONFIG } from '@/config/site'
-import { Confirm } from '@/components/confirm/Confirm'
 import {
-  ArrowRight,
   CheckCircle2,
-  Phone,
-  Mail,
-  Building,
-  User,
-  MapPin,
-  Clock,
-  MessageSquare,
-  ShieldCheck,
   AlertCircle,
 } from 'lucide-react'
 
@@ -24,9 +13,13 @@ export function QuoteForm() {
   const router = useRouter()
   const searchParams = useSearchParams()
 
+  const pParam = searchParams.get('product')
+  const indParam = searchParams.get('industry')
+
   const [step, setStep] = useState<number>(1)
-  const [selectedProduct, setSelectedProduct] = useState<string>('stolift')
-  const [selectedIndustry, setSelectedIndustry] = useState<string>('automotive')
+  const [selectedProduct, setSelectedProduct] = useState<string>(() => pParam || 'stolift')
+  const [selectedIndustry, setSelectedIndustry] = useState<string>(() => indParam || 'automotive')
+  const [prevParams, setPrevParams] = useState({ p: pParam, ind: indParam })
 
   const [companyName, setCompanyName] = useState('')
   const [contactName, setContactName] = useState('')
@@ -34,25 +27,24 @@ export function QuoteForm() {
   const [email, setEmail] = useState('')
   const [city, setCity] = useState('')
   const [timeline, setTimeline] = useState('1-3-months')
-  const [notes, setNotes] = useState('')
+  const [notes, setNotes] = useState(() => {
+    const calcArea = searchParams.get('calc_area')
+    const calcSkus = searchParams.get('calc_skus')
+    if (calcArea || calcSkus) {
+      return `Calculator Session Inputs: Floor Area = ${calcArea || 'N/A'} sq.ft, SKUs = ${calcSkus || 'N/A'}`
+    }
+    return ''
+  })
   const [whatsappOptIn, setWhatsappOptIn] = useState(true)
 
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState('')
 
-  // Pre-fill from URL params
-  useEffect(() => {
-    const p = searchParams.get('product')
-    const ind = searchParams.get('industry')
-    const calcArea = searchParams.get('calc_area')
-    const calcSkus = searchParams.get('calc_skus')
-
-    if (p) setSelectedProduct(p)
-    if (ind) setSelectedIndustry(ind)
-    if (calcArea || calcSkus) {
-      setNotes(`Calculator Session Inputs: Floor Area = ${calcArea || 'N/A'} sq.ft, SKUs = ${calcSkus || 'N/A'}`)
-    }
-  }, [searchParams])
+  if (pParam !== prevParams.p || indParam !== prevParams.ind) {
+    setPrevParams({ p: pParam, ind: indParam })
+    if (pParam) setSelectedProduct(pParam)
+    if (indParam) setSelectedIndustry(indParam)
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -88,7 +80,7 @@ export function QuoteForm() {
       } else {
         setErrorMessage(data.message || 'Please check all required fields and try again.')
       }
-    } catch (err) {
+    } catch {
       setErrorMessage('Connection error. Please try calling us directly.')
     } finally {
       setIsSubmitting(false)

@@ -1,5 +1,4 @@
 import { constructMetadata } from '@/lib/metadata'
-import { SITE_CONFIG } from '@/config/site'
 
 export const metadata = constructMetadata({
   title: 'Cookie Policy — Space Magnum Equipments',
@@ -19,7 +18,7 @@ export default function CookiesPage() {
 
         <h2 className="font-mono text-xl font-bold text-zinc-100 pt-4">Managing Preferences</h2>
         <p>
-          You can clear your cookie consent at any time by clearing your browser's site data for <span className="font-mono text-orange-400">spacemagnum.com</span>.
+          You can clear your cookie consent at any time by clearing your browser&apos;s site data for <span className="font-mono text-orange-400">spacemagnum.com</span>.
         </p>
       </div>
     </div>

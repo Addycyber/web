@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Space_Grotesk, Inter, JetBrains_Mono } from 'next/font/google'
+import { Syne, DM_Sans, DM_Mono } from 'next/font/google'
 import './globals.css'
 import { constructMetadata } from '@/lib/metadata'
 import { Header } from '@/components/layout/Header'
@@ -9,23 +9,27 @@ import { CookieBanner } from '@/components/analytics/CookieBanner'
 import { Analytics } from '@/components/analytics/Analytics'
 import { JsonLd } from '@/components/seo/JsonLd'
 
-// Font setup with font-display: swap for performance
-const spaceGrotesk = Space_Grotesk({
+// Syne — bold, geometric display font for headings
+const syne = Syne({
   subsets: ['latin'],
-  variable: '--font-space-grotesk',
+  variable: '--font-syne',
+  display: 'swap',
+  weight: ['400', '500', '600', '700', '800'],
+})
+
+// DM Sans — clean, modern humanist for body
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans',
   display: 'swap',
 })
 
-const inter = Inter({
+// DM Mono — for technical specs and code
+const dmMono = DM_Mono({
   subsets: ['latin'],
-  variable: '--font-inter',
+  variable: '--font-dm-mono',
   display: 'swap',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-jetbrains-mono',
-  display: 'swap',
+  weight: ['300', '400', '500'],
 })
 
 export const metadata: Metadata = constructMetadata({
@@ -42,12 +46,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable} dark scroll-smooth`}
+      className={`${syne.variable} ${dmSans.variable} ${dmMono.variable} dark scroll-smooth`}
     >
       <head>
         <JsonLd />
       </head>
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 font-sans antialiased selection:bg-orange-500 selection:text-zinc-950 flex flex-col">
+      <body className="min-h-screen bg-[#0A0D14] text-zinc-100 font-sans antialiased selection:bg-orange-500 selection:text-zinc-950 flex flex-col">
         {/* Accessibility Skip Link */}
         <a
           href="#main-content"

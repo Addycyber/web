@@ -2,8 +2,7 @@ import { Suspense } from 'react'
 import { constructMetadata } from '@/lib/metadata'
 import { QuoteForm } from '@/components/quote/QuoteForm'
 import { SITE_CONFIG } from '@/config/site'
-import { Confirm } from '@/components/confirm/Confirm'
-import { Phone, Mail, Clock, ShieldCheck, Award } from 'lucide-react'
+import { Phone, Mail, Clock, ShieldCheck } from 'lucide-react'
 
 export const metadata = constructMetadata({
   title: 'Get Engineering Quote — Space Magnum ASRS',

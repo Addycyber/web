@@ -3,8 +3,7 @@
 import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
-import { CheckCircle2, Phone, ArrowRight, ShieldCheck } from 'lucide-react'
-import { SITE_CONFIG } from '@/config/site'
+import { CheckCircle2 } from 'lucide-react'
 
 function ThankYouContent() {
   const searchParams = useSearchParams()

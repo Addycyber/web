@@ -1,137 +1,173 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { PRODUCTS } from '@/config/products'
-import { Confirm } from '@/components/confirm/Confirm'
-import { ArrowRight, Layers, RefreshCw, Box, ShieldAlert } from 'lucide-react'
+import { ArrowRight, Zap } from 'lucide-react'
 
 export function ProductGateway() {
   return (
-    <section className="py-24 bg-zinc-950 border-b border-zinc-800/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
+    <section className="py-28 bg-[#0F1319] border-b border-white/5 relative overflow-hidden">
+      {/* Subtle top gradient */}
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-orange-500/30 to-transparent" />
+      <div className="absolute inset-0 mesh-bg pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+        {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="space-y-3 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 font-mono text-xs font-bold uppercase tracking-wider">
+          <div className="space-y-4 max-w-2xl">
+            <div className="pill-signal">
+              <Zap className="w-3 h-3" />
               <span>ASRS Product Matrix</span>
             </div>
-            <h2 className="font-mono text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight">
-              Engineered Automated Systems
+            <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
+              Engineered{' '}
+              <span className="text-gradient-signal">Automated</span>{' '}
+              Systems
             </h2>
-            <p className="font-sans text-zinc-400 text-base">
-              Four core automated storage product families manufactured at our Pune industrial facility for high-density storage and rapid retrieval.
+            <p className="font-body text-[#8A9BB5] text-lg leading-relaxed">
+              Four core automated storage product families manufactured at our Pune industrial facility.
             </p>
           </div>
 
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-mono text-sm font-bold group"
+            className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 font-mono text-sm font-medium group flex-shrink-0"
           >
-            <span>Explore All Product Specs</span>
+            <span>View Full Catalogue</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
 
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {PRODUCTS.map((product) => (
-            <div
+          {PRODUCTS.map((product, idx) => (
+            <Link
               key={product.id}
-              className="group relative rounded-2xl bg-zinc-900/90 border border-zinc-800/90 hover:border-orange-500/50 p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10"
+              href={`/products/${product.id}`}
+              className="group relative rounded-2xl overflow-hidden bg-[#151B25] border border-white/8 hover:border-orange-500/40 transition-all duration-500 hover:shadow-2xl hover:shadow-orange-500/10 hover:-translate-y-1 flex flex-col"
             >
-              <div className="space-y-5">
-                
-                {/* Visual Icon Container */}
-                <div className="w-full h-36 rounded-xl bg-zinc-950 border border-zinc-800/80 flex items-center justify-center relative overflow-hidden group-hover:border-orange-500/30 transition-colors">
-                  
-                  {/* Subtle Grid Background */}
-                  <div className="absolute inset-0 bg-[radial-gradient(#27272a_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
+              {/* Product Photo */}
+              <div className="relative h-52 overflow-hidden flex-shrink-0">
+                <Image
+                  src={product.heroImage}
+                  alt={product.name}
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                />
+                {/* Image gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#151B25]/90 via-[#151B25]/20 to-transparent" />
 
-                  {/* SVG Animated Illustration by Product Type */}
-                  {product.id === 'stomat' && (
-                    <div className="relative w-16 h-24 border-2 border-orange-500 rounded bg-zinc-900 flex flex-col justify-between p-1">
-                      <div className="w-full h-2 bg-orange-500/40 rounded animate-pulse" />
-                      <div className="space-y-1">
-                        <div className="w-full h-1 bg-zinc-700 rounded" />
-                        <div className="w-full h-1 bg-zinc-700 rounded" />
-                        <div className="w-full h-1 bg-zinc-700 rounded" />
-                      </div>
-                      <div className="w-full h-2.5 bg-amber-500 text-[6px] font-mono font-bold text-zinc-950 rounded flex items-center justify-center">
-                        VLM
-                      </div>
-                    </div>
-                  )}
+                {/* Accent colour top bar */}
+                <div
+                  className="absolute top-0 inset-x-0 h-0.5 opacity-70"
+                  style={{ background: `linear-gradient(90deg, transparent, ${product.accentColor}, transparent)` }}
+                />
 
-                  {product.id === 'stolift' && (
-                    <div className="relative w-20 h-20 border-2 border-emerald-500 rounded-full bg-zinc-900 flex items-center justify-center p-2">
-                      <RefreshCw className="w-8 h-8 text-emerald-400 animate-spin [animation-duration:8s]" />
-                    </div>
-                  )}
-
-                  {product.id === 'storder' && (
-                    <div className="relative w-24 h-16 border-2 border-amber-500 rounded bg-zinc-900 flex items-center justify-between p-2">
-                      <div className="w-4 h-full bg-amber-500/20 rounded border border-amber-500/50" />
-                      <div className="w-4 h-full bg-amber-500/60 rounded border border-amber-500/80 animate-pulse" />
-                      <div className="w-4 h-full bg-amber-500/20 rounded border border-amber-500/50" />
-                    </div>
-                  )}
-
-                  {product.id === 'compactors-racking' && (
-                    <div className="relative w-24 h-16 border-2 border-zinc-600 rounded bg-zinc-900 flex items-center justify-around p-1">
-                      <div className="w-3 h-full bg-zinc-800 rounded" />
-                      <div className="w-3 h-full bg-zinc-800 rounded" />
-                      <div className="w-3 h-full bg-zinc-800 rounded" />
-                    </div>
-                  )}
-
-                  <span className="absolute bottom-2 right-2 text-[10px] font-mono text-zinc-500 uppercase">
-                    {product.id.toUpperCase()}
+                {/* Product name badge on photo */}
+                <div className="absolute bottom-3 left-3">
+                  <span
+                    className="font-heading font-bold text-lg text-white drop-shadow-lg"
+                  >
+                    {product.name}
                   </span>
                 </div>
+              </div>
 
-                {/* Card Title & Desc */}
-                <div className="space-y-2">
-                  <h3 className="font-mono text-xl font-bold text-zinc-100 group-hover:text-orange-400 transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-xs text-zinc-400 leading-relaxed line-clamp-2">
+              {/* Card Body */}
+              <div className="flex flex-col flex-1 p-5 space-y-4">
+                <div className="space-y-1">
+                  <span className="font-mono text-xs font-medium uppercase tracking-widest" style={{ color: product.accentColor }}>
+                    {product.tagline}
+                  </span>
+                  <p className="text-sm text-[#8A9BB5] leading-relaxed line-clamp-2">
                     {product.shortDesc}
                   </p>
                 </div>
 
-                {/* Technical Highlights */}
-                <div className="space-y-2 pt-3 border-t border-zinc-800/80 text-xs font-mono">
-                  <div className="flex justify-between text-zinc-400">
-                    <span>Height / Capacity:</span>
-                    <span className="text-zinc-200 font-semibold">{product.primaryMetric}</span>
+                {/* Key Metrics */}
+                <div className="grid grid-cols-2 gap-2 text-xs font-mono">
+                  <div className="bg-[#0F1319] rounded-lg p-2.5 border border-white/5">
+                    <div className="text-[#8A9BB5] mb-0.5">Capacity</div>
+                    <div className="text-white font-semibold">{product.primaryMetric}</div>
                   </div>
-                  <div className="flex justify-between text-zinc-400">
-                    <span>Payload:</span>
-                    <span className="text-zinc-200 font-semibold">{product.secondaryMetric}</span>
+                  <div className="bg-[#0F1319] rounded-lg p-2.5 border border-white/5">
+                    <div className="text-[#8A9BB5] mb-0.5">Payload</div>
+                    <div className="text-white font-semibold">{product.secondaryMetric}</div>
                   </div>
                 </div>
 
-                {/* Confirm Marker */}
-                <div className="pt-1">
-                  <Confirm id={`SPEC_${product.id.toUpperCase()}`} label="Verified Load Spec" compact />
+                {/* Space saving bar */}
+                <div className="space-y-1.5">
+                  <div className="flex justify-between text-[11px] font-mono text-[#8A9BB5]">
+                    <span>Space Reclaim</span>
+                    <span className="text-emerald-400 font-medium">
+                      {product.spaceSavingRange.min}–{product.spaceSavingRange.max}%
+                    </span>
+                  </div>
+                  <div className="h-1.5 bg-[#0F1319] rounded-full overflow-hidden">
+                    <div
+                      className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-emerald-400 transition-all duration-1000"
+                      style={{ width: `${product.spaceSavingRange.max}%` }}
+                    />
+                  </div>
                 </div>
 
+                {/* CTA */}
+                <div className="mt-auto pt-2">
+                  <div className="flex items-center justify-between text-sm font-semibold text-orange-400 group-hover:text-orange-300 transition-colors">
+                    <span>View Specifications</span>
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </div>
               </div>
-
-              {/* Action Link */}
-              <div className="pt-6">
-                <Link
-                  href={`/products/${product.id}`}
-                  className="w-full py-2.5 px-3 rounded-lg bg-zinc-800 hover:bg-orange-500 text-zinc-200 hover:text-zinc-950 font-mono text-xs font-bold flex items-center justify-between transition-all"
-                >
-                  <span>View Specifications</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </Link>
-              </div>
-
-            </div>
+            </Link>
           ))}
+        </div>
+
+        {/* Bottom Grid of extra product images for Compactors & Racking */}
+        <div className="mt-16 pt-12 border-t border-white/5">
+          <div className="text-center mb-8 space-y-2">
+            <h3 className="font-heading text-2xl font-bold text-white">
+              Our Full Product Range
+            </h3>
+            <p className="text-[#8A9BB5] text-sm font-body">
+              Mezzanine Floors · Cantilever Racks · Pallet Racking · Slotted Angle · Heavy Duty · Drum Storage
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+            {[
+              { src: '/images/products/mezzanine/mezzanine-1.jpg', label: 'Mezzanine Floor' },
+              { src: '/images/products/cantilever/cantilever-1.jpg', label: 'Cantilever Rack' },
+              { src: '/images/products/pallet/pallet-1.jpg', label: 'Pallet Racking' },
+              { src: '/images/products/slotted-angle/slotted-1.jpg', label: 'Slotted Angle' },
+              { src: '/images/products/heavy-duty/heavy-duty-1.jpg', label: 'Heavy Duty' },
+              { src: '/images/products/compactor/compactor-3.jpg', label: 'Mobile Compactor' },
+            ].map((item) => (
+              <Link
+                key={item.label}
+                href="/products/compactors-racking"
+                className="group relative aspect-square rounded-xl overflow-hidden bg-[#151B25] border border-white/8 hover:border-orange-500/30 transition-all"
+              >
+                <Image
+                  src={item.src}
+                  alt={item.label}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 17vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0D14]/80 to-transparent" />
+                <div className="absolute bottom-2 left-2 right-2">
+                  <span className="text-[10px] font-mono text-white/90 uppercase tracking-wide font-medium">
+                    {item.label}
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
 
       </div>

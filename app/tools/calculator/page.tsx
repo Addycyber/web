@@ -23,7 +23,7 @@ export default function CalculatorPage() {
             Warehouse Space Reclaim Calculator
           </h1>
           <p className="font-sans text-zinc-400 text-base sm:text-lg">
-            Complete the 8 quick steps below to calculate your facility's floor space reclaim potential, annual rent savings, and recommended ASRS system.
+            Complete the 8 quick steps below to calculate your facility&apos;s floor space reclaim potential, annual rent savings, and recommended ASRS system.
           </p>
         </div>
 

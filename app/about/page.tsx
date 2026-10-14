@@ -1,8 +1,6 @@
-import Link from 'next'
 import { constructMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/config/site'
 import { Confirm } from '@/components/confirm/Confirm'
-import { Factory, ShieldCheck, Award, Users, MapPin } from 'lucide-react'
 
 export const metadata = constructMetadata({
   title: 'About Space Magnum Equipments Pvt. Ltd. — Pune ASRS Manufacturer',

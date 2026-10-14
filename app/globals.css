@@ -1,33 +1,44 @@
 @import "tailwindcss";
 
 /* ============================================================
-   SPACE MAGNUM DESIGN TOKENS
-   Concept: "Vertical Space" — precise, quiet, confident
+   SPACE MAGNUM DESIGN TOKENS — v2
+   Concept: "Industrial Precision" — bold, confident, premium
+   Fonts: Syne (headings) + DM Sans (body) + DM Mono (specs)
    ============================================================ */
 
 @theme {
-  /* --- Colour palette --- */
-  --color-ink-900: #0B1220;
-  --color-ink-800: #111D30;
-  --color-ink-700: #16233B;
-  --color-ink-600: #1E2F4D;
-  --color-ink-500: #2A4066;
+  /* --- Core Colour Palette --- */
+  --color-base-950: #0A0D14;
+  --color-base-900: #0F1319;
+  --color-base-800: #151B25;
+  --color-base-700: #1C2535;
+  --color-base-600: #243045;
+  --color-base-500: #2E3D58;
+
+  /* --- Steel/Neutral Tones --- */
+  --color-steel-500: #6B7FA0;
   --color-steel-400: #8A9BB5;
-  --color-steel-300: #C9D3E0;
-  --color-steel-200: #DDE4EE;
-  --color-steel-100: #EEF2F7;
-  --color-steel-50: #F7F9FC;
-  --color-signal: #FF6A1A;
-  --color-signal-glow: #FF9A5C;
-  --color-signal-dark: #CC5514;
-  --color-ok: #1FBF8F;
-  --color-ok-dark: #179970;
-  --color-white: #FFFFFF;
+  --color-steel-300: #B0BECE;
+  --color-steel-200: #CDD6E3;
+  --color-steel-100: #E4EBF3;
+  --color-steel-50:  #F2F6FA;
+
+  /* --- Signal/Accent — Amber-Orange --- */
+  --color-signal:      #F97316;
+  --color-signal-warm: #FBBF24;
+  --color-signal-dim:  #C2590A;
+  --color-signal-soft: rgba(249, 115, 22, 0.12);
+
+  /* --- Status colours --- */
+  --color-ok:      #10B981;
+  --color-ok-dim:  #059669;
+  --color-danger:  #EF4444;
+  --color-white:   #FFFFFF;
 
   /* --- Typography --- */
-  --font-heading: var(--font-space-grotesk), "Space Grotesk", system-ui, sans-serif;
-  --font-body: var(--font-inter), "Inter", system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), "JetBrains Mono", "Fira Code", monospace;
+  --font-heading: var(--font-syne),    "Syne",    system-ui, sans-serif;
+  --font-body:    var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
+  --font-mono:    var(--font-dm-mono), "DM Mono", "Fira Code", monospace;
 
   /* --- Spacing extensions --- */
   --spacing-18: 4.5rem;
@@ -35,15 +46,16 @@
   --spacing-128: 32rem;
 
   /* --- Border radius --- */
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-xl: 1.5rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 2rem;
 
   /* --- Shadows --- */
-  --shadow-signal: 0 0 24px 0 rgba(255, 106, 26, 0.35);
-  --shadow-card: 0 4px 32px 0 rgba(11, 18, 32, 0.18);
-  --shadow-glow: 0 0 48px 0 rgba(255, 106, 26, 0.15);
+  --shadow-signal:  0 0 32px 0 rgba(249, 115, 22, 0.30);
+  --shadow-card:    0 8px 40px 0 rgba(10, 13, 20, 0.50);
+  --shadow-glow:    0 0 60px 0 rgba(249, 115, 22, 0.12);
+  --shadow-image:   0 20px 60px 0 rgba(10, 13, 20, 0.70);
 
   /* --- Transitions --- */
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
@@ -66,13 +78,8 @@ html {
 
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -82,9 +89,9 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--color-white);
-  color: var(--color-ink-900);
-  line-height: 1.6;
+  background-color: var(--color-base-950);
+  color: var(--color-steel-200);
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -96,8 +103,9 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: #FFFFFF;
 }
 
 code, kbd, samp, pre {
@@ -123,7 +131,6 @@ code, kbd, samp, pre {
   text-decoration: none;
   transition: top 0.2s var(--ease-smooth);
 }
-
 .skip-to-content:focus {
   top: 0;
   outline: 2px solid #fff;
@@ -131,54 +138,20 @@ code, kbd, samp, pre {
 }
 
 /* ============================================================
-   ENGINEERING GRID DECORATION
-   (Pure CSS, no performance cost, purely decorative)
+   MESH GRADIENT DECORATION (no perf cost)
    ============================================================ */
 
-.grid-decoration {
-  position: relative;
-}
-
-.grid-decoration::before {
-  content: '';
-  position: absolute;
-  inset: 0;
+.mesh-bg {
   background-image:
-    linear-gradient(rgba(201, 211, 224, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 211, 224, 0.06) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249,115,22,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(16,185,129,0.04) 0%, transparent 50%);
 }
 
-/* ============================================================
-   MEASURE TICK MARKS (decorative motif)
-   ============================================================ */
-
-.tick-marks-v {
-  position: relative;
-}
-
-.tick-marks-v::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 1px;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--color-steel-300) 0px,
-    var(--color-steel-300) 1px,
-    transparent 1px,
-    transparent 8px,
-    var(--color-steel-200) 8px,
-    var(--color-steel-200) 9px,
-    transparent 9px,
-    transparent 40px
-  );
-  opacity: 0.4;
-  pointer-events: none;
+.grid-lines {
+  background-image:
+    linear-gradient(rgba(139,155,181,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,155,181,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
 }
 
 /* ============================================================
@@ -188,30 +161,17 @@ code, kbd, samp, pre {
 :focus-visible {
   outline: 2px solid var(--color-signal);
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 /* ============================================================
    SCROLLBAR STYLING (Webkit)
    ============================================================ */
 
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-steel-100);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--color-steel-300);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-signal);
-}
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--color-base-900); }
+::-webkit-scrollbar-thumb { background: var(--color-base-600); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--color-signal); }
 
 /* ============================================================
    SELECTION COLOUR
@@ -232,34 +192,75 @@ code, kbd, samp, pre {
 
 /* Signal gradient text */
 .text-gradient-signal {
-  background: linear-gradient(135deg, var(--color-signal) 0%, var(--color-signal-glow) 100%);
+  background: linear-gradient(135deg, var(--color-signal) 0%, var(--color-signal-warm) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* OK gradient text */
-.text-gradient-ok {
-  background: linear-gradient(135deg, var(--color-ok) 0%, #7FEAD1 100%);
+/* Premium gradient text */
+.text-gradient-premium {
+  background: linear-gradient(135deg, #fff 0%, var(--color-steel-300) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Dark surface base */
-.surface-dark {
-  background-color: var(--color-ink-900);
-  color: var(--color-white);
+/* Card surfaces */
+.card-dark {
+  background: var(--color-base-800);
+  border: 1px solid rgba(139,155,181,0.10);
+  border-radius: var(--radius-lg);
 }
 
-/* Light surface */
-.surface-light {
-  background-color: var(--color-white);
-  color: var(--color-ink-900);
+.card-glass {
+  background: rgba(21,27,37,0.70);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(139,155,181,0.12);
+  border-radius: var(--radius-lg);
 }
 
-/* Steel surface */
-.surface-steel {
-  background-color: var(--color-steel-100);
-  color: var(--color-ink-900);
+/* Pill badge */
+.pill-signal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 1rem;
+  background: var(--color-signal-soft);
+  border: 1px solid rgba(249,115,22,0.25);
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-signal);
+}
+
+/* Image overlays */
+.img-overlay-dark::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 30%, rgba(10,13,20,0.85) 100%);
+  pointer-events: none;
+}
+
+/* Hover lift */
+.hover-lift {
+  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-smooth);
+}
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Number counter large */
+.stat-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
 }

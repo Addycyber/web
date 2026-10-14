@@ -1,8 +1,6 @@
-import Link from 'next'
 import { constructMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/config/site'
-import { Confirm } from '@/components/confirm/Confirm'
-import { Phone, Mail, MapPin, MessageSquare, Clock } from 'lucide-react'
+import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react'
 
 export const metadata = constructMetadata({
   title: 'Contact Space Magnum Equipments — Pune ASRS Plant',

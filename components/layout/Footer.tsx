@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { SITE_CONFIG } from '@/config/site'
 import { PRODUCTS } from '@/config/products'
 import { INDUSTRIES } from '@/config/industries'
@@ -9,22 +10,23 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-zinc-950 text-zinc-400 border-t border-zinc-800/80 pt-16 pb-24 lg:pb-12">
+    <footer className="bg-[#0A0D14] text-[#6B7FA0] border-t border-white/6 pt-16 pb-24 lg:pb-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-zinc-900">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/5">
           
           {/* Col 1: Company Profile & Location */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded bg-orange-500 flex items-center justify-center font-bold text-zinc-950 text-lg font-mono">
-                SM
-              </div>
-              <span className="font-mono text-lg font-bold text-zinc-100 tracking-tight uppercase">
-                {SITE_CONFIG.legalName}
-              </span>
+              <Image
+                src="/SMlogo.png"
+                alt="Space Magnum Equipments Pvt. Ltd."
+                width={120}
+                height={40}
+                className="h-10 w-auto object-contain"
+              />
             </div>
             
-            <p className="text-sm text-zinc-400 max-w-sm leading-relaxed">
+            <p className="text-sm text-[#6B7FA0] max-w-sm leading-relaxed font-body">
               {SITE_CONFIG.positioningLine}
             </p>
 
@@ -47,13 +49,13 @@ export function Footer() {
 
             {/* Certifications Badge */}
             <div className="pt-4 flex items-center gap-3">
-              <div className="px-3 py-2 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center gap-2">
+              <div className="px-4 py-3 rounded-xl bg-[#151B25] border border-white/8 flex items-center gap-3">
                 <Award className="w-5 h-5 text-amber-500" />
                 <div>
-                  <div className="text-[11px] font-mono text-zinc-200 font-semibold uppercase">
+                  <div className="text-[11px] font-mono text-white font-semibold uppercase">
                     TÜV Austria Certified
                   </div>
-                  <div className="text-[10px] text-zinc-500">ISO 9001:2015 Management</div>
+                  <div className="text-[10px] text-[#6B7FA0]">ISO 9001:2015 Management</div>
                 </div>
               </div>
               <Confirm id="TUV_SCOPE_CERT" label="Cert Number & Scope" compact />
@@ -62,7 +64,7 @@ export function Footer() {
 
           {/* Col 2: Product Systems */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-orange-500 font-bold">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-orange-400 font-medium">
               ASRS Systems
             </h3>
             <ul className="space-y-2 text-sm">
@@ -70,7 +72,7 @@ export function Footer() {
                 <li key={p.id}>
                   <Link 
                     href={`/products/${p.id}`}
-                    className="hover:text-orange-400 transition-colors"
+                    className="hover:text-orange-400 transition-colors text-[#6B7FA0] hover:text-orange-400"
                   >
                     {p.name}
                   </Link>
@@ -86,7 +88,7 @@ export function Footer() {
 
           {/* Col 3: Industry Applications */}
           <div className="space-y-3">
-            <h3 className="text-xs font-mono uppercase tracking-wider text-orange-500 font-bold">
+            <h3 className="text-xs font-mono uppercase tracking-widest text-orange-400 font-medium">
               Industries
             </h3>
             <ul className="space-y-2 text-sm">
@@ -145,7 +147,7 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#6B7FA0] font-mono">
           <div>
             &copy; {currentYear} {SITE_CONFIG.legalName}. All rights reserved. Manufactured in Pune, Maharashtra, India.
           </div>
