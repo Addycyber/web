@@ -1,6 +1,6 @@
 'use client'
 
-import { useSyncExternalStore } from 'react'
+import * as React from 'react'
 import { ShieldAlert, Check, X } from 'lucide-react'
 
 function subscribe(callback: () => void) {
@@ -21,7 +21,7 @@ function getServerSnapshot(): string | null {
 }
 
 export function CookieBanner() {
-  const consent = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
+  const consent = React.useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)
   const showBanner = consent === null
 
   const handleAccept = () => {
@@ -37,30 +37,32 @@ export function CookieBanner() {
   if (!showBanner) return null
 
   return (
-    <div className="fixed bottom-20 lg:bottom-6 right-4 left-4 lg:left-auto lg:max-w-md z-50 bg-zinc-900/95 border border-zinc-800 p-4 rounded-xl shadow-2xl backdrop-blur-md animate-in slide-in-from-bottom-5 duration-300">
+    <div className="fixed bottom-24 lg:bottom-6 right-4 left-4 lg:left-auto lg:max-w-md z-50 bg-[var(--bg)]/95 border border-[var(--border-strong)] p-4 rounded-xl shadow-2xl backdrop-blur-md animate-in slide-in-from-bottom-5 duration-300 transition-colors">
       <div className="flex items-start gap-3">
-        <ShieldAlert className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+        <ShieldAlert className="w-5 h-5 text-[var(--accent)] shrink-0 mt-0.5" />
         <div className="space-y-1">
-          <div className="text-xs font-mono uppercase font-bold text-zinc-200 tracking-wider">
-            Privacy & Analytics Notice
+          <div className="text-xs font-mono uppercase font-bold text-[var(--text)] tracking-wider">
+            Privacy &amp; Analytics Notice
           </div>
-          <p className="text-xs text-zinc-400 leading-relaxed">
+          <p className="text-xs text-[var(--text-secondary)] leading-relaxed font-body">
             We use essential cookies to measure site performance and deliver custom engineering quotes (compliant with India DPDP Act). No marketing tracking is sold to third parties.
           </p>
           <div className="pt-2 flex items-center gap-2">
             <button
+              type="button"
               onClick={handleAccept}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-zinc-950 bg-orange-500 hover:bg-orange-400 rounded-md transition-colors shadow"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-white bg-[var(--accent)] hover:bg-[var(--accent-hover)] rounded-md transition-colors shadow-xs"
             >
               <Check className="w-3.5 h-3.5" />
               Accept
             </button>
             <button
+              type="button"
               onClick={handleDecline}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-zinc-400 hover:text-zinc-200 bg-zinc-800 hover:bg-zinc-700 rounded-md transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text)] bg-[var(--bg-subtle)] border border-[var(--border)] rounded-md transition-colors"
             >
               <X className="w-3.5 h-3.5" />
-              Essential Only
+              Decline
             </button>
           </div>
         </div>

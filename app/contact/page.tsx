@@ -1,6 +1,7 @@
 import { constructMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/config/site'
-import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react'
+import { Phone, Mail, MapPin } from 'lucide-react'
+import { SiWhatsapp } from '@icons-pack/react-simple-icons'
 
 export const metadata = constructMetadata({
   title: 'Contact Space Magnum Equipments — Pune ASRS Plant',
@@ -10,63 +11,75 @@ export const metadata = constructMetadata({
 })
 
 export default function ContactPage() {
-  const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(SITE_CONFIG.whatsappDefaultMessage)}`
+  const cleanWhatsappNumber = SITE_CONFIG.whatsappNumber.replace(/[^0-9]/g, '')
+  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(
+    SITE_CONFIG.whatsappDefaultMessage
+  )}`
 
   return (
-    <div className="py-16 bg-zinc-950 min-h-screen text-zinc-100">
+    <div className="py-12 md:py-16 bg-[var(--bg)] min-h-screen text-[var(--text)] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         
         {/* Header */}
         <div className="max-w-3xl space-y-4">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 font-mono text-xs font-bold uppercase tracking-wider">
-            <span>Direct Plant & Sales Contact</span>
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-mono text-xs font-bold uppercase tracking-wider">
+            <Phone className="w-3.5 h-3.5" />
+            <span>Direct Plant &amp; Sales Contact</span>
           </div>
-          <h1 className="font-mono text-4xl sm:text-5xl font-extrabold tracking-tight">
+          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--text)]">
             Contact Space Magnum
           </h1>
-          <p className="font-sans text-zinc-400 text-lg leading-relaxed">
+          <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-body">
             Reach our application engineering desk directly for site survey requests, CAD layout options, or technical service enquiries.
           </p>
         </div>
 
         {/* Contact Info Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           
-          <div className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-3">
-            <MapPin className="w-6 h-6 text-orange-500" />
-            <h3 className="font-mono text-lg font-bold text-zinc-100">Registered Office & Plant</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-lg bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center">
+              <MapPin className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold text-[var(--text)]">Registered Office &amp; Plant</h3>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed">
               {SITE_CONFIG.legalName}<br />
               {SITE_CONFIG.address.street}, {SITE_CONFIG.address.city} – {SITE_CONFIG.address.pincode}, {SITE_CONFIG.address.state}, {SITE_CONFIG.address.country}
             </p>
           </div>
 
-          <div className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-3">
-            <Phone className="w-6 h-6 text-orange-500" />
-            <h3 className="font-mono text-lg font-bold text-zinc-100">Phone Enquiries</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed font-mono">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-lg bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center">
+              <Phone className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold text-[var(--text)]">Phone Enquiries</h3>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed font-mono">
               Primary: {SITE_CONFIG.phonePrimary}<br />
               Secondary: {SITE_CONFIG.phoneSecondary}<br />
               Fax: {SITE_CONFIG.fax}
             </p>
           </div>
 
-          <div className="p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-3">
-            <Mail className="w-6 h-6 text-orange-500" />
-            <h3 className="font-mono text-lg font-bold text-zinc-100">Digital Desk</h3>
-            <p className="text-xs text-zinc-400 leading-relaxed font-mono">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-3 shadow-xs">
+            <div className="w-10 h-10 rounded-lg bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center">
+              <Mail className="w-5 h-5" />
+            </div>
+            <h3 className="text-lg font-bold text-[var(--text)]">Digital Desk</h3>
+            <p className="text-xs sm:text-sm text-[var(--text-secondary)] leading-relaxed font-mono">
               Email: {SITE_CONFIG.emailSales}<br />
               WhatsApp: +{SITE_CONFIG.whatsappNumber}
             </p>
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 hover:underline pt-1"
-            >
-              <MessageSquare className="w-3.5 h-3.5" />
-              Start WhatsApp Chat &rarr;
-            </a>
+            <div className="pt-2">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-xs font-semibold text-[#25D366] hover:underline"
+              >
+                <SiWhatsapp size={14} />
+                <span>Open WhatsApp Chat &rarr;</span>
+              </a>
+            </div>
           </div>
 
         </div>

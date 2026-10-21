@@ -1,65 +1,108 @@
 @import "tailwindcss";
 
 /* ============================================================
-   SPACE MAGNUM DESIGN TOKENS — v2
-   Concept: "Industrial Precision" — bold, confident, premium
-   Fonts: Syne (headings) + DM Sans (body) + DM Mono (specs)
+   SPACE MAGNUM DESIGN SYSTEM — v3
+   Concept: "Precision Industrial Engineering"
+   Default: Light-First (Professional, Restrained)
+   Secondary: Dark Theme (Fully Supported via data-theme="dark")
    ============================================================ */
 
+:root {
+  /* --- Light Theme Tokens (Default) --- */
+  --bg: #FFFFFF;
+  --bg-subtle: #F5F7FA;
+  --bg-muted: #E9EEF4;
+  --border: #D8DFE8;
+  --border-strong: #B9C4D2;
+  --text: #0F1B2D;
+  --text-secondary: #44546A;
+  --text-muted: #66758A;
+  --brand: #0B2A4A;
+  --brand-hover: #123A63;
+  --brand-text: #FFFFFF;
+  --accent: #C2410C;
+  --accent-hover: #9A3412;
+  --accent-soft: #FDF0E9;
+  --accent-text: #FFFFFF;
+  --info: #1D5FA8;
+  --success: #17803D;
+  --warning: #A15C07;
+  --danger: #B42318;
+  --focus-ring: #1D5FA8;
+
+  /* Shadows (Soft, Cool, Never Harsh Black) */
+  --shadow-sm: 0 1px 2px rgba(15, 27, 45, 0.05);
+  --shadow-md: 0 4px 12px rgba(15, 27, 45, 0.06);
+  --shadow-lg: 0 8px 24px rgba(15, 27, 45, 0.08);
+  --shadow-card: 0 1px 3px rgba(15, 27, 45, 0.06), 0 8px 24px rgba(15, 27, 45, 0.04);
+  --shadow-accent: 0 4px 16px rgba(194, 65, 12, 0.22);
+}
+
+[data-theme="dark"] {
+  /* --- Dark Theme Tokens --- */
+  --bg: #0B1220;
+  --bg-subtle: #111B2E;
+  --bg-muted: #18253D;
+  --border: #26364F;
+  --border-strong: #3A4D6B;
+  --text: #EAF0F7;
+  --text-secondary: #B3C0D2;
+  --text-muted: #8A99AF;
+  --brand: #9CC2F0;
+  --brand-hover: #B8D6F7;
+  --brand-text: #0B1220;
+  --accent: #FF8A4C;
+  --accent-hover: #FFA36F;
+  --accent-soft: #2A1A10;
+  --accent-text: #1A0B03;
+  --info: #3B82F6;
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --focus-ring: #7DB3F5;
+
+  /* Shadows for dark mode */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.55);
+  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+  --shadow-accent: 0 4px 20px rgba(255, 138, 76, 0.25);
+}
+
 @theme {
-  /* --- Core Colour Palette --- */
-  --color-base-950: #0A0D14;
-  --color-base-900: #0F1319;
-  --color-base-800: #151B25;
-  --color-base-700: #1C2535;
-  --color-base-600: #243045;
-  --color-base-500: #2E3D58;
+  /* Semantic Color Aliases for Tailwind */
+  --color-bg: var(--bg);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-muted: var(--bg-muted);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-text: var(--brand-text);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-text: var(--accent-text);
+  --color-info: var(--info);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --color-focus: var(--focus-ring);
 
-  /* --- Steel/Neutral Tones --- */
-  --color-steel-500: #6B7FA0;
-  --color-steel-400: #8A9BB5;
-  --color-steel-300: #B0BECE;
-  --color-steel-200: #CDD6E3;
-  --color-steel-100: #E4EBF3;
-  --color-steel-50:  #F2F6FA;
+  /* Fonts mapped to next/font variables */
+  --font-heading: var(--font-heading), "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-body), "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-mono), "IBM Plex Mono", ui-monospace, Menlo, monospace;
 
-  /* --- Signal/Accent — Amber-Orange --- */
-  --color-signal:      #F97316;
-  --color-signal-warm: #FBBF24;
-  --color-signal-dim:  #C2590A;
-  --color-signal-soft: rgba(249, 115, 22, 0.12);
-
-  /* --- Status colours --- */
-  --color-ok:      #10B981;
-  --color-ok-dim:  #059669;
-  --color-danger:  #EF4444;
-  --color-white:   #FFFFFF;
-
-  /* --- Typography --- */
-  --font-heading: var(--font-syne),    "Syne",    system-ui, sans-serif;
-  --font-body:    var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
-  --font-mono:    var(--font-dm-mono), "DM Mono", "Fira Code", monospace;
-
-  /* --- Spacing extensions --- */
-  --spacing-18: 4.5rem;
-  --spacing-22: 5.5rem;
-  --spacing-128: 32rem;
-
-  /* --- Border radius --- */
+  /* Radii */
   --radius-sm: 0.375rem;
-  --radius-md: 0.75rem;
-  --radius-lg: 1.25rem;
-  --radius-xl: 2rem;
-
-  /* --- Shadows --- */
-  --shadow-signal:  0 0 32px 0 rgba(249, 115, 22, 0.30);
-  --shadow-card:    0 8px 40px 0 rgba(10, 13, 20, 0.50);
-  --shadow-glow:    0 0 60px 0 rgba(249, 115, 22, 0.12);
-  --shadow-image:   0 20px 60px 0 rgba(10, 13, 20, 0.70);
-
-  /* --- Transitions --- */
-  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
-  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
 }
 
 /* ============================================================
@@ -76,9 +119,43 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.15;
+}
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  letter-spacing: -0.015em;
+}
+
+/* Monospace text & numbers */
+code, kbd, samp, pre, .font-mono, .tabular-nums {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
 /* Respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+  html {
+    scroll-behavior: auto;
+  }
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
@@ -87,180 +164,151 @@ html {
   }
 }
 
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-base-950);
-  color: var(--color-steel-200);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Accessibility Focus Ring (WCAG 2.2 AA) */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-/* ============================================================
-   TYPOGRAPHY BASE
-   ============================================================ */
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  line-height: 1.12;
-  letter-spacing: -0.025em;
-  color: #FFFFFF;
-}
-
-code, kbd, samp, pre {
-  font-family: var(--font-mono);
-}
-
-/* ============================================================
-   SKIP TO CONTENT (ACCESSIBILITY)
-   ============================================================ */
-
+/* Skip link */
 .skip-to-content {
   position: absolute;
   top: -100%;
   left: 1rem;
   z-index: 9999;
-  padding: 0.75rem 1.5rem;
-  background: var(--color-signal);
-  color: #fff;
-  font-family: var(--font-body);
+  padding: 0.625rem 1.25rem;
+  background: var(--accent);
+  color: #FFFFFF;
   font-weight: 600;
-  font-size: 0.875rem;
-  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  border-radius: 0 0 6px 6px;
   text-decoration: none;
-  transition: top 0.2s var(--ease-smooth);
+  transition: top 150ms ease;
 }
 .skip-to-content:focus {
   top: 0;
-  outline: 2px solid #fff;
+  outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
-/* ============================================================
-   MESH GRADIENT DECORATION (no perf cost)
-   ============================================================ */
-
-.mesh-bg {
+/* Engineering Drawing Accents */
+.eng-grid {
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(249,115,22,0.07) 0%, transparent 60%),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(16,185,129,0.04) 0%, transparent 50%);
+    linear-gradient(to right, var(--border) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border) 1px, transparent 1px);
+  background-size: 32px 32px;
+  opacity: 0.45;
 }
 
-.grid-lines {
-  background-image:
-    linear-gradient(rgba(139,155,181,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139,155,181,0.04) 1px, transparent 1px);
-  background-size: 48px 48px;
+.eng-border {
+  border: 1px solid var(--border);
 }
 
-/* ============================================================
-   FOCUS STYLES (WCAG 2.2 AA)
-   ============================================================ */
+.eng-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
 
-:focus-visible {
-  outline: 2px solid var(--color-signal);
-  outline-offset: 3px;
+/* Section Rhythm Utilities */
+.section-white {
+  background-color: var(--bg);
+}
+
+.section-subtle {
+  background-color: var(--bg-subtle);
+}
+
+.section-brand {
+  background-color: var(--brand);
+  color: #FFFFFF;
+}
+
+/* Subtle card styling */
+.sm-card {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.sm-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-md);
+}
+
+.customer-marquee {
+  overflow: hidden;
+}
+
+.customer-marquee:hover .customer-marquee-track,
+.customer-marquee:focus-within .customer-marquee-track {
+  animation-play-state: paused;
+}
+
+.customer-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1rem;
+  animation: customer-marquee 90s linear infinite;
+}
+
+.customer-marquee-set {
+  display: flex;
+  flex: 0 0 auto;
+  gap: 1rem;
+}
+
+@keyframes customer-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .customer-marquee {
+    overflow: visible;
+  }
+
+  .customer-marquee-track {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    animation: none;
+  }
+
+  .customer-marquee-set {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .customer-marquee-duplicate {
+    display: none;
+  }
+}
+
+/* Selection Color */
+::selection {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-subtle);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
   border-radius: 3px;
 }
-
-/* ============================================================
-   SCROLLBAR STYLING (Webkit)
-   ============================================================ */
-
-::-webkit-scrollbar { width: 5px; height: 5px; }
-::-webkit-scrollbar-track { background: var(--color-base-900); }
-::-webkit-scrollbar-thumb { background: var(--color-base-600); border-radius: 3px; }
-::-webkit-scrollbar-thumb:hover { background: var(--color-signal); }
-
-/* ============================================================
-   SELECTION COLOUR
-   ============================================================ */
-
-::selection {
-  background: var(--color-signal);
-  color: #fff;
-}
-
-/* ============================================================
-   UTILITY CLASSES
-   ============================================================ */
-
-.font-heading { font-family: var(--font-heading); }
-.font-body    { font-family: var(--font-body); }
-.font-mono    { font-family: var(--font-mono); }
-
-/* Signal gradient text */
-.text-gradient-signal {
-  background: linear-gradient(135deg, var(--color-signal) 0%, var(--color-signal-warm) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Premium gradient text */
-.text-gradient-premium {
-  background: linear-gradient(135deg, #fff 0%, var(--color-steel-300) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Card surfaces */
-.card-dark {
-  background: var(--color-base-800);
-  border: 1px solid rgba(139,155,181,0.10);
-  border-radius: var(--radius-lg);
-}
-
-.card-glass {
-  background: rgba(21,27,37,0.70);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(139,155,181,0.12);
-  border-radius: var(--radius-lg);
-}
-
-/* Pill badge */
-.pill-signal {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.375rem 1rem;
-  background: var(--color-signal-soft);
-  border: 1px solid rgba(249,115,22,0.25);
-  border-radius: 9999px;
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-signal);
-}
-
-/* Image overlays */
-.img-overlay-dark::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, transparent 30%, rgba(10,13,20,0.85) 100%);
-  pointer-events: none;
-}
-
-/* Hover lift */
-.hover-lift {
-  transition: transform 0.3s var(--ease-spring), box-shadow 0.3s var(--ease-smooth);
-}
-.hover-lift:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-card);
-}
-
-/* Number counter large */
-.stat-number {
-  font-family: var(--font-heading);
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 800;
-  line-height: 1;
-  letter-spacing: -0.04em;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
 }

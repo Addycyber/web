@@ -1,22 +1,27 @@
 'use client'
 
+import * as React from 'react'
 import Link from 'next/link'
 import { SITE_CONFIG } from '@/config/site'
-import { Phone, MessageSquare, ArrowRight } from 'lucide-react'
+import { Phone, ArrowRight } from 'lucide-react'
+import { SiWhatsapp } from '@icons-pack/react-simple-icons'
 
 export function MobileActionBar() {
-  const whatsappUrl = `https://wa.me/${SITE_CONFIG.whatsappNumber.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(SITE_CONFIG.whatsappDefaultMessage)}`
+  const cleanWhatsappNumber = SITE_CONFIG.whatsappNumber.replace(/[^0-9]/g, '')
+  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(
+    SITE_CONFIG.whatsappDefaultMessage
+  )}`
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-zinc-950/95 backdrop-blur-xl border-t border-zinc-800 p-2.5 px-4 shadow-2xl shadow-black">
+    <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[var(--bg)]/95 backdrop-blur-xl border-t border-[var(--border)] p-2 px-3 shadow-xl transition-colors">
       <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
         
         {/* Direct Call */}
         <a
           href={`tel:${SITE_CONFIG.phonePrimary}`}
-          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-zinc-900 border border-zinc-800 text-zinc-200 active:scale-95 transition-transform"
+          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-[var(--bg-subtle)] border border-[var(--border)] text-[var(--text)] active:scale-95 transition-all"
         >
-          <Phone className="w-4 h-4 text-orange-400 mb-0.5" />
+          <Phone className="w-4 h-4 text-[var(--accent)] mb-0.5" strokeWidth={1.75} />
           <span className="text-[10px] font-mono uppercase font-semibold">Call Sales</span>
         </a>
 
@@ -25,19 +30,19 @@ export function MobileActionBar() {
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-emerald-950/60 border border-emerald-800/60 text-emerald-300 active:scale-95 transition-transform"
+          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] dark:text-[#25D366] active:scale-95 transition-all font-semibold"
         >
-          <MessageSquare className="w-4 h-4 text-emerald-400 mb-0.5" />
+          <SiWhatsapp size={16} className="mb-0.5" />
           <span className="text-[10px] font-mono uppercase font-semibold">WhatsApp</span>
         </a>
 
         {/* Get Quote */}
         <Link
           href="/get-a-quote"
-          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-gradient-to-r from-orange-500 to-amber-500 text-zinc-950 font-bold active:scale-95 transition-transform shadow-lg shadow-orange-500/20"
+          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-bold active:scale-95 transition-all shadow-sm"
         >
-          <ArrowRight className="w-4 h-4 text-zinc-950 mb-0.5" />
-          <span className="text-[10px] font-mono uppercase font-black">Get Quote</span>
+          <ArrowRight className="w-4 h-4 text-white mb-0.5" strokeWidth={2} />
+          <span className="text-[10px] font-mono uppercase font-bold tracking-tight">Get Quote</span>
         </Link>
 
       </div>

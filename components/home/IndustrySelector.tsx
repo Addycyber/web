@@ -1,46 +1,59 @@
 'use client'
 
-import { useState } from 'react'
+import * as React from 'react'
 import Link from 'next/link'
 import { INDUSTRIES, IndustryId } from '@/config/industries'
-import { ArrowRight, CheckCircle, Factory, ShieldAlert, Zap, Truck, Beaker } from 'lucide-react'
+import { ArrowRight, CheckCircle2, Factory, Car, Pill, FlaskConical, Truck, Cpu } from 'lucide-react'
+
+const INDUSTRY_ICONS: Record<string, React.ComponentType<{ className?: string }>> = {
+  automotive: Car,
+  pharma: Pill,
+  chemicals: FlaskConical,
+  logistics: Truck,
+  electronics: Cpu,
+}
 
 export function IndustrySelector() {
-  const [selectedId, setSelectedId] = useState<IndustryId>('automotive')
+  const [selectedId, setSelectedId] = React.useState<IndustryId>('automotive')
 
-  const currentIndustry = INDUSTRIES.find((i) => i.id === selectedId) || INDUSTRIES[0]
+  const currentIndustry = INDUSTRIES.find(i => i.id === selectedId) || INDUSTRIES[0]
+  const CurrentIcon = INDUSTRY_ICONS[currentIndustry.id] || Factory
 
   return (
-    <section className="py-24 bg-zinc-900/40 border-b border-zinc-800/80">
+    <section className="py-20 md:py-24 bg-[var(--bg)] border-b border-[var(--border)] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 border border-orange-500/20 text-orange-400 font-mono text-xs font-bold uppercase tracking-wider">
+        <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-mono text-xs font-bold uppercase tracking-wider">
             <span>Tailored Industrial Storage</span>
           </div>
-          <h2 className="font-mono text-3xl sm:text-4xl font-extrabold text-zinc-100 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text)] tracking-tight">
             Solutions Built for Your Sector
           </h2>
-          <p className="font-sans text-zinc-400 text-base">
+          <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-body">
             From high-speed spare parts picking in Automotive to batch-controlled cleanroom storage in Pharma.
           </p>
         </div>
 
         {/* Industry Selector Chips */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {INDUSTRIES.map((ind) => {
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10">
+          {INDUSTRIES.map(ind => {
             const isActive = ind.id === selectedId
+            const Icon = INDUSTRY_ICONS[ind.id] || Factory
+
             return (
               <button
                 key={ind.id}
+                type="button"
                 onClick={() => setSelectedId(ind.id)}
-                className={`px-5 py-3 rounded-xl font-mono text-xs font-bold transition-all flex items-center gap-2.5 ${
+                className={`px-4 sm:px-5 py-2.5 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
                   isActive
-                    ? 'bg-gradient-to-r from-orange-500 to-amber-500 text-zinc-950 shadow-lg shadow-orange-500/20 scale-105'
-                    : 'bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-800'
+                    ? 'bg-[var(--accent)] text-white shadow-sm'
+                    : 'bg-[var(--bg-subtle)] text-[var(--text-secondary)] border border-[var(--border)] hover:border-[var(--border-strong)] hover:text-[var(--text)]'
                 }`}
               >
+                <Icon className="w-4 h-4 shrink-0" />
                 <span>{ind.name}</span>
               </button>
             )
@@ -48,71 +61,59 @@ export function IndustrySelector() {
         </div>
 
         {/* Selected Industry Detail Card */}
-        <div className="bg-zinc-950 border border-zinc-800 rounded-2xl p-6 sm:p-10 shadow-2xl">
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] rounded-2xl p-6 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-8 space-y-6">
               <div className="space-y-2">
-                <span className="font-mono text-xs text-orange-400 font-bold uppercase tracking-wider">
-                  {currentIndustry.name} Solutions
+                <span className="font-mono text-xs text-[var(--accent)] font-bold uppercase tracking-wider">
+                  {currentIndustry.name} Engineering Focus
                 </span>
-                <h3 className="font-mono text-2xl font-bold text-zinc-100">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[var(--text)]">
                   {currentIndustry.headline}
                 </h3>
-                <p className="text-sm text-zinc-400 leading-relaxed">
+                <p className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed font-body">
                   {currentIndustry.description}
                 </p>
               </div>
 
-              {/* Pain Points Solved */}
-              <div className="space-y-3 pt-2">
-                <span className="font-mono text-xs text-zinc-300 font-bold uppercase block">
-                  Key Challenges Solved:
-                </span>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-zinc-300">
-                  {currentIndustry.painPoints.map((point, i) => (
-                    <div key={i} className="flex items-center gap-2 bg-zinc-900 p-2.5 rounded-lg border border-zinc-800">
-                      <CheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
-                      <span>{point}</span>
-                    </div>
-                  ))}
-                </div>
+              {/* Key Pain Points Solved */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                {currentIndustry.painPoints.map((point, idx) => (
+                  <div key={idx} className="flex items-start gap-2.5 text-xs text-[var(--text)]">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
+                    <span className="leading-relaxed">{point}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="pt-2">
+                <Link
+                  href={`/industries/${currentIndustry.id}`}
+                  className="inline-flex items-center gap-2 text-sm font-bold text-[var(--accent)] hover:text-[var(--accent-hover)] transition-colors group"
+                >
+                  <span>Explore {currentIndustry.name} Storage Systems</span>
+                  <ArrowRight className="w-4 h-4 transition-transform motion-safe:group-hover:translate-x-1" />
+                </Link>
               </div>
             </div>
 
-            {/* Recommended System Card */}
-            <div className="lg:col-span-5 bg-zinc-900 border border-zinc-800 p-6 rounded-xl space-y-4">
-              <div className="text-xs font-mono uppercase text-zinc-400">
-                Recommended ASRS Configuration
+            {/* Right Mini Spec Tile */}
+            <div className="lg:col-span-4 p-6 rounded-xl border border-[var(--border)] bg-[var(--bg)] space-y-4">
+              <div className="w-12 h-12 rounded-xl bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center">
+                <CurrentIcon className="w-6 h-6" />
               </div>
-
-              <div className="p-4 rounded-lg bg-zinc-950 border border-zinc-800 space-y-2">
-                <div className="text-base font-mono font-bold text-orange-400">
-                  {currentIndustry.recommendedProduct}
-                </div>
-                <p className="text-xs text-zinc-400">
-                  Optimized for high-density storage and rapid retrieval in {currentIndustry.name} facilities.
-                </p>
-              </div>
-
-              <div className="text-xs font-mono text-zinc-400 space-y-1">
-                <div className="flex justify-between">
-                  <span>Space Reclaim Potential:</span>
-                  <span className="text-emerald-400 font-bold">Up to 85%</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Pick Accuracy:</span>
-                  <span className="text-emerald-400 font-bold">99.9%</span>
+              <div>
+                <span className="font-mono text-[11px] font-bold text-[var(--text-muted)] uppercase tracking-wider">
+                  Recommended System
+                </span>
+                <div className="text-base font-bold text-[var(--text)] mt-0.5">
+                  {currentIndustry.recommendedProducts[0]}
                 </div>
               </div>
-
-              <Link
-                href={`/industries/${currentIndustry.id}`}
-                className="w-full py-3 px-4 rounded-lg bg-orange-500 hover:bg-orange-400 text-zinc-950 font-mono text-xs font-bold flex items-center justify-center gap-2 transition-colors"
-              >
-                <span>Read Full {currentIndustry.name} Case Breakdown</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+              <div className="pt-2 border-t border-[var(--border)] text-xs text-[var(--text-secondary)]">
+                Configured with sector-specific containment, tray division, and industrial WMS protocol connectivity.
+              </div>
             </div>
 
           </div>

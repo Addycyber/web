@@ -1,0 +1,3350 @@
+[
+  {
+    "id": "asrs_1",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "VID-20160702-WA0008.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_asrs_1.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_2",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "VID-20160702-WA0008.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_asrs_2.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_3",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "sasewadi asrs 2.jpg",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBQCdASoYABIAPzmOvFYvKiYjsBgIAeAnCWwAsR+WrpQIpro4d6V+wqp9RVCnUJwAAOyoUVFyf0PHCS9RFUc/qB9/kAlTjNE7KUSB52jX6TkqsiO7sy8kOXJvKxqkSnzTVZMNA4W18x7E6KBN3CTPx09a2puKWZXfJUTXeb8ZGAAA",
+    "src": "/gallery/img_asrs_3_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_3_480w.webp",
+        "960": "/gallery/img_asrs_3_960w.webp",
+        "1600": "/gallery/img_asrs_3_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_3_480w.avif",
+        "960": "/gallery/img_asrs_3_960w.avif",
+        "1600": "/gallery/img_asrs_3_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_4",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "sasewadi asrs 1.jpg",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYABIAPzmOuVWvKiWksBgIAeAnCWMAv+wLuL2H5iAubxwrvDX9AADaFJse/A4tJjLgZBf+mXQkIvF/Ib3bz0BK2NIxL3RccV1HkPxCk0LUVWMdvQpey32t418a8FBkWAAAAA==",
+    "src": "/gallery/img_asrs_4_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_4_480w.webp",
+        "960": "/gallery/img_asrs_4_960w.webp",
+        "1600": "/gallery/img_asrs_4_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_4_480w.avif",
+        "960": "/gallery/img_asrs_4_960w.avif",
+        "1600": "/gallery/img_asrs_4_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_5",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "sasewadi asrs 4.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAACwBQCdASoYACAAPzmMulYvKSWjqA1R4CcJagCdL2uGavM0ZL2IeXeOqJsPv5Cu7nojbmOa8DAA+muKNsAMiHU9rW6wZLhTexy1+Ntf8UKkxjVP6+p6TGhJBWtjOSEoVmn+TM9udnxb+XT6i0n2Hys+TFGxUEQGnaSGU28QRnB2g2GdocTEoCsw2WxUzlxFu3m96CB8skSDR4CcOqT8YCu/SkPceWH4HEDwSmhjPwH1rvrK+LdDtMMAAAA=",
+    "src": "/gallery/img_asrs_5_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_5_480w.webp",
+        "960": "/gallery/img_asrs_5_960w.webp",
+        "1600": "/gallery/img_asrs_5_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_5_480w.avif",
+        "960": "/gallery/img_asrs_5_960w.avif",
+        "1600": "/gallery/img_asrs_5_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_6",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "asrs.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAABwBQCdASoYACAAPzmEu1cvJ6WjsBgIAeAnCWwAqPRpaOhs1CWgA0we/5avEW7NrlkUAJwAAP7LZRSgzmcsdqQAD3+1PsI77hdm/4N/r1pbzoUCsEQx0kmtG7bRXkO5+hVas/D4Ewd9x1U6eJRaFPaL4O7TowPLcHEY/NsnrGPaYnpsdsPz11vIX5yKWbTsx6yydWOjAAA=",
+    "src": "/gallery/img_asrs_6_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_6_480w.webp",
+        "960": "/gallery/img_asrs_6_960w.webp",
+        "1600": "/gallery/img_asrs_6_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_6_480w.avif",
+        "960": "/gallery/img_asrs_6_960w.avif",
+        "1600": "/gallery/img_asrs_6_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_7",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "sasewadi asrs 3.jpg",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoYABIAPzmKvFYvKSYjsBgIAeAnCWQAzBwQlncadMy343UrEm5tn3FT5EPAAP3MKjvYgUFP9NxcVqGUk37Tf+a9dXSEakDEr9kuRQp/czPGkeeU1iIISilBNMSrSU8zTrLZNBFTX/z45YZ6cPX80GQjLEl2zmLosjZDJ8L59wAAAA==",
+    "src": "/gallery/img_asrs_7_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_7_480w.webp",
+        "960": "/gallery/img_asrs_7_960w.webp",
+        "1600": "/gallery/img_asrs_7_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_7_480w.avif",
+        "960": "/gallery/img_asrs_7_960w.avif",
+        "1600": "/gallery/img_asrs_7_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_8",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "sasewadi asrs.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAABwBQCdASoYACAAPzmOvlevKaYjqAqp4CcJbAC/Z68FoiM8dlXv1UlqH7QPbWBYT/CibhAAAP6hyfEDnKH6Y3t2xf1ExrCwV4EEe9eUj3gVXYD4s3QuHD18SQVY9jZWiysfckjZtsLk1vcquLvHl2RHIs4Lml00gGTs25I+VGzV4lPiSaCg3K6Z5NQ6AAAA",
+    "src": "/gallery/img_asrs_8_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_8_480w.webp",
+        "960": "/gallery/img_asrs_8_960w.webp",
+        "1600": "/gallery/img_asrs_8_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_8_480w.avif",
+        "960": "/gallery/img_asrs_8_960w.avif",
+        "1600": "/gallery/img_asrs_8_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_9",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "goods lift.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAABQBQCdASoYACAAPzmQvVgvKaYjqAqp4CcJZgDBzDMc7hJZvGakOfDaj1jcHnLOIHqOGAAA9DFfkI1VSjWDQfS983z1Av3NOlkOHYV/AZuNC13886XH15/rqzTOixjuxHo3o41wXhnONKSxIRLbIKLaCumIwpAFa+v6do4S2dJdP9+WvV/l+oOXM/kVK1svV5ai4RSQrsr1i5kwAAA=",
+    "src": "/gallery/img_asrs_9_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_9_480w.webp",
+        "960": "/gallery/img_asrs_9_960w.webp",
+        "1600": "/gallery/img_asrs_9_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_9_480w.avif",
+        "960": "/gallery/img_asrs_9_960w.avif",
+        "1600": "/gallery/img_asrs_9_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_10",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "Photo0038.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRs4AAABXRUJQVlA4IMIAAACwBQCdASoYACAAPzmIuFOvKSUisAgB4CcJQBnhmTE/wFH90Nl45O8xRN2+K+eUDab/Xdeym1AA/j20MzmzsRbJFF07Fa0YE6vy9G9gRPR81zDRlddhvYtwRwDEV90hpPy1Tt+N0NHvLqokP8iO1OmgVMHXux0lDE3DVVOC+e2CW9oKPN3YUpt9TiX00aICGNyrqW5kv+FRWTSTH3N0eId4sRQegouwGDLzANuFyYNo2Ho/xZXhx8MRBhW1z83Pf8AAAA==",
+    "src": "/gallery/img_asrs_10_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_10_480w.webp",
+        "960": "/gallery/img_asrs_10_960w.webp",
+        "1600": "/gallery/img_asrs_10_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_10_480w.avif",
+        "960": "/gallery/img_asrs_10_960w.avif",
+        "1600": "/gallery/img_asrs_10_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_11",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "Mahindra 2.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRrgAAABXRUJQVlA4IKwAAACwBQCdASoYACAAPzmGuFOvKSUisAgB4CcJYwDC/JQAepdFRlCQF9y3N2BjtKA1GTCZUVKtt5AA/p1Xhg5hndnN1c2bhIh8eQRctkbA1tt4KAc3zg0jyAqEnwVVq3TyEPkhoYJsmQQ4xDlEQnvVKBMK5Gw++OgWsHAQzlNVeJMnGQWXtdIV2fhFp+jwuLKgVem1zF7kU0aGgRPb8lTbnK6HagAVC/VA6b3IrmAA",
+    "src": "/gallery/img_asrs_11_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_11_480w.webp",
+        "960": "/gallery/img_asrs_11_960w.webp",
+        "1600": "/gallery/img_asrs_11_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_11_480w.avif",
+        "960": "/gallery/img_asrs_11_960w.avif",
+        "1600": "/gallery/img_asrs_11_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_12",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "IMG_20160505_153121.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAAAQBQCdASoYACAAPzmGvFcvKCWjsBgIAeAnCWYAuxH/4LcMx7FW+EOhM1Lwky1BI1sAAP4jiWGoiFySOF0pMaQyrHGGCt8EBJXEZxK0ZwBR0DLEwDBvcAJ7xYfseC5G0ljvWhbqHK/23FFzDB/maYkFRKakmCQ3zHjbafDxhNFy0gSMaTC9mzJaRZYM+Wck3KY+z3CcbO/tsTjEOsoBVf70U9M5ORjjDKKk1kq9qJC9XmTniM9k/dgAAAA=",
+    "src": "/gallery/img_asrs_12_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_12_480w.webp",
+        "960": "/gallery/img_asrs_12_960w.webp",
+        "1600": "/gallery/img_asrs_12_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_12_480w.avif",
+        "960": "/gallery/img_asrs_12_960w.avif",
+        "1600": "/gallery/img_asrs_12_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_13",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "Photo0035.jpg",
+    "type": "image",
+    "width": 2048,
+    "height": 1536,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoYABIAPzmQu1gvKaWjqAqp4CcJQBhQARUTPD/XlJSsJIyo32KBOAD+uf4uks3UrjiXAnHkXm/k08GERGhpB3qod7wCijltkNTA7Yw4r1D8ezLMkZR4POtF30v7TDP+efTXPVPE+3tgzyuyMJ1H1cGLWLLxAm+LmbS2a0oHqIyngAAA",
+    "src": "/gallery/img_asrs_13_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_13_480w.webp",
+        "960": "/gallery/img_asrs_13_960w.webp",
+        "1600": "/gallery/img_asrs_13_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_13_480w.avif",
+        "960": "/gallery/img_asrs_13_960w.avif",
+        "1600": "/gallery/img_asrs_13_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_14",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "Photo0028.jpg",
+    "type": "image",
+    "width": 2048,
+    "height": 1536,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRroAAABXRUJQVlA4IK4AAABwBACdASoYABIAPzmQulgvKaUjqAqp4CcJaADE2BEx2zWqNJiyTZYZGLNEEAD7mQve95yCuR0c6NXklexyr1QJmKyn9CjmsMM9q2JYU6irAPUvfXvcbGNcIH51Y7zG30wnHiJwj01vJ+Xatw/GxA5MCa0Rq5AC3r9+Bpk25fz4lXyQNsklmKYBNv8m/ffsAm3+TbUtcLaPcBmvq9mbUSwRWmUoWgq+26+3auLpwAA=",
+    "src": "/gallery/img_asrs_14_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_14_480w.webp",
+        "960": "/gallery/img_asrs_14_960w.webp",
+        "1600": "/gallery/img_asrs_14_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_14_480w.avif",
+        "960": "/gallery/img_asrs_14_960w.avif",
+        "1600": "/gallery/img_asrs_14_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_15",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "Photo0027.jpg",
+    "type": "image",
+    "width": 2048,
+    "height": 1536,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAAAwBQCdASoYABIAPzmQvFgvKaWjqAqp4CcJbAC1Aar//4BTMAJNhVsTXLiJrWnCBs7OAAD9lOzqSMe6sqtucC3P6kSvU+DqqSWAE/qRK63T424sciHZjl9q19+LU+G3OsBUmXo6gUysWsFJSg7nLlJgk7Mome3Gr2zFu/0mle5dNG96uqrSA9OyFd99dxorGb7Jy7XPiJzUjthcXAa3UBYgpfcHtfg1btXKqauVU49/AKF/v4AAAA==",
+    "src": "/gallery/img_asrs_15_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_15_480w.webp",
+        "960": "/gallery/img_asrs_15_960w.webp",
+        "1600": "/gallery/img_asrs_15_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_15_480w.avif",
+        "960": "/gallery/img_asrs_15_960w.avif",
+        "1600": "/gallery/img_asrs_15_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "asrs_16",
+    "category": "asrs",
+    "categoryLabel": "ASRS High-Bay",
+    "originalFilename": "DSCN1038.JPG",
+    "type": "image",
+    "width": 2272,
+    "height": 1704,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAACwBACdASoYABIAPzmMwFevKScjqAqp4CcJZACdMy/A5okFlo4gjQbDn0J0ulQAAP6iTEf11PsEf/WSAQe4et5sDc463Z2RJMt/xAQTBsUqfgyMqf0wwiH+NEkaz8ra4W+E/i6X3kbAGOhtWwkp7Y83GeCwqVUN9uBVFwiQCVB0SgEzywwAAA==",
+    "src": "/gallery/img_asrs_16_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_asrs_16_480w.webp",
+        "960": "/gallery/img_asrs_16_960w.webp",
+        "1600": "/gallery/img_asrs_16_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_asrs_16_480w.avif",
+        "960": "/gallery/img_asrs_16_960w.avif",
+        "1600": "/gallery/img_asrs_16_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_17",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "22022012039.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_17.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_18",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "VID_20260219_160754548.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_18.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_19",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "12082011002.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_19.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_20",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "3 AXIS PLATFORM.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_20.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_21",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "VID-20140208-WA0007.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_21.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_22",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "bdl powerised compactor 1.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_22.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_23",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "bdl powerised compactor 1.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_23.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_24",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "WhatsApp Video 2022-07-29 at 7.04.47 PM.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_24.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_25",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "WhatsApp Video 2022-07-29 at 7.03.03 PM (1).mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_25.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_26",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "WhatsApp Video 2022-07-29 at 7.03.02 PM.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_26.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_27",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "WhatsApp Video 2022-07-29 at 7.03.00 PM.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_27.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_28",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "12082011004.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_28.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_29",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "video-2011-12-29-13-52-35.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_29.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_30",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "WhatsApp Video 2022-07-29 at 7.03.05 PM.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_30.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_31",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "STOLIFT VIDEO.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_31.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "general_32",
+    "category": "general",
+    "categoryLabel": "General Installations",
+    "originalFilename": "VID-20180512-WA0061.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_general_32.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_33",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "IMG_20150701_122119.jpg",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRq4AAABXRUJQVlA4IKIAAAAQBQCdASoYABIAPzmQvVgvKaYjqAqp4CcJYgCsAA6yfcfIEzMYbixfG/8tqbFDRfgAAPhFTREFgJerHSjc46bIukcc/qRLcfvdRGjdylqiHH/tXZZjZVChC7XCr7rpjixH8fS+aCKjPN9XNGUhxr1gcYqK89tL7TJOkCG82q5zgh/4jAOx3BtjpJEh6ZjTGLNkxnHMPi8lXQKdnNoewXuAAAA=",
+    "src": "/gallery/img_cantilever_33_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_33_480w.webp",
+        "960": "/gallery/img_cantilever_33_960w.webp",
+        "1600": "/gallery/img_cantilever_33_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_33_480w.avif",
+        "960": "/gallery/img_cantilever_33_960w.avif",
+        "1600": "/gallery/img_cantilever_33_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_34",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "IMG_20160406_134358.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRvgAAABXRUJQVlA4IOwAAADwBQCdASoYACAAPzmMvlevKSYjqAqp4CcJYgDE2dwLhyK8v3e2aqnoI5lyUQnmJJxQFKroTkkZgAD+qVBamAgGZ9Uwm65L/QDmOI2nf5F4uXJQfaIhy37OcgU1Lx2X0/+6K2qz8rb2dzon6kkMHdQ/n6vnxi0Vytu5BRYqqp0py5DNznovgmnpDZ0FMQAQEf7yP9mghPyo2SKsP0nV8mlBYUeYrZov2PenTH5Pa+6QdaUBk+pW9ByiTRBAJ3Qt1mCA18pfUHdM871rueFYPsbHbsNtYWW/om8ayOe/Gc4p+68cGV3oMH3qmiAAAA==",
+    "src": "/gallery/img_cantilever_34_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_34_480w.webp",
+        "960": "/gallery/img_cantilever_34_960w.webp",
+        "1600": "/gallery/img_cantilever_34_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_34_480w.avif",
+        "960": "/gallery/img_cantilever_34_960w.avif",
+        "1600": "/gallery/img_cantilever_34_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_35",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "IMG_20160406_134434.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRvYAAABXRUJQVlA4IOoAAACwBQCdASoYACAAPzmKvFYvKSYjsBgIAeAnCWMAyGAIHafmUL/fh09lqewt6Mg1yHlMc5Xft8AA+yinJK2zl4aDdgg6qRCcu2dCKnYre/miVAethUAWv7R/+Za/z8AyrVZ8jIRvpzkAOCDUGSYV3V3WNpNbv4l3UFaoODZfc1s/es78CSMaQAns5MYCxIZk9EmM6YqNECeaOSH7bA1MHJummlg8iMitTSW09DTxEmi6JC1wXTEe9wPCwBpzlu5dtcZ5PeK5jEkKVdbtyoL2vvFTOSLufx40lrxrz98vaaEgOAj11VZ/UgAsgAA=",
+    "src": "/gallery/img_cantilever_35_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_35_480w.webp",
+        "960": "/gallery/img_cantilever_35_960w.webp",
+        "1600": "/gallery/img_cantilever_35_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_35_480w.avif",
+        "960": "/gallery/img_cantilever_35_960w.avif",
+        "1600": "/gallery/img_cantilever_35_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_36",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "IMG_20160406_134428.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAADQBQCdASoYACAAPzmMwVcvKSejqAqp4CcJYwAu/9SyKgAQ/Gkp2thVy+Dy0Ze/xD9ATA7xNgXMAP6L92AlVKbUX0MESd3XpZ81dwlOiTq165HubQZY/jwo56gNj1IGN5aosryDQ3a+t3ojohoKMUwl1Ofs2EY6HtCDUzGKNUOSQOxpLdRZHjBNxga/c7on5Ed0AKaEgiJxF7rLIpDi9Q6bu+ZzRytUoyjH5fODNtSbTY/3KubyogkxwyvEXSCV/lTz9+vytuAUczt6S3MQZbsdEUoBUqFyUzcn7n4/APt7nwogAAA=",
+    "src": "/gallery/img_cantilever_36_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_36_480w.webp",
+        "960": "/gallery/img_cantilever_36_960w.webp",
+        "1600": "/gallery/img_cantilever_36_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_36_480w.avif",
+        "960": "/gallery/img_cantilever_36_960w.avif",
+        "1600": "/gallery/img_cantilever_36_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_37",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "IMG_20160406_135133.jpg",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAABwBQCdASoYABIAPzmSulivKiUjqAqp4CcJQBihXkAlKR50mlOtau8DWEbKOJnA319rt3SAAP3tP7YrTrswfo1I+NqgPtCyW+Mr778juG/mAoLXuYNI6a/N8ofSVyu3+xAtedZOafwzFzSEn0ntAFofra9xKrUdxp/78VnQF548XYJq4gFGDCZFKdXjojmj0w20dkl2yGV6Z7Y63ND4ik8bBmEjSZ0yIvgAAA==",
+    "src": "/gallery/img_cantilever_37_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_37_480w.webp",
+        "960": "/gallery/img_cantilever_37_960w.webp",
+        "1600": "/gallery/img_cantilever_37_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_37_480w.avif",
+        "960": "/gallery/img_cantilever_37_960w.avif",
+        "1600": "/gallery/img_cantilever_37_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_38",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "IMG_20160406_135122.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRggBAABXRUJQVlA4IPwAAACQBQCdASoYACAAPzmKulOvKaWisAgB4CcJaAC3va7WwAwV4DSbzM7b2s361yKMe1XOKhhgcAD+28DyL9KgUkpSxexKL+LJD/KMvtTzhot+iNiz+RBBWVLiWfT5AZjQ3y9PDRRZAAQ7aOx43uBOYzlAWyGFBMORCUxN4JYMH7E06ad2caoOpHlSPBI7pFvcE2fv09/1MF2Zk8mPuibs1nlF82j82ESD20Aym/dQnJDE5oBbrXDPrIb3uetwk3KjPJHbBN8gCZF26IaSHkdd/SM8hEOWZhlpf9qLFesD11wL1ol3O7dO5wQWoolSFcCHRA5KYO7jusViXYXUAAA=",
+    "src": "/gallery/img_cantilever_38_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_38_480w.webp",
+        "960": "/gallery/img_cantilever_38_960w.webp",
+        "1600": "/gallery/img_cantilever_38_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_38_480w.avif",
+        "960": "/gallery/img_cantilever_38_960w.avif",
+        "1600": "/gallery/img_cantilever_38_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_39",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "Cantilever_Racks 7.jpg",
+    "type": "image",
+    "width": 476,
+    "height": 444,
+    "aspectRatio": 1.072072072072072,
+    "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAADQBQCdASoYABYAPzmOwVcvKaejqAqp4CcJbAC1GuOA90qzzvPt6YAATPVVgVR76fqR6I+/S18gAP6iTbSMCN4cKUt6ID5gjhD06UfS4bSTw9r2dKYHG26714v5JZtdTfx7C+mPMxwAc9z2HykJvFSelMRqk9ZF7fziomCAwQVKY4yxmOxY/Y9OOT8Tj0FMjPj4/v9H4dzXNKppN0ev80EIaDapC9VzOAA=",
+    "src": "/gallery/img_cantilever_39_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_39_480w.webp",
+        "960": "/gallery/img_cantilever_39_960w.webp",
+        "1600": "/gallery/img_cantilever_39_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_39_480w.avif",
+        "960": "/gallery/img_cantilever_39_960w.avif",
+        "1600": "/gallery/img_cantilever_39_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_40",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "Cantilever_Racks 4.JPG",
+    "type": "image",
+    "width": 1229,
+    "height": 971,
+    "aspectRatio": 1.2657054582904221,
+    "blurDataURL": "data:image/webp;base64,UklGRkgAAABXRUJQVlA4IDwAAADwAwCdASoYABMAPzmQulWvKiWjMBgIAeAnCWkAAC52UN15XwAGs7DAAP7qiTg7Mc4cdAL5dJPva7AAAAA=",
+    "src": "/gallery/img_cantilever_40_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_40_480w.webp",
+        "960": "/gallery/img_cantilever_40_960w.webp",
+        "1600": "/gallery/img_cantilever_40_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_40_480w.avif",
+        "960": "/gallery/img_cantilever_40_960w.avif",
+        "1600": "/gallery/img_cantilever_40_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_41",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "Single-Sided-Cantilever-Racking.jpg",
+    "type": "image",
+    "width": 480,
+    "height": 640,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtgAAABXRUJQVlA4IMwAAADQBQCdASoYACAAPzmKvFYvKSYjsBgIAeAnCWYAwOGuwn3Z0p2xbAMkw9Cc3ew0uzGVPKG4Eo52APiAmyTG+U5v+ei9rseIsyUQMdXaTowCTo1LKQQ6Y8T/jFMzgefIWnB8IKxhDzEBy8b1YtPlrP5aoh+fqTgYu4I0Au9AGTIAyUut3GgAf5utMTW93Iu4jxcSaPtcO4n0Le0+G/W/0s6LmiODIJAvRjWdBM2Y/hJTcvE5OMxOsBHJFmoECQUsieKDkp1MPS5m0H0AAAA=",
+    "src": "/gallery/img_cantilever_41_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_41_480w.webp",
+        "960": "/gallery/img_cantilever_41_960w.webp",
+        "1600": "/gallery/img_cantilever_41_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_41_480w.avif",
+        "960": "/gallery/img_cantilever_41_960w.avif",
+        "1600": "/gallery/img_cantilever_41_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_42",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "Cantilever-Racking System.jpg",
+    "type": "image",
+    "width": 500,
+    "height": 477,
+    "aspectRatio": 1.0482180293501049,
+    "blurDataURL": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAACwBACdASoYABcAPzmUwVmvKicjqAgB4CcJZACdAA0KG4wbvKEJ6ioHnrhkX0mAAP4VtV3EuJw5HcxQEGxSPYLAvCQVCk3cdfzWcIJE6gf9+Ej6pYM9c25pGPaGnEUAUUGZ8xiLe7vX9uoUi7bW8xatMxq7PlDryITXsOt7NGOXFZMRfiDb4j1Rna4+nQkQ9aZ58GRhJ70f/Bm5hkrJyCSwmWJOeRVFGyxIG/LNHuM/ZquVfqAAAA==",
+    "src": "/gallery/img_cantilever_42_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_42_480w.webp",
+        "960": "/gallery/img_cantilever_42_960w.webp",
+        "1600": "/gallery/img_cantilever_42_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_42_480w.avif",
+        "960": "/gallery/img_cantilever_42_960w.avif",
+        "1600": "/gallery/img_cantilever_42_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_43",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "2717.jpg",
+    "type": "image",
+    "width": 350,
+    "height": 281,
+    "aspectRatio": 1.2455516014234875,
+    "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAACQBACdASoYABQAPzmSu1gvKiWjqAqp4CcJQBfJARLakS7yDjSq7luNqHd/izgA/ZM/J2pw7MzXxAaXpqB6ARMHIEw1LsOyfMmcWdblFPcl6nqp6WgxK3gufFA39EUuG6bAoR7XfcIynz3CLYK01At0YuVcHONpDFFhCQv0FBtXKU+C3rguMis2f8XAfuU7QXp3nLTh4APAAA==",
+    "src": "/gallery/img_cantilever_43_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_43_480w.webp",
+        "960": "/gallery/img_cantilever_43_960w.webp",
+        "1600": "/gallery/img_cantilever_43_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_43_480w.avif",
+        "960": "/gallery/img_cantilever_43_960w.avif",
+        "1600": "/gallery/img_cantilever_43_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_44",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "tn_a.jpg",
+    "type": "image",
+    "width": 368,
+    "height": 418,
+    "aspectRatio": 0.8803827751196173,
+    "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAADQBACdASoYABsAPzmUwVmvKicjqAgB4CcJZwDOdAw+5PUjm1DyDUh/xyqlJCcwAADKKM3lGBzD1EyhSmtY7TYtGQ27p7aGC/S9lDSVrs80QINIGnEpmIFNlxqrXmW/njLviENbgjK3AJcgtw6AwHNFsadedAmGaSvvc3smeYN+INJTVSo2O18qHyB4AEjUcwbitUbN/MwAAA==",
+    "src": "/gallery/img_cantilever_44_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_44_480w.webp",
+        "960": "/gallery/img_cantilever_44_960w.webp",
+        "1600": "/gallery/img_cantilever_44_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_44_480w.avif",
+        "960": "/gallery/img_cantilever_44_960w.avif",
+        "1600": "/gallery/img_cantilever_44_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_45",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "tn_2.jpg",
+    "type": "image",
+    "width": 368,
+    "height": 394,
+    "aspectRatio": 0.934010152284264,
+    "blurDataURL": "data:image/webp;base64,UklGRtAAAABXRUJQVlA4IMQAAADwBACdASoYABoAPzmSv1mvKaajqAgB4CcJZQDOPa0AofX96ut87tuBWAabLBrIzAAA6++oj3ADDD8PIHXX0+LnlqoApRuZzfQKJHNwPqB9+kPvp9z0T+8ubKlOzmV5nz+JUkHO3M2suncLD/E6HuoApGyfIpzvRO7K8kZj2igNdN9wrNlv69DwK0YnZcuZL/QaV3CqBrRETVeaU07t09IO1M2GMSUm5Swbi30ml1wJkK5SCZXf2skeRxCxxJn4mwZinIAA",
+    "src": "/gallery/img_cantilever_45_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_45_480w.webp",
+        "960": "/gallery/img_cantilever_45_960w.webp",
+        "1600": "/gallery/img_cantilever_45_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_45_480w.avif",
+        "960": "/gallery/img_cantilever_45_960w.avif",
+        "1600": "/gallery/img_cantilever_45_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_46",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "tn_b.jpg",
+    "type": "image",
+    "width": 368,
+    "height": 418,
+    "aspectRatio": 0.8803827751196173,
+    "blurDataURL": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABQBQCdASoYABsAPzmQvFgvKaWjqAqp4CcJZQDDdagAuY4USax028cvOPJL8NsIvkOkWAAA9jrQKXk0ifiiiySqS0vg1YIS9M1bWFOECDMBA8k1TcQg/tagkR5GEhTho8RnrL0OpdFKUo+RM3FC8q9Ft4ZA12nNOFmhneuOb58NaHdBbpdHJlDWc+h2tegiVpT1wmYzEaOWBYbpoP/ppqTVCcy0NBWKybaonOL4ARPzMg8gpAfPR04AAAA=",
+    "src": "/gallery/img_cantilever_46_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_46_480w.webp",
+        "960": "/gallery/img_cantilever_46_960w.webp",
+        "1600": "/gallery/img_cantilever_46_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_46_480w.avif",
+        "960": "/gallery/img_cantilever_46_960w.avif",
+        "1600": "/gallery/img_cantilever_46_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_47",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "Cantilever_Racks 1.jpg",
+    "type": "image",
+    "width": 1024,
+    "height": 768,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAABwAwCdASoYABIAPzmQv1evKaajqAqp4CcJZQAAIbwZMmn+NoAA/uqV0TCuYAPMuHpNIUcINzQlyKC8O2lCuEHthi+QWCSccsMBDr1rYb814zGARcAq0pygAAA=",
+    "src": "/gallery/img_cantilever_47_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_47_480w.webp",
+        "960": "/gallery/img_cantilever_47_960w.webp",
+        "1600": "/gallery/img_cantilever_47_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_47_480w.avif",
+        "960": "/gallery/img_cantilever_47_960w.avif",
+        "1600": "/gallery/img_cantilever_47_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "cantilever_48",
+    "category": "cantilever",
+    "categoryLabel": "Cantilever Racking",
+    "originalFilename": "Image0125.jpg",
+    "type": "image",
+    "width": 480,
+    "height": 640,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAAAwBQCdASoYACAAPzmKulOvKaWisAgB4CcJYgDHMB0k6YhIS1jNkC4mzM6Dyg6V6A9vFAD+lsVsaUlvscv05PpIyWHrUrkg+NgxvR7E15p64rH6P2pbAe6Z7HIK2mf0oLlkSJMesY0nQD3F67nZLtA4poSHJRAwdcGiTqvf8idlY5QsN/xSK1XPIINAcP5NXLzJ2GixGjGoZQy1Tm1EJHiAFnsRvUILpDD09G+0bAhDvchfhy9g56BdZvVnxFVRVFkHEhyla/vuAAAA",
+    "src": "/gallery/img_cantilever_48_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_cantilever_48_480w.webp",
+        "960": "/gallery/img_cantilever_48_960w.webp",
+        "1600": "/gallery/img_cantilever_48_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_cantilever_48_480w.avif",
+        "960": "/gallery/img_cantilever_48_960w.avif",
+        "1600": "/gallery/img_cantilever_48_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_49",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "CAROUSEL SYSTEM.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_carousel_49.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_50",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00043.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoYABIAPzmCuVQvKCWjMBgMAeAnCWkAAC+GwVvRtQDuNUffb/n9UQAAzhoU5UKhxB9ey8bX5+nNQ2wQiCAnECPBv8HiJMhN/9X9aBxGSf+MhmfV9i0Vki7qzlHSHRjhnx/eRMAAAAA=",
+    "src": "/gallery/img_carousel_50_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_50_480w.webp",
+        "960": "/gallery/img_carousel_50_960w.webp",
+        "1600": "/gallery/img_carousel_50_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_50_480w.avif",
+        "960": "/gallery/img_carousel_50_960w.avif",
+        "1600": "/gallery/img_carousel_50_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_51",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00040.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYABIAPzmEu1OvKCYisBgMAeAnCWcABwfY0LdlJDf4tmkH6+1gAAD2lKtJC4Dv3IJhxhwyYIi2HRz8hiESqn1WW9ZuqCqabX5HjphbqXJ58J3pV8YxQcOReHP3V3v2JgAAAA==",
+    "src": "/gallery/img_carousel_51_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_51_480w.webp",
+        "960": "/gallery/img_carousel_51_960w.webp",
+        "1600": "/gallery/img_carousel_51_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_51_480w.avif",
+        "960": "/gallery/img_carousel_51_960w.avif",
+        "1600": "/gallery/img_carousel_51_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_52",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00045.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYABIAPzmQu1WvKqYjMBgIAeAnCWcAACPTAJOKdwofHioAsnlrYADK8YuQaYel46s2IpKMxTWsWxWhjQ/9cmvWViKJcxChwehmSzlaHjA+gXhr4CtjJ9Hs9LJeN122ygAAAA==",
+    "src": "/gallery/img_carousel_52_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_52_480w.webp",
+        "960": "/gallery/img_carousel_52_960w.webp",
+        "1600": "/gallery/img_carousel_52_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_52_480w.avif",
+        "960": "/gallery/img_carousel_52_960w.avif",
+        "1600": "/gallery/img_carousel_52_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_53",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00041.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBQCdASoYABIAPzmCt1SvKCUjMBgMAeAnCWUAwCwH+Bt9J8j2f6eWg97l2XiqwV0fMAD9m6erKGj1lG2m0CT8DimxpPFOcu/9gxvYE42WozilZ5UX4YmzPvgb+X/6pcQTXxFXFYdeokIffVeIEetdBshJeug06ySLQhN2DS5xa3zhSlwAAA==",
+    "src": "/gallery/img_carousel_53_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_53_480w.webp",
+        "960": "/gallery/img_carousel_53_960w.webp",
+        "1600": "/gallery/img_carousel_53_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_53_480w.avif",
+        "960": "/gallery/img_carousel_53_960w.avif",
+        "1600": "/gallery/img_carousel_53_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_54",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00044.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwBACdASoYABIAPzmIvVavKCYjsBgIAeAnCWcAy+ALaCutYZOjVddEYGgCAADK8Yuo9MfrTFjg19Dl0h1+A9yLnK4HtLw+M1qRyXLRCPS+xElqKkeKp45Rwp+2I4VM7Dl958rjTTdsdJgOPpvwAA==",
+    "src": "/gallery/img_carousel_54_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_54_480w.webp",
+        "960": "/gallery/img_carousel_54_960w.webp",
+        "1600": "/gallery/img_carousel_54_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_54_480w.avif",
+        "960": "/gallery/img_carousel_54_960w.avif",
+        "1600": "/gallery/img_carousel_54_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_55",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00039.JPG",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBQCdASoYACAAPzmOvlOvKqcisAgB4CcJZwDD6Gt65Eq4HCcfaZ5Dvh6UZq5Xn4shAAD+5hj6WhGdAl/JIVbuAaZmRg+F64nxeuz559i4+Vs6cAQsRJCywqiAGhtD3YZ6cWj2jDQchzK1xVeY0Mg/DAXNg8o451cY6HMDHcA7h3I2eKAAAA==",
+    "src": "/gallery/img_carousel_55_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_55_480w.webp",
+        "960": "/gallery/img_carousel_55_960w.webp",
+        "1600": "/gallery/img_carousel_55_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_55_480w.avif",
+        "960": "/gallery/img_carousel_55_960w.avif",
+        "1600": "/gallery/img_carousel_55_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_56",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSC00038.JPG",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwBACdASoYACAAPzWEs1OvKKQisAwB4CaJZQDG9Hd7h6zH8a5WWh0eYHo3zrBqWFgA/t0Z3w5LGAewTgU0Khz+ko+9AUMwz8IIHWkjWwWUvkysIz3DNvoDwnLFqX8zXT8AQXCTG97Wy+pxI8TE9LTdo8MI71HXd/AZO04eMP6nNfAAAAA=",
+    "src": "/gallery/img_carousel_56_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_56_480w.webp",
+        "960": "/gallery/img_carousel_56_960w.webp",
+        "1600": "/gallery/img_carousel_56_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_56_480w.avif",
+        "960": "/gallery/img_carousel_56_960w.avif",
+        "1600": "/gallery/img_carousel_56_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_57",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "IMG_20150616_160608.jpg",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBQCdASoYABIAPzmMvlevKSYjqAqp4CcJYwC/7AhDL4nv9/4ivjsYT6eU9DUwQlywAP4UzUU1t82wd8X4AqETK99fModETkF5vReQzoKOScUHduSXwGLZ7J/53IUpM5HAJ803XsSCiWR7vJRo32N0C+xY7ZmJrb60Xvcnz+75xymYUAAAAA==",
+    "src": "/gallery/img_carousel_57_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_57_480w.webp",
+        "960": "/gallery/img_carousel_57_960w.webp",
+        "1600": "/gallery/img_carousel_57_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_57_480w.avif",
+        "960": "/gallery/img_carousel_57_960w.avif",
+        "1600": "/gallery/img_carousel_57_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_58",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "kpcl-pune carousel.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtYAAABXRUJQVlA4IMoAAABQBQCdASoYACAAPzmOvVgvKaYjqAqp4CcJZgCsM47JKKCx/q4O3MTj6oDlpOTmcNzLYsAA/tKE6E9jJ5ZrpBMkzxxcEwj+TKlXBgFQVi/YDX/YeVlg1eWY1cMkKHRInJOYvxbCMB0Ajj1qeVBToSXAM19QuPN/uS1dEoQT3uV/ll0tVlz71UBp60lHPzWJpqSUtA2gSBO1OT5DQMD9p0Cw1L9DrAIsGLEgO1p9Vbzet2iR402wDxGWLBmbkyxw5PiU6kDwl/kAOIAA",
+    "src": "/gallery/img_carousel_58_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_58_480w.webp",
+        "960": "/gallery/img_carousel_58_960w.webp",
+        "1600": "/gallery/img_carousel_58_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_58_480w.avif",
+        "960": "/gallery/img_carousel_58_960w.avif",
+        "1600": "/gallery/img_carousel_58_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_59",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "IMG_20150616_155432.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAABwBACdASoYACAAPzmKvVavKSYjsBgIAeAnCUAYyAUuQKqDHDi/Cr96zbNUAAD+cN+x7w0wso/Er+YtLCVm0XjxAUqP/65xHHWes19hoJbLnGlJWeetKkKLjcw9Fx1jnzbhCxxQOxvPCHfgn3QKe8wOxPm3NR4sLnMzJ+8AAAA=",
+    "src": "/gallery/img_carousel_59_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_59_480w.webp",
+        "960": "/gallery/img_carousel_59_960w.webp",
+        "1600": "/gallery/img_carousel_59_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_59_480w.avif",
+        "960": "/gallery/img_carousel_59_960w.avif",
+        "1600": "/gallery/img_carousel_59_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_60",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "craousel 2.jpg",
+    "type": "image",
+    "width": 2448,
+    "height": 3264,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABQBQCdASoYACAAPzmOuFavKaUjqA1R4CcJYgDGQEfpt3EXxeU8KzA2zIvFsyDNPeRSSQAA/ukaI308keHqx5XvVgCgxkLg1MpbGoAtW4+kfgaocXiq6JBjvYspVgF06qs+8M1bfSvmgTzoChLK0aUSfARvnxGjx34ZCApcTF36d25NxJYwPdulhVsKa8opUWlscx/iJ/vQ1OBmAiUNUIGBnTxu1HPkBg63pWdC3KnrX70c60YAAA==",
+    "src": "/gallery/img_carousel_60_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_60_480w.webp",
+        "960": "/gallery/img_carousel_60_960w.webp",
+        "1600": "/gallery/img_carousel_60_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_60_480w.avif",
+        "960": "/gallery/img_carousel_60_960w.avif",
+        "1600": "/gallery/img_carousel_60_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_61",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "DSCN1109.JPG",
+    "type": "image",
+    "width": 1704,
+    "height": 2272,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRqoAAABXRUJQVlA4IJ4AAADQBQCdASoYACAAPzmAuFOvJ6Wit/VYAeAnCUAYP2AAHJ100Uwx2UKxxb3n8I3HXHnzEh8TAGaYAP6od+io0vgOs9sbU1gyLAm99BoOepNaad2zv3ORfkiOftFw6LkfYiFxJoF988PrxAHdqotNo0jFlzDaxH0NvJjwVNGv3VN1X3Wl6q0koxEXG3pDBRTKyEBmiYoau1LIpfPhguaIAA==",
+    "src": "/gallery/img_carousel_61_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_61_480w.webp",
+        "960": "/gallery/img_carousel_61_960w.webp",
+        "1600": "/gallery/img_carousel_61_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_61_480w.avif",
+        "960": "/gallery/img_carousel_61_960w.avif",
+        "1600": "/gallery/img_carousel_61_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_62",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "18082010016.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAADQBQCdASoYACAAPzmMv1cvKSajqAqp4CcJYwDLMbJlPVqv/4bL/YhxfxILNJvAT/Gy4nA8WjkAAP7GBC5U5/rs/T9GpDH2/mKX3qr1mLzA0FKMrmYpAKGnBUckp4/0EcnGy8cAGDGHLslUCa8XWAuF2DjteaC9MtgtfC4vJ6Fygi+Q6EPsSpMziNmVAh6GO54Y4Ko2wJnv38mIO7Oz4z5f2vaXBk1D4xvjm2wbBS00OajBC8g0V02jAJ1rAAAA",
+    "src": "/gallery/img_carousel_62_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_62_480w.webp",
+        "960": "/gallery/img_carousel_62_960w.webp",
+        "1600": "/gallery/img_carousel_62_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_62_480w.avif",
+        "960": "/gallery/img_carousel_62_960w.avif",
+        "1600": "/gallery/img_carousel_62_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_63",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "18082010029.jpg",
+    "type": "image",
+    "width": 2048,
+    "height": 1536,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAABwBACdASoYABIAPzmSu1gvKiWjqAqp4CcJYwDE2AoAdOcTUyzxJYd7NzDoAAD+lEbXaf6RcVN0apCySTJuetwVt62XNBu5yjl9AVThfZYYh+9BVzMGJVwBN61awzxaQmsA1J5F0+R8H9oT4ioqq9cZbJ3K64vRUuEBRLaALAR6lsxeywoPNak9VVW4Pb1lUneQAA==",
+    "src": "/gallery/img_carousel_63_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_63_480w.webp",
+        "960": "/gallery/img_carousel_63_960w.webp",
+        "1600": "/gallery/img_carousel_63_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_63_480w.avif",
+        "960": "/gallery/img_carousel_63_960w.avif",
+        "1600": "/gallery/img_carousel_63_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "carousel_64",
+    "category": "carousel",
+    "categoryLabel": "Vertical Carousels",
+    "originalFilename": "18082010015.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtIAAABXRUJQVlA4IMYAAACwBQCdASoYACAAPzmEvFavJ6YjsBgIAeAnCWUAzFgqPBhA/mEvl8MHNOXZ2DHujd5fO/RwZOAA+g0r6O4iy0mM/wtG9m3I2qoO5p2wqBl85JL1VxEJplBRW5pkSh69vmuX5gwPkoNPTuhyKfLFHcESPoZKO43fYxb1r9s/93meve30iXIy7/zbZv9OkKdRE6QxvTA9yT8Q3kthMP29/eS7EWM2pO5v5affqlKfwBJFUwzzPzYkcNXdWjtoYFQvQOegn4qwAAA=",
+    "src": "/gallery/img_carousel_64_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_carousel_64_480w.webp",
+        "960": "/gallery/img_carousel_64_960w.webp",
+        "1600": "/gallery/img_carousel_64_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_carousel_64_480w.avif",
+        "960": "/gallery/img_carousel_64_960w.avif",
+        "1600": "/gallery/img_carousel_64_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_65",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "22022012039.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_65.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_66",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "VID20141223140435.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_66.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_67",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "VID20141223134656.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_67.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_68",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "VID-20160705-WA0028.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_68.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_69",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "VID-20160705-WA0027.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_69.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_70",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "small compactor video.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_70.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_71",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "VID-20160722-WA0034.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_compactors_71.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_72",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "DSCN4250.jpg",
+    "type": "image",
+    "width": 4608,
+    "height": 3456,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAABQBACdASoYABIAPzmKuFQvKaUjMAgB4CcJaQAAUYq8PqbzucWUJ03Vq4qsANq6mNWYOQ03NoNEvOD9zuCnYxR4j4jr2V6iZxMvfiHt2zLJ60OCuHTy1I7sH42Wg3FvLAfzKB8mnPCeL+EAAAA=",
+    "src": "/gallery/img_compactors_72_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_72_480w.webp",
+        "960": "/gallery/img_compactors_72_960w.webp",
+        "1600": "/gallery/img_compactors_72_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_72_480w.avif",
+        "960": "/gallery/img_compactors_72_960w.avif",
+        "1600": "/gallery/img_compactors_72_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_73",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "20220405_110727.jpg",
+    "type": "image",
+    "width": 4032,
+    "height": 2268,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABQAwCdASoYAA0APzmGuVOvKSWisAgB4CcJYgCw7AlbOPSU4ADJRQ7sh3a3bzG1W4xrADtzfgtfAAJSjtqInq0uDBQSrzHrPYB5VNOSNXuHTByt+/dxLhN5o8pAYMei2hqjOF6k5S1vKEAlxwoAAA==",
+    "src": "/gallery/img_compactors_73_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_73_480w.webp",
+        "960": "/gallery/img_compactors_73_960w.webp",
+        "1600": "/gallery/img_compactors_73_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_73_480w.avif",
+        "960": "/gallery/img_compactors_73_960w.avif",
+        "1600": "/gallery/img_compactors_73_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_74",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "DSCN4246.jpg",
+    "type": "image",
+    "width": 4608,
+    "height": 3456,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABQBACdASoYABIAPzmMwVcvKSejqAqp4CcJZwAALtXX/w2rILfYPbQNrACgAMsD9FQ/3YpnfKsL+p/i9axCwxhSFF98dUbZgzj1mNbpYp1jxXdCTp4K3oVCdLmRvXqcq5RuignftgAAAA==",
+    "src": "/gallery/img_compactors_74_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_74_480w.webp",
+        "960": "/gallery/img_compactors_74_960w.webp",
+        "1600": "/gallery/img_compactors_74_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_74_480w.avif",
+        "960": "/gallery/img_compactors_74_960w.avif",
+        "1600": "/gallery/img_compactors_74_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_75",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "DSCN4247.jpg",
+    "type": "image",
+    "width": 4608,
+    "height": 3456,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAQBACdASoYABIAPzmIt1OvKSUisAgB4CcJZwAAYbPNy+HVQ/vyf4omAAD+vJaMHwmAcEDEaTwTvBsORsnN0ylNW1li7cx7AZiA/4ESJ0eVgqs06f5cgsTobSdyb+f50qHj6l5AAAA=",
+    "src": "/gallery/img_compactors_75_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_75_480w.webp",
+        "960": "/gallery/img_compactors_75_960w.webp",
+        "1600": "/gallery/img_compactors_75_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_75_480w.avif",
+        "960": "/gallery/img_compactors_75_960w.avif",
+        "1600": "/gallery/img_compactors_75_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_76",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "20190119_134159.jpg",
+    "type": "image",
+    "width": 4128,
+    "height": 3096,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRmoAAABXRUJQVlA4IF4AAAAQBACdASoYABIAPzl+t1OvJ6Uit/VYAeAnCWkAAA54U0XgROUry9JfQAD8Z2+1+0Wm7M1SCrVj3XD5qMd+Xt+dx5hx5tN7ydsUet6fjIePPlSQp12blpEZvaCdAAAA",
+    "src": "/gallery/img_compactors_76_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_76_480w.webp",
+        "960": "/gallery/img_compactors_76_960w.webp",
+        "1600": "/gallery/img_compactors_76_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_76_480w.avif",
+        "960": "/gallery/img_compactors_76_960w.avif",
+        "1600": "/gallery/img_compactors_76_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_77",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "20190119_134043.jpg",
+    "type": "image",
+    "width": 4128,
+    "height": 3096,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwBACdASoYABIAPzmKulQvKaWjMAgB4CcJZwDM0Brv26z0znTVb31bIlQ8AADNndCTKqsXyXtqd/kTNrvifYUhoZ64ntwFQ2Hx82eb3rjcXkIukFpqzdsSyLd21uehLQlSVudIG/oTWFju6roAAA==",
+    "src": "/gallery/img_compactors_77_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_77_480w.webp",
+        "960": "/gallery/img_compactors_77_960w.webp",
+        "1600": "/gallery/img_compactors_77_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_77_480w.avif",
+        "960": "/gallery/img_compactors_77_960w.avif",
+        "1600": "/gallery/img_compactors_77_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_78",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "Pushpull.jpg",
+    "type": "image",
+    "width": 4128,
+    "height": 3096,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRlwAAABXRUJQVlA4IFAAAACwBACdASoYABIAPy2Et1OuqSWisAwB0CWJZzcAA+NAr6CPpIdvfNTXSMp4c/IAANyLJ+nDFodZyvXOwrLsE5qb9TO8qE2q5MRigYBuQAAAAA==",
+    "src": "/gallery/img_compactors_78_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_78_480w.webp",
+        "960": "/gallery/img_compactors_78_960w.webp",
+        "1600": "/gallery/img_compactors_78_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_78_480w.avif",
+        "960": "/gallery/img_compactors_78_960w.avif",
+        "1600": "/gallery/img_compactors_78_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_79",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "DSC00043.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoYABIAPzmCuVQvKCWjMBgMAeAnCWkAAC+GwVvRtQDuNUffb/n9UQAAzhoU5UKhxB9ey8bX5+nNQ2wQiCAnECPBv8HiJMhN/9X9aBxGSf+MhmfV9i0Vki7qzlHSHRjhnx/eRMAAAAA=",
+    "src": "/gallery/img_compactors_79_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_79_480w.webp",
+        "960": "/gallery/img_compactors_79_960w.webp",
+        "1600": "/gallery/img_compactors_79_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_79_480w.avif",
+        "960": "/gallery/img_compactors_79_960w.avif",
+        "1600": "/gallery/img_compactors_79_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "compactors_80",
+    "category": "compactors",
+    "categoryLabel": "Compactors & Racks",
+    "originalFilename": "DSC00040.JPG",
+    "type": "image",
+    "width": 3264,
+    "height": 2448,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAABwBACdASoYABIAPzmEu1OvKCYisBgMAeAnCWcABwfY0LdlJDf4tmkH6+1gAAD2lKtJC4Dv3IJhxhwyYIi2HRz8hiESqn1WW9ZuqCqabX5HjphbqXJ58J3pV8YxQcOReHP3V3v2JgAAAA==",
+    "src": "/gallery/img_compactors_80_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_compactors_80_480w.webp",
+        "960": "/gallery/img_compactors_80_960w.webp",
+        "1600": "/gallery/img_compactors_80_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_compactors_80_480w.avif",
+        "960": "/gallery/img_compactors_80_960w.avif",
+        "1600": "/gallery/img_compactors_80_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_81",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG_20181130_140216.jpg",
+    "type": "image",
+    "width": 3120,
+    "height": 4160,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRswAAABXRUJQVlA4IMAAAACwBQCdASoYACAAPzmOvFWvKiYjMBgIAeAnCWIAtO2yQmFKCBiBiZrMXN91sDM0B5kf6XwnJsAAzdWqJTS3+LkPAe2uWkcuLBFDX/JYgsrra3eTDXYAAbSAIj2do0KnDJqhQpuBSjZE9GUSw5qBqlqqH4SdD0Y5VuHqTej1c5XYD4ddAAELyhgPk6gWCoJBiHpBrfGcR9QggPZCuj+3VIZlNcBZKs9XjRp3I0WH8devdtlzaHSu1fkdLmKUehD4AAA=",
+    "src": "/gallery/img_pallet-racks_81_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_81_480w.webp",
+        "960": "/gallery/img_pallet-racks_81_960w.webp",
+        "1600": "/gallery/img_pallet-racks_81_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_81_480w.avif",
+        "960": "/gallery/img_pallet-racks_81_960w.avif",
+        "1600": "/gallery/img_pallet-racks_81_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_82",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG_20181130_140221.jpg",
+    "type": "image",
+    "width": 3120,
+    "height": 4160,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAABwBQCdASoYACAAPzmGuFOvKSUisAgB4CcJQBidP/xvAB5y6GMuGS9WoiBM1kzhR2jXhD7AAP4VG1CVDJvPeyO3va9SWrFqwmki5w+DqB0BOWHOB8FvrMe/sOrF/LzvIb7HHZwEOacpQUM/X4mpcPxz6JhloIUNScoYkKx2U2/V1F+WA1PBhpQ5YTUEEKKmjyk+UI9If1mbQmyjl/Qqrp6K/D7zZR/FhEL1sItWH2HHQw5HdCLrg4qAAAA=",
+    "src": "/gallery/img_pallet-racks_82_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_82_480w.webp",
+        "960": "/gallery/img_pallet-racks_82_960w.webp",
+        "1600": "/gallery/img_pallet-racks_82_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_82_480w.avif",
+        "960": "/gallery/img_pallet-racks_82_960w.avif",
+        "1600": "/gallery/img_pallet-racks_82_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_83",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "drum pallett.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAwBQCdASoYACAAPzmGvVavKCajsBgIAeAnCWwAuwAJuswBR5y4qf9Purah8LzBqOGgAAD+2P7cY0s4XuZU4OvaGhH3mWrG3cpmVqlDRE+16RWlqIsYrMli6zxUmX46gJuXUPxRpHxkPq9B9rsrbK+zugaiUWgvGfrf6s2G82XDyN2b21S696M4i1L7ILZybZGppXpBJF2WiVygmAu5ZOPlJO4/hZnRlDiqkG2BT4+FC+QAAAA=",
+    "src": "/gallery/img_pallet-racks_83_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_83_480w.webp",
+        "960": "/gallery/img_pallet-racks_83_960w.webp",
+        "1600": "/gallery/img_pallet-racks_83_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_83_480w.avif",
+        "960": "/gallery/img_pallet-racks_83_960w.avif",
+        "1600": "/gallery/img_pallet-racks_83_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_84",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG_20131121_132337.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADQBACdASoYACAAPzmOwVcvKaejqAqp4CcJaAC7AAuxUNwcFT70uIJvKmpIzp81gAD+2P7apk5xI5hx1ReVYRkhspwQJqgcp7xu7Lgd3P8di1pwLtwB6mvbMeGCPIEvjzx7UXGM/MOrQbPa1liSBBZBztqBYnv/8GA5zawKFVvKd4WcnQNPDj6miKl49/kX5FED9y7EG/THCOdqyD86FpTdgsPT6iqNhzMAAA==",
+    "src": "/gallery/img_pallet-racks_84_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_84_480w.webp",
+        "960": "/gallery/img_pallet-racks_84_960w.webp",
+        "1600": "/gallery/img_pallet-racks_84_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_84_480w.avif",
+        "960": "/gallery/img_pallet-racks_84_960w.avif",
+        "1600": "/gallery/img_pallet-racks_84_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_85",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG_20131121_132330.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRrYAAABXRUJQVlA4IKoAAADwBACdASoYACAAPzmMvFYvKSYjsBgIAeAnCWwAvOANALWGiLxOnE4fJIuQOxia6gAA/qiU43tnhu+rj12z6lwIEyru0OxijdM8Fvb9+NWSASDDeZpIdkvXT1SXmbyuE5pIGMUi8XLcTERbD8rSkwIx6e7Q5KvpSnX8Ff63a/B/V+LA3rUECvwTf0fC00ItsJ65Xa4y29kbIRXZm5RS9aw/sEgEOcJ9EAxgAA==",
+    "src": "/gallery/img_pallet-racks_85_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_85_480w.webp",
+        "960": "/gallery/img_pallet-racks_85_960w.webp",
+        "1600": "/gallery/img_pallet-racks_85_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_85_480w.avif",
+        "960": "/gallery/img_pallet-racks_85_960w.avif",
+        "1600": "/gallery/img_pallet-racks_85_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_86",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG_20131121_132153.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpAAAABXRUJQVlA4IIQAAADwBACdASoYACAAPzmUwFmvKiajqAgB4CcJZQDE2AcWd//B8M4Wx9CEV4c1/MWIwQAA/r+M0OvRtZ00NgxqbdE/bvBDPjlIi3TXbQ/nfzvgiueDm7KVEanTDCpjhR7UIU/gMKnIP7r64nuXk2ij+uIg0jU9d3P3J5RcTk2ew6XCS2hqAAA=",
+    "src": "/gallery/img_pallet-racks_86_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_86_480w.webp",
+        "960": "/gallery/img_pallet-racks_86_960w.webp",
+        "1600": "/gallery/img_pallet-racks_86_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_86_480w.avif",
+        "960": "/gallery/img_pallet-racks_86_960w.avif",
+        "1600": "/gallery/img_pallet-racks_86_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_87",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG_20131121_132321.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBQCdASoYACAAPy2AuFOuqCWisAwB0CWJYwDNSBDzwlT3H6mLH41ToOHWRxZSpAZUAP7kG8ZvrJIK8U+E62a2whjj+gXD+HcKPc3+xj8S9sngERA8OCJDfo1VT9lnVwBFGI3wMeCorsvJ9hcWlEd/JDKHwjIt3U7h2xdu2w2Ye4shrqKH+z6mUSpR43CWY8b4xfQ8KAAAAA==",
+    "src": "/gallery/img_pallet-racks_87_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_87_480w.webp",
+        "960": "/gallery/img_pallet-racks_87_960w.webp",
+        "1600": "/gallery/img_pallet-racks_87_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_87_480w.avif",
+        "960": "/gallery/img_pallet-racks_87_960w.avif",
+        "1600": "/gallery/img_pallet-racks_87_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_88",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "Drum Pallet.jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 824,
+    "aspectRatio": 1.941747572815534,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADQAwCdASoYAAwAPzmGulOvKSWisAgB4CcJYwAASlkU/6sJlWG/FMAA+eVWBKfMSquDBccXA5ehvi3TbLUXevMPSZn9h8a0f4vBwYYjSMjiFouTyK9vpicvU8/sSf1h912+h4FOvsUFONFnBAA=",
+    "src": "/gallery/img_pallet-racks_88_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_88_480w.webp",
+        "960": "/gallery/img_pallet-racks_88_960w.webp",
+        "1600": "/gallery/img_pallet-racks_88_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_88_480w.avif",
+        "960": "/gallery/img_pallet-racks_88_960w.avif",
+        "1600": "/gallery/img_pallet-racks_88_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_89",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "28082012(003).jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQAwCdASoYABIAPzmKu1OvKiYisAgB4CcJZQDM0B4iI+pxrr9vcAAA/iNMWkMYPlWUwPSkVgbMaxGslwIv2jxuSenNpS7YpFV/tJtpE+2bvZuc9sdWOvQOmPQa6G5YsjO6AAAA",
+    "src": "/gallery/img_pallet-racks_89_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_89_480w.webp",
+        "960": "/gallery/img_pallet-racks_89_960w.webp",
+        "1600": "/gallery/img_pallet-racks_89_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_89_480w.avif",
+        "960": "/gallery/img_pallet-racks_89_960w.avif",
+        "1600": "/gallery/img_pallet-racks_89_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_90",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "28082012(001).jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAACQBACdASoYABIAPzmMvFYvKaYjsBgIAeAnCWMAvzgRBL+tMC9Ogj5NmJd0DgAA/tq+JOsRttlDqbHHQcbByDGLoTJhjD0mW8tlvT1h3m7aYwB/4ZCmygW140DcBKPvFwN8tftldoQZymyzQAA=",
+    "src": "/gallery/img_pallet-racks_90_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_90_480w.webp",
+        "960": "/gallery/img_pallet-racks_90_960w.webp",
+        "1600": "/gallery/img_pallet-racks_90_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_90_480w.avif",
+        "960": "/gallery/img_pallet-racks_90_960w.avif",
+        "1600": "/gallery/img_pallet-racks_90_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_91",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG-20150912-WA0044.jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnYAAABXRUJQVlA4IGoAAADwBACdASoYABIAPzmMulWvKaWyMBgIAkAnCWcAyRAQtLtbB5or4NNyoPCqz2B68OAA/nMubOxDUmfZ8vu3uzBsSyp5Jx/csfJPBoJyo7mSgvEgmU9volZDWPA+bXNM5vzg1qb0wr6uWEAA",
+    "src": "/gallery/img_pallet-racks_91_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_91_480w.webp",
+        "960": "/gallery/img_pallet-racks_91_960w.webp",
+        "1600": "/gallery/img_pallet-racks_91_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_91_480w.avif",
+        "960": "/gallery/img_pallet-racks_91_960w.avif",
+        "1600": "/gallery/img_pallet-racks_91_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_92",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "28082012.jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAABQBACdASoYABIAPzmKulOvKaWsMAgB4CcJZQDPHoADSnZNbZX/JPMGSX+AAP0PAJ6wRxWWunOT0WJ+S0BbTvhxH/vwxzqbbe8JzC5AMnngSMsoO3jX5LWDysGSyh/g5Ef64AAA",
+    "src": "/gallery/img_pallet-racks_92_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_92_480w.webp",
+        "960": "/gallery/img_pallet-racks_92_960w.webp",
+        "1600": "/gallery/img_pallet-racks_92_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_92_480w.avif",
+        "960": "/gallery/img_pallet-racks_92_960w.avif",
+        "1600": "/gallery/img_pallet-racks_92_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_93",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG-20150912-WA0045.jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQBACdASoYABIAPzWAt1OvKCUit/VYAeAmiWcAACQu33TiPY4okmeqqNWWbCAA/m9/IgtX4WRm3PVjXohQwT6dh/lQhyL0nNyb6HMCs2xSAAAA",
+    "src": "/gallery/img_pallet-racks_93_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_93_480w.webp",
+        "960": "/gallery/img_pallet-racks_93_960w.webp",
+        "1600": "/gallery/img_pallet-racks_93_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_93_480w.avif",
+        "960": "/gallery/img_pallet-racks_93_960w.avif",
+        "1600": "/gallery/img_pallet-racks_93_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_94",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMG-20150912-WA00451.jpg",
+    "type": "image",
+    "width": 1600,
+    "height": 1200,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRl4AAABXRUJQVlA4IFIAAACQBACdASoYABIAPzWAt1OvKCUit/VYAeAmiWcAACQu33TiPY4okmeqqNWWbCAA/m9/IgtX4WRm3PVjXohQwT6dh/lQhyL0nNyb6HMCs2xSAAAA",
+    "src": "/gallery/img_pallet-racks_94_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_94_480w.webp",
+        "960": "/gallery/img_pallet-racks_94_960w.webp",
+        "1600": "/gallery/img_pallet-racks_94_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_94_480w.avif",
+        "960": "/gallery/img_pallet-racks_94_960w.avif",
+        "1600": "/gallery/img_pallet-racks_94_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_95",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMGA0480.JPG",
+    "type": "image",
+    "width": 640,
+    "height": 480,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAACQBACdASoYABIAPzmUwVmvKicvqAgB8CcJZwAAJdGPB+l0pOV48Ivvg/M+J4AA/rbsjwe+REZYjH55fBzg+CzEvAAQ1rkrevKdrTvS2EZR3bi4QsdE7T9wInH/BRX7dcKovBj0hCx8BwN0yxZxaSVakfYzrDxOYnAAAA==",
+    "src": "/gallery/img_pallet-racks_95_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_95_480w.webp",
+        "960": "/gallery/img_pallet-racks_95_960w.webp",
+        "1600": "/gallery/img_pallet-racks_95_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_95_480w.avif",
+        "960": "/gallery/img_pallet-racks_95_960w.avif",
+        "1600": "/gallery/img_pallet-racks_95_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "pallet-racks_96",
+    "category": "pallet-racks",
+    "categoryLabel": "Pallet & Drum Storage",
+    "originalFilename": "IMGA0482.JPG",
+    "type": "image",
+    "width": 640,
+    "height": 480,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAACQBACdASoYABIAPzmSwFmvKaajqAgB4CcJZwAAI6wUGKRlfojK9YUYMjMHJEAA/prKhw1VwIU3ruVoMB/8Z82kT9prjJmfo+rz/z4lTkoyOA+pMyhwbaIEheJOVDsAfOHw+Ozuume0+eCW53OdbfKSt/tpHonJNXIAAAAA",
+    "src": "/gallery/img_pallet-racks_96_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_pallet-racks_96_480w.webp",
+        "960": "/gallery/img_pallet-racks_96_960w.webp",
+        "1600": "/gallery/img_pallet-racks_96_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_pallet-racks_96_480w.avif",
+        "960": "/gallery/img_pallet-racks_96_960w.avif",
+        "1600": "/gallery/img_pallet-racks_96_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_97",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "03012010215.jpg",
+    "type": "image",
+    "width": 2592,
+    "height": 1944,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoYABIAPzmIvFavKKYjsBgIAeAnCWcAwoANtYrnu9ite6z3u0AA/TXNCVBYNILM7ZnfEpr2o5yZ8OMD3nNoQRGhJ7WhYDcyLBdnBWzIcPn/rVCTPh5w1ZZPrJNtiaQJYR7cn6URfmgy+RUAAAA=",
+    "src": "/gallery/img_mezzanine_97_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_97_480w.webp",
+        "960": "/gallery/img_mezzanine_97_960w.webp",
+        "1600": "/gallery/img_mezzanine_97_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_97_480w.avif",
+        "960": "/gallery/img_mezzanine_97_960w.avif",
+        "1600": "/gallery/img_mezzanine_97_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_98",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "03012010214.jpg",
+    "type": "image",
+    "width": 2592,
+    "height": 1944,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAAAQBACdASoYABIAPzmGtlQvKSSjMBgMAeAnCWUAzfwNkGW87BHNhJ8DzAD545/42rBefhoeuUfVfi6eN8Fd6g22bgRnOtEoKmNbJ2RvUC/ghm4g/1bgu/bbVOLY/FHn805M5z2WIasvgMVUIxcn6PSbixb0Zg1AAAA=",
+    "src": "/gallery/img_mezzanine_98_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_98_480w.webp",
+        "960": "/gallery/img_mezzanine_98_960w.webp",
+        "1600": "/gallery/img_mezzanine_98_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_98_480w.avif",
+        "960": "/gallery/img_mezzanine_98_960w.avif",
+        "1600": "/gallery/img_mezzanine_98_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_99",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170722-WA0049.jpg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRuYAAABXRUJQVlA4INoAAACwBQCdASoYACAAPzmGuVOvKSWisAgB4CcJagC+Wf/ngAEQMW3cQxyPpI7SS6dEKd4MtCxrV/AA9o6lplY94tbCxLz2pB4oFZ4lwQnT5wBpzP+jiChb5WnaLixtO2YuQcsiAEbg/VwoBYSUA3G4lmcoalvhAfTWWAG/KfGlrAl3n+WYQTawVWpW3T57JNK8+hOL+gcQ2yXTSBWe7SXt93VU0iyYHQ0BSPo+d0mremyb9BTZoBIhBj/V5Nzx+snGqX3KNtIk51ZkW++EUmBG9IT08cDEXoMBaygAAA==",
+    "src": "/gallery/img_mezzanine_99_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_99_480w.webp",
+        "960": "/gallery/img_mezzanine_99_960w.webp",
+        "1600": "/gallery/img_mezzanine_99_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_99_480w.avif",
+        "960": "/gallery/img_mezzanine_99_960w.avif",
+        "1600": "/gallery/img_mezzanine_99_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_100",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "WhatsApp Image 2018-10-22 at 11.17.55 AM.jpeg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRugAAABXRUJQVlA4INwAAACQBQCdASoYACAAPzmKulOvKaWisAgB4CcJZADAJYyAqfdZWMPCFHyAwZJVmnJ+nEUmyzv7AAD+ZM0ZDnVBvdSkA9RcAXZyg84kRK6F/Mr40wGfsDWi/ngkYJN4uHtOs/WI6LRDLRQJvxoHxkpNpiYdTBMZQiF2TX8cbrpwLpyNbovcuooFBeB4qPbfs+hm9UYRORpo4sFNfPxiYuqnSuhmPEick4c5oTS9HdDC1WTDY8ipUdSZ1CiKlZLYhnjlUbfxPZZZf6R7a1haPF4eP12StilIQDPX4B7z4AAA",
+    "src": "/gallery/img_mezzanine_100_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_100_480w.webp",
+        "960": "/gallery/img_mezzanine_100_960w.webp",
+        "1600": "/gallery/img_mezzanine_100_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_100_480w.avif",
+        "960": "/gallery/img_mezzanine_100_960w.avif",
+        "1600": "/gallery/img_mezzanine_100_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_101",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170722-WA0045.jpg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsAAAABXRUJQVlA4ILQAAAAQBQCdASoYACAAPzmIt1OvKSUisAgB4CcJbACdEfKgKf7PlYZI6xC2APW2XGncycoAAPrrmN+5NLVRPsC83KGhnSXxpxab3Gy0UwBcRO9SJzEr/QI3oq1gqNuxhBG+foVbMMvsc2/cP1yHF5EBk2RxbjzX+SV+AVebU82/8tN5QgAblgmVKRUZWarEU89zVT3rQKq41SQMQb4rDpOOE4yHXe/oU+Ma1jBZTm1y4heJ5z3CgAA=",
+    "src": "/gallery/img_mezzanine_101_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_101_480w.webp",
+        "960": "/gallery/img_mezzanine_101_960w.webp",
+        "1600": "/gallery/img_mezzanine_101_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_101_480w.avif",
+        "960": "/gallery/img_mezzanine_101_960w.avif",
+        "1600": "/gallery/img_mezzanine_101_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_102",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "WhatsApp Image 2018-10-22 at 11.17.03 AM.jpeg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoYACAAPzmQu1gvKaWjqAqp4CcJQBUfAQAPtwz2ekdUoVAyCVnDo5tEZnpJ1s5QAOHEW+1t5uRIpu5Dnlk3YMjJgpt2JmUUAkNWURf3xhFt0wEpRbsxjL6PAIxoL/IArKHT+lyKDsuANrKv1OZctSBXbdZv2WdYzvOfliK9bAIZ23hQB3gQ9+UxIJktzmD0wTEY0T2L2gz/3rO+EWtc4iHOSkM2lFfhFFyUMK9czHrbFfv8fSYr8SVhD6q6nN5DqAAAAA==",
+    "src": "/gallery/img_mezzanine_102_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_102_480w.webp",
+        "960": "/gallery/img_mezzanine_102_960w.webp",
+        "1600": "/gallery/img_mezzanine_102_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_102_480w.avif",
+        "960": "/gallery/img_mezzanine_102_960w.avif",
+        "1600": "/gallery/img_mezzanine_102_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_103",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "WhatsApp Image 2018-10-22 at 11.17.49 AM.jpeg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtQAAABXRUJQVlA4IMgAAABwBQCdASoYACAAPzmQu1gvKaWjqAqp4CcJQBUfAQAPtwz2ekdUoVAyCVnDo5tEZnpJ1s5QAOHEW+1t5uRIpu5Dnlk3YMjJgpt2JmUUAkNWURf3xhFt0wEpRbsxjL6PAIxoL/IArKHT+lyKDsuANrKv1OZctSBXbdZv2WdYzvOfliK9bAIZ23hQB3gQ9+UxIJktzmD0wTEY0T2L2gz/3rO+EWtc4iHOSkM2lFfhFFyUMK9czHrbFfv8fSYr8SVhD6q6nN5DqAAAAA==",
+    "src": "/gallery/img_mezzanine_103_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_103_480w.webp",
+        "960": "/gallery/img_mezzanine_103_960w.webp",
+        "1600": "/gallery/img_mezzanine_103_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_103_480w.avif",
+        "960": "/gallery/img_mezzanine_103_960w.avif",
+        "1600": "/gallery/img_mezzanine_103_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_104",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170722-WA0042.jpg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsYAAABXRUJQVlA4ILoAAADQBQCdASoYACAAPzmKulOvKiWisAgB4CcJZAC7M2SpAawA+YxSBOYG12Exr+81diXAlG/xqtoAAP7LRwDLc7+UK1xTTWXENXn48dWy+LPFY7c08dP9Bq3RyApoc7GjNYHGwIWnynfoaAzZscDii0j83DzxWPffUMrHzg6UwxAFPpSgycI+wufu/yhdepmjzlG5Vo+XMc9NZp+8qcE7CXdXhOGPOXP/getl4/mQgmd6xssqv/27NUzYAAA=",
+    "src": "/gallery/img_mezzanine_104_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_104_480w.webp",
+        "960": "/gallery/img_mezzanine_104_960w.webp",
+        "1600": "/gallery/img_mezzanine_104_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_104_480w.avif",
+        "960": "/gallery/img_mezzanine_104_960w.avif",
+        "1600": "/gallery/img_mezzanine_104_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_105",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170722-WA0046.jpg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRrAAAABXRUJQVlA4IKQAAADQBACdASoYACAAPzmQvVgvKaYjqAqp4CcJQBfJAaeOGvEVG33s1sW+k3vfDogQAADyLaZgDZ+YJOphkYmvKvy16BrwaIWGKokjuxrMwVsyH1bqlzFinxic9+Q7u8pADKFcc4wAtg+aeBp4T2WAw+p9nZBA7PvGhJ9y0gYIYYxhlp1SZOoLUkBz4PR4TsdSBUQdj1Z0+/Qrtd6Yxfkacw9kBSIAAA==",
+    "src": "/gallery/img_mezzanine_105_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_105_480w.webp",
+        "960": "/gallery/img_mezzanine_105_960w.webp",
+        "1600": "/gallery/img_mezzanine_105_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_105_480w.avif",
+        "960": "/gallery/img_mezzanine_105_960w.avif",
+        "1600": "/gallery/img_mezzanine_105_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_106",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170722-WA0047.jpg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRt4AAABXRUJQVlA4INIAAACwBQCdASoYACAAPzmIuVOvKSWisAgB4CcJbACdMoMxgElPLkjJSqqzMQXhquSCy7r4TkU4pIAA/p0cysnWaUfDIAQ8tbncKLtn0QCS3uHDVEY+tvrjhJ4hVlTG9HB/R0xzBPRfOCMMvUDQ5Gu5iL3Fnk0GJ/T0c9Halj2cc9JE+BXE9OY0dfu7/07g0wTOiIZdQfrlZZN8ivMqBnOqQM8/2l0KI/9pXjDC9x8bEAlWrsy0YwYJrtSFZF6TeUj/zoYHFEPCpMY1Xsgcf3VKkuI4AAA=",
+    "src": "/gallery/img_mezzanine_106_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_106_480w.webp",
+        "960": "/gallery/img_mezzanine_106_960w.webp",
+        "1600": "/gallery/img_mezzanine_106_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_106_480w.avif",
+        "960": "/gallery/img_mezzanine_106_960w.avif",
+        "1600": "/gallery/img_mezzanine_106_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_107",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170724-WA0062.jpg",
+    "type": "image",
+    "width": 1032,
+    "height": 774,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACwBACdASoYABIAPzmOvlevKaYjqAqp4CcJQBlWgZ9uHNATZMCo2imlkQJWF3AAAPysTYHYSI2pAIsnISe8Zdy76ydyrfUG7sq+MHXIs7dfVA8h1mQHOHcYWHdadUqz4wwfHcGlDX6tfQ+2zDrPUcMcRDm9AZubP3XdS0AiYpoUCURyX9eMvlkYIrXcAAAA",
+    "src": "/gallery/img_mezzanine_107_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_107_480w.webp",
+        "960": "/gallery/img_mezzanine_107_960w.webp",
+        "1600": "/gallery/img_mezzanine_107_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_107_480w.avif",
+        "960": "/gallery/img_mezzanine_107_960w.avif",
+        "1600": "/gallery/img_mezzanine_107_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_108",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170724-WA0050.jpg",
+    "type": "image",
+    "width": 1032,
+    "height": 774,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoYABIAPzmUwFmvKiajqAgB4CcJYwDImAkcacR5czX9p7UirwFF4EjgAP0xQsIVP6ECkNTAdrN4H83gM12N4lMgfuVLv6zCL8GNdWHiK+EmoBQq7kvVAj37MsmeZfu6MlsxkoijeV8uZzWof+tzt/x/8rP8wIzpmFmeEurMUznhWLPaGvzUVMgJP9AAAA==",
+    "src": "/gallery/img_mezzanine_108_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_108_480w.webp",
+        "960": "/gallery/img_mezzanine_108_960w.webp",
+        "1600": "/gallery/img_mezzanine_108_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_108_480w.avif",
+        "960": "/gallery/img_mezzanine_108_960w.avif",
+        "1600": "/gallery/img_mezzanine_108_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_109",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170724-WA0051.jpg",
+    "type": "image",
+    "width": 1032,
+    "height": 774,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAACwBACdASoYABIAPzmUwFmvKiajqAgB4CcJYwDImAkcacR5czX9p7UirwFF4EjgAP0xQsIVP6ECkNTAdrN4H83gM12N4lMgfuVLv6zCL8GNdWHiK+EmoBQq7kvVAj37MsmeZfu6MlsxkoijeV8uZzWof+tzt/x/8rP8wIzpmFmeEurMUznhWLPaGvzUVMgJP9AAAA==",
+    "src": "/gallery/img_mezzanine_109_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_109_480w.webp",
+        "960": "/gallery/img_mezzanine_109_960w.webp",
+        "1600": "/gallery/img_mezzanine_109_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_109_480w.avif",
+        "960": "/gallery/img_mezzanine_109_960w.avif",
+        "1600": "/gallery/img_mezzanine_109_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_110",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170724-WA0046.jpg",
+    "type": "image",
+    "width": 1032,
+    "height": 774,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwBACdASoYABIAPzmQvVgvKaYjqAqp4CcJQBdmXWH/AEQGug/ON5Clbnzi87560QAA/sNuFQD9YP4p/qrdVcwptQeW1POVMt7akWDv/AIWQaihn/WyvoMPgrzpGGUat3mU+x791dmkMsTaRuv/Dk/akRNpaj3gsl8wN/ni8v78owqNJ4pa1MZ5SObanBunqksqmD06jHqKxf2OgAA=",
+    "src": "/gallery/img_mezzanine_110_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_110_480w.webp",
+        "960": "/gallery/img_mezzanine_110_960w.webp",
+        "1600": "/gallery/img_mezzanine_110_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_110_480w.avif",
+        "960": "/gallery/img_mezzanine_110_960w.avif",
+        "1600": "/gallery/img_mezzanine_110_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_111",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170724-WA0047.jpg",
+    "type": "image",
+    "width": 1032,
+    "height": 774,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADwBACdASoYABIAPzmQvVgvKaYjqAqp4CcJQBdmXWH/AEQGug/ON5Clbnzi87560QAA/sNuFQD9YP4p/qrdVcwptQeW1POVMt7akWDv/AIWQaihn/WyvoMPgrzpGGUat3mU+x791dmkMsTaRuv/Dk/akRNpaj3gsl8wN/ni8v78owqNJ4pa1MZ5SObanBunqksqmD06jHqKxf2OgAA=",
+    "src": "/gallery/img_mezzanine_111_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_111_480w.webp",
+        "960": "/gallery/img_mezzanine_111_960w.webp",
+        "1600": "/gallery/img_mezzanine_111_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_111_480w.avif",
+        "960": "/gallery/img_mezzanine_111_960w.avif",
+        "1600": "/gallery/img_mezzanine_111_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "mezzanine_112",
+    "category": "mezzanine",
+    "categoryLabel": "Mezzanine Floors",
+    "originalFilename": "IMG-20170722-WA0041.jpg",
+    "type": "image",
+    "width": 960,
+    "height": 1280,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsoAAABXRUJQVlA4IL4AAACQBQCdASoYACAAPzmQulWvKiWjMBgIAeAnCWMAwoAQ9aqEfRVyKLmXMTVH1TbjW6GoONToAAD+5A8UH94grA7Si+M5XufgRpZh9ayB2tSSrwiqEJeyM4zhNdKYRbt/vyoevbPwlxmVDD7+gGjrpFsNTAw/DoZQ2DJPYWPBb3fpkEAr1WqJRIs0IU20IL3UEqTL2AUoyGeDN2+FSORduUyUGEbfe7y8P2dJzpsgyPkkZrQDSwPdJ/yFM43BgAAA",
+    "src": "/gallery/img_mezzanine_112_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_mezzanine_112_480w.webp",
+        "960": "/gallery/img_mezzanine_112_960w.webp",
+        "1600": "/gallery/img_mezzanine_112_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_mezzanine_112_480w.avif",
+        "960": "/gallery/img_mezzanine_112_960w.avif",
+        "1600": "/gallery/img_mezzanine_112_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_113",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "VID-20140208-WA0007.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_stolift_113.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_114",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "VID-20190702-WA0107.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_stolift_114.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_115",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "STOLIFT- KRD COPY.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_stolift_115.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_116",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "VID-20180313-WA0080.mp4",
+    "type": "video",
+    "width": 960,
+    "height": 540,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "src": "/gallery/vid_stolift_116.mp4",
+    "sources": {
+      "webp": {},
+      "avif": {}
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_117",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0760.JPG",
+    "type": "image",
+    "width": 2592,
+    "height": 1944,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAABwBACdASoYABIAPzmIvVavKKYuMBgIAeAnCWkAACWqWijy9ilOpNtxszC8AAD+y/YPeVPNpFXubx+0sOTnQL463BoRCB3ZFT3LtbkyoegGffAU/9EW7mErf++UDJwvNBoAAA==",
+    "src": "/gallery/img_stolift_117_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_117_480w.webp",
+        "960": "/gallery/img_stolift_117_960w.webp",
+        "1600": "/gallery/img_stolift_117_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_117_480w.avif",
+        "960": "/gallery/img_stolift_117_960w.avif",
+        "1600": "/gallery/img_stolift_117_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_118",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0754.JPG",
+    "type": "image",
+    "width": 2592,
+    "height": 1944,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRnAAAABXRUJQVlA4IGQAAADQBACdASoYABIAPzmIu1avKCWjsBgIAeAnCWUAABuCHtsy2GbzAa4+CyY9FE+HgAD+6NV0XZj7SXfc9TpWCXXgIOv26R4gJtA7TUJIhZZeyizaWfyoB99HTIJMaPK0VAgiH6AA",
+    "src": "/gallery/img_stolift_118_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_118_480w.webp",
+        "960": "/gallery/img_stolift_118_960w.webp",
+        "1600": "/gallery/img_stolift_118_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_118_480w.avif",
+        "960": "/gallery/img_stolift_118_960w.avif",
+        "1600": "/gallery/img_stolift_118_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_119",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0758.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAADwBACdASoYACAAPzmGtlSvKKSjMBgMAeAnCWcAAU9pY3CHqisIWDWKD6SrV8u/aAAA/vl03vaVkp580Ab609ttR0KepG3zcMJhE7wO8yrUSmMa3RJMi3XvxMo5lnNLBWREFzq/KSPITRVVsMR694FitnmWrjyCX3Hvp5e0iBVRckVY/jMAAA==",
+    "src": "/gallery/img_stolift_119_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_119_480w.webp",
+        "960": "/gallery/img_stolift_119_960w.webp",
+        "1600": "/gallery/img_stolift_119_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_119_480w.avif",
+        "960": "/gallery/img_stolift_119_960w.avif",
+        "1600": "/gallery/img_stolift_119_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_120",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0752.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBQCdASoYACAAPzmAuVSvJ6WjMBgMAeAnCWcA0BhXr1LTd01yUaRun8TXiMo6rC7AAP7ysc+xt9gfjXV2MSo8YYUnkDNyHkDggHiVsZv6O/uOnKgLt0P6RmDOQtiB8hzyvBbc/oFLyNUC+0xplysT8OnS9ShnHws3CET2mJn6AAAA",
+    "src": "/gallery/img_stolift_120_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_120_480w.webp",
+        "960": "/gallery/img_stolift_120_960w.webp",
+        "1600": "/gallery/img_stolift_120_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_120_480w.avif",
+        "960": "/gallery/img_stolift_120_960w.avif",
+        "1600": "/gallery/img_stolift_120_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_121",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0761.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRmYAAABXRUJQVlA4IFoAAAAQBACdASoYACAAPzmMwFcvKScjqAqp4CcJZwABFajk5co0kiMigQVQAAD+94IRcvfcmBaQperoPH/iWbys4VsNBftdI0pRWTaRlwCSzsD2eDA+KdjEwuUAAAA=",
+    "src": "/gallery/img_stolift_121_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_121_480w.webp",
+        "960": "/gallery/img_stolift_121_960w.webp",
+        "1600": "/gallery/img_stolift_121_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_121_480w.avif",
+        "960": "/gallery/img_stolift_121_960w.avif",
+        "1600": "/gallery/img_stolift_121_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_122",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0753.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpoAAABXRUJQVlA4II4AAACQBACdASoYACAAPzmSvlgvKiYjqAqp4CcJZwAAiVz66augBPCD8LTVaGMnuoAA/u/XhxmPyJQki+d6eZrdEubHhfHPK1D/lCJOU0/Af9XUUeryiVf9wajxXq2N0f5RutiViN0eKhgwxoF7FmAutCUs1DThQ2q3eFOK6VcaVj7JW4iNwZ28idfTIofgAAAA",
+    "src": "/gallery/img_stolift_122_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_122_480w.webp",
+        "960": "/gallery/img_stolift_122_960w.webp",
+        "1600": "/gallery/img_stolift_122_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_122_480w.avif",
+        "960": "/gallery/img_stolift_122_960w.avif",
+        "1600": "/gallery/img_stolift_122_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_123",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0759.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRpYAAABXRUJQVlA4IIoAAACQBACdASoYACAAPzmKvFWvKaYjKA1R4CcJZwABTJ9lpK37DD0saNQx6bIPmIAA/vi6PtzdrsgfGqBE1b11aMEDx6vpj5c9AfYz8QNnrsSVvEf1jj2VAfdY7TKdDVCX3dnT5r9+E0b6cYXnxrxVH9v2clgQhaYHRBZ7DSi3Ut3EY+2P+gYcAbmzgAA=",
+    "src": "/gallery/img_stolift_123_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_123_480w.webp",
+        "960": "/gallery/img_stolift_123_960w.webp",
+        "1600": "/gallery/img_stolift_123_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_123_480w.avif",
+        "960": "/gallery/img_stolift_123_960w.avif",
+        "1600": "/gallery/img_stolift_123_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_124",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0755.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAABwBACdASoYACAAPzmQwVevKacjqAqp4CcJaQABFfs4/2MYWmP+k9MNTEdKAAD+9xEuwJ92vRk+qjYHMv52x9cUtZMA2NvMCG8qaZXufF0fborPjMVIYhiIJVr0MH5Gq0lvmDlz1ABKBYpSoscfXh5y4XphihbxUd13IDN6CaV7BwAA",
+    "src": "/gallery/img_stolift_124_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_124_480w.webp",
+        "960": "/gallery/img_stolift_124_960w.webp",
+        "1600": "/gallery/img_stolift_124_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_124_480w.avif",
+        "960": "/gallery/img_stolift_124_960w.avif",
+        "1600": "/gallery/img_stolift_124_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_125",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0756.JPG",
+    "type": "image",
+    "width": 2592,
+    "height": 1944,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpQAAABXRUJQVlA4IIgAAABwBACdASoYABIAPzmOvlevKaYjqAqp4CcJZwAAKdIj3wStvyHMOhx0so6UAAD+4zncJJ+DaZTplPHHpwg5hsVNC9eVuRMPdHYMnsecx+wZaocW5AcmL2YxE0HXAnN6FS2kQ9Uf7cHGplE6kOvVeXsMtHhi7WzCxfIqjk3hIDDynfBWeD04AAAA",
+    "src": "/gallery/img_stolift_125_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_125_480w.webp",
+        "960": "/gallery/img_stolift_125_960w.webp",
+        "1600": "/gallery/img_stolift_125_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_125_480w.avif",
+        "960": "/gallery/img_stolift_125_960w.avif",
+        "1600": "/gallery/img_stolift_125_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_126",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0762.JPG",
+    "type": "image",
+    "width": 1944,
+    "height": 2592,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAABwBACdASoYACAAPzmEvVavJ6YjsBgIAeAnCWcAAI92FIhorDCooShXltQAAAD+7UdD2a3Bj6sXD3a2YNZQmTKIoRJidbXhUXSRh4rDjCFQUMT7VbMSikGlLzpviBFsndYk7PgAAAA=",
+    "src": "/gallery/img_stolift_126_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_126_480w.webp",
+        "960": "/gallery/img_stolift_126_960w.webp",
+        "1600": "/gallery/img_stolift_126_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_126_480w.avif",
+        "960": "/gallery/img_stolift_126_960w.avif",
+        "1600": "/gallery/img_stolift_126_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_127",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "IMG_0757.JPG",
+    "type": "image",
+    "width": 2592,
+    "height": 1944,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRpwAAABXRUJQVlA4IJAAAABwBACdASoYABIAPzmSwFmvKaajqAgB4CcJZwAAKdKXlSjEnXd2X6be+MAvQAD+6N+cjw+LiMYXtRX+cSvnZ+gqMVDC8j1qqc3fq7kRuiscaKaj18Wz5oG/UmEd8XeaIueh4teLUWWif0ZwXzlLLX4xYpM8u1YH7//II77lGr7ISVATM9kbRYID/AaRFKJNAAA=",
+    "src": "/gallery/img_stolift_127_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_127_480w.webp",
+        "960": "/gallery/img_stolift_127_960w.webp",
+        "1600": "/gallery/img_stolift_127_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_127_480w.avif",
+        "960": "/gallery/img_stolift_127_960w.avif",
+        "1600": "/gallery/img_stolift_127_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "stolift_128",
+    "category": "stolift",
+    "categoryLabel": "STOLIFT Vertical Lift",
+    "originalFilename": "stolift with automatic tray extractor.jpg",
+    "type": "image",
+    "width": 2340,
+    "height": 4160,
+    "aspectRatio": 0.5625,
+    "blurDataURL": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACQBgCdASoYACsAPzmWv1mvKqajpWsx4CcJYwDI1Gjwy/4y9/97OrkdW7H73ScrgLI0aIvHNK9XNQVr0ZsgAP7yo9rlE+bJcgZcm8/V5oIQqaN9LqdLuoKmEz7tIGiOq/8y3tPhJP5Jn+AgQ6vBBF3chMZdwIYe6cN6w8yLsClwdm3VWcYHc7GMba9JhfBQQQxAUYlGl4UY9SBuqb7cmQPYeuJZuzmd5YvB2gNtfHeqWQap90RKtj2WKngAAA==",
+    "src": "/gallery/img_stolift_128_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_stolift_128_480w.webp",
+        "960": "/gallery/img_stolift_128_960w.webp",
+        "1600": "/gallery/img_stolift_128_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_stolift_128_480w.avif",
+        "960": "/gallery/img_stolift_128_960w.avif",
+        "1600": "/gallery/img_stolift_128_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "facility_129",
+    "category": "facility",
+    "categoryLabel": "Factory & Facility",
+    "originalFilename": "WhatsApp Image 2017-01-07 at 3.25.35 PM.jpeg",
+    "type": "image",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoYAA4APzmGuVOvKSWisAgB4CcJZQAAUvyRdOtDmIs6r5ECwADNRDJgHL0pY1Eae6dlL5EzAmQqxM1iT4Yq1U66aS4hLKuXjP1nldf43O3r1DQDu26R/wYNwYF9z+4/NZnKyNw4RiYiAAAA",
+    "src": "/gallery/img_facility_129_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_facility_129_480w.webp",
+        "960": "/gallery/img_facility_129_960w.webp",
+        "1600": "/gallery/img_facility_129_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_facility_129_480w.avif",
+        "960": "/gallery/img_facility_129_960w.avif",
+        "1600": "/gallery/img_facility_129_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "facility_130",
+    "category": "facility",
+    "categoryLabel": "Factory & Facility",
+    "originalFilename": "1d749d09-f1b9-44cd-87da-9f3f865f8374.jpg",
+    "type": "image",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABQBACdASoYAA4APzmGuVOvKSWisAgB4CcJYwDG9B6WroMTp8SjurxuO2IAAOEVpPKJAVyWRzl+RaWVaEgXmiXW0EJE+AAAVupQ4uwxjUClpvB/TwDyDS0pEQ0QGfKF/N7RCI7jE3x3TvfnmYfKapD9nBPzAAAA",
+    "src": "/gallery/img_facility_130_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_facility_130_480w.webp",
+        "960": "/gallery/img_facility_130_960w.webp",
+        "1600": "/gallery/img_facility_130_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_facility_130_480w.avif",
+        "960": "/gallery/img_facility_130_960w.avif",
+        "1600": "/gallery/img_facility_130_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "facility_131",
+    "category": "facility",
+    "categoryLabel": "Factory & Facility",
+    "originalFilename": "WhatsApp Image 2017-01-07 at 3.25.24 PM.jpeg",
+    "type": "image",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoYAA4APzmIvlOvKScisAgB4CcJYwAAXvc+nSpUKw3lADIwAPacejCkYaBdaJeTB3y4WjEYF0HyFlH+CUnftK5f/+GmsCt7DS47pD5AxGaQ6uiWKO9B4tpn3j97TSBmsDxkAA==",
+    "src": "/gallery/img_facility_131_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_facility_131_480w.webp",
+        "960": "/gallery/img_facility_131_960w.webp",
+        "1600": "/gallery/img_facility_131_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_facility_131_480w.avif",
+        "960": "/gallery/img_facility_131_960w.avif",
+        "1600": "/gallery/img_facility_131_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "facility_132",
+    "category": "facility",
+    "categoryLabel": "Factory & Facility",
+    "originalFilename": "2469746c-0c36-46e2-8de6-955e1382d5e1.jpg",
+    "type": "image",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoYAA4APzmOvlOvKqcisAgB4CcJYwAAUgM78pcTa1uCRlBgAPaOOUElKRzKFHm1ncNXkI6eV66fUnkPJrw9XHok1XkkQtrOrD1yVqDgJlqfEfCSkDaQRD2t5GhRnkHeP1pCBmsC4AA=",
+    "src": "/gallery/img_facility_132_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_facility_132_480w.webp",
+        "960": "/gallery/img_facility_132_960w.webp",
+        "1600": "/gallery/img_facility_132_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_facility_132_480w.avif",
+        "960": "/gallery/img_facility_132_960w.avif",
+        "1600": "/gallery/img_facility_132_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "facility_133",
+    "category": "facility",
+    "categoryLabel": "Factory & Facility",
+    "originalFilename": "877e5978-8485-4d0c-bd78-79bd6e2be327.jpg",
+    "type": "image",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYAA4APzmIvlSvKSajMAgB4CcJaQAAW+1boh4/J175y2AA/uOt6/jh/Wj53ppaZAtUNY/yrbZI1f1RYh8uRbBTz4G2rykhfWirNm9MbtLj3D8UeYgbZgFAAAA=",
+    "src": "/gallery/img_facility_133_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_facility_133_480w.webp",
+        "960": "/gallery/img_facility_133_960w.webp",
+        "1600": "/gallery/img_facility_133_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_facility_133_480w.avif",
+        "960": "/gallery/img_facility_133_960w.avif",
+        "1600": "/gallery/img_facility_133_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "facility_134",
+    "category": "facility",
+    "categoryLabel": "Factory & Facility",
+    "originalFilename": "7d07e856-2062-4999-87a9-061b017d5432.jpg",
+    "type": "image",
+    "width": 1280,
+    "height": 720,
+    "aspectRatio": 1.7777777777777777,
+    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoYAA4APzmIulOvKSWisAgB4CcJZwAAXiIh4iQA2KusL/AA/uLs9sa4/eTT5C/NHh+AYnnlScQYdURO5IanKb0YolO8MDBv3NpgxY8TL00oGF5/eMJj20H0r4Rx+YBNpqDgAA==",
+    "src": "/gallery/img_facility_134_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_facility_134_480w.webp",
+        "960": "/gallery/img_facility_134_960w.webp",
+        "1600": "/gallery/img_facility_134_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_facility_134_480w.avif",
+        "960": "/gallery/img_facility_134_960w.avif",
+        "1600": "/gallery/img_facility_134_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "storder_135",
+    "category": "storder",
+    "categoryLabel": "STORDER Picking",
+    "originalFilename": "091220091041.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACQBACdASoYACAAPzmUwVmvKicjqAgB4CcJaACdAEW8z+xP4LVyfPNXiQaRbAAA/tn3rVC/C/UtY0QDM/kwkEEXfd0dsdtBwWfROvOqa1I+NqAjS9395BkE/ZnDuedmTCvvyS1MRmSiudDEMXfRoZAVdBP7JNA2of8+j7APdbew/U4GHy92Bse1cu2safm2PTju7y1BlDIjqXCMleIQpBQEjlMqCohhnFZhhHn8WVwQOKsfG7NbHaY9mNbGAA==",
+    "src": "/gallery/img_storder_135_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_storder_135_480w.webp",
+        "960": "/gallery/img_storder_135_960w.webp",
+        "1600": "/gallery/img_storder_135_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_storder_135_480w.avif",
+        "960": "/gallery/img_storder_135_960w.avif",
+        "1600": "/gallery/img_storder_135_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "storder_136",
+    "category": "storder",
+    "categoryLabel": "STORDER Picking",
+    "originalFilename": "091220091039.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAABQBQCdASoYACAAPzmUwVmvKicjqAgB4CcJagCw7FhqkbBxdlJAg4JM8TmWN5NhkDU1i8AA/tzoe7Yk4fcOvI8JG2wWTzIfy2w+VWV8iBeP5UXypMxguy142xav1noKf63amb0lm8qCKA9lSb6vFD1RA0n3ChzLN6QMTRK2TMJjDis8EQNZhbbpKXNhCXYUVQRjGGF07VeUUJvNKasVbu0AnMXpeE38U7T10BX3m6R3WyiwfzdP0mRY8PRQjl+mJ3j67lWO8BsVlGBI3+7CAAAA",
+    "src": "/gallery/img_storder_136_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_storder_136_480w.webp",
+        "960": "/gallery/img_storder_136_960w.webp",
+        "1600": "/gallery/img_storder_136_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_storder_136_480w.avif",
+        "960": "/gallery/img_storder_136_960w.avif",
+        "1600": "/gallery/img_storder_136_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "storder_137",
+    "category": "storder",
+    "categoryLabel": "STORDER Picking",
+    "originalFilename": "091220091040.jpg",
+    "type": "image",
+    "width": 1536,
+    "height": 2048,
+    "aspectRatio": 0.75,
+    "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBACdASoYACAAPzmIulOvKSWisAgB4CcJZgCdABHSLsvGNxD6VIWXxKQ8DQAA/NSPb+bXG9uSMv5wGrFRBTK870StVCw1H4SHBqqt15sWbe5sq2duVXBtBgXHAO1FEhAdwqlHhKkAJdY9XPhCYbI6bzzDSlQ46vzf9OiULHWO9veEHYknnH92OrWUaMs/sH8S6AnAhoXhFsqJwYcVkFTNuACKJUoFgAA=",
+    "src": "/gallery/img_storder_137_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_storder_137_480w.webp",
+        "960": "/gallery/img_storder_137_960w.webp",
+        "1600": "/gallery/img_storder_137_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_storder_137_480w.avif",
+        "960": "/gallery/img_storder_137_960w.avif",
+        "1600": "/gallery/img_storder_137_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  },
+  {
+    "id": "storder_138",
+    "category": "storder",
+    "categoryLabel": "STORDER Picking",
+    "originalFilename": "091220091042.jpg",
+    "type": "image",
+    "width": 2048,
+    "height": 1536,
+    "aspectRatio": 1.3333333333333333,
+    "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoYABIAPzmSu1gvKiWjqAqp4CcJQBcGAUUxLAnmdTvlXwAAx1DrBIi5Xh/v1HowjhxZMCZP2XSMSsdXzJq7pYR+vE+d2108iKPelDzUZoynUgyJ+/fQnrSCUZoGTFavZRey5F+OHUTGunSUwO4FvWXundgfxtsAAAA=",
+    "src": "/gallery/img_storder_138_960w.webp",
+    "sources": {
+      "webp": {
+        "480": "/gallery/img_storder_138_480w.webp",
+        "960": "/gallery/img_storder_138_960w.webp",
+        "1600": "/gallery/img_storder_138_1600w.webp"
+      },
+      "avif": {
+        "480": "/gallery/img_storder_138_480w.avif",
+        "960": "/gallery/img_storder_138_960w.avif",
+        "1600": "/gallery/img_storder_138_1600w.avif"
+      }
+    },
+    "alt": "",
+    "caption": ""
+  }
+]

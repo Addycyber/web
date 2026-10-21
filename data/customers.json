@@ -1,0 +1,1277 @@
+{
+  "_readme": "Space Magnum customer list for the website logo wall. Every record starts with approved=false and logo=null. The site must only show a customer publicly once approved is true. 'original' keeps the text exactly as supplied.",
+  "sectors": [
+    {
+      "id": "automobile",
+      "label": "Automobile"
+    },
+    {
+      "id": "government-institutes",
+      "label": "Government Institutes"
+    },
+    {
+      "id": "engineering",
+      "label": "Engineering"
+    },
+    {
+      "id": "pharmaceuticals",
+      "label": "Pharmaceuticals"
+    },
+    {
+      "id": "other",
+      "label": "Other"
+    }
+  ],
+  "customers": [
+    {
+      "id": "anand-motors-ltd",
+      "name": "Anand Motors Ltd.",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Anand Motors Ltd."
+      ]
+    },
+    {
+      "id": "ashok-leyland",
+      "name": "Ashok Leyland",
+      "sector": "automobile",
+      "locations": [
+        "Chennai"
+      ],
+      "note": "",
+      "logo": "customers/ashok-leyland.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Ashok Leyland - Chennai"
+      ]
+    },
+    {
+      "id": "behr-india-pvt-ltd",
+      "name": "Behr India Pvt. Ltd.",
+      "sector": "automobile",
+      "locations": [
+        "Pune"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Behr India Pvt. Ltd. - Pune"
+      ]
+    },
+    {
+      "id": "bharat-forge-ltd",
+      "name": "Bharat Forge Ltd.",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Bharat Forge Ltd."
+      ]
+    },
+    {
+      "id": "cummins-india-ltd",
+      "name": "Cummins India Ltd.",
+      "sector": "automobile",
+      "locations": [
+        "Pune"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Cummins India Ltd. - Pune"
+      ]
+    },
+    {
+      "id": "endurance",
+      "name": "Endurance",
+      "sector": "automobile",
+      "locations": [
+        "Aurangabad"
+      ],
+      "note": "Spelling corrected: Aurnagabad to Aurangabad",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "ENDURANCE - Aurnagabad"
+      ]
+    },
+    {
+      "id": "kalyani-carpenter-metal-centers",
+      "name": "Kalyani Carpenter Metal Centers",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Kalyani Carpenter Metal Centers"
+      ]
+    },
+    {
+      "id": "lucas-tvs",
+      "name": "Lucas TVS",
+      "sector": "automobile",
+      "locations": [
+        "Chennai"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Lucas TVS - Chennai"
+      ]
+    },
+    {
+      "id": "mahindra-and-mahindra-ltd",
+      "name": "Mahindra & Mahindra Ltd.",
+      "sector": "automobile",
+      "locations": [
+        "Chennai",
+        "Kandivali",
+        "Nagpur",
+        "Nashik",
+        "Igatpuri"
+      ],
+      "note": "5 entries merged into one company with 5 sites; Kandivali spelling corrected",
+      "logo": "customers/mahindra-and-mahindra-ltd.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Mahindra & Mahindra Ltd. - Chennai",
+        "Mahindra & Mahindra Ltd. - kandiwali",
+        "Mahindra & Mahindra Ltd. - Nagpur",
+        "Mahindra & Mahindra Ltd. - Nashik",
+        "M&M - Igatpuri"
+      ]
+    },
+    {
+      "id": "mico",
+      "name": "MICO",
+      "sector": "automobile",
+      "locations": [
+        "Nashik"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "This company may now trade under a different name; confirm which name and logo to show.",
+      "original": [
+        "MICO - Nashik"
+      ]
+    },
+    {
+      "id": "mindarika",
+      "name": "Mindarika",
+      "sector": "automobile",
+      "locations": [
+        "Delhi"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Confirm the exact company name and spelling.",
+      "original": [
+        "Mindarika – Delhi"
+      ]
+    },
+    {
+      "id": "perfect-circle-victor-ltd",
+      "name": "Perfect Circle Victor Ltd.",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Perfect Circle Victor Ltd."
+      ]
+    },
+    {
+      "id": "shriram-piston",
+      "name": "Shriram Piston",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": "customers/shriram-piston.png",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Shriram Piston"
+      ]
+    },
+    {
+      "id": "tata-holset",
+      "name": "Tata Holset",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Tata Holset"
+      ]
+    },
+    {
+      "id": "tata-johnson-controls-automotive-ltd",
+      "name": "Tata Johnson Controls Automotive Ltd.",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "This company may now trade under a different name; confirm which name and logo to show.",
+      "original": [
+        "Tata Johnson Controls Automotive Ltd."
+      ]
+    },
+    {
+      "id": "tata-motors",
+      "name": "Tata Motors",
+      "sector": "automobile",
+      "locations": [
+        "Jamshedpur",
+        "Pune"
+      ],
+      "note": "2 entries merged (Jamshedpur listed twice)",
+      "logo": "customers/tata-motors.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "TATA Motors - Jamshedpur",
+        "Tata Motors Ltd. - Jamshedpur / Pune"
+      ]
+    },
+    {
+      "id": "tata-toyo-radiators-ltd",
+      "name": "Tata Toyo Radiators Ltd.",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Tata Toyo Radiators Ltd."
+      ]
+    },
+    {
+      "id": "tc-springs-ltd",
+      "name": "TC Springs Ltd.",
+      "sector": "automobile",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "TC Springs Ltd."
+      ]
+    },
+    {
+      "id": "wendt-india",
+      "name": "Wendt India",
+      "sector": "automobile",
+      "locations": [
+        "Hosur"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "WENDT India, - Hosur"
+      ]
+    },
+    {
+      "id": "air-force-depot-palam",
+      "name": "Air Force Depot Palam",
+      "sector": "government-institutes",
+      "locations": [
+        "Delhi"
+      ],
+      "note": "Spelling corrected: Depo to Depot",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Defence organisation: confirm you may name or show it publicly.",
+      "original": [
+        "Air Force Depo Palam - Delhi"
+      ]
+    },
+    {
+      "id": "bharat-heavy-electricals-ltd",
+      "name": "Bharat Heavy Electricals Ltd. (BHEL)",
+      "sector": "government-institutes",
+      "locations": [
+        "Bhopal",
+        "Varanasi"
+      ],
+      "note": "3 entries merged (one had no location)",
+      "logo": "customers/bharat-heavy-electricals-ltd.png",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Bharat Heavy Electricals Ltd.",
+        "Bharat Heavy Electricals Ltd. - Bhopal",
+        "Bharat Heavy Electricals Ltd. - Varanasi"
+      ]
+    },
+    {
+      "id": "central-railway",
+      "name": "Central Railway",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Central Railway."
+      ]
+    },
+    {
+      "id": "central-railway-2",
+      "name": "Central Railway (East)",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Confirm the official zone name.",
+      "original": [
+        "Central Railway(East)"
+      ]
+    },
+    {
+      "id": "department-of-income-tax",
+      "name": "Department of Income-Tax",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Department of Income-Tax"
+      ]
+    },
+    {
+      "id": "hindustan-aeronautics-ltd",
+      "name": "Hindustan Aeronautics Ltd. (HAL)",
+      "sector": "government-institutes",
+      "locations": [
+        "Bangalore",
+        "Koraput",
+        "Lucknow"
+      ],
+      "note": "3 entries merged",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Defence organisation: confirm you may name or show it publicly.",
+      "original": [
+        "HAL - Bangalore",
+        "HAL - Koraput",
+        "HAL - Lucknow"
+      ]
+    },
+    {
+      "id": "indian-navy",
+      "name": "Indian Navy",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Defence organisation: confirm you may name or show it publicly.",
+      "original": [
+        "Indian Navy"
+      ]
+    },
+    {
+      "id": "indian-security-press",
+      "name": "Indian Security Press",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Indian Security Press"
+      ]
+    },
+    {
+      "id": "lic",
+      "name": "LIC",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "LIC"
+      ]
+    },
+    {
+      "id": "lmw",
+      "name": "LMW",
+      "sector": "government-institutes",
+      "locations": [
+        "Coimbatore"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Possible duplicate of 'Laxmi Machine Works - Coimbatore' in the Other group; confirm whether these are the same customer.",
+      "original": [
+        "LMW Coimbatore"
+      ]
+    },
+    {
+      "id": "ongc",
+      "name": "ONGC",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "ONGC"
+      ]
+    },
+    {
+      "id": "saraswat-bank",
+      "name": "Saraswat Bank",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": "customers/saraswat-bank.png",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Saraswat Bank"
+      ]
+    },
+    {
+      "id": "south-western-railway",
+      "name": "South Western Railway",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "South Western Railway"
+      ]
+    },
+    {
+      "id": "state-bank-of-india",
+      "name": "State Bank of India",
+      "sector": "government-institutes",
+      "locations": [],
+      "note": "Name written out in full",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "state bank India"
+      ]
+    },
+    {
+      "id": "aroma",
+      "name": "AROMA",
+      "sector": "engineering",
+      "locations": [
+        "Kachcch"
+      ],
+      "note": "Food industry",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Confirm company name and the spelling of the location (Kachcch).",
+      "original": [
+        "AROMA Kachcch (food)"
+      ]
+    },
+    {
+      "id": "bosch-rexroth",
+      "name": "Bosch Rexroth",
+      "sector": "engineering",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Bosch Rexroth"
+      ]
+    },
+    {
+      "id": "enercon",
+      "name": "ENERCON",
+      "sector": "engineering",
+      "locations": [
+        "Daman"
+      ],
+      "note": "",
+      "logo": "customers/enercon.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "ENERCON – Daman"
+      ]
+    },
+    {
+      "id": "feed-tech-engineers-pvt-ltd",
+      "name": "Feed Tech Engineers Pvt. Ltd.",
+      "sector": "engineering",
+      "locations": [],
+      "note": "Listed in two groups; kept once here",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Feed Tech Engineers Pvt. Ltd. (Engineering column)",
+        "Feed Tech Engineers Pvt. Ltd. (Other column)"
+      ]
+    },
+    {
+      "id": "honeywell-automation",
+      "name": "Honeywell Automation",
+      "sector": "engineering",
+      "locations": [],
+      "note": "",
+      "logo": "customers/honeywell-automation.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Honeywell Automation."
+      ]
+    },
+    {
+      "id": "kirloskar-pneumatics",
+      "name": "Kirloskar Pneumatics",
+      "sector": "engineering",
+      "locations": [
+        "Pune"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Kirloskar Pneumatics - Pune"
+      ]
+    },
+    {
+      "id": "landt",
+      "name": "L&T",
+      "sector": "engineering",
+      "locations": [
+        "Nagar"
+      ],
+      "note": "",
+      "logo": "customers/landt.svg",
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "The location reads only 'Nagar'; confirm the full place name and which L&T unit.",
+      "original": [
+        "L & T - Nagar"
+      ]
+    },
+    {
+      "id": "merloni-termo-sanitari-india-ltd",
+      "name": "Merloni Termo Sanitari India Ltd.",
+      "sector": "engineering",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "This company may now trade under a different name; confirm which name and logo to show.",
+      "original": [
+        "Merloni Termo Sanitari India Ltd."
+      ]
+    },
+    {
+      "id": "sandvik-asia",
+      "name": "Sandvik Asia",
+      "sector": "engineering",
+      "locations": [
+        "Pune"
+      ],
+      "note": "",
+      "logo": "customers/sandvik-asia.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Sandvik Asia - Pune"
+      ]
+    },
+    {
+      "id": "sanmar-weighing-systems-ltd",
+      "name": "Sanmar Weighing Systems Ltd.",
+      "sector": "engineering",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Sanmar Weighing Systems Ltd."
+      ]
+    },
+    {
+      "id": "ship-building-center",
+      "name": "Ship Building Center",
+      "sector": "engineering",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "The name is generic; confirm the exact organisation.",
+      "original": [
+        "Ship Building Center"
+      ]
+    },
+    {
+      "id": "spicer",
+      "name": "Spicer",
+      "sector": "engineering",
+      "locations": [
+        "Dharwad"
+      ],
+      "note": "Automotive",
+      "logo": "customers/spicer.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "SPICER – Dharwad (Auto)"
+      ]
+    },
+    {
+      "id": "wipro",
+      "name": "Wipro",
+      "sector": "engineering",
+      "locations": [
+        "Bangalore",
+        "Hindupur"
+      ],
+      "note": "2 entries merged (Hindupur was in the Other group)",
+      "logo": "customers/wipro.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "WIPRO - Bangalore",
+        "Wipro - Hindupur"
+      ]
+    },
+    {
+      "id": "associated-capsules-ltd",
+      "name": "Associated Capsules Ltd.",
+      "sector": "pharmaceuticals",
+      "locations": [],
+      "note": "Listed twice; kept once",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Associated Capsules Ltd.",
+        "Associated Capsules Ltd."
+      ]
+    },
+    {
+      "id": "cipla",
+      "name": "Cipla",
+      "sector": "pharmaceuticals",
+      "locations": [
+        "Vikhroli",
+        "Patalganga"
+      ],
+      "note": "Spelling corrected: Vikroli to Vikhroli",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "CIPLA - Vikroli / Patalganga"
+      ]
+    },
+    {
+      "id": "himedia-laboratories-ltd",
+      "name": "Himedia Laboratories Ltd.",
+      "sector": "pharmaceuticals",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Himedia Laboratories Ltd."
+      ]
+    },
+    {
+      "id": "pfizer-india",
+      "name": "Pfizer India",
+      "sector": "pharmaceuticals",
+      "locations": [],
+      "note": "",
+      "logo": "customers/pfizer-india.svg",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Pfizer India."
+      ]
+    },
+    {
+      "id": "serum-institute-of-india",
+      "name": "Serum Institute of India",
+      "sector": "pharmaceuticals",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Serum Institute of India."
+      ]
+    },
+    {
+      "id": "umang-pharma",
+      "name": "Umang Pharma",
+      "sector": "pharmaceuticals",
+      "locations": [
+        "Thane"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Umang Pharma - Thane"
+      ]
+    },
+    {
+      "id": "wockhardt-ltd",
+      "name": "Wockhardt Ltd.",
+      "sector": "pharmaceuticals",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Wockhardt Ltd."
+      ]
+    },
+    {
+      "id": "adani-energy",
+      "name": "Adani Energy",
+      "sector": "other",
+      "locations": [
+        "Ahmedabad"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Adani Energy - Ahmedabad"
+      ]
+    },
+    {
+      "id": "ador-powertron",
+      "name": "Ador Powertron",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Ador Powertron"
+      ]
+    },
+    {
+      "id": "asco",
+      "name": "ASCO",
+      "sector": "other",
+      "locations": [
+        "Chennai"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "ASCO – Chennai"
+      ]
+    },
+    {
+      "id": "asian-paints",
+      "name": "Asian Paints",
+      "sector": "other",
+      "locations": [],
+      "note": "Chemical / paint",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Asian Paints. Chemical Paint"
+      ]
+    },
+    {
+      "id": "avision",
+      "name": "Avision",
+      "sector": "other",
+      "locations": [
+        "Dubai"
+      ],
+      "note": "Export customer",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Avision Dubai (Export)"
+      ]
+    },
+    {
+      "id": "b-and-s-safety",
+      "name": "B & S Safety",
+      "sector": "other",
+      "locations": [
+        "Chennai"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "B & S Safety - Chennai"
+      ]
+    },
+    {
+      "id": "bhavani-industries",
+      "name": "Bhavani Industries",
+      "sector": "other",
+      "locations": [
+        "Rajkot"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Bhavani Industries - Rajkot"
+      ]
+    },
+    {
+      "id": "bureau-of-sailors",
+      "name": "Bureau of Sailors",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Confirm the exact organisation name.",
+      "original": [
+        "Bureau of Sailors"
+      ]
+    },
+    {
+      "id": "chc-ltd",
+      "name": "CHC Ltd",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "CHC Ltd"
+      ]
+    },
+    {
+      "id": "devidoll",
+      "name": "Devidoll",
+      "sector": "other",
+      "locations": [
+        "Mumbai"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Devidoll - Mumbai."
+      ]
+    },
+    {
+      "id": "dhariwal-electricals-pvt-ltd",
+      "name": "Dhariwal Electricals Pvt. Ltd.",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Dhariwal Electricals Pvt. Ltd."
+      ]
+    },
+    {
+      "id": "dresser-rand",
+      "name": "Dresser Rand",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "This company may now trade under a different name; confirm which name and logo to show.",
+      "original": [
+        "Dresser Rand"
+      ]
+    },
+    {
+      "id": "durametalic-sanmar-ltd",
+      "name": "Durametalic Sanmar Ltd.",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Durametalic Sanmar Ltd."
+      ]
+    },
+    {
+      "id": "gold-star",
+      "name": "Gold Star",
+      "sector": "other",
+      "locations": [
+        "Mumbai"
+      ],
+      "note": "Jewellery (spelling corrected from 'julary')",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Gold Star Mumbai. (julary)"
+      ]
+    },
+    {
+      "id": "greaves-cotton",
+      "name": "Greaves Cotton",
+      "sector": "other",
+      "locations": [
+        "Aurangabad"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Greaves Cotton - Aurangabad."
+      ]
+    },
+    {
+      "id": "k-g-khosla-compressors-ltd",
+      "name": "K. G. Khosla Compressors Ltd.",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "K. G. Khosla Compressors Ltd."
+      ]
+    },
+    {
+      "id": "keynes",
+      "name": "Keynes",
+      "sector": "other",
+      "locations": [],
+      "note": "Electronics",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Keynes. (electronics)"
+      ]
+    },
+    {
+      "id": "laxmi-machine-works",
+      "name": "Laxmi Machine Works",
+      "sector": "other",
+      "locations": [
+        "Coimbatore"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "Possible duplicate of 'LMW Coimbatore' in Government Institutes; confirm whether these are the same customer.",
+      "original": [
+        "Laxmi Machine Works - Coimbatore"
+      ]
+    },
+    {
+      "id": "lechler-india-ltd",
+      "name": "Lechler India Ltd.",
+      "sector": "other",
+      "locations": [
+        "Mumbai"
+      ],
+      "note": "",
+      "logo": "customers/lechler-india-ltd.png",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Lechler India Ltd. - Mumbai"
+      ]
+    },
+    {
+      "id": "mach-aero",
+      "name": "Mach Aero",
+      "sector": "other",
+      "locations": [
+        "Bangalore"
+      ],
+      "note": "",
+      "logo": "customers/mach-aero.png",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Mach Aero - Bangalore"
+      ]
+    },
+    {
+      "id": "power-control-engineers",
+      "name": "Power Control Engineers",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Power Control Engineers."
+      ]
+    },
+    {
+      "id": "premier-energy",
+      "name": "Premier Energy",
+      "sector": "other",
+      "locations": [
+        "Phalta, West Bengal"
+      ],
+      "note": "Listed twice; kept once",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Premier Energy Phalta - W. Bengal",
+        "Premier Energy Phalta - W. Bengal"
+      ]
+    },
+    {
+      "id": "salute-beverages",
+      "name": "Salute Beverages",
+      "sector": "other",
+      "locations": [],
+      "note": "FMCG",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Salute Beverages. (fmcg)"
+      ]
+    },
+    {
+      "id": "sdfc",
+      "name": "SDFC",
+      "sector": "other",
+      "locations": [
+        "Mumbai"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": true,
+      "reviewReason": "The name may be a typo; confirm the exact organisation.",
+      "original": [
+        "SDFC – Mumbai"
+      ]
+    },
+    {
+      "id": "sparkionix",
+      "name": "Sparkionix",
+      "sector": "other",
+      "locations": [
+        "Pune"
+      ],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Sparkionix - Pune"
+      ]
+    },
+    {
+      "id": "swaraj-engines-ltd",
+      "name": "Swaraj Engines Ltd.",
+      "sector": "other",
+      "locations": [
+        "Chandigarh"
+      ],
+      "note": "2 entries merged",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Swaraj Engines - Chandigarh",
+        "Swaraj Engines Ltd."
+      ]
+    },
+    {
+      "id": "the-printer-house-ltd",
+      "name": "The Printer House Ltd.",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "The Printer House Ltd."
+      ]
+    },
+    {
+      "id": "trumpf-private-ltd",
+      "name": "Trumpf (India) Private Ltd.",
+      "sector": "other",
+      "locations": [],
+      "note": "",
+      "logo": null,
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "Trumpf (India) Private Ltd."
+      ]
+    },
+    {
+      "id": "tvs-electronics",
+      "name": "TVS Electronics",
+      "sector": "other",
+      "locations": [
+        "Rudrapur"
+      ],
+      "note": "",
+      "logo": "customers/tvs-electronics.png",
+      "approved": false,
+      "needsReview": false,
+      "reviewReason": "",
+      "original": [
+        "TVS electronics - Rudrapur"
+      ]
+    }
+  ]
+}

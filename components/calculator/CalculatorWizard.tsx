@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import * as React from 'react'
 import { useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import {
@@ -19,6 +19,7 @@ import {
   RefreshCw,
   Sparkles,
 } from 'lucide-react'
+import { FloorSpaceSlider } from '@/components/features/FloorSpaceSlider'
 
 const DEFAULT_INPUTS: CalculatorInputs = {
   industry: 'automotive',
@@ -34,12 +35,12 @@ const DEFAULT_INPUTS: CalculatorInputs = {
 export function CalculatorWizard() {
   const searchParams = useSearchParams()
   const dataParam = searchParams.get('data')
-  const [prevDataParam, setPrevDataParam] = useState(dataParam)
+  const [prevDataParam, setPrevDataParam] = React.useState(dataParam)
 
   const initialDecoded = dataParam ? decodeCalculatorInputs(dataParam) : null
-  const [step, setStep] = useState<number>(() => (initialDecoded ? 9 : 1))
-  const [inputs, setInputs] = useState<CalculatorInputs>(() => initialDecoded || DEFAULT_INPUTS)
-  const [copiedShareLink, setCopiedShareLink] = useState(false)
+  const [step, setStep] = React.useState<number>(() => (initialDecoded ? 9 : 1))
+  const [inputs, setInputs] = React.useState<CalculatorInputs>(() => initialDecoded || DEFAULT_INPUTS)
+  const [copiedShareLink, setCopiedShareLink] = React.useState(false)
 
   if (dataParam !== prevDataParam) {
     setPrevDataParam(dataParam)
@@ -67,20 +68,20 @@ export function CalculatorWizard() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto space-y-12">
+    <div className="max-w-5xl mx-auto space-y-10">
       
       {/* Wizard Progress Bar */}
       {step < 9 && (
-        <div className="space-y-3">
-          <div className="flex justify-between items-center text-xs font-mono text-zinc-400">
+        <div className="space-y-2">
+          <div className="flex justify-between items-center text-xs font-mono text-[var(--text-muted)]">
             <span>Step {step} of 8</span>
-            <span className="text-orange-400 font-bold">
+            <span className="text-[var(--accent)] font-bold">
               {Math.round((step / 8) * 100)}% Completed
             </span>
           </div>
-          <div className="w-full h-2 bg-zinc-900 rounded-full overflow-hidden border border-zinc-800">
+          <div className="w-full h-2 bg-[var(--bg-muted)] rounded-full overflow-hidden border border-[var(--border)]">
             <div
-              className="h-full bg-gradient-to-r from-orange-500 to-amber-500 transition-all duration-300"
+              className="h-full bg-[var(--accent)] transition-all duration-300"
               style={{ width: `${(step / 8) * 100}%` }}
             />
           </div>
@@ -89,17 +90,18 @@ export function CalculatorWizard() {
 
       {/* STEP 1: Industry Picker */}
       {step === 1 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 1</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Select Your Industry Sector</h2>
-            <p className="text-xs text-zinc-400">Pre-configures storage density presets for your sector</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 1</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Select Your Industry Sector</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Pre-configures storage density presets for your sector</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {INDUSTRIES.map((ind) => (
               <button
                 key={ind.id}
+                type="button"
                 onClick={() => {
                   updateInput('industry', ind.id)
                   updateInput('floorAreaSqFt', ind.calculatorPreset.suggestedFloorArea)
@@ -108,12 +110,12 @@ export function CalculatorWizard() {
                 }}
                 className={`p-5 rounded-xl border text-left transition-all ${
                   inputs.industry === ind.id
-                    ? 'bg-orange-500/10 border-orange-500 text-zinc-100'
-                    : 'bg-zinc-950 border-zinc-800 text-zinc-300 hover:border-zinc-700'
+                    ? 'bg-[var(--accent-soft)] border-[var(--accent)] text-[var(--text)]'
+                    : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:text-[var(--text)]'
                 }`}
               >
-                <div className="font-mono text-sm font-bold">{ind.name}</div>
-                <div className="text-xs text-zinc-400 mt-1">{ind.tagline}</div>
+                <div className="text-sm font-bold text-[var(--text)]">{ind.name}</div>
+                <div className="text-xs text-[var(--text-muted)] mt-1">{ind.tagline}</div>
               </button>
             ))}
           </div>
@@ -122,17 +124,17 @@ export function CalculatorWizard() {
 
       {/* STEP 2: Floor Area Input */}
       {step === 2 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 2</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Current Storage Floor Footprint</h2>
-            <p className="text-xs text-zinc-400">Enter total floor area currently allocated to static storage & aisles</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 2</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Current Storage Floor Footprint</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Enter total floor area currently allocated to static storage &amp; aisles</p>
           </div>
 
           <div className="space-y-4 max-w-md">
             <div className="flex justify-between items-center">
-              <label className="text-sm text-zinc-300 font-medium">Floor Area:</label>
-              <div className="font-mono text-2xl font-bold text-orange-400">
+              <label className="text-sm text-[var(--text)] font-semibold">Floor Area:</label>
+              <div className="font-mono text-2xl font-bold text-[var(--accent)]">
                 {inputs.floorAreaSqFt.toLocaleString()} sq.ft
               </div>
             </div>
@@ -143,15 +145,16 @@ export function CalculatorWizard() {
               step="500"
               value={inputs.floorAreaSqFt}
               onChange={(e) => updateInput('floorAreaSqFt', Number(e.target.value))}
-              className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+              aria-label="Current storage floor footprint"
+              className="w-full h-2 bg-[var(--bg-muted)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
             />
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(1)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(1)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
-            <button onClick={() => setStep(3)} className="px-6 py-2.5 rounded-lg bg-orange-500 text-zinc-950 font-mono text-xs font-bold">
+            <button onClick={() => setStep(3)} className="px-6 py-2.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold shadow-xs">
               Next Step &rarr;
             </button>
           </div>
@@ -160,17 +163,17 @@ export function CalculatorWizard() {
 
       {/* STEP 3: Ceiling Height */}
       {step === 3 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 3</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Clear Ceiling Height</h2>
-            <p className="text-xs text-zinc-400">Higher clear height maximizes STOLIFT / STOMAT vertical space savings</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 3</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Clear Ceiling Height</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Higher clear height maximizes STOLIFT / STOMAT vertical space savings</p>
           </div>
 
           <div className="space-y-4 max-w-md">
             <div className="flex justify-between items-center">
-              <label className="text-sm text-zinc-300 font-medium">Ceiling Height:</label>
-              <div className="font-mono text-2xl font-bold text-orange-400">
+              <label className="text-sm text-[var(--text)] font-semibold">Ceiling Height:</label>
+              <div className="font-mono text-2xl font-bold text-[var(--accent)]">
                 {inputs.ceilingHeightFt} ft ({Math.round(inputs.ceilingHeightFt * 0.3048 * 10) / 10} m)
               </div>
             </div>
@@ -181,15 +184,16 @@ export function CalculatorWizard() {
               step="1"
               value={inputs.ceilingHeightFt}
               onChange={(e) => updateInput('ceilingHeightFt', Number(e.target.value))}
-              className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+              aria-label="Clear ceiling height"
+              className="w-full h-2 bg-[var(--bg-muted)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
             />
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(2)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(2)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
-            <button onClick={() => setStep(4)} className="px-6 py-2.5 rounded-lg bg-orange-500 text-zinc-950 font-mono text-xs font-bold">
+            <button onClick={() => setStep(4)} className="px-6 py-2.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold shadow-xs">
               Next Step &rarr;
             </button>
           </div>
@@ -198,17 +202,17 @@ export function CalculatorWizard() {
 
       {/* STEP 4: SKU Count */}
       {step === 4 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 4</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Estimated Active SKU Count</h2>
-            <p className="text-xs text-zinc-400">Total distinct part numbers or items stored in this facility</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 4</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Estimated Active SKU Count</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Total distinct part numbers or items stored in this facility</p>
           </div>
 
           <div className="space-y-4 max-w-md">
             <div className="flex justify-between items-center">
-              <label className="text-sm text-zinc-300 font-medium">Active SKUs:</label>
-              <div className="font-mono text-2xl font-bold text-orange-400">
+              <label className="text-sm text-[var(--text)] font-semibold">Active SKUs:</label>
+              <div className="font-mono text-2xl font-bold text-[var(--accent)]">
                 {inputs.skuCount.toLocaleString()} SKUs
               </div>
             </div>
@@ -219,90 +223,93 @@ export function CalculatorWizard() {
               step="250"
               value={inputs.skuCount}
               onChange={(e) => updateInput('skuCount', Number(e.target.value))}
-              className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+              aria-label="Estimated active SKU count"
+              className="w-full h-2 bg-[var(--bg-muted)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
             />
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(3)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(3)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
-            <button onClick={() => setStep(5)} className="px-6 py-2.5 rounded-lg bg-orange-500 text-zinc-950 font-mono text-xs font-bold">
+            <button onClick={() => setStep(5)} className="px-6 py-2.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold shadow-xs">
               Next Step &rarr;
             </button>
           </div>
         </div>
       )}
 
-      {/* STEP 5: Storage Type */}
+      {/* STEP 5: Current Storage Type */}
       {step === 5 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 5</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Current Storage Method</h2>
-            <p className="text-xs text-zinc-400">How is inventory stored today?</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 5</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Current Storage Method</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Select the primary method currently deployed on your warehouse floor</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              { id: 'static-racking', label: 'Static Pallet Racking', desc: 'Fixed aisles with forklifts' },
-              { id: 'open-shelving', label: 'Open Metal Shelving', desc: 'Manual bin walking' },
-              { id: 'floor-stacking', label: 'Floor Pallet Stacking', desc: 'Sprawling floor footprint' },
-              { id: 'other', label: 'Mixed / Other', desc: 'Combination storage' },
-            ].map((st) => (
+              { id: 'static-racking', label: 'Static Pallet Racking', desc: 'Standard selective pallet racks with fixed forklift aisles' },
+              { id: 'shelving', label: 'Small Parts Shelving', desc: 'Slotted angle or multi-tier bin shelving units' },
+              { id: 'drawers', label: 'Modular Drawer Cabinets', desc: 'Tooling cupboards and small parts drawer units' },
+              { id: 'floor-bulk', label: 'Floor Stacking / Bulk', desc: 'Pallets or totes stacked directly on the floor' },
+            ].map((t) => (
               <button
-                key={st.id}
+                key={t.id}
+                type="button"
                 onClick={() => {
-                  updateInput('storageType', st.id as StorageType)
+                  updateInput('storageType', t.id as StorageType)
                   setStep(6)
                 }}
                 className={`p-5 rounded-xl border text-left transition-all ${
-                  inputs.storageType === st.id
-                    ? 'bg-orange-500/10 border-orange-500 text-zinc-100'
-                    : 'bg-zinc-950 border-zinc-800 text-zinc-300 hover:border-zinc-700'
+                  inputs.storageType === t.id
+                    ? 'bg-[var(--accent-soft)] border-[var(--accent)] text-[var(--text)]'
+                    : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:text-[var(--text)]'
                 }`}
               >
-                <div className="font-mono text-sm font-bold">{st.label}</div>
-                <div className="text-xs text-zinc-400 mt-1">{st.desc}</div>
+                <div className="text-sm font-bold text-[var(--text)]">{t.label}</div>
+                <div className="text-xs text-[var(--text-muted)] mt-1">{t.desc}</div>
               </button>
             ))}
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(4)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(4)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
           </div>
         </div>
       )}
 
-      {/* STEP 6: Daily Picks */}
+      {/* STEP 6: Daily Picks Volume */}
       {step === 6 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 6</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Daily Retrieval / Pick Volume</h2>
-            <p className="text-xs text-zinc-400">Average number of item picks per day</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 6</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Daily Picking Activity</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Average order line items or component picks per working day</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {[
-              { id: 'under-50', label: '< 50 picks/day' },
-              { id: '50-200', label: '50 – 200 picks/day' },
-              { id: '200-500', label: '200 – 500 picks/day' },
-              { id: '500-1000', label: '500 – 1,000 picks/day' },
-              { id: 'over-1000', label: '1,000+ picks/day' },
+              { id: 'under-50', label: '< 50 picks / day' },
+              { id: '50-200', label: '50 – 200 picks' },
+              { id: '200-500', label: '200 – 500 picks' },
+              { id: '500-1000', label: '500 – 1,000 picks' },
+              { id: 'over-1000', label: '> 1,000 picks / day' },
             ].map((p) => (
               <button
                 key={p.id}
+                type="button"
                 onClick={() => {
                   updateInput('dailyPicks', p.id as DailyPicksBand)
                   setStep(7)
                 }}
                 className={`p-4 rounded-xl border text-center font-mono text-xs font-bold transition-all ${
                   inputs.dailyPicks === p.id
-                    ? 'bg-orange-500/10 border-orange-500 text-orange-400'
-                    : 'bg-zinc-950 border-zinc-800 text-zinc-300 hover:border-zinc-700'
+                    ? 'bg-[var(--accent-soft)] border-[var(--accent)] text-[var(--accent)]'
+                    : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--border-strong)]'
                 }`}
               >
                 {p.label}
@@ -310,8 +317,8 @@ export function CalculatorWizard() {
             ))}
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(5)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(5)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
           </div>
@@ -320,17 +327,17 @@ export function CalculatorWizard() {
 
       {/* STEP 7: Staff Count */}
       {step === 7 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 7</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Stores Staff Count</h2>
-            <p className="text-xs text-zinc-400">Number of full-time operators currently assigned to picking and putaway</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 7</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Stores Staff Count</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Number of full-time operators currently assigned to picking and putaway</p>
           </div>
 
           <div className="space-y-4 max-w-md">
             <div className="flex justify-between items-center">
-              <label className="text-sm text-zinc-300 font-medium">Operators:</label>
-              <div className="font-mono text-2xl font-bold text-orange-400">
+              <label className="text-sm text-[var(--text)] font-semibold">Operators:</label>
+              <div className="font-mono text-2xl font-bold text-[var(--accent)]">
                 {inputs.staffCount} Staff Members
               </div>
             </div>
@@ -341,15 +348,16 @@ export function CalculatorWizard() {
               step="1"
               value={inputs.staffCount}
               onChange={(e) => updateInput('staffCount', Number(e.target.value))}
-              className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+              aria-label="Stores staff count"
+              className="w-full h-2 bg-[var(--bg-muted)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
             />
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(6)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(6)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
-            <button onClick={() => setStep(8)} className="px-6 py-2.5 rounded-lg bg-orange-500 text-zinc-950 font-mono text-xs font-bold">
+            <button onClick={() => setStep(8)} className="px-6 py-2.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold shadow-xs">
               Next Step &rarr;
             </button>
           </div>
@@ -358,17 +366,17 @@ export function CalculatorWizard() {
 
       {/* STEP 8: Floor Rent Cost (Optional) */}
       {step === 8 && (
-        <div className="bg-zinc-900 border border-zinc-800 p-8 rounded-2xl space-y-6">
-          <div className="space-y-2">
-            <span className="text-xs font-mono uppercase text-orange-400 font-bold">Step 8</span>
-            <h2 className="font-mono text-2xl font-bold text-zinc-100">Estimated Floor Cost (Optional)</h2>
-            <p className="text-xs text-zinc-400">Monthly facility rent or opportunity cost per sq.ft (INR)</p>
+        <div className="bg-[var(--bg-subtle)] border border-[var(--border)] p-6 sm:p-8 rounded-2xl space-y-6 shadow-sm">
+          <div className="space-y-1">
+            <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">Step 8</span>
+            <h2 className="text-2xl font-bold text-[var(--text)]">Estimated Floor Cost</h2>
+            <p className="text-xs text-[var(--text-secondary)]">Monthly facility rent or opportunity cost per sq.ft (INR)</p>
           </div>
 
           <div className="space-y-4 max-w-md">
             <div className="flex justify-between items-center">
-              <label className="text-sm text-zinc-300 font-medium">Rent / sq.ft / Month:</label>
-              <div className="font-mono text-2xl font-bold text-orange-400">
+              <label className="text-sm text-[var(--text)] font-semibold">Rent / sq.ft / Month:</label>
+              <div className="font-mono text-2xl font-bold text-[var(--accent)]">
                 ₹{inputs.rentPerSqFtMonthly || 75}
               </div>
             </div>
@@ -379,15 +387,16 @@ export function CalculatorWizard() {
               step="5"
               value={inputs.rentPerSqFtMonthly || 75}
               onChange={(e) => updateInput('rentPerSqFtMonthly', Number(e.target.value))}
-              className="w-full h-2 bg-zinc-800 rounded-lg appearance-none cursor-pointer accent-orange-500"
+              aria-label="Rent per sq ft monthly"
+              className="w-full h-2 bg-[var(--bg-muted)] rounded-lg appearance-none cursor-pointer accent-[var(--accent)]"
             />
           </div>
 
-          <div className="flex justify-between pt-4">
-            <button onClick={() => setStep(7)} className="px-4 py-2 text-xs font-mono text-zinc-400 hover:text-white">
+          <div className="flex justify-between pt-4 border-t border-[var(--border)]">
+            <button onClick={() => setStep(7)} className="px-4 py-2 text-xs font-mono text-[var(--text-muted)] hover:text-[var(--text)]">
               &larr; Back
             </button>
-            <button onClick={() => setStep(9)} className="px-8 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-amber-500 text-zinc-950 font-mono text-xs font-extrabold shadow-xl">
+            <button onClick={() => setStep(9)} className="px-8 py-3 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white text-xs font-bold shadow-sm">
               Calculate Reclaim Results &rarr;
             </button>
           </div>
@@ -399,26 +408,28 @@ export function CalculatorWizard() {
         <div className="space-y-8 animate-in fade-in duration-300">
           
           {/* Top Bar with Reset & Share */}
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-zinc-900 border border-zinc-800">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-xl bg-[var(--bg-subtle)] border border-[var(--border)] shadow-xs">
             <div className="flex items-center gap-2">
-              <Sparkles className="w-5 h-5 text-orange-500" />
-              <span className="font-mono text-sm font-bold text-zinc-100">
+              <Sparkles className="w-5 h-5 text-[var(--accent)]" />
+              <span className="font-mono text-sm font-bold text-[var(--text)]">
                 Space Reclaim Calculation Report
               </span>
             </div>
 
             <div className="flex items-center gap-2">
               <button
+                type="button"
                 onClick={handleShare}
-                className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 text-xs font-mono font-semibold flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded-lg bg-[var(--bg)] border border-[var(--border)] hover:border-[var(--border-strong)] text-[var(--text)] text-xs font-mono font-semibold flex items-center gap-1.5 transition-colors"
               >
-                {copiedShareLink ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
+                {copiedShareLink ? <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
                 <span>{copiedShareLink ? 'Link Copied!' : 'Share Results Link'}</span>
               </button>
 
               <button
+                type="button"
                 onClick={() => setStep(1)}
-                className="px-3 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-400 hover:text-white text-xs font-mono flex items-center gap-1.5"
+                className="px-3 py-1.5 rounded-lg bg-[var(--bg)] border border-[var(--border)] text-[var(--text-muted)] hover:text-[var(--text)] text-xs font-mono flex items-center gap-1.5 transition-colors"
               >
                 <RefreshCw className="w-3.5 h-3.5" />
                 <span>Recalculate</span>
@@ -430,77 +441,80 @@ export function CalculatorWizard() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
             {/* Card 1: Reclaimed Floor Area */}
-            <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
-              <span className="text-xs font-mono text-zinc-400 uppercase font-bold">
+            <div className="p-6 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-2 shadow-xs">
+              <span className="text-xs font-mono text-[var(--text-muted)] uppercase font-bold">
                 Floor Space Reclaimed
               </span>
-              <div className="font-mono text-3xl font-extrabold text-emerald-400">
-                {results.spaceReclaimedSqFt.min.toLocaleString()} – {results.spaceReclaimedSqFt.max.toLocaleString()} <span className="text-sm font-normal text-zinc-400">sq.ft</span>
+              <div className="font-mono text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">
+                {results.spaceReclaimedSqFt.min.toLocaleString()} – {results.spaceReclaimedSqFt.max.toLocaleString()} <span className="text-sm font-normal text-[var(--text-muted)]">sq.ft</span>
               </div>
-              <p className="text-xs text-emerald-500 font-mono">
+              <p className="text-xs text-emerald-700 dark:text-emerald-400 font-mono">
                 {results.spaceReclaimedPct.min}% – {results.spaceReclaimedPct.max}% reduction in required floor area
               </p>
             </div>
 
             {/* Card 2: Annual Rent Savings */}
-            <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
-              <span className="text-xs font-mono text-zinc-400 uppercase font-bold">
-                Est. Annual Rent Saved
+            <div className="p-6 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-2 shadow-xs">
+              <span className="text-xs font-mono text-[var(--text-muted)] uppercase font-bold">
+                Est. Annual Real Estate Value
               </span>
-              <div className="font-mono text-3xl font-extrabold text-orange-400">
-                ₹{((results.annualRentSavingsINR.min) / 100000).toFixed(2)} – {((results.annualRentSavingsINR.max) / 100000).toFixed(2)} <span className="text-sm font-normal text-zinc-400">Lakhs</span>
+              <div className="font-mono text-3xl font-extrabold text-[var(--accent)]">
+                ₹{((results.annualRentSavingsINR.min) / 100000).toFixed(2)} – {((results.annualRentSavingsINR.max) / 100000).toFixed(2)} <span className="text-sm font-normal text-[var(--text-muted)]">Lakhs</span>
               </div>
-              <p className="text-xs text-zinc-400 font-mono">
+              <p className="text-xs text-[var(--text-muted)] font-mono">
                 Based on ₹{inputs.rentPerSqFtMonthly || 75}/sq.ft monthly opportunity cost
               </p>
-              {results.rentFallbackUsed && (
-                <p className="text-[10px] text-amber-400 font-mono border border-amber-500/30 bg-amber-500/10 rounded px-2 py-1">
-                  ⚠️ Using assumed default of ₹75/sq.ft. Update in Step 8 with your actual rent for a more accurate figure.
-                </p>
-              )}
             </div>
 
-            {/* Card 3: Picking Throughput Improvement */}
-            <div className="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2">
-              <span className="text-xs font-mono text-zinc-400 uppercase font-bold">
+            {/* Card 3: Picking Throughput Gain */}
+            <div className="p-6 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-2 shadow-xs">
+              <span className="text-xs font-mono text-[var(--text-muted)] uppercase font-bold">
                 Picking Throughput Gain
               </span>
-              <div className="font-mono text-3xl font-extrabold text-amber-400">
-                {results.pickingTimeReductionPct.min}% – {results.pickingTimeReductionPct.max}% <span className="text-sm font-normal text-zinc-400">faster</span>
+              <div className="font-mono text-3xl font-extrabold text-[var(--text)]">
+                {results.pickingTimeReductionPct.min}% – {results.pickingTimeReductionPct.max}% <span className="text-sm font-normal text-[var(--text-muted)]">faster</span>
               </div>
-              <p className="text-xs text-zinc-400 font-mono">
+              <p className="text-xs text-[var(--text-muted)] font-mono">
                 Based on your {inputs.dailyPicks?.replace(/-/g, ' – ')} daily picks volume
               </p>
             </div>
 
           </div>
 
+          {/* Interactive Before/After Floor Space Slider (Priority 1 Feature) */}
+          <div className="space-y-3">
+            <h3 className="text-lg font-bold text-[var(--text)]">
+              Visualizing Your Footprint Compression
+            </h3>
+            <FloorSpaceSlider initialPosition={50} />
+          </div>
+
           {/* Recommended ASRS System */}
-          <div className="p-8 rounded-2xl bg-gradient-to-r from-zinc-900 via-zinc-900 to-zinc-950 border border-zinc-800 space-y-6">
+          <div className="p-6 sm:p-8 rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] space-y-6 shadow-xs">
             <div className="space-y-1">
-              <span className="text-xs font-mono uppercase text-orange-400 font-bold">
+              <span className="text-xs font-mono uppercase text-[var(--accent)] font-bold">
                 Recommended ASRS Solution
               </span>
               <div className="space-y-3 mt-2">
                 {results.recommendations.map((rec, i) => (
-                  <div key={rec.productId} className={`flex items-start gap-3 p-3 rounded-lg border ${
+                  <div key={rec.productId} className={`flex items-start gap-3 p-4 rounded-xl border ${
                     rec.confidence === 'primary'
-                      ? 'border-orange-500/50 bg-orange-500/10'
-                      : 'border-zinc-700 bg-zinc-900/50'
+                      ? 'border-[var(--accent)] bg-[var(--accent-soft)]'
+                      : 'border-[var(--border)] bg-[var(--bg)]'
                   }`}>
-                    <span className={`text-[10px] font-mono font-bold uppercase px-1.5 py-0.5 rounded ${
-                      rec.confidence === 'primary' ? 'bg-orange-500 text-zinc-950' : 'bg-zinc-700 text-zinc-300'
+                    <span className={`text-[10px] font-mono font-bold uppercase px-2 py-0.5 rounded ${
+                      rec.confidence === 'primary' ? 'bg-[var(--accent)] text-white' : 'bg-[var(--bg-muted)] text-[var(--text)]'
                     }`}>{i === 0 ? 'PRIMARY' : 'ALT'}</span>
                     <div>
-                      <div className="font-mono text-sm font-bold text-zinc-100 uppercase">{rec.productId.replace(/-/g, ' & ')}</div>
-                      <div className="text-xs text-zinc-400 mt-0.5">{rec.reason}</div>
+                      <div className="font-mono text-sm font-bold text-[var(--text)] uppercase">{rec.productId.replace(/-/g, ' & ')}</div>
+                      <div className="text-xs text-[var(--text-secondary)] mt-0.5">{rec.reason}</div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            <p className="text-xs text-zinc-400 leading-relaxed max-w-3xl">
+            <p className="text-xs text-[var(--text-secondary)] leading-relaxed max-w-3xl">
               Based on your input of {inputs.floorAreaSqFt.toLocaleString()} sq.ft storage area with {inputs.ceilingHeightFt}ft clear ceiling height and {inputs.skuCount.toLocaleString()} SKUs.
             </p>
 
@@ -508,15 +522,15 @@ export function CalculatorWizard() {
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href={`/get-a-quote?calc_area=${inputs.floorAreaSqFt}&calc_skus=${inputs.skuCount}&calc_industry=${inputs.industry}`}
-                className="px-6 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-zinc-950 font-mono text-xs font-bold flex items-center gap-2 shadow-lg"
+                className="px-6 py-3.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold text-sm flex items-center gap-2 shadow-xs transition-colors"
               >
-                <span>Request Custom Quote & Engineering Layout</span>
+                <span>Request Custom Quote &amp; Engineering Layout</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
 
-          <div className="text-center text-xs font-mono text-zinc-500">
+          <div className="text-center text-xs font-mono text-[var(--text-muted)]">
             * All figures are indicative estimates. Final space savings confirmed via Pune engineering site survey.
           </div>
 

@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next'
 import { SITE_CONFIG } from '@/config/site'
 import { PRODUCTS } from '@/config/products'
 import { INDUSTRIES } from '@/config/industries'
+import { getApprovedCustomers, hasPublicCustomerWall } from '@/lib/customers'
 
 /**
  * Sitemap — only lists routes that have a corresponding page.tsx
@@ -22,9 +23,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.url
 
   // ─── Static pages that exist ──────────────────────────────────────────────
-  const staticRoutes = [
+  const staticRoutes: MetadataRoute.Sitemap = [
     '',              // /   ← homepage
     '/products',
+    '/gallery',
+    '/resources/downloads',
     '/tools/calculator',
     '/tools/simulator',
     '/proof',
@@ -40,6 +43,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
     priority: route === '' ? 1.0 : 0.8,
   }))
+  if (hasPublicCustomerWall(getApprovedCustomers().length)) {
+    staticRoutes.push({
+      url: `${baseUrl}/customers`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })
+  }
 
   // ─── Product detail pages (/products/[id]) — all 4 exist ──────────────────
   const productRoutes = PRODUCTS.map((p) => ({
