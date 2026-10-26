@@ -3,9 +3,8 @@ import { SimulatorCanvas } from '@/components/simulator/SimulatorCanvas'
 import { Play } from 'lucide-react'
 
 export const metadata = constructMetadata({
-  title: 'Live 3D ASRS Simulator — Space Magnum',
-  description:
-    'Experience interactive STOLIFT Vertical Lift Module tray storage, retrieval cycles, and sensor monitoring live in your web browser.',
+  title: 'STOLIFT Simulator',
+  description: 'Interactive visualization of STOLIFT tray storage and retrieval.',
   path: '/tools/simulator',
 })
 
@@ -21,10 +20,10 @@ export default function SimulatorPage() {
             <span>Interactive Web Experience</span>
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--text)]">
-            Live STOLIFT ASRS Simulator
+            STOLIFT Simulator
           </h1>
           <p className="text-base sm:text-lg text-[var(--text-secondary)] font-body leading-relaxed">
-            Simulate automated tray storage and retrieval operations live in real-time. Toggle safety sensors, adjust pick cycle speed, and inspect operational telemetry.
+            Explore an interactive visualization of tray storage and retrieval.
           </p>
         </div>
 

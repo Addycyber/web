@@ -11,6 +11,8 @@ const PRODUCT_ICONS: Record<string, React.ComponentType<{ className?: string }>>
   stomat: Boxes,
   stolift: VerticalLift,
   storder: Shuttle,
+  stopick: StackerCrane,
+  stolong: StackerCrane,
   'compactors-racking': MobileCompactor,
 }
 
@@ -29,7 +31,7 @@ export function ProductGateway() {
               Engineered Storage Systems
             </h2>
             <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-body">
-              Four specialized automated storage product lines manufactured at our Pune industrial facility.
+              Automated storage, retrieval, mobile shelving, and racking systems.
             </p>
           </div>
 
@@ -45,12 +47,12 @@ export function ProductGateway() {
         {/* Product Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {PRODUCTS.map(product => {
-            const Icon = PRODUCT_ICONS[product.id] || Boxes
+            const Icon = PRODUCT_ICONS[product.slug] || Boxes
 
             return (
               <Link
-                key={product.id}
-                href={`/products/${product.id}`}
+                key={product.slug}
+                href={`/products/${product.slug}`}
                 className="group relative rounded-2xl overflow-hidden bg-[var(--bg-subtle)] border border-[var(--border)] hover:border-[var(--border-strong)] transition-all duration-200 hover:shadow-md flex flex-col"
               >
                 {/* Product Photo with subtle border */}
@@ -71,13 +73,13 @@ export function ProductGateway() {
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">
                   <div>
                     <div className="text-[11px] font-mono font-bold uppercase tracking-wider text-[var(--accent)] mb-1">
-                      {product.tagline}
+                      {product.type}
                     </div>
                     <h3 className="text-lg font-bold text-[var(--text)] group-hover:text-[var(--accent)] transition-colors">
                       {product.name}
                     </h3>
                     <p className="text-xs text-[var(--text-secondary)] mt-1.5 line-clamp-2 leading-relaxed">
-                      {product.shortDesc}
+                      {product.summary}
                     </p>
                   </div>
 

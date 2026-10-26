@@ -3,6 +3,7 @@
 import * as React from 'react'
 import { useRouter } from 'next/navigation'
 import { Search, Boxes, Factory, Calculator, Play, Image as ImageIcon, Download, Phone, ArrowRight, X } from 'lucide-react'
+import { products } from '@/lib/company'
 
 interface SearchItem {
   id: string
@@ -14,11 +15,14 @@ interface SearchItem {
 }
 
 const SEARCH_REGISTRY: SearchItem[] = [
-  // Products
-  { id: 'stomat', title: 'STOMAT Vertical Carousel & ASRS', category: 'Products', keywords: 'stomat vertical carousel automated storage retrieval system trays', href: '/products/stomat', icon: Boxes },
-  { id: 'stolift', title: 'STOLIFT Vertical Lift Module (VLM)', category: 'Products', keywords: 'stolift vertical lift module vlm dual mast heavy parts', href: '/products/stolift', icon: Boxes },
-  { id: 'storder', title: 'STORDER Horizontal Order Carousel', category: 'Products', keywords: 'storder order picking carousel high velocity batch pick', href: '/products/storder', icon: Boxes },
-  { id: 'compactors', title: 'Heavy-Duty Industrial Mobile Compactors', category: 'Products', keywords: 'compactors mobile racking storage racks high density', href: '/products/compactors-racking', icon: Boxes },
+  ...products.map((product) => ({
+    id: product.slug,
+    title: `${product.name} — ${product.type}`,
+    category: 'Products' as const,
+    keywords: `${product.name} ${product.type} ${product.summary}`,
+    href: `/products/${product.slug}`,
+    icon: Boxes,
+  })),
 
   // Industries
   { id: 'ind-auto', title: 'Automotive & Heavy Engineering Storage', category: 'Industries', keywords: 'automotive tier 1 spare parts dies tooling tata mahindra', href: '/industries/automotive', icon: Factory },
@@ -27,13 +31,14 @@ const SEARCH_REGISTRY: SearchItem[] = [
   { id: 'ind-3pl', title: 'Logistics, 3PL & E-Commerce Fulfillment', category: 'Industries', keywords: 'logistics 3pl warehousing distribution center', href: '/industries/logistics', icon: Factory },
 
   // Tools
-  { id: 'calc', title: 'Warehouse ROI & Space Savings Calculator', category: 'Tools', keywords: 'calculator roi space savings cost payback floor reclaim', href: '/tools/calculator', icon: Calculator },
-  { id: 'sim', title: 'Interactive 3D ASRS Crane Simulator', category: 'Tools', keywords: 'simulator 3d threejs visual crane elevation extraction', href: '/tools/simulator', icon: Play },
+  { id: 'calc', title: 'Brochure-Based Floor-Space Illustration', category: 'Tools', keywords: 'calculator brochure floor space saving', href: '/tools/calculator', icon: Calculator },
+  { id: 'sim', title: 'STOLIFT Simulator', category: 'Tools', keywords: 'stolift simulator tray storage retrieval', href: '/tools/simulator', icon: Play },
 
   // Resources
   { id: 'gallery', title: 'Plant & Commissioning Installation Gallery', category: 'Resources', keywords: 'gallery photos plant factory facility videos pictures installations', href: '/gallery', icon: ImageIcon },
   { id: 'downloads', title: 'Technical Downloads & Spec Sheets Centre', category: 'Resources', keywords: 'downloads brochures pdf technical specs cad catalog', href: '/resources/downloads', icon: Download },
-  { id: 'proof', title: 'Certifications & Proof Inventory', category: 'Resources', keywords: 'proof certifications tuv austria iso 9001 test lab', href: '/proof', icon: Boxes },
+  { id: 'brochure', title: 'Digital Brochure', category: 'Resources', keywords: 'brochure pages catalogue snapshots', href: '/brochure', icon: Download },
+  { id: 'solutions', title: 'Solutions', category: 'Resources', keywords: 'solutions products storage planning', href: '/solutions', icon: Boxes },
 
   // Actions
   { id: 'quote', title: 'Request a Customized Engineering Quote', category: 'Actions', keywords: 'quote pricing get a quote proposal inquiry', href: '/get-a-quote', icon: ArrowRight },

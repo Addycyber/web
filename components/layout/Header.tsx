@@ -5,7 +5,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { SITE_CONFIG } from '@/config/site'
 import { PRODUCTS } from '@/config/products'
-import { INDUSTRIES } from '@/config/industries'
 import { 
   Menu, 
   X, 
@@ -18,7 +17,6 @@ import {
   Boxes,
   FileText,
   Image as ImageIcon,
-  ShieldCheck
 } from 'lucide-react'
 import { SiWhatsapp } from '@icons-pack/react-simple-icons'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
@@ -50,10 +48,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [])
 
-  const cleanWhatsappNumber = SITE_CONFIG.whatsappNumber.replace(/[^0-9]/g, '')
-  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(
-    SITE_CONFIG.whatsappDefaultMessage
-  )}`
+  const whatsappUrl = SITE_CONFIG.whatsappUrl
 
   return (
     <>
@@ -117,18 +112,18 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                     </div>
                     {PRODUCTS.map(product => (
                       <Link
-                        key={product.id}
-                        href={`/products/${product.id}`}
+                        key={product.slug}
+                        href={`/products/${product.slug}`}
                         className="group/item flex items-start gap-3 p-2.5 rounded-xl hover:bg-[var(--bg-subtle)] transition-colors"
                       >
                         <div className="w-8 h-8 rounded-lg bg-[var(--accent-soft)] text-[var(--accent)] flex items-center justify-center text-xs font-mono font-bold shrink-0">
-                          {product.id.substring(0, 3).toUpperCase()}
+                          {product.slug.substring(0, 3).toUpperCase()}
                         </div>
                         <div>
                           <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
                             {product.name}
                           </div>
-                          <p className="text-xs text-[var(--text-muted)] line-clamp-1">{product.shortDesc}</p>
+                          <p className="text-xs text-[var(--text-muted)] line-clamp-1">{product.summary}</p>
                         </div>
                       </Link>
                     ))}
@@ -136,40 +131,12 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 )}
               </div>
 
-              {/* Industries Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setActiveDropdown('industries')}
-                onMouseLeave={() => setActiveDropdown(null)}
+              <Link
+                href="/solutions"
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-subtle)] hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
               >
-                <button
-                  type="button"
-                  className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] transition-colors rounded-lg hover:bg-[var(--bg-subtle)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
-                >
-                  Industries
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'industries' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
-                </button>
-
-                {activeDropdown === 'industries' && (
-                  <div className="absolute top-full left-0 w-80 p-3 rounded-2xl bg-[var(--bg)] border border-[var(--border)] shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
-                    <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)]">
-                      Industry Applications
-                    </div>
-                    {INDUSTRIES.map(ind => (
-                      <Link
-                        key={ind.id}
-                        href={`/industries/${ind.id}`}
-                        className="group/ind p-2.5 rounded-xl hover:bg-[var(--bg-subtle)] transition-colors block"
-                      >
-                        <div className="text-sm font-semibold text-[var(--text)] group-hover/ind:text-[var(--accent)]">
-                          {ind.name}
-                        </div>
-                        <p className="text-xs text-[var(--text-muted)] line-clamp-1">{ind.tagline}</p>
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+                Solutions
+              </Link>
 
               {/* Resources Dropdown */}
               <div 
@@ -214,18 +181,18 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                         <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
                           Installation Gallery
                         </div>
-                        <p className="text-xs text-[var(--text-muted)]">Verified photos & videos</p>
+                        <p className="text-xs text-[var(--text-muted)]">Product and facility imagery</p>
                       </div>
                     </Link>
 
                     <Link
-                      href="/resources/downloads"
+                      href="/brochure"
                       className="p-2.5 rounded-xl hover:bg-[var(--bg-subtle)] transition-colors flex items-center gap-3 group/item"
                     >
                       <FileText className="w-5 h-5 text-[var(--accent)]" />
                       <div>
                         <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
-                          Downloads Centre
+                          Digital Brochure
                         </div>
                         <p className="text-xs text-[var(--text-muted)]">Brochures & spec sheets</p>
                       </div>
@@ -238,9 +205,9 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                       <Calculator className="w-5 h-5 text-[var(--accent)]" />
                       <div>
                         <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
-                          Warehouse ROI Calculator
+                          Floor-Space Illustration
                         </div>
-                        <p className="text-xs text-[var(--text-muted)]">Calculate space reclaimed</p>
+                        <p className="text-xs text-[var(--text-muted)]">Brochure-based calculation</p>
                       </div>
                     </Link>
 
@@ -251,24 +218,12 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                       <Play className="w-5 h-5 text-[var(--accent)]" />
                       <div>
                         <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
-                          3D ASRS Crane Simulator
+                          STOLIFT Simulator
                         </div>
                         <p className="text-xs text-[var(--text-muted)]">Interactive storage crane</p>
                       </div>
                     </Link>
 
-                    <Link
-                      href="/proof"
-                      className="p-2.5 rounded-xl hover:bg-[var(--bg-subtle)] transition-colors flex items-center gap-3 group/item"
-                    >
-                      <ShieldCheck className="w-5 h-5 text-[var(--accent)]" />
-                      <div>
-                        <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
-                          Proof & Certifications
-                        </div>
-                        <p className="text-xs text-[var(--text-muted)]">TÜV Austria & ISO 9001</p>
-                      </div>
-                    </Link>
                   </div>
                 )}
               </div>
@@ -308,15 +263,17 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               </button>
 
               {/* WhatsApp direct */}
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Chat with engineer on WhatsApp"
-                className="hidden md:inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border)] bg-[var(--bg-subtle)] text-[#25D366] hover:bg-[#25D366]/10 transition-colors focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
-              >
-                <SiWhatsapp size={17} />
-              </a>
+              {whatsappUrl && (
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Chat with Space Magnum on WhatsApp"
+                  className="hidden h-9 w-9 items-center justify-center rounded-lg border border-[var(--border)] bg-[var(--bg-subtle)] text-[#25D366] transition-colors hover:bg-[#25D366]/10 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] md:inline-flex"
+                >
+                  <SiWhatsapp size={17} />
+                </a>
+              )}
 
               {/* Theme Toggle Button */}
               <ThemeToggle />
@@ -353,8 +310,8 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               </div>
               {PRODUCTS.map(product => (
                 <Link
-                  key={product.id}
-                  href={`/products/${product.id}`}
+                  key={product.slug}
+                  href={`/products/${product.slug}`}
                   onClick={() => setMobileMenuOpen(false)}
                   className="block px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)] rounded-lg hover:bg-[var(--bg-subtle)]"
                 >
@@ -362,6 +319,14 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 </Link>
               ))}
             </div>
+
+            <Link
+              href="/solutions"
+              onClick={() => setMobileMenuOpen(false)}
+              className="block rounded-lg px-3 py-2 text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-subtle)] hover:text-[var(--accent)]"
+            >
+              Solutions
+            </Link>
 
             <div className="space-y-1 border-t border-[var(--border)] pt-3">
               <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1">
@@ -386,12 +351,12 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 </Link>
               )}
               <Link
-                href="/resources/downloads"
+                href="/brochure"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <FileText className="w-4 h-4 text-[var(--accent)]" />
-                <span>Downloads Centre</span>
+                <span>Digital Brochure</span>
               </Link>
               <Link
                 href="/tools/calculator"
@@ -399,7 +364,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <Calculator className="w-4 h-4 text-[var(--accent)]" />
-                <span>Warehouse ROI Calculator</span>
+                <span>Floor-Space Illustration</span>
               </Link>
               <Link
                 href="/tools/simulator"
@@ -407,7 +372,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <Play className="w-4 h-4 text-[var(--accent)]" />
-                <span>3D ASRS Crane Simulator</span>
+                <span>STOLIFT Simulator</span>
               </Link>
             </div>
 

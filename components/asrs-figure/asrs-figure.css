@@ -1,0 +1,201 @@
+.asrs-home-figure {
+  --anatomy-page: var(--bg);
+  --anatomy-card: var(--bg);
+  --anatomy-paper: var(--bg-subtle);
+  --anatomy-face: var(--bg-subtle);
+  --anatomy-top: var(--bg);
+  --anatomy-shade-0: var(--bg-muted);
+  --anatomy-shade-1: var(--border);
+  --anatomy-shade-2: var(--bg-muted);
+  --anatomy-shade-3: var(--bg-subtle);
+  --anatomy-lit-top: var(--accent);
+  --anatomy-lit-shade: var(--accent-hover);
+  --anatomy-hi: var(--text);
+  --anatomy-mid: var(--text-secondary);
+  --anatomy-lo: var(--border-strong);
+  --anatomy-faint: var(--border);
+  --anatomy-lit: var(--accent);
+  --anatomy-halo: var(--text);
+  --anatomy-halo-opacity: 0.14;
+  --anatomy-dot: var(--accent);
+  --anatomy-muted: var(--focus-ring);
+  display: flex;
+  min-height: calc(100svh - 5rem);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 1rem 1.25rem;
+  background: var(--bg);
+  color: var(--text);
+}
+
+[data-theme="dark"] .asrs-home-figure {
+  --anatomy-paper: var(--bg-muted);
+  --anatomy-face: var(--bg-subtle);
+  --anatomy-top: var(--bg-subtle);
+  --anatomy-shade-0: var(--bg);
+  --anatomy-shade-1: var(--bg-muted);
+  --anatomy-shade-2: var(--border);
+  --anatomy-shade-3: var(--bg-subtle);
+  --anatomy-lit-top: var(--accent);
+  --anatomy-lit-shade: var(--accent-hover);
+  --anatomy-hi: var(--text);
+  --anatomy-mid: var(--text-secondary);
+  --anatomy-lo: var(--border-strong);
+  --anatomy-faint: var(--border);
+  --anatomy-lit: var(--accent);
+}
+
+.asrs-stage {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr);
+  width: min(100%, 960px);
+  height: min(64svh, 620px);
+  min-height: 340px;
+  place-items: center;
+  touch-action: pan-y;
+}
+
+.asrs-stage:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: -2px;
+}
+
+.asrs-stage > .asrs-svg {
+  width: auto;
+  height: 100%;
+  max-width: 100%;
+}
+
+.asrs-caption {
+  display: flex;
+  width: min(100%, 960px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.35rem 0.15rem 0.85rem;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+}
+
+.asrs-caption p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.asrs-caption output {
+  color: var(--text-muted);
+  font-family: var(--font-mono, ui-monospace, monospace);
+  text-align: right;
+}
+
+.asrs-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.asrs-trusted-stats {
+  display: grid;
+  width: min(calc(100% - 2rem), 960px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+}
+
+.asrs-trusted-stats article {
+  display: flex;
+  min-height: 6rem;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg-subtle);
+  padding: 0.9rem 1rem;
+}
+
+.asrs-trusted-stats strong {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+}
+
+.asrs-trusted-stats span {
+  margin-top: 0.25rem;
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.asrs-trusted-stats small {
+  margin-top: 0.125rem;
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+}
+
+.asrs-action {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+
+.asrs-action-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.asrs-action-primary:hover {
+  background: var(--accent-hover);
+}
+
+.asrs-action-secondary {
+  border: 1px solid var(--border-strong);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.asrs-action-secondary:hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+@media (min-width: 768px) {
+  .asrs-trusted-stats {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .asrs-home-figure {
+    min-height: calc(100svh - 4rem);
+    padding-inline: 0.5rem;
+  }
+
+  .asrs-stage {
+    height: min(60svh, 520px);
+    min-height: 260px;
+  }
+
+  .asrs-caption {
+    gap: 0.35rem;
+    font-size: 0.65rem;
+  }
+
+  .asrs-action {
+    padding-inline: 0.8rem;
+    font-size: 0.8rem;
+  }
+}

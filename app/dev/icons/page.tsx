@@ -52,7 +52,7 @@ export default function DevIconsPage() {
     { name: 'STOMAT / High-Density', icon: Boxes },
     { name: 'Warehouse Storage', icon: Warehouse },
     { name: 'VerticalLift (Custom VLM)', icon: VerticalLift },
-    { name: 'STORDER / Order Picking', icon: PackageSearch },
+    { name: 'STORDER / Multi-Axis Storage', icon: PackageSearch },
     { name: 'Scan Barcode', icon: ScanBarcode },
     { name: 'MobileCompactor (Custom)', icon: MobileCompactor },
     { name: 'Shuttle (Custom)', icon: Shuttle },
@@ -179,7 +179,7 @@ export default function DevIconsPage() {
                 <VerticalLift className="w-5 h-5 text-[var(--accent)]" strokeWidth={1.75} />
               </div>
               <p className="text-sm text-[var(--text-secondary)] leading-relaxed">
-                Dual-mast automated vertical lift module stores hundreds of heavy steel tote trays up to 14 meters in height, delivering rapid extraction directly to the ergonomic picking window.
+                A brochure-based example of automated material storage and retrieval.
               </p>
             </div>
           </div>

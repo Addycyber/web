@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@import "../components/asrs-figure/kit/iso.css";
+@import "../components/asrs-figure/asrs-figure.css";
 
 /* ============================================================
    SPACE MAGNUM DESIGN SYSTEM — v3

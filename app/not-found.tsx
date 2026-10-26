@@ -33,8 +33,8 @@ export default function NotFound() {
             className="p-4 rounded-xl border border-[var(--border)] bg-[var(--bg-subtle)] hover:border-[var(--accent)] transition-all group"
           >
             <Calculator className="w-5 h-5 text-[var(--accent)] mb-2" />
-            <div className="font-bold text-sm text-[var(--text)]">ROI Calculator</div>
-            <div className="text-xs text-[var(--text-muted)] mt-0.5">Calculate space savings</div>
+            <div className="font-bold text-sm text-[var(--text)]">Floor-Space Illustration</div>
+            <div className="text-xs text-[var(--text-muted)] mt-0.5">Use brochure-stated product data</div>
           </Link>
 
           <Link

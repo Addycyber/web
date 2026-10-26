@@ -1,0 +1,398 @@
+{
+  "company": {
+    "name": "Space Magnum Equipments Pvt. Ltd.",
+    "founded": 1992,
+    "tagline": "Capacity² Efficiency² Safety²",
+    "about": "Space Magnum began in 1992 as a small fabrication and assembly shop undertaking work for conventional mobile racks. Experience with storage-system users led the company to develop an integrated approach to storage planning and custom-built storage solutions. Its product range spans mobile racks, automated storage systems, and other allied storage solutions.",
+    "unit1": "S. No. 39/1 A, Manik Baug, Vadgaon (BK), Pune 411 051, India",
+    "unit2": "Gat No. 646, Village Sasewadi, Tal. Bhor, Dist. Pune 421 210, India",
+    "phones": ["+91-20-2435 5895", "+91-20-2435 2812"],
+    "fax": "+91-20-2435 8082",
+    "emails": ["admin@spacemagnum.com", "enquire@spacemagnum.com"],
+    "brochurePage": 20
+  },
+  "pageMap": [
+    { "page": 1, "title": "Cover" },
+    { "page": 2, "title": "Product range overview" },
+    { "page": 3, "title": "About Space Magnum" },
+    { "page": 4, "title": "STOMAT concept" },
+    { "page": 5, "title": "STOMAT features and applications" },
+    { "page": 6, "title": "STOMAT installations" },
+    { "page": 7, "title": "STOMAT model and loading table" },
+    { "page": 8, "title": "STOMAT technical data" },
+    { "page": 9, "title": "STOLIFT system concept" },
+    { "page": 10, "title": "STOLIFT benefits and features" },
+    { "page": 11, "title": "STOLIFT tray configurations" },
+    { "page": 12, "title": "STORDER multi-axis system" },
+    { "page": 13, "title": "STOPICK AS/RS overview" },
+    { "page": 14, "title": "STOPICK construction and safety" },
+    { "page": 15, "title": "STOPICK concept, uses and benefits" },
+    { "page": 16, "title": "STOLONG long-section retrieval" },
+    { "page": 17, "title": "Mobile rack storage system" },
+    { "page": 18, "title": "Compactor drives and capacity example" },
+    { "page": 19, "title": "Other product range" },
+    { "page": 20, "title": "Company contact information" }
+  ],
+  "products": [
+    {
+      "slug": "stomat",
+      "name": "STOMAT",
+      "type": "Vertical carousel storage system",
+      "summary": "An automated vertical carousel for high-density storage and retrieval of small parts and other listed materials.",
+      "concept": "Storage shelves or trays are mounted on vertical chain loops driven by a geared brake motor and controlled by a PLC. The selected shelf is retrieved by its number using the shortest route. The system is enclosed in sheet-metal cladding and operates on the paternoster elevator principle.",
+      "whereToUse": "Suitable for small-parts storage where the number of items is high.",
+      "benefits": [
+        "The brochure states three-times savings in cost, time, and energy compared with a conventional system.",
+        "The brochure states 40% floor-space saving while making use of available height.",
+        "Automated retrieval reduces manual effort.",
+        "The geared-chain, electronically controlled system is described as low-noise.",
+        "The system can be operated manually in case of power failure.",
+        "Designed and manufactured around customer requirements."
+      ],
+      "features": [
+        "Carriers are mounted closely on twin endless chains.",
+        "Shelves rotate in either direction in a vertical plane.",
+        "Material reaches the operating zone by the nearest path.",
+        "Torsion-free, self-supporting, powder-coated construction.",
+        "Work table is listed at 1 metre from the ground.",
+        "PLC control."
+      ],
+      "controller": [
+        "Microprocessor controller with numeric display.",
+        "A tray, bin, or component can be retrieved by its part number.",
+        "The PLC remembers the carrier position in case of power failure.",
+        "PC or control-computer connection through an RS 232 C serial port."
+      ],
+      "safety": [
+        "Safety bars at the top and bottom of the operating window stop the system when pressed.",
+        "Manual operation is available in case of power failure."
+      ],
+      "applications": [
+        "Office files and documents",
+        "Machined and electronic components",
+        "CDs and cassettes",
+        "Medicines",
+        "Tools, hardware, and components",
+        "Small, costly finished goods"
+      ],
+      "variants": [],
+      "trays": ["Storage shelves or material-storage trays mounted on vertical chain loops."],
+      "drives": ["Geared brake motor and twin endless chains."],
+      "facts": [
+        { "label": "Floor-space saving", "value": "40%" },
+        { "label": "Comparison stated in brochure", "value": "Three times cost, time, and energy saving" }
+      ],
+      "specs": [],
+      "otherRange": [],
+      "brochurePages": [4, 5, 6, 7, 8],
+      "heroImage": "/images/products/asrs/asrs-1.jpg",
+      "galleryImages": [
+        "/images/products/asrs/asrs-1.jpg",
+        "/images/products/asrs/asrs-2.jpg",
+        "/images/products/asrs/asrs-3.jpg",
+        "/images/products/asrs/asrs-4.jpg",
+        "/images/products/asrs/asrs-5.jpg"
+      ],
+      "accentColor": "#C2410C"
+    },
+    {
+      "slug": "stolift",
+      "name": "STOLIFT",
+      "type": "Modular automated storage and retrieval system (shuttle)",
+      "summary": "A PLC-controlled shuttle system that retrieves material carriers from selected storage locations and brings them to the operating window.",
+      "concept": "A PLC-controlled platform moves special material carriers between the control station and a selected storage location. The operator enters a part number or location; the platform retrieves the tray from the designated rack and brings it to the operating window. The system is described as a modular automated storage and retrieval system using vertical-lift technology.",
+      "whereToUse": "For mid-sized, mid-weight components or parts that need secure storage, fast retrieval, precise inventory control, and use of available height.",
+      "benefits": [
+        "The brochure states 40% floor-space saving through use of available height.",
+        "The retriever locates and retrieves trays for fast access.",
+        "Enclosed racks protect stored material from theft, dust, mishandling, or damage.",
+        "The brochure describes reduced manpower through automation.",
+        "Inventory is retrieved by part number and quantity for precise control."
+      ],
+      "features": [
+        "Flexible tray pitch, with fixed or optimized pitch selected for component height.",
+        "Machine height and capacity can be increased later.",
+        "The brochure describes lower power consumption than a vertical carousel.",
+        "Operation is described as free of vibration or jerks.",
+        "Material can be removed with the trays.",
+        "Further automation can transfer material through material-handling systems.",
+        "A barcode scanner can be connected externally.",
+        "Top access is available.",
+        "Automatic door and work-table load-carrying facility are listed."
+      ],
+      "controller": [
+        "PLC-controlled platform retrieves material carriers by location or part number.",
+        "Sophisticated PLC control with an easy-to-operate interface."
+      ],
+      "safety": [
+        "Stored material is held in completely enclosed racks.",
+        "An automatic door is listed."
+      ],
+      "applications": [
+        "Mid-sized and mid-weight components or parts",
+        "Items requiring safe storage and precision inventory control"
+      ],
+      "variants": [
+        "Fixed-pitch or optimized-pitch storage arrangement."
+      ],
+      "trays": [
+        "Trays with plastic boxes",
+        "Trays with modular sidewalls, partitions, and dividers",
+        "Trays for Euro-pallets",
+        "Trays with tool-holder systems"
+      ],
+      "drives": [],
+      "facts": [
+        { "label": "Floor-space saving", "value": "40%" },
+        { "label": "Tray load classes", "value": "250 kg / 500 kg" },
+        { "label": "Designed machine capacity", "value": "20 Tonne / 40 Tonne" }
+      ],
+      "specs": [],
+      "otherRange": [],
+      "brochurePages": [9, 10, 11],
+      "heroImage": "/images/products/carousel/carousel-2.jpg",
+      "galleryImages": [
+        "/images/products/carousel/carousel-1.jpg",
+        "/images/products/carousel/carousel-2.jpg",
+        "/images/products/carousel/carousel-3.jpg",
+        "/images/products/carousel/carousel-4.jpg",
+        "/images/products/carousel/carousel-5.jpg"
+      ],
+      "accentColor": "#17803D"
+    },
+    {
+      "slug": "storder",
+      "name": "STORDER",
+      "type": "Modular multi-axis storage and retrieval system",
+      "summary": "A modular multi-axis system using X, Y, and Z movement, combining features of STOLIFT and STOPICK for compact storage of many SKUs.",
+      "concept": "The storage system uses triple-axis X, Y, and Z movement. The brochure describes STORDER as combining advantages of STOLIFT and STOPICK in a limited space, for cases where one STOLIFT machine cannot accommodate many SKUs accessibly.",
+      "whereToUse": "For manufacturing, stock-list, distribution, and warehouse operations that need to store many SKUs in limited space.",
+      "benefits": [
+        "The brochure states that STORDER estimates access-opening requirements for each machine.",
+        "Reduces maintenance cost and the number of operations.",
+        "Provides precision and automation for storage and retrieval.",
+        "The number of picks per hour can be increased or matched to an individual STOLIFT machine."
+      ],
+      "features": [
+        "Retrieving mechanism is described as lightweight and robust.",
+        "High-performance chain is described as quieter during operation.",
+        "Torsion-free structure with sturdy covers.",
+        "Positioning accuracy.",
+        "Vertical expansion by increasing the number of windows."
+      ],
+      "controller": [],
+      "safety": [],
+      "applications": [
+        "Manufacturing",
+        "Stock-list operations",
+        "Distribution",
+        "Warehouses"
+      ],
+      "variants": [],
+      "trays": [],
+      "drives": ["High-performance chain."],
+      "facts": [
+        { "label": "Motion axes", "value": "X, Y, Z" }
+      ],
+      "specs": [],
+      "otherRange": [],
+      "brochurePages": [12],
+      "heroImage": "/images/products/asrs/asrs-3.jpg",
+      "galleryImages": [
+        "/images/products/asrs/asrs-3.jpg",
+        "/images/products/asrs/asrs-4.jpg"
+      ],
+      "accentColor": "#1D5FA8"
+    },
+    {
+      "slug": "stopick",
+      "name": "STOPICK",
+      "type": "Automated storage and retrieval system (AS/RS)",
+      "summary": "A modular unit-load storage and retrieval system designed to use storage height and depth, with simultaneous X and Y movement.",
+      "concept": "A storage-retrieval machine carries a load carrier on a mast and moves on rails in horizontal and vertical planes between two storage racks. An operating window is at the front of the aisle. The PLC-controlled carrier can be configured for the required height, depth, and speed.",
+      "whereToUse": "Customizable for stores, warehouses, finished goods, and raw-material stores in manufacturing, pharmaceutical, automobile, engineering, and heavy-electrical industries.",
+      "benefits": [
+        "One retrieval mechanism can serve a large storage area.",
+        "Integral storage uses available height and depth.",
+        "The brochure describes floor-space saving through full height use and an extremely narrow aisle.",
+        "The system is designed for one-person operation.",
+        "A completely enclosed system with a locking operating window protects stored material.",
+        "The modular rack and main carriage can be expanded."
+      ],
+      "features": [
+        "Positive chain hoisting.",
+        "24 to 40 dual cycles per hour.",
+        "Simultaneous X and Y axis motion.",
+        "Busbar or trolley current supply.",
+        "On-board storage-retrieval machine control, off-board communication, and on-board diagnostics.",
+        "Double-arm lifting carriage guided on 8 rollers.",
+        "Load-extraction options include single-arm and double-arm telescopic forks and Retriever I (TM).",
+        "Core sensing, ergonomic workstation, and aisle-changer hardware for multiple aisles.",
+        "AC variable-frequency drive for hoisting and long travel.",
+        "Quadruple-chain hoisting, linear guideways, and optical load centering.",
+        "Optional man-on-board facility and PC or central-computer interface."
+      ],
+      "controller": [
+        "PLC control with on-board SRM control.",
+        "Off-board communication and diagnostics for SRM faults."
+      ],
+      "safety": [
+        "Full safety protocols through on-board sensors, as stated in the brochure.",
+        "Racking structure and storage-retrieval machine standards are listed in the brochure."
+      ],
+      "applications": [
+        "Electronic parts, hardware, and small tools",
+        "Refrigerators",
+        "Drums in chemical or process industries",
+        "Passenger-car storage and retrieval in parking lots",
+        "Finished goods and raw-material stores"
+      ],
+      "variants": [
+        "Single-arm telescopic fork",
+        "Double-arm telescopic fork",
+        "Retriever I (TM)",
+        "Optional man-on-board"
+      ],
+      "trays": ["Load carrier mounted on the storage-retrieval machine mast."],
+      "drives": [
+        "AC variable-frequency drives for hoisting and long travel.",
+        "Quadruple-chain hoisting."
+      ],
+      "facts": [
+        { "label": "Machine height", "value": "Up to 16 metres" },
+        { "label": "Dual cycles", "value": "24 to 40 per hour" }
+      ],
+      "specs": [],
+      "otherRange": [],
+      "brochurePages": [13, 14, 15],
+      "heroImage": "/gallery/img_asrs_3_960w.webp",
+      "galleryImages": [
+        "/gallery/img_asrs_3_960w.webp",
+        "/gallery/img_asrs_4_960w.webp"
+      ],
+      "accentColor": "#1D5FA8"
+    },
+    {
+      "slug": "stolong",
+      "name": "STOLONG",
+      "type": "Retrieval system for longer sections",
+      "summary": "An automated storage and retrieval system for bars, profiles, metal fittings, and sheet-metal systems in varied sizes and quantities.",
+      "concept": "The system uses a random-cassette principle. Gantry cranes retrieve material and bring it to the operator; the material can then be carried to several workstations. Faster drives and a double-pulling device on the gantry crane are described as supporting material flow.",
+      "whereToUse": "Steel and metal service centres, manufacturing, plastics, and aluminium industries.",
+      "benefits": [
+        "Higher storage capacity and faster access with moderate investment.",
+        "The brochure describes faster drives and a double-pulling device for efficient material flow."
+      ],
+      "features": [
+        "Gantry cranes operate at varied speeds.",
+        "Material can be supplied to several workstations.",
+        "System height is listed up to 25 metres.",
+        "The brochure lists commissioning cranes, buffer tables, chain conveyors, bundling devices, and truck-routing systems as options."
+      ],
+      "controller": [],
+      "safety": [],
+      "applications": [
+        "Bars and building-facade profiles",
+        "Metal fittings and sheet-metal systems",
+        "Steel and metal service centres",
+        "Manufacturing",
+        "Plastics and aluminium industries"
+      ],
+      "variants": [
+        "Cassette dividers",
+        "Inside linings",
+        "Floor coverings"
+      ],
+      "trays": ["Random cassettes."],
+      "drives": [
+        "Faster drives are offered as an option.",
+        "Double-pulling device on the gantry crane."
+      ],
+      "facts": [
+        { "label": "Storage height", "value": "Up to 25 metres" },
+        { "label": "Double cycles", "value": "Up to 50 per hour" }
+      ],
+      "specs": [],
+      "otherRange": [],
+      "brochurePages": [16],
+      "heroImage": "/images/products/asrs/asrs-4.jpg",
+      "galleryImages": [
+        "/images/products/asrs/asrs-4.jpg",
+        "/images/products/asrs/asrs-5.jpg"
+      ],
+      "accentColor": "#1D5FA8"
+    },
+    {
+      "slug": "compactors-racking",
+      "name": "Compactors & Racking",
+      "type": "Mobile rack storage system and other storage products",
+      "summary": "Mobile shelving reduces the number of fixed aisles to a single access aisle; the brochure also lists other storage and racking products.",
+      "concept": "Mobile shelving units move together to open an access aisle where needed. The brochure describes manual, crank, and electric drive options and a central locking system.",
+      "whereToUse": "For offices, workshops, and household storage, including files, suspended folders, registers, card indexes, clothes, fittings, electrical and electronic articles, shoes, paints, medicines, and bins.",
+      "benefits": [
+        "One movable access aisle serves the shelves; fixed aisles are only needed where simultaneous access is required.",
+        "A brochure example compares 30 fixed bays with mobile shelving and illustrates an 80% increase in linear shelf space.",
+        "The brochure describes suitability for varied storage applications."
+      ],
+      "features": [
+        "Aisle-security service is available for special requirements or tailor-made products.",
+        "The central locking system protects the system against unauthorized access."
+      ],
+      "controller": ["Electric-drive control is designed to meet customer requirements."],
+      "safety": ["Central locking system."],
+      "applications": [
+        "Files, suspended folders, registers, and card indexes",
+        "Clothes, fittings, electrical and electronic articles",
+        "Shoes, paints, medicines, and bins"
+      ],
+      "variants": [
+        "Manual mobile shelving",
+        "Crank-drive mobile shelving",
+        "Electric-drive mobile shelving",
+        "Cantilever-type racking",
+        "Heavy-duty racking",
+        "Motorized heavy-duty mobile system",
+        "Bin-type FIFO racking",
+        "Two-tier racking",
+        "Drawer-type die storage"
+      ],
+      "trays": [],
+      "drives": [
+        "Manual block: the brochure lists up to 1,200 kg overall weight.",
+        "Crank drive: the brochure lists a 1:6 reduction ratio and up to 10 Tonne maximum base weight.",
+        "Electric drive: single-motor drive using a friction wheel running on the rail."
+      ],
+      "facts": [
+        { "label": "Illustrated example", "value": "80% increase in linear shelf space" },
+        { "label": "Manual block", "value": "Up to 1,200 kg overall weight" },
+        { "label": "Crank drive", "value": "Up to 10 Tonne maximum base weight" }
+      ],
+      "specs": [],
+      "otherRange": [
+        "Cantilever-type racking",
+        "Heavy-duty racking",
+        "Motorized heavy-duty mobile system",
+        "Bin-type FIFO racking",
+        "Two-tier racking",
+        "Drawer-type die storage"
+      ],
+      "brochurePages": [17, 18, 19],
+      "heroImage": "/images/products/compactor/compactor-1.jpg",
+      "galleryImages": [
+        "/images/products/compactor/compactor-1.jpg",
+        "/images/products/compactor/compactor-2.jpg",
+        "/images/products/compactor/compactor-3.jpg",
+        "/images/products/compactor/heavy-compactor.jpg",
+        "/images/products/mezzanine/mezzanine-1.jpg",
+        "/images/products/mezzanine/mezzanine-2.jpg",
+        "/images/products/pallet/pallet-1.jpg",
+        "/images/products/cantilever/cantilever-1.jpg",
+        "/images/products/cantilever/cantilever-3.jpg",
+        "/images/products/slotted-angle/slotted-1.jpg",
+        "/images/products/slotted-angle/slotted-2.jpg",
+        "/images/products/heavy-duty/heavy-duty-1.jpg"
+      ],
+      "accentColor": "#66758A"
+    }
+  ]
+}

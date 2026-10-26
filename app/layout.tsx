@@ -16,7 +16,7 @@ import { getApprovedCustomers, hasPublicCustomerWall } from '@/lib/customers'
 export const metadata: Metadata = constructMetadata({
   title: 'Automated Storage & Retrieval Systems (ASRS)',
   description:
-    'Pune, India based manufacturer of automated vertical lift modules (STOMAT), carousel systems, and heavy-duty industrial compactors. Reclaim up to 85% warehouse floor space.',
+    'Pune, India based manufacturer of STOMAT vertical carousel storage, STOLIFT shuttle retrieval systems, and mobile shelving.',
 })
 
 export default function RootLayout({

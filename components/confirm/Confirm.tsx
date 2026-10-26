@@ -15,12 +15,11 @@ interface ConfirmProps {
   compact?: boolean
 }
 
-export function Confirm({ id, label, fallback, inline = false, compact = false }: ConfirmProps) {
+export function Confirm({ id, label, inline = false, compact = false }: ConfirmProps) {
   const isDev = process.env.NODE_ENV === 'development'
 
   if (!isDev) {
-    // In production: render fallback or nothing
-    return fallback ? <>{fallback}</> : null
+    throw new Error(`[CONFIRM ${id}] ${label} must be resolved before production rendering.`)
   }
 
   // In development: render visible amber warning

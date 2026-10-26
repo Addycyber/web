@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { SITE_CONFIG } from '@/config/site'
+import { products } from '@/lib/company'
 
 interface PageMetadataOptions {
   title: string
@@ -27,12 +28,9 @@ export function constructMetadata({
     keywords: [
       'ASRS Systems India',
       'Automated Storage and Retrieval System Pune',
-      'Vertical Lift Module Manufacturer India',
       'Industrial Storage Equipment India',
-      'STOMAT Compactors',
-      'STOLIFT Vertical Carousel',
-      'Warehouse Automation India',
       'Space Magnum Equipments',
+      ...products.flatMap((product) => [product.name, product.type]),
     ],
     authors: [{ name: SITE_CONFIG.name, url: SITE_CONFIG.url }],
     creator: SITE_CONFIG.name,

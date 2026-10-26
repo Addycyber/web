@@ -1,7 +1,6 @@
 import { MetadataRoute } from 'next'
 import { SITE_CONFIG } from '@/config/site'
 import { PRODUCTS } from '@/config/products'
-import { INDUSTRIES } from '@/config/industries'
 import { getApprovedCustomers, hasPublicCustomerWall } from '@/lib/customers'
 
 /**
@@ -25,12 +24,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // ─── Static pages that exist ──────────────────────────────────────────────
   const staticRoutes: MetadataRoute.Sitemap = [
     '',              // /   ← homepage
+    '/solutions',
     '/products',
+    '/brochure',
     '/gallery',
-    '/resources/downloads',
     '/tools/calculator',
     '/tools/simulator',
-    '/proof',
     '/about',
     '/contact',
     '/get-a-quote',
@@ -52,21 +51,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   }
 
-  // ─── Product detail pages (/products/[id]) — all 4 exist ──────────────────
+  // ─── Product detail pages (/products/[id]) ───────────────────────────────
   const productRoutes = PRODUCTS.map((p) => ({
-    url: `${baseUrl}/products/${p.id}`,
+    url: `${baseUrl}/products/${p.slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.9,
   }))
 
-  // ─── Industry pages (/industries/[id]) — all 5 exist ──────────────────────
-  const industryRoutes = INDUSTRIES.map((ind) => ({
-    url: `${baseUrl}/industries/${ind.id}`,
-    lastModified: new Date(),
-    changeFrequency: 'monthly' as const,
-    priority: 0.9,
-  }))
-
-  return [...staticRoutes, ...productRoutes, ...industryRoutes]
+  return [...staticRoutes, ...productRoutes]
 }

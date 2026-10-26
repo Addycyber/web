@@ -169,7 +169,11 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 <video
                   src={item.src}
                   preload="none"
-                  className="w-full h-full object-cover"
+                  controls
+                  playsInline
+                  aria-label={item.alt || `${item.categoryLabel} video`}
+                  onClick={(event) => event.stopPropagation()}
+                  className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full bg-[var(--accent)] text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
@@ -277,11 +281,7 @@ export function GalleryGrid({ items }: GalleryGridProps) {
                 <span className="font-mono uppercase font-bold tracking-wider text-[var(--accent)] mr-3">
                   {activeItem.categoryLabel}
                 </span>
-                {activeItem.caption ? (
-                  <span className="text-zinc-200">{activeItem.caption}</span>
-                ) : (
-                  <span className="text-zinc-400 font-mono text-[11px]">{activeItem.originalFilename}</span>
-                )}
+                {activeItem.caption && <span className="text-zinc-200">{activeItem.caption}</span>}
               </div>
               <div className="font-mono text-zinc-400 shrink-0 ml-4">
                 {lightboxIndex + 1} of {filteredItems.length}

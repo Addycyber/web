@@ -1,13 +1,13 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { constructMetadata } from '@/lib/metadata'
-import { PRODUCTS } from '@/config/products'
+import { products, pageMap } from '@/lib/company'
 import { ArrowRight, Boxes, CheckCircle2 } from 'lucide-react'
 
 export const metadata = constructMetadata({
-  title: 'Automated Storage Products — STOMAT, STOLIFT, STORDER & Racking',
+  title: 'Automated Storage Products — Space Magnum',
   description:
-    'Explore Space Magnum automated storage & retrieval systems: STOMAT vertical carousels, STOLIFT vertical lift modules, STORDER goods-to-person picking, and heavy compactors.',
+    'Explore Space Magnum storage and retrieval systems, mobile shelving, and racking products.',
   path: '/products',
 })
 
@@ -27,7 +27,7 @@ export default function ProductsPage() {
               Automated Industrial Storage Systems
             </h1>
             <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-body">
-              All Space Magnum systems are manufactured at our Pune industrial plant, utilizing robust PLC controls, safety interlocks, and WMS/ERP connectivity.
+              Browse the product range using the descriptions and facts published in the company brochure.
             </p>
           </div>
         </div>
@@ -35,9 +35,12 @@ export default function ProductsPage() {
 
       {/* Product Cards */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
-        {PRODUCTS.map((product, idx) => (
+        {products.map((product, idx) => {
+          const thumbnailPage = product.brochurePages[0]
+          const thumbnailTitle = pageMap.find((entry) => entry.page === thumbnailPage)?.title ?? `Page ${thumbnailPage}`
+          return (
           <div
-            key={product.id}
+            key={product.slug}
             className="group rounded-2xl bg-[var(--bg-subtle)] border border-[var(--border)] hover:border-[var(--border-strong)] transition-all overflow-hidden shadow-sm hover:shadow-md"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
@@ -45,8 +48,8 @@ export default function ProductsPage() {
               {/* Photo */}
               <div className={`lg:col-span-5 relative h-64 lg:h-auto ${idx % 2 !== 0 ? 'lg:order-last' : ''} bg-[var(--bg-muted)] border-b lg:border-b-0 border-[var(--border)]`}>
                 <Image
-                  src={product.heroImage}
-                  alt={product.name}
+                  src={`/brochure/p${String(thumbnailPage).padStart(2, '0')}.webp`}
+                  alt={`Brochure page ${thumbnailPage}: ${thumbnailTitle}`}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 1024px) 100vw, 42vw"
@@ -59,40 +62,33 @@ export default function ProductsPage() {
                   <div className="flex flex-wrap items-start justify-between gap-3">
                     <div>
                       <span className="font-mono text-xs font-bold uppercase tracking-wider text-[var(--accent)] block mb-1">
-                        {product.tagline}
+                        {product.type}
                       </span>
                       <h2 className="text-2xl sm:text-3xl font-extrabold text-[var(--text)]">
                         {product.name}
                       </h2>
                     </div>
-                    <div className="flex gap-2 shrink-0">
+                    {product.facts[0] && <div className="flex gap-2 shrink-0">
                       <span className="px-3 py-1 rounded-full bg-[var(--bg)] border border-[var(--border)] font-mono text-xs font-semibold text-[var(--text)]">
-                        {product.primaryMetric}
+                        {product.facts[0]?.value ?? '—'}
                       </span>
-                    </div>
+                    </div>}
                   </div>
 
                   <p className="text-sm sm:text-base text-[var(--text-secondary)] leading-relaxed font-body">
-                    {product.description}
+                    {product.summary}
                   </p>
 
-                  {/* Metrics Grid */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                    <div className="bg-[var(--bg)] rounded-xl p-3.5 border border-emerald-500/20">
-                      <div className="text-emerald-600 dark:text-emerald-400 font-mono font-bold text-lg">
-                        {product.spaceSavingRange.min}–{product.spaceSavingRange.max}%
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {product.facts.slice(0, 2).map((fact) => (
+                      <div key={fact.label} className="bg-[var(--bg)] rounded-xl p-3.5 border border-[var(--border)]">
+                        <div className="text-[var(--accent)] font-mono font-bold text-lg">{fact.value}</div>
+                        <div className="text-[11px] font-mono text-[var(--text-muted)] mt-0.5">{fact.label}</div>
                       </div>
-                      <div className="text-[11px] font-mono text-[var(--text-muted)] mt-0.5">Space Reclaim</div>
-                    </div>
-                    <div className="bg-[var(--bg)] rounded-xl p-3.5 border border-[var(--border)]">
-                      <div className="text-[var(--accent)] font-mono font-bold text-lg">
-                        {product.labourReductionRange.min}–{product.labourReductionRange.max}%
-                      </div>
-                      <div className="text-[11px] font-mono text-[var(--text-muted)] mt-0.5">Labour Gain</div>
-                    </div>
-                    <div className="col-span-2 sm:col-span-1 bg-[var(--bg)] rounded-xl p-3.5 border border-[var(--border)] flex items-center gap-2">
+                    ))}
+                    <div className="bg-[var(--bg)] rounded-xl p-3.5 border border-[var(--border)] flex items-center gap-2">
                       <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                      <div className="text-xs font-medium text-[var(--text)] line-clamp-2">{product.promise}</div>
+                      <div className="text-xs font-medium text-[var(--text)] line-clamp-2">{product.summary}</div>
                     </div>
                   </div>
                 </div>
@@ -100,7 +96,7 @@ export default function ProductsPage() {
                 {/* Action Buttons */}
                 <div className="flex items-center gap-3 pt-4 border-t border-[var(--border)]">
                   <Link
-                    href={`/products/${product.id}`}
+                    href={`/products/${product.slug}`}
                     className="py-2.5 px-5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-xs transition-colors"
                   >
                     <span>Full Specifications</span>
@@ -108,7 +104,7 @@ export default function ProductsPage() {
                   </Link>
 
                   <Link
-                    href={`/get-a-quote?product=${product.id}`}
+                    href={`/get-a-quote?product=${product.slug}`}
                     className="py-2.5 px-4 rounded-lg bg-[var(--bg)] hover:bg-[var(--bg-muted)] border border-[var(--border-strong)] text-[var(--text)] font-semibold text-xs sm:text-sm transition-colors"
                   >
                     Get Quote
@@ -117,7 +113,8 @@ export default function ProductsPage() {
               </div>
             </div>
           </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )

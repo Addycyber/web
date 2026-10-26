@@ -7,14 +7,11 @@ import { Phone, ArrowRight } from 'lucide-react'
 import { SiWhatsapp } from '@icons-pack/react-simple-icons'
 
 export function MobileActionBar() {
-  const cleanWhatsappNumber = SITE_CONFIG.whatsappNumber.replace(/[^0-9]/g, '')
-  const whatsappUrl = `https://wa.me/${cleanWhatsappNumber}?text=${encodeURIComponent(
-    SITE_CONFIG.whatsappDefaultMessage
-  )}`
+  const whatsappUrl = SITE_CONFIG.whatsappUrl
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-40 lg:hidden bg-[var(--bg)]/95 backdrop-blur-xl border-t border-[var(--border)] p-2 px-3 shadow-xl transition-colors">
-      <div className="grid grid-cols-3 gap-2 max-w-md mx-auto">
+      <div className={`mx-auto grid max-w-md gap-2 ${whatsappUrl ? 'grid-cols-3' : 'grid-cols-2'}`}>
         
         {/* Direct Call */}
         <a
@@ -26,15 +23,17 @@ export function MobileActionBar() {
         </a>
 
         {/* WhatsApp Chat */}
-        <a
-          href={whatsappUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-2 px-2 rounded-lg bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] dark:text-[#25D366] active:scale-95 transition-all font-semibold"
-        >
-          <SiWhatsapp size={16} className="mb-0.5" />
-          <span className="text-[10px] font-mono uppercase font-semibold">WhatsApp</span>
-        </a>
+        {whatsappUrl && (
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex flex-col items-center justify-center rounded-lg border border-[#25D366]/30 bg-[#25D366]/10 px-2 py-2 font-semibold text-[#25D366] transition-all active:scale-95 dark:text-[#25D366]"
+          >
+            <SiWhatsapp size={16} className="mb-0.5" />
+            <span className="text-[10px] font-mono uppercase font-semibold">WhatsApp</span>
+          </a>
+        )}
 
         {/* Get Quote */}
         <Link

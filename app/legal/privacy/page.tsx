@@ -1,5 +1,6 @@
 import { constructMetadata } from '@/lib/metadata'
 import { SITE_CONFIG } from '@/config/site'
+import { company } from '@/lib/company'
 
 export const metadata = constructMetadata({
   title: 'Privacy Policy — Space Magnum Equipments',
@@ -28,7 +29,7 @@ export default function PrivacyPolicyPage() {
 
         <h2 className="text-xl font-bold text-[var(--text)] pt-4">3. Data Security &amp; Storage</h2>
         <p>
-          All contact details and quote requests are processed securely. You have the right to request deletion or update of your contact record at any time by emailing <span className="font-mono text-[var(--accent)]">{SITE_CONFIG.emailSales}</span>.
+          All contact details and quote requests are processed securely. You have the right to request deletion or update of your contact record at any time by emailing <span className="font-mono text-[var(--accent)]">{company.emails.join(' / ')}</span>.
         </p>
       </div>
     </div>

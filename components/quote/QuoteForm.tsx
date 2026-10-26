@@ -135,19 +135,19 @@ export function QuoteForm() {
               {PRODUCTS.map((p) => (
                 <button
                   type="button"
-                  key={p.id}
-                  onClick={() => setSelectedProduct(p.id)}
+                  key={p.slug}
+                  onClick={() => setSelectedProduct(p.slug)}
                   className={`p-4 rounded-xl border text-left transition-all ${
-                    selectedProduct === p.id
+                    selectedProduct === p.slug
                       ? 'bg-[var(--accent-soft)] border-[var(--accent)] text-[var(--text)]'
                       : 'bg-[var(--bg)] border-[var(--border)] text-[var(--text-secondary)] hover:border-[var(--border-strong)]'
                   }`}
                 >
                   <div className="font-mono text-sm font-bold flex items-center justify-between text-[var(--text)]">
                     <span>{p.name}</span>
-                    {selectedProduct === p.id && <CheckCircle2 className="w-4 h-4 text-[var(--accent)]" />}
+                    {selectedProduct === p.slug && <CheckCircle2 className="w-4 h-4 text-[var(--accent)]" />}
                   </div>
-                  <div className="text-xs text-[var(--text-muted)] mt-1">{p.shortDesc}</div>
+                  <div className="text-xs text-[var(--text-muted)] mt-1">{p.summary}</div>
                 </button>
               ))}
             </div>
