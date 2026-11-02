@@ -85,13 +85,13 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [4, 5, 6, 7, 8],
-      "heroImage": "/images/products/asrs/asrs-1.jpg",
+      "heroImage": "/brochure/p04.webp",
       "galleryImages": [
-        "/images/products/asrs/asrs-1.jpg",
-        "/images/products/asrs/asrs-2.jpg",
-        "/images/products/asrs/asrs-3.jpg",
-        "/images/products/asrs/asrs-4.jpg",
-        "/images/products/asrs/asrs-5.jpg"
+        "/brochure/p04.webp",
+        "/brochure/p05.webp",
+        "/brochure/p06.webp",
+        "/brochure/p07.webp",
+        "/brochure/p08.webp"
       ],
       "accentColor": "#C2410C"
     },
@@ -150,13 +150,11 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [9, 10, 11],
-      "heroImage": "/images/products/carousel/carousel-2.jpg",
+      "heroImage": "/brochure/p09.webp",
       "galleryImages": [
-        "/images/products/carousel/carousel-1.jpg",
-        "/images/products/carousel/carousel-2.jpg",
-        "/images/products/carousel/carousel-3.jpg",
-        "/images/products/carousel/carousel-4.jpg",
-        "/images/products/carousel/carousel-5.jpg"
+        "/brochure/p09.webp",
+        "/brochure/p10.webp",
+        "/brochure/p11.webp"
       ],
       "accentColor": "#17803D"
     },
@@ -197,10 +195,9 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [12],
-      "heroImage": "/images/products/asrs/asrs-3.jpg",
+      "heroImage": "/brochure/p12.webp",
       "galleryImages": [
-        "/images/products/asrs/asrs-3.jpg",
-        "/images/products/asrs/asrs-4.jpg"
+        "/brochure/p12.webp"
       ],
       "accentColor": "#1D5FA8"
     },
@@ -265,10 +262,11 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [13, 14, 15],
-      "heroImage": "/gallery/img_asrs_3_960w.webp",
+      "heroImage": "/brochure/p13.webp",
       "galleryImages": [
-        "/gallery/img_asrs_3_960w.webp",
-        "/gallery/img_asrs_4_960w.webp"
+        "/brochure/p13.webp",
+        "/brochure/p14.webp",
+        "/brochure/p15.webp"
       ],
       "accentColor": "#1D5FA8"
     },
@@ -315,10 +313,9 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [16],
-      "heroImage": "/images/products/asrs/asrs-4.jpg",
+      "heroImage": "/brochure/p16.webp",
       "galleryImages": [
-        "/images/products/asrs/asrs-4.jpg",
-        "/images/products/asrs/asrs-5.jpg"
+        "/brochure/p16.webp"
       ],
       "accentColor": "#1D5FA8"
     },
@@ -377,21 +374,8 @@
         "Drawer-type die storage"
       ],
       "brochurePages": [17, 18, 19],
-      "heroImage": "/images/products/compactor/compactor-1.jpg",
-      "galleryImages": [
-        "/images/products/compactor/compactor-1.jpg",
-        "/images/products/compactor/compactor-2.jpg",
-        "/images/products/compactor/compactor-3.jpg",
-        "/images/products/compactor/heavy-compactor.jpg",
-        "/images/products/mezzanine/mezzanine-1.jpg",
-        "/images/products/mezzanine/mezzanine-2.jpg",
-        "/images/products/pallet/pallet-1.jpg",
-        "/images/products/cantilever/cantilever-1.jpg",
-        "/images/products/cantilever/cantilever-3.jpg",
-        "/images/products/slotted-angle/slotted-1.jpg",
-        "/images/products/slotted-angle/slotted-2.jpg",
-        "/images/products/heavy-duty/heavy-duty-1.jpg"
-      ],
+      "heroImage": "/brochure/p17.webp",
+      "galleryImages": ["/brochure/p17.webp", "/brochure/p18.webp", "/brochure/p19.webp"],
       "accentColor": "#66758A"
     }
   ]

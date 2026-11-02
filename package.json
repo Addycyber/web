@@ -6,12 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "predev": "tsx scripts/build-gallery.ts",
-    "prebuild": "tsx scripts/check-contrast.ts",
+    "prebuild": "tsx scripts/check-contrast.ts && node scripts/check-images.mjs",
+    "check:images": "node scripts/check-images.mjs",
     "check:contrast": "tsx scripts/check-contrast.ts",
     "check:logos": "tsx scripts/check-logos.ts",
     "gallery:build": "tsx scripts/build-gallery.ts",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",

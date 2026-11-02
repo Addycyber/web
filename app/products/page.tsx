@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { constructMetadata } from '@/lib/metadata'
-import { products, pageMap } from '@/lib/company'
+import { products } from '@/lib/company'
 import { ArrowRight, Boxes, CheckCircle2 } from 'lucide-react'
 
 export const metadata = constructMetadata({
@@ -37,7 +37,6 @@ export default function ProductsPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
         {products.map((product, idx) => {
           const thumbnailPage = product.brochurePages[0]
-          const thumbnailTitle = pageMap.find((entry) => entry.page === thumbnailPage)?.title ?? `Page ${thumbnailPage}`
           return (
           <div
             key={product.slug}
@@ -49,9 +48,9 @@ export default function ProductsPage() {
               <div className={`lg:col-span-5 relative h-64 lg:h-auto ${idx % 2 !== 0 ? 'lg:order-last' : ''} bg-[var(--bg-muted)] border-b lg:border-b-0 border-[var(--border)]`}>
                 <Image
                   src={`/brochure/p${String(thumbnailPage).padStart(2, '0')}.webp`}
-                  alt={`Brochure page ${thumbnailPage}: ${thumbnailTitle}`}
+                  alt={`${product.name} – brochure page ${thumbnailPage}`}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-contain group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
               </div>

@@ -59,9 +59,9 @@ export function ProductGateway() {
                 <div className="relative h-52 overflow-hidden bg-[var(--bg-muted)] border-b border-[var(--border)] shrink-0">
                   <Image
                     src={product.heroImage}
-                    alt={product.name}
+                    alt={`${product.name} – brochure page ${product.brochurePages[0]}`}
                     fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="object-contain transition-transform duration-300 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                   />
                   <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-[var(--bg)]/90 backdrop-blur-md border border-[var(--border)] text-[var(--accent)] flex items-center justify-center">

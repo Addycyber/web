@@ -10,7 +10,17 @@ const titleForPage = (page: number) =>
 const imageForPage = (page: number) =>
   `/brochure/p${String(page).padStart(2, "0")}.webp`;
 
-export function BrochureViewer({ pages }: { pages: number[] }) {
+export function BrochureViewer({
+  pages,
+  productName,
+}: {
+  pages: number[];
+  productName?: string;
+}) {
+  const altForPage = (page: number) =>
+    productName
+      ? `${productName} – brochure page ${page}`
+      : `Brochure page ${page}: ${titleForPage(page)}`;
   const dialog = React.useRef<HTMLDialogElement>(null);
   const opener = React.useRef<HTMLButtonElement | null>(null);
   const pointerStart = React.useRef<number | null>(null);
@@ -28,7 +38,7 @@ export function BrochureViewer({ pages }: { pages: number[] }) {
       setActivePage(pages[nextIndex] ?? pages[0] ?? 1);
       setZoomed(false);
     },
-    [activePage, pages],
+    [activePage, pages, setZoomed],
   );
 
   const openAt = (page: number, button: HTMLButtonElement) => {
@@ -93,7 +103,7 @@ export function BrochureViewer({ pages }: { pages: number[] }) {
             <span className="relative block aspect-[656/926] overflow-hidden rounded-lg border border-[var(--border)] bg-[var(--bg-subtle)]">
               <Image
                 src={imageForPage(page)}
-                alt={`Brochure page ${page}: ${titleForPage(page)}`}
+                alt={altForPage(page)}
                 width={656}
                 height={926}
                 sizes="(max-width: 768px) 72vw, 280px"
@@ -170,7 +180,7 @@ export function BrochureViewer({ pages }: { pages: number[] }) {
             <Image
               key={activePage}
               src={imageForPage(activePage)}
-              alt={`Brochure page ${activePage}: ${titleForPage(activePage)}`}
+              alt={altForPage(activePage)}
               width={656}
               height={926}
               sizes="100vw"

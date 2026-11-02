@@ -55,11 +55,11 @@ export function ProductDetail({ product, id }: { product: Product; id?: string }
           <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-muted)] lg:col-span-5">
             <Image
               src={product.heroImage}
-              alt={`${product.name} storage system`}
+              alt={`${product.name} – brochure page ${product.brochurePages[0]}`}
               fill
               priority
               sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>
@@ -139,7 +139,7 @@ export function ProductDetail({ product, id }: { product: Product; id?: string }
           </section>
         )}
 
-        <BrochureViewer pages={product.brochurePages} />
+        <BrochureViewer pages={product.brochurePages} productName={product.name} />
 
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border)] pt-8">
           <p className="text-sm text-[var(--text-secondary)]">
