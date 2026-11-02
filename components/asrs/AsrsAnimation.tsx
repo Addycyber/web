@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import * as React from "react";
 
 type AsrsAppHandle = {
@@ -184,12 +183,8 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
       aria-label={isHero ? undefined : "ASRS simulation"}
     >
       <div className="asrs-animation__viewport">
-        <Image
-          src="/asrs/asrs-poster.svg"
-          alt=""
-          fill
-          priority={isHero}
-          sizes="100vw"
+        <div
+          aria-hidden="true"
           className={`asrs-animation__poster${ready ? " is-hidden" : ""}`}
         />
         <canvas
@@ -197,9 +192,9 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
           aria-label="Interactive three-dimensional automated storage and retrieval system"
           className={`asrs-animation__canvas${ready ? " is-ready" : ""}`}
           role="img"
-          tabIndex={0}
+          tabIndex={isHero ? undefined : 0}
         />
-        {error && (
+        {error && mode === "simulator" && (
           <p className="asrs-animation__status" role="status">
             {error}
           </p>

@@ -13,6 +13,10 @@
   pointer-events: none;
 }
 
+.asrs-animation--hero .asrs-ui {
+  display: none;
+}
+
 .asrs-animation__viewport {
   position: relative;
   width: 100%;
@@ -33,8 +37,14 @@
 }
 
 .asrs-animation__poster {
-  object-fit: contain;
-  background: #0b1220;
+  position: absolute;
+  inset: 0;
+  display: block;
+  background-color: #0b1220;
+  background-image: url("/asrs/asrs-poster.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   transition: opacity 180ms ease;
 }
 
@@ -280,12 +290,22 @@
 }
 
 @media (max-width: 640px) {
+  .asrs-animation__poster {
+    background-image: url("/asrs/asrs-poster-mobile.webp");
+  }
+
   .asrs-animation__viewport {
     min-height: 300px;
   }
 
   .asrs-animation--hero .asrs-animation__viewport {
     min-height: 0;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .asrs-animation__poster {
+    background-image: url("/asrs/asrs-poster-tablet.webp");
   }
 }
 

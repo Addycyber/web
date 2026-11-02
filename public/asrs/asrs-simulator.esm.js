@@ -2608,8 +2608,10 @@ class AsrsApp {
   // ---------------------------------------------------------------- camera
   home() {
     const L = this.scene.L;
+    const aspect = this.canvas.clientWidth / this.canvas.clientHeight || 1.7;
+    const dist = Math.min(90, 30 * Math.sqrt(1.7 / aspect));
     this.camera.followFn = null;
-    this.camera.setGoal({ target: [(L.xMin + L.xMax) / 2 - 1, 0, 4], dist: 30, yaw: -2.2, pitch: 0.45 });
+    this.camera.setGoal({ target: [(L.xMin + L.xMax) / 2 - 1, 0, 4], dist, yaw: -2.2, pitch: 0.45 });
   }
 
   fly(part) {
@@ -2699,6 +2701,7 @@ class AsrsApp {
       else if (k === "h") this.home();
     };
     listen(window, "keydown", this.keyHandler);
+    listen(window, "resize", () => this.home());
   }
 
   pinchDist(ptr) {
