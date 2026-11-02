@@ -1,7 +1,7 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { constructMetadata } from '@/lib/metadata'
-import { AsrsHero } from '@/components/home/AsrsHero'
+import { HeroSlider } from '@/components/home/HeroSlider'
 import { ProofStrip } from '@/components/home/ProofStrip'
 import { ReclaimFloorSection } from '@/components/home/ReclaimFloorSection'
 import { ProductGateway } from '@/components/home/ProductGateway'
@@ -50,7 +50,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col w-full overflow-hidden">
       {/* 1. Hero */}
-      <AsrsHero />
+      <HeroSlider />
 
       {/* 2. Product proof */}
       <ProofStrip items={galleryItems} />

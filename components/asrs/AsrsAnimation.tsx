@@ -19,30 +19,13 @@ type AsrsModule = {
   ) => AsrsAppHandle;
 };
 
-type AsrsAnimationProps = {
-  mode: "hero" | "simulator";
-};
-
 const SPEEDS = [0.5, 1, 2] as const;
-const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const subscribeToMotionPreference = (onChange: () => void) => {
-  const query = window.matchMedia(REDUCED_MOTION_QUERY);
-  query.addEventListener("change", onChange);
-  return () => query.removeEventListener("change", onChange);
-};
-const getReducedMotion = () => window.matchMedia(REDUCED_MOTION_QUERY).matches;
-const getServerReducedMotion = () => true;
 
-export function AsrsAnimation({ mode }: AsrsAnimationProps) {
+export function AsrsAnimation() {
   const shellRef = React.useRef<HTMLDivElement>(null);
   const canvasRef = React.useRef<HTMLCanvasElement>(null);
   const appRef = React.useRef<AsrsAppHandle | null>(null);
   const [inView, setInView] = React.useState(false);
-  const reducedMotion = React.useSyncExternalStore(
-    subscribeToMotionPreference,
-    getReducedMotion,
-    getServerReducedMotion,
-  );
   const [ready, setReady] = React.useState(false);
   const [error, setError] = React.useState("");
   const [paused, setPaused] = React.useState(false);
@@ -62,7 +45,7 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
     );
     observer.observe(shell);
     return () => observer.disconnect();
-  }, [mode]);
+  }, []);
 
   React.useEffect(() => {
     const updateVisibility = () => {
@@ -76,7 +59,7 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
   React.useEffect(() => {
     const shell = shellRef.current;
     const canvas = canvasRef.current;
-    if (!shell || !canvas || !inView || (mode === "hero" && reducedMotion)) return;
+    if (!shell || !canvas || !inView) return;
     let cancelled = false;
     let app: AsrsAppHandle | null = null;
     let moduleUrl = "";
@@ -105,11 +88,11 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
       app = new simulator.AsrsApp(canvasRef.current, {
         auto: true,
         autoRate: 6,
-        hint: mode === "simulator",
-        render: { maxDpr: mode === "hero" ? 1.5 : 2 },
+        hint: true,
+        render: { maxDpr: 2 },
       });
       appRef.current = app;
-      app.setActive(!document.hidden && (mode === "simulator" || inView));
+      app.setActive(!document.hidden && inView);
       setPaused(app.paused);
       setSpeed(app.speed);
       setReady(true);
@@ -128,7 +111,7 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
       if (appRef.current === app) appRef.current = null;
       setReady(false);
     };
-  }, [inView, mode, reducedMotion]);
+  }, [inView]);
 
   React.useEffect(() => {
     const update = () => setFullscreen(document.fullscreenElement === shellRef.current);
@@ -173,14 +156,12 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
     }
   };
 
-  const isHero = mode === "hero";
-
   return (
     <div
       ref={shellRef}
-      className={`asrs-animation asrs-animation--${mode}`}
-      role={isHero ? undefined : "group"}
-      aria-label={isHero ? undefined : "ASRS simulation"}
+      className="asrs-animation asrs-animation--simulator"
+      role="group"
+      aria-label="ASRS simulation"
     >
       <div className="asrs-animation__viewport">
         <div
@@ -192,21 +173,20 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
           aria-label="Interactive three-dimensional automated storage and retrieval system"
           className={`asrs-animation__canvas${ready ? " is-ready" : ""}`}
           role="img"
-          tabIndex={isHero ? undefined : 0}
+          tabIndex={0}
         />
-        {error && mode === "simulator" && (
+        {error && (
           <p className="asrs-animation__status" role="status">
             {error}
           </p>
         )}
       </div>
 
-      {!isHero && (
-        <div
-          className="asrs-animation__controls"
-          role="group"
-          aria-label="Simulation controls"
-        >
+      <div
+        className="asrs-animation__controls"
+        role="group"
+        aria-label="Simulation controls"
+      >
           <button type="button" onClick={togglePlayback} disabled={!ready}>
             {paused ? "Play" : "Pause"}
           </button>
@@ -238,8 +218,7 @@ export function AsrsAnimation({ mode }: AsrsAnimationProps) {
           <button type="button" onClick={() => void toggleFullscreen()}>
             {fullscreen ? "Exit fullscreen" : "Fullscreen"}
           </button>
-        </div>
-      )}
+      </div>
     </div>
   );
 }

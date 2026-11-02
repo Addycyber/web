@@ -3,20 +3,6 @@
   color: var(--text);
 }
 
-.asrs-animation--hero {
-  position: relative;
-  height: 100svh;
-  min-height: 340px;
-  margin-top: -5rem;
-  overflow: hidden;
-  background: #0b1220;
-  pointer-events: none;
-}
-
-.asrs-animation--hero .asrs-ui {
-  display: none;
-}
-
 .asrs-animation__viewport {
   position: relative;
   width: 100%;
@@ -26,14 +12,6 @@
   border: 1px solid var(--border);
   border-radius: 1rem;
   background: #0b1220;
-}
-
-.asrs-animation--hero .asrs-animation__viewport {
-  height: 100%;
-  min-height: 0;
-  aspect-ratio: auto;
-  border: 0;
-  border-radius: 0;
 }
 
 .asrs-animation__poster {
@@ -298,9 +276,6 @@
     min-height: 300px;
   }
 
-  .asrs-animation--hero .asrs-animation__viewport {
-    min-height: 0;
-  }
 }
 
 @media (min-width: 641px) and (max-width: 1024px) {

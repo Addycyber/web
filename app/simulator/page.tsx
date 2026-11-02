@@ -36,7 +36,7 @@ export default function SimulatorPage() {
         </header>
 
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.7fr)_minmax(17rem,0.8fr)]">
-          <AsrsAnimation mode="simulator" />
+          <AsrsAnimation />
           <aside className="space-y-5 rounded-2xl border border-[var(--border)] bg-[var(--bg-subtle)] p-6">
             <h2 className="text-lg font-bold">Explore the simulation</h2>
             <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
