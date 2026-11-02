@@ -59,7 +59,7 @@ if (!fs.existsSync(manifestDir)) {
 }
 
 // Category normalization dictionary
-function normalizeCategory(folderName: string): { key: string; label: string } {
+function normalizeCategory(folderName: string): { key: string; label: string } | null {
   const lower = folderName.toLowerCase().replace(/[^a-z0-9]/g, '')
   
   if (lower.includes('stolift')) return { key: 'stolift', label: 'STOLIFT Vertical Lift' }
@@ -69,7 +69,7 @@ function normalizeCategory(folderName: string): { key: string; label: string } {
   if (lower.includes('compactor') || lower.includes('heavyduty')) return { key: 'compactors', label: 'Compactors & Racks' }
   if (lower.includes('asrs')) return { key: 'asrs', label: 'ASRS High-Bay' }
   if (lower.includes('mezzanine') || lower.includes('mazzannine')) return { key: 'mezzanine', label: 'Mezzanine Floors' }
-  if (lower.includes('facility') || lower.includes('powdercoating') || lower.includes('rollforming')) return { key: 'facility', label: 'Factory & Facility' }
+  if (lower.includes('facility') || lower.includes('powdercoating') || lower.includes('rollforming')) return null
   if (lower.includes('cantilever')) return { key: 'cantilever', label: 'Cantilever Racking' }
   if (lower.includes('pallet') || lower.includes('drum')) return { key: 'pallet-racks', label: 'Pallet & Drum Storage' }
   
@@ -87,7 +87,7 @@ function loadCaptions(dir: string, category: string) {
     if (fs.existsSync(c)) {
       try {
         captionsMap[category] = JSON.parse(fs.readFileSync(c, 'utf-8'))
-      } catch (e) {
+      } catch {
         // ignore
       }
     }
@@ -97,7 +97,7 @@ function loadCaptions(dir: string, category: string) {
 if (assetsRoot && fs.existsSync(path.join(assetsRoot, 'captions.json'))) {
   try {
     captionsMap['root'] = JSON.parse(fs.readFileSync(path.join(assetsRoot, 'captions.json'), 'utf-8'))
-  } catch (e) {}
+  } catch {}
 }
 
 interface DiscoveredFile {
@@ -112,6 +112,8 @@ interface DiscoveredFile {
 function walkDir(dir: string, currentCategory: string = 'general'): DiscoveredFile[] {
   let results: DiscoveredFile[] = []
   if (!fs.existsSync(dir)) return results
+  const norm = normalizeCategory(currentCategory)
+  if (!norm) return results
 
   const entries = fs.readdirSync(dir, { withFileTypes: true })
   loadCaptions(dir, currentCategory)
@@ -129,7 +131,6 @@ function walkDir(dir: string, currentCategory: string = 'general'): DiscoveredFi
     } else if (entry.isFile()) {
       const ext = path.extname(entry.name).toLowerCase()
       const stats = fs.statSync(fullPath)
-      const norm = normalizeCategory(currentCategory)
       results.push({
         fullPath,
         categoryKey: norm.key,
@@ -213,7 +214,7 @@ async function processImage(file: DiscoveredFile, id: string): Promise<GalleryMa
       alt: captionEntry.alt || '',
       caption: captionEntry.caption || '',
     }
-  } catch (err) {
+  } catch {
     return null
   }
 }
@@ -317,6 +318,18 @@ async function run() {
 
   const manifestItems: GalleryManifestItem[] = processedItems.filter((item): item is GalleryManifestItem => item !== null)
   fs.writeFileSync(manifestPath, JSON.stringify(manifestItems, null, 2), 'utf-8')
+  const referencedAssets = new Set(
+    manifestItems.flatMap((item) => [
+      item.src,
+      ...Object.values(item.sources.webp),
+      ...Object.values(item.sources.avif),
+    ].map((assetPath) => path.basename(assetPath))),
+  )
+  for (const filename of fs.readdirSync(outputPublicDir)) {
+    if (/^(img|vid)_/.test(filename) && !referencedAssets.has(filename)) {
+      fs.unlinkSync(path.join(outputPublicDir, filename))
+    }
+  }
   console.log(`\nManifest written to ${manifestPath} (${manifestItems.length} items)`)
 
   const missingAltReports = manifestItems.filter(i => !i.alt).map(i => ({ category: i.category, filename: i.originalFilename }))

@@ -1,10 +1,6 @@
-import fs from 'node:fs'
-import path from 'node:path'
 import { constructMetadata } from '@/lib/metadata'
 import { company } from '@/lib/company'
-import { Factory, MapPin } from 'lucide-react'
-import { GalleryStrip } from '@/components/gallery/GalleryStrip'
-import type { GalleryManifestItem } from '@/scripts/build-gallery'
+import { Building2, MapPin } from 'lucide-react'
 
 export const metadata = constructMetadata({
   title: 'About Space Magnum Equipments Pvt. Ltd.',
@@ -12,21 +8,13 @@ export const metadata = constructMetadata({
   path: '/about',
 })
 
-function getGalleryItems(): GalleryManifestItem[] {
-  const manifestPath = path.resolve(process.cwd(), 'content/gallery.manifest.json')
-  if (!fs.existsSync(manifestPath)) return []
-  return JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as GalleryManifestItem[]
-}
-
 export default function AboutPage() {
-  const galleryItems = getGalleryItems()
-
   return (
     <div className="min-h-screen bg-[var(--bg)] py-12 text-[var(--text)] transition-colors md:py-16">
       <div className="mx-auto max-w-7xl space-y-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl space-y-4">
           <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-soft)] px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
-            <Factory className="h-3.5 w-3.5" aria-hidden="true" />
+            <Building2 className="h-3.5 w-3.5" aria-hidden="true" />
             <span>Company background</span>
           </div>
           <h1 className="text-3xl font-extrabold tracking-tight text-[var(--text)] sm:text-5xl">
@@ -61,14 +49,6 @@ export default function AboutPage() {
         </section>
       </div>
 
-      <div className="mt-16">
-        <GalleryStrip
-          title="Company gallery"
-          items={galleryItems}
-          category="facility"
-          limit={4}
-        />
-      </div>
     </div>
   )
 }

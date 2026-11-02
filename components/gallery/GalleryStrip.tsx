@@ -14,7 +14,7 @@ interface GalleryStripProps {
 
 export function GalleryStrip({
   title = 'Gallery',
-  subtitle = 'Product and facility images and videos.',
+  subtitle = 'Product images and installation videos.',
   category,
   items,
   limit = 4,

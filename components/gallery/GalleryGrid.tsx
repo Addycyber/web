@@ -258,9 +258,12 @@ export function GalleryGrid({ items }: GalleryGridProps) {
           >
             <div className="relative max-w-full max-h-[75vh] rounded-xl overflow-hidden border border-white/20 bg-black/60 shadow-2xl flex items-center justify-center">
               {activeItem.type === 'image' ? (
-                <img
+                <Image
                   src={activeItem.src}
                   alt={activeItem.alt || activeItem.categoryLabel}
+                  width={activeItem.width}
+                  height={activeItem.height}
+                  sizes="90vw"
                   className="max-w-full max-h-[75vh] w-auto h-auto object-contain select-none"
                   onContextMenu={e => e.preventDefault()}
                 />

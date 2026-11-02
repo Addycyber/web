@@ -43,7 +43,7 @@ export function ProofStrip({ items }: { items: GalleryManifestItem[] }) {
           <div key={photo.id} className="relative flex-1 overflow-hidden bg-[var(--bg-muted)]">
             <Image
               src={photo.src}
-              alt={photo.alt || 'Space Magnum product and facility imagery'}
+              alt={photo.alt || 'Space Magnum product imagery'}
               fill
               className="object-cover transition-transform duration-500 hover:scale-105"
               sizes="(max-width: 768px) 50vw, 20vw"

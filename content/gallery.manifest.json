@@ -3088,163 +3088,7 @@
     "caption": ""
   },
   {
-    "id": "facility_129",
-    "category": "facility",
-    "categoryLabel": "Factory & Facility",
-    "originalFilename": "WhatsApp Image 2017-01-07 at 3.25.35 PM.jpeg",
-    "type": "image",
-    "width": 1280,
-    "height": 720,
-    "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/webp;base64,UklGRnwAAABXRUJQVlA4IHAAAAAQBACdASoYAA4APzmGuVOvKSWisAgB4CcJZQAAUvyRdOtDmIs6r5ECwADNRDJgHL0pY1Eae6dlL5EzAmQqxM1iT4Yq1U66aS4hLKuXjP1nldf43O3r1DQDu26R/wYNwYF9z+4/NZnKyNw4RiYiAAAA",
-    "src": "/gallery/img_facility_129_960w.webp",
-    "sources": {
-      "webp": {
-        "480": "/gallery/img_facility_129_480w.webp",
-        "960": "/gallery/img_facility_129_960w.webp",
-        "1600": "/gallery/img_facility_129_1600w.webp"
-      },
-      "avif": {
-        "480": "/gallery/img_facility_129_480w.avif",
-        "960": "/gallery/img_facility_129_960w.avif",
-        "1600": "/gallery/img_facility_129_1600w.avif"
-      }
-    },
-    "alt": "",
-    "caption": ""
-  },
-  {
-    "id": "facility_130",
-    "category": "facility",
-    "categoryLabel": "Factory & Facility",
-    "originalFilename": "1d749d09-f1b9-44cd-87da-9f3f865f8374.jpg",
-    "type": "image",
-    "width": 1280,
-    "height": 720,
-    "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/webp;base64,UklGRoIAAABXRUJQVlA4IHYAAABQBACdASoYAA4APzmGuVOvKSWisAgB4CcJYwDG9B6WroMTp8SjurxuO2IAAOEVpPKJAVyWRzl+RaWVaEgXmiXW0EJE+AAAVupQ4uwxjUClpvB/TwDyDS0pEQ0QGfKF/N7RCI7jE3x3TvfnmYfKapD9nBPzAAAA",
-    "src": "/gallery/img_facility_130_960w.webp",
-    "sources": {
-      "webp": {
-        "480": "/gallery/img_facility_130_480w.webp",
-        "960": "/gallery/img_facility_130_960w.webp",
-        "1600": "/gallery/img_facility_130_1600w.webp"
-      },
-      "avif": {
-        "480": "/gallery/img_facility_130_480w.avif",
-        "960": "/gallery/img_facility_130_960w.avif",
-        "1600": "/gallery/img_facility_130_1600w.avif"
-      }
-    },
-    "alt": "",
-    "caption": ""
-  },
-  {
-    "id": "facility_131",
-    "category": "facility",
-    "categoryLabel": "Factory & Facility",
-    "originalFilename": "WhatsApp Image 2017-01-07 at 3.25.24 PM.jpeg",
-    "type": "image",
-    "width": 1280,
-    "height": 720,
-    "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADwAwCdASoYAA4APzmIvlOvKScisAgB4CcJYwAAXvc+nSpUKw3lADIwAPacejCkYaBdaJeTB3y4WjEYF0HyFlH+CUnftK5f/+GmsCt7DS47pD5AxGaQ6uiWKO9B4tpn3j97TSBmsDxkAA==",
-    "src": "/gallery/img_facility_131_960w.webp",
-    "sources": {
-      "webp": {
-        "480": "/gallery/img_facility_131_480w.webp",
-        "960": "/gallery/img_facility_131_960w.webp",
-        "1600": "/gallery/img_facility_131_1600w.webp"
-      },
-      "avif": {
-        "480": "/gallery/img_facility_131_480w.avif",
-        "960": "/gallery/img_facility_131_960w.avif",
-        "1600": "/gallery/img_facility_131_1600w.avif"
-      }
-    },
-    "alt": "",
-    "caption": ""
-  },
-  {
-    "id": "facility_132",
-    "category": "facility",
-    "categoryLabel": "Factory & Facility",
-    "originalFilename": "2469746c-0c36-46e2-8de6-955e1382d5e1.jpg",
-    "type": "image",
-    "width": 1280,
-    "height": 720,
-    "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/webp;base64,UklGRngAAABXRUJQVlA4IGwAAADwAwCdASoYAA4APzmOvlOvKqcisAgB4CcJYwAAUgM78pcTa1uCRlBgAPaOOUElKRzKFHm1ncNXkI6eV66fUnkPJrw9XHok1XkkQtrOrD1yVqDgJlqfEfCSkDaQRD2t5GhRnkHeP1pCBmsC4AA=",
-    "src": "/gallery/img_facility_132_960w.webp",
-    "sources": {
-      "webp": {
-        "480": "/gallery/img_facility_132_480w.webp",
-        "960": "/gallery/img_facility_132_960w.webp",
-        "1600": "/gallery/img_facility_132_1600w.webp"
-      },
-      "avif": {
-        "480": "/gallery/img_facility_132_480w.avif",
-        "960": "/gallery/img_facility_132_960w.avif",
-        "1600": "/gallery/img_facility_132_1600w.avif"
-      }
-    },
-    "alt": "",
-    "caption": ""
-  },
-  {
-    "id": "facility_133",
-    "category": "facility",
-    "categoryLabel": "Factory & Facility",
-    "originalFilename": "877e5978-8485-4d0c-bd78-79bd6e2be327.jpg",
-    "type": "image",
-    "width": 1280,
-    "height": 720,
-    "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/webp;base64,UklGRmwAAABXRUJQVlA4IGAAAADQAwCdASoYAA4APzmIvlSvKSajMAgB4CcJaQAAW+1boh4/J175y2AA/uOt6/jh/Wj53ppaZAtUNY/yrbZI1f1RYh8uRbBTz4G2rykhfWirNm9MbtLj3D8UeYgbZgFAAAA=",
-    "src": "/gallery/img_facility_133_960w.webp",
-    "sources": {
-      "webp": {
-        "480": "/gallery/img_facility_133_480w.webp",
-        "960": "/gallery/img_facility_133_960w.webp",
-        "1600": "/gallery/img_facility_133_1600w.webp"
-      },
-      "avif": {
-        "480": "/gallery/img_facility_133_480w.avif",
-        "960": "/gallery/img_facility_133_960w.avif",
-        "1600": "/gallery/img_facility_133_1600w.avif"
-      }
-    },
-    "alt": "",
-    "caption": ""
-  },
-  {
-    "id": "facility_134",
-    "category": "facility",
-    "categoryLabel": "Factory & Facility",
-    "originalFilename": "7d07e856-2062-4999-87a9-061b017d5432.jpg",
-    "type": "image",
-    "width": 1280,
-    "height": 720,
-    "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/webp;base64,UklGRnQAAABXRUJQVlA4IGgAAADQAwCdASoYAA4APzmIulOvKSWisAgB4CcJZwAAXiIh4iQA2KusL/AA/uLs9sa4/eTT5C/NHh+AYnnlScQYdURO5IanKb0YolO8MDBv3NpgxY8TL00oGF5/eMJj20H0r4Rx+YBNpqDgAA==",
-    "src": "/gallery/img_facility_134_960w.webp",
-    "sources": {
-      "webp": {
-        "480": "/gallery/img_facility_134_480w.webp",
-        "960": "/gallery/img_facility_134_960w.webp",
-        "1600": "/gallery/img_facility_134_1600w.webp"
-      },
-      "avif": {
-        "480": "/gallery/img_facility_134_480w.avif",
-        "960": "/gallery/img_facility_134_960w.avif",
-        "1600": "/gallery/img_facility_134_1600w.avif"
-      }
-    },
-    "alt": "",
-    "caption": ""
-  },
-  {
-    "id": "storder_135",
+    "id": "storder_129",
     "category": "storder",
     "categoryLabel": "STORDER Picking",
     "originalFilename": "091220091041.jpg",
@@ -3253,24 +3097,24 @@
     "height": 2048,
     "aspectRatio": 0.75,
     "blurDataURL": "data:image/webp;base64,UklGRsgAAABXRUJQVlA4ILwAAACQBACdASoYACAAPzmUwVmvKicjqAgB4CcJaACdAEW8z+xP4LVyfPNXiQaRbAAA/tn3rVC/C/UtY0QDM/kwkEEXfd0dsdtBwWfROvOqa1I+NqAjS9395BkE/ZnDuedmTCvvyS1MRmSiudDEMXfRoZAVdBP7JNA2of8+j7APdbew/U4GHy92Bse1cu2safm2PTju7y1BlDIjqXCMleIQpBQEjlMqCohhnFZhhHn8WVwQOKsfG7NbHaY9mNbGAA==",
-    "src": "/gallery/img_storder_135_960w.webp",
+    "src": "/gallery/img_storder_129_960w.webp",
     "sources": {
       "webp": {
-        "480": "/gallery/img_storder_135_480w.webp",
-        "960": "/gallery/img_storder_135_960w.webp",
-        "1600": "/gallery/img_storder_135_1600w.webp"
+        "480": "/gallery/img_storder_129_480w.webp",
+        "960": "/gallery/img_storder_129_960w.webp",
+        "1600": "/gallery/img_storder_129_1600w.webp"
       },
       "avif": {
-        "480": "/gallery/img_storder_135_480w.avif",
-        "960": "/gallery/img_storder_135_960w.avif",
-        "1600": "/gallery/img_storder_135_1600w.avif"
+        "480": "/gallery/img_storder_129_480w.avif",
+        "960": "/gallery/img_storder_129_960w.avif",
+        "1600": "/gallery/img_storder_129_1600w.avif"
       }
     },
     "alt": "",
     "caption": ""
   },
   {
-    "id": "storder_136",
+    "id": "storder_130",
     "category": "storder",
     "categoryLabel": "STORDER Picking",
     "originalFilename": "091220091039.jpg",
@@ -3279,24 +3123,24 @@
     "height": 2048,
     "aspectRatio": 0.75,
     "blurDataURL": "data:image/webp;base64,UklGRtwAAABXRUJQVlA4INAAAABQBQCdASoYACAAPzmUwVmvKicjqAgB4CcJagCw7FhqkbBxdlJAg4JM8TmWN5NhkDU1i8AA/tzoe7Yk4fcOvI8JG2wWTzIfy2w+VWV8iBeP5UXypMxguy142xav1noKf63amb0lm8qCKA9lSb6vFD1RA0n3ChzLN6QMTRK2TMJjDis8EQNZhbbpKXNhCXYUVQRjGGF07VeUUJvNKasVbu0AnMXpeE38U7T10BX3m6R3WyiwfzdP0mRY8PRQjl+mJ3j67lWO8BsVlGBI3+7CAAAA",
-    "src": "/gallery/img_storder_136_960w.webp",
+    "src": "/gallery/img_storder_130_960w.webp",
     "sources": {
       "webp": {
-        "480": "/gallery/img_storder_136_480w.webp",
-        "960": "/gallery/img_storder_136_960w.webp",
-        "1600": "/gallery/img_storder_136_1600w.webp"
+        "480": "/gallery/img_storder_130_480w.webp",
+        "960": "/gallery/img_storder_130_960w.webp",
+        "1600": "/gallery/img_storder_130_1600w.webp"
       },
       "avif": {
-        "480": "/gallery/img_storder_136_480w.avif",
-        "960": "/gallery/img_storder_136_960w.avif",
-        "1600": "/gallery/img_storder_136_1600w.avif"
+        "480": "/gallery/img_storder_130_480w.avif",
+        "960": "/gallery/img_storder_130_960w.avif",
+        "1600": "/gallery/img_storder_130_1600w.avif"
       }
     },
     "alt": "",
     "caption": ""
   },
   {
-    "id": "storder_137",
+    "id": "storder_131",
     "category": "storder",
     "categoryLabel": "STORDER Picking",
     "originalFilename": "091220091040.jpg",
@@ -3305,24 +3149,24 @@
     "height": 2048,
     "aspectRatio": 0.75,
     "blurDataURL": "data:image/webp;base64,UklGRrQAAABXRUJQVlA4IKgAAACQBACdASoYACAAPzmIulOvKSWisAgB4CcJZgCdABHSLsvGNxD6VIWXxKQ8DQAA/NSPb+bXG9uSMv5wGrFRBTK870StVCw1H4SHBqqt15sWbe5sq2duVXBtBgXHAO1FEhAdwqlHhKkAJdY9XPhCYbI6bzzDSlQ46vzf9OiULHWO9veEHYknnH92OrWUaMs/sH8S6AnAhoXhFsqJwYcVkFTNuACKJUoFgAA=",
-    "src": "/gallery/img_storder_137_960w.webp",
+    "src": "/gallery/img_storder_131_960w.webp",
     "sources": {
       "webp": {
-        "480": "/gallery/img_storder_137_480w.webp",
-        "960": "/gallery/img_storder_137_960w.webp",
-        "1600": "/gallery/img_storder_137_1600w.webp"
+        "480": "/gallery/img_storder_131_480w.webp",
+        "960": "/gallery/img_storder_131_960w.webp",
+        "1600": "/gallery/img_storder_131_1600w.webp"
       },
       "avif": {
-        "480": "/gallery/img_storder_137_480w.avif",
-        "960": "/gallery/img_storder_137_960w.avif",
-        "1600": "/gallery/img_storder_137_1600w.avif"
+        "480": "/gallery/img_storder_131_480w.avif",
+        "960": "/gallery/img_storder_131_960w.avif",
+        "1600": "/gallery/img_storder_131_1600w.avif"
       }
     },
     "alt": "",
     "caption": ""
   },
   {
-    "id": "storder_138",
+    "id": "storder_132",
     "category": "storder",
     "categoryLabel": "STORDER Picking",
     "originalFilename": "091220091042.jpg",
@@ -3331,17 +3175,17 @@
     "height": 1536,
     "aspectRatio": 1.3333333333333333,
     "blurDataURL": "data:image/webp;base64,UklGRooAAABXRUJQVlA4IH4AAADQAwCdASoYABIAPzmSu1gvKiWjqAqp4CcJQBcGAUUxLAnmdTvlXwAAx1DrBIi5Xh/v1HowjhxZMCZP2XSMSsdXzJq7pYR+vE+d2108iKPelDzUZoynUgyJ+/fQnrSCUZoGTFavZRey5F+OHUTGunSUwO4FvWXundgfxtsAAAA=",
-    "src": "/gallery/img_storder_138_960w.webp",
+    "src": "/gallery/img_storder_132_960w.webp",
     "sources": {
       "webp": {
-        "480": "/gallery/img_storder_138_480w.webp",
-        "960": "/gallery/img_storder_138_960w.webp",
-        "1600": "/gallery/img_storder_138_1600w.webp"
+        "480": "/gallery/img_storder_132_480w.webp",
+        "960": "/gallery/img_storder_132_960w.webp",
+        "1600": "/gallery/img_storder_132_1600w.webp"
       },
       "avif": {
-        "480": "/gallery/img_storder_138_480w.avif",
-        "960": "/gallery/img_storder_138_960w.avif",
-        "1600": "/gallery/img_storder_138_1600w.avif"
+        "480": "/gallery/img_storder_132_480w.avif",
+        "960": "/gallery/img_storder_132_960w.avif",
+        "1600": "/gallery/img_storder_132_1600w.avif"
       }
     },
     "alt": "",

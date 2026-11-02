@@ -8,7 +8,7 @@ import { Suspense } from 'react'
 
 export const metadata: Metadata = constructMetadata({
   title: 'Gallery',
-  description: 'Browse available Space Magnum product and facility images and videos.',
+  description: 'Browse Space Magnum product imagery and installation videos.',
 })
 
 function getGalleryManifest(): GalleryManifestItem[] {
@@ -28,13 +28,13 @@ export default function GalleryPage() {
         {/* Page Header */}
         <div className="max-w-3xl mb-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] text-xs font-mono font-semibold uppercase tracking-wider mb-4 border border-[var(--border)]">
-            Product and facility media
+            Product imagery and installation videos
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[var(--text)] mb-4">
             Gallery
           </h1>
           <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-body">
-            Browse available product and facility images and videos.
+            Browse available product images and installation videos.
           </p>
         </div>
 
