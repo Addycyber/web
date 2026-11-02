@@ -7,7 +7,6 @@ import { INDUSTRIES } from '@/config/industries'
 import {
   CheckCircle2,
   AlertCircle,
-  ArrowRight,
 } from 'lucide-react'
 
 export function QuoteForm() {

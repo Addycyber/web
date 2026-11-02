@@ -4,13 +4,17 @@ import * as React from 'react'
 import { useTheme } from 'next-themes'
 import { Sun, Moon } from 'lucide-react'
 
+const subscribeToMount = () => () => {}
+const getClientMounted = () => true
+const getServerMounted = () => false
+
 export function ThemeToggle({ className = '' }: { className?: string }) {
   const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = React.useState(false)
-
-  React.useEffect(() => {
-    setMounted(true)
-  }, [])
+  const mounted = React.useSyncExternalStore(
+    subscribeToMount,
+    getClientMounted,
+    getServerMounted,
+  )
 
   if (!mounted) {
     // Render placeholder with same dimensions to avoid layout shift

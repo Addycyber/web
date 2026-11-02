@@ -6,11 +6,6 @@
  * - Large text / UI components: >= 3.0:1
  */
 
-interface ColorToken {
-  name: string
-  hex: string
-}
-
 function hexToRgb(hex: string): [number, number, number] {
   const cleanHex = hex.replace('#', '')
   const r = parseInt(cleanHex.substring(0, 2), 16)
