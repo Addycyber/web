@@ -29,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/brochure',
     '/gallery',
     '/tools/calculator',
-    '/tools/simulator',
+    '/simulator',
     '/about',
     '/contact',
     '/get-a-quote',

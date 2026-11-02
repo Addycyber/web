@@ -10,7 +10,6 @@ import {
   X, 
   ChevronDown, 
   Search, 
-  Phone, 
   Calculator, 
   Play, 
   ArrowRight,
@@ -73,7 +72,8 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                   alt="Space Magnum Equipments Pvt. Ltd. Logo"
                   width={110}
                   height={36}
-                  className="h-8 sm:h-9 w-auto object-contain"
+                  className="object-contain"
+                  style={{ width: '110px', height: 'auto' }}
                   priority
                 />
               </div>
@@ -181,7 +181,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                         <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
                           Installation Gallery
                         </div>
-                        <p className="text-xs text-[var(--text-muted)]">Product and facility imagery</p>
+                        <p className="text-xs text-[var(--text-muted)]">Product imagery and installation videos</p>
                       </div>
                     </Link>
 
@@ -212,13 +212,13 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                     </Link>
 
                     <Link
-                      href="/tools/simulator"
+                      href="/simulator"
                       className="p-2.5 rounded-xl hover:bg-[var(--bg-subtle)] transition-colors flex items-center gap-3 group/item"
                     >
                       <Play className="w-5 h-5 text-[var(--accent)]" />
                       <div>
                         <div className="text-sm font-semibold text-[var(--text)] group-hover/item:text-[var(--accent)]">
-                          STOLIFT Simulator
+                          ASRS Simulation
                         </div>
                         <p className="text-xs text-[var(--text-muted)]">Interactive storage crane</p>
                       </div>
@@ -367,12 +367,12 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 <span>Floor-Space Illustration</span>
               </Link>
               <Link
-                href="/tools/simulator"
+                href="/simulator"
                 onClick={() => setMobileMenuOpen(false)}
                 className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <Play className="w-4 h-4 text-[var(--accent)]" />
-                <span>STOLIFT Simulator</span>
+                <span>ASRS Simulation</span>
               </Link>
             </div>
 

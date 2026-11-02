@@ -15,4 +15,10 @@ test.describe('Legacy 301 Redirect Smoke Tests', () => {
       await expect(page).toHaveURL(new RegExp(r.to))
     })
   }
+
+  test('Redirects the former simulator route with a 301 status', async ({ request }) => {
+    const response = await request.get('/tools/simulator', { maxRedirects: 0 })
+    expect(response.status()).toBe(301)
+    expect(response.headers().location).toContain('/simulator')
+  })
 })

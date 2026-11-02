@@ -21,7 +21,7 @@ export function constructMetadata({
 
   return {
     title: {
-      default: `${title} | ${SITE_CONFIG.name}`,
+      default: title,
       template: `%s | ${SITE_CONFIG.name}`,
     },
     description,

@@ -20,11 +20,11 @@ export function SimulatorTeaser() {
               </div>
 
               <h2 className="text-3xl sm:text-4xl font-extrabold text-[var(--text)] tracking-tight">
-                Simulate STOLIFT Carousel Operations Live in 3D
+                Explore an ASRS Simulation
               </h2>
 
               <p className="text-base sm:text-lg text-[var(--text-secondary)] leading-relaxed font-body">
-                Watch automated tray selection, goods-to-person delivery, and sensor monitoring in real-time right in your web browser — no software installation required.
+                Explore a browser-based 3D illustration of an automated storage and retrieval system.
               </p>
 
               <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-[var(--text-secondary)]">
@@ -34,13 +34,13 @@ export function SimulatorTeaser() {
                 </div>
                 <div className="flex items-center gap-2 bg-[var(--bg-subtle)] px-3 py-2 rounded-lg border border-[var(--border)]">
                   <Layers className="w-4 h-4 text-[var(--accent)]" />
-                  <span>WebGL / 2D Canvas Fallback</span>
+                  <span>WebGL2 · static poster fallback</span>
                 </div>
               </div>
 
               <div className="pt-2">
                 <Link
-                  href="/tools/simulator"
+                  href="/simulator"
                   className="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-[var(--accent)] hover:bg-[var(--accent-hover)] text-white font-semibold text-sm shadow-sm transition-colors group"
                 >
                   <Play className="w-4 h-4 fill-white" />

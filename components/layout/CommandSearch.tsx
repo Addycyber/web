@@ -32,10 +32,10 @@ const SEARCH_REGISTRY: SearchItem[] = [
 
   // Tools
   { id: 'calc', title: 'Brochure-Based Floor-Space Illustration', category: 'Tools', keywords: 'calculator brochure floor space saving', href: '/tools/calculator', icon: Calculator },
-  { id: 'sim', title: 'STOLIFT Simulator', category: 'Tools', keywords: 'stolift simulator tray storage retrieval', href: '/tools/simulator', icon: Play },
+  { id: 'sim', title: 'ASRS Simulation', category: 'Tools', keywords: 'asrs simulator storage retrieval', href: '/simulator', icon: Play },
 
   // Resources
-  { id: 'gallery', title: 'Plant & Commissioning Installation Gallery', category: 'Resources', keywords: 'gallery photos plant factory facility videos pictures installations', href: '/gallery', icon: ImageIcon },
+  { id: 'gallery', title: 'Product & Installation Gallery', category: 'Resources', keywords: 'gallery photos product videos pictures installations', href: '/gallery', icon: ImageIcon },
   { id: 'downloads', title: 'Technical Downloads & Spec Sheets Centre', category: 'Resources', keywords: 'downloads brochures pdf technical specs cad catalog', href: '/resources/downloads', icon: Download },
   { id: 'brochure', title: 'Digital Brochure', category: 'Resources', keywords: 'brochure pages catalogue snapshots', href: '/brochure', icon: Download },
   { id: 'solutions', title: 'Solutions', category: 'Resources', keywords: 'solutions products storage planning', href: '/solutions', icon: Boxes },
@@ -50,6 +50,11 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
   const [query, setQuery] = React.useState('')
   const [selectedIndex, setSelectedIndex] = React.useState(0)
   const inputRef = React.useRef<HTMLInputElement>(null)
+  const handleClose = React.useCallback(() => {
+    setQuery('')
+    setSelectedIndex(0)
+    onClose()
+  }, [onClose])
 
   // Filter items
   const filtered = React.useMemo(() => {
@@ -66,10 +71,11 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
   // Focus input on open
   React.useEffect(() => {
     if (isOpen) {
-      setTimeout(() => inputRef.current?.focus(), 50)
-      setSelectedIndex(0)
-    } else {
-      setQuery('')
+      const focusTimer = window.setTimeout(() => {
+        inputRef.current?.focus()
+        setSelectedIndex(0)
+      }, 50)
+      return () => window.clearTimeout(focusTimer)
     }
   }, [isOpen])
 
@@ -79,7 +85,7 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
 
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        onClose()
+        handleClose()
       } else if (e.key === 'ArrowDown') {
         e.preventDefault()
         setSelectedIndex(prev => (prev < filtered.length - 1 ? prev + 1 : 0))
@@ -90,14 +96,14 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
         e.preventDefault()
         if (filtered[selectedIndex]) {
           router.push(filtered[selectedIndex].href)
-          onClose()
+          handleClose()
         }
       }
     }
 
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
-  }, [isOpen, filtered, selectedIndex, router, onClose])
+  }, [isOpen, filtered, selectedIndex, router, handleClose])
 
   if (!isOpen) return null
 
@@ -107,7 +113,7 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
       aria-modal="true"
       aria-label="Quick search palette"
       className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-start justify-center pt-16 sm:pt-24 px-4"
-      onClick={onClose}
+      onClick={handleClose}
     >
       <div
         onClick={e => e.stopPropagation()}
@@ -129,7 +135,7 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
           />
           <button
             type="button"
-            onClick={onClose}
+            onClick={handleClose}
             className="p-1 rounded-md text-[var(--text-muted)] hover:text-[var(--text)] hover:bg-[var(--bg-muted)]"
           >
             <X className="w-4 h-4" />
@@ -153,7 +159,7 @@ export function CommandSearch({ isOpen, onClose }: { isOpen: boolean; onClose: (
                   type="button"
                   onClick={() => {
                     router.push(item.href)
-                    onClose()
+                    handleClose()
                   }}
                   onMouseEnter={() => setSelectedIndex(idx)}
                   className={`w-full flex items-center justify-between p-3 rounded-xl text-left transition-colors ${

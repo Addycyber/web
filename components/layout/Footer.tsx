@@ -26,7 +26,8 @@ export function Footer({ showCustomerLink = false }: { showCustomerLink?: boolea
                   alt="Space Magnum Equipments Pvt. Ltd."
                   width={120}
                   height={40}
-                  className="h-9 w-auto object-contain"
+                  className="object-contain"
+                  style={{ width: '120px', height: 'auto' }}
                 />
               </div>
             </div>
@@ -151,8 +152,8 @@ export function Footer({ showCustomerLink = false }: { showCustomerLink?: boolea
                 </Link>
               </li>
               <li>
-                <Link href="/tools/simulator" className="text-[#C9D7E8] hover:text-[#FF8A4C] transition-colors">
-                  STOLIFT Simulator
+                <Link href="/simulator" className="text-[#C9D7E8] hover:text-[#FF8A4C] transition-colors">
+                  ASRS Simulation
                 </Link>
               </li>
               <li>

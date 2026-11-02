@@ -43,10 +43,10 @@ function ThankYouContent() {
           Return to Home Page
         </Link>
         <Link
-          href="/tools/simulator"
+          href="/simulator"
           className="px-6 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-200 font-mono text-xs font-bold"
         >
-          Explore Live 3D Simulator &rarr;
+          Explore ASRS Simulation &rarr;
         </Link>
       </div>
 
