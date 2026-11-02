@@ -52,7 +52,7 @@ export default function HomePage() {
       {/* 1. Hero */}
       <AsrsHero />
 
-      {/* 2. Proof & Facility Strip */}
+      {/* 2. Product proof */}
       <ProofStrip items={galleryItems} />
 
       {/* 3. Products Architecture */}
@@ -70,7 +70,7 @@ export default function HomePage() {
       {/* Customer logo wall (hidden publicly until the approval threshold is met) */}
       <CustomerLogos />
 
-      {/* 7. Plant Proof Gallery Strip (Priority 1 Feature) */}
+      {/* 7. Company gallery */}
       <GalleryStrip
         title="Company gallery"
         items={galleryItems}

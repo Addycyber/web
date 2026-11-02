@@ -1,0 +1,297 @@
+.asrs-animation {
+  min-width: 0;
+  color: var(--text);
+}
+
+.asrs-animation--hero {
+  position: relative;
+  height: 100svh;
+  min-height: 340px;
+  margin-top: -5rem;
+  overflow: hidden;
+  background: #0b1220;
+  pointer-events: none;
+}
+
+.asrs-animation__viewport {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 340px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: #0b1220;
+}
+
+.asrs-animation--hero .asrs-animation__viewport {
+  height: 100%;
+  min-height: 0;
+  aspect-ratio: auto;
+  border: 0;
+  border-radius: 0;
+}
+
+.asrs-animation__poster {
+  object-fit: contain;
+  background: #0b1220;
+  transition: opacity 180ms ease;
+}
+
+.asrs-animation__poster.is-hidden {
+  opacity: 0;
+}
+
+.asrs-animation__canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  outline-offset: -4px;
+  touch-action: pan-y;
+  transition: opacity 180ms ease;
+}
+
+.asrs-animation__canvas.is-ready {
+  opacity: 1;
+}
+
+.asrs-animation__status {
+  position: absolute;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--bg);
+  padding: 0.75rem 1rem;
+  color: var(--text);
+  font-size: 0.875rem;
+}
+
+.asrs-animation__controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-top: 0;
+  border-radius: 0 0 1rem 1rem;
+  background: var(--bg-subtle);
+  padding: 0.75rem;
+}
+
+.asrs-animation__controls button,
+.asrs-animation__controls select {
+  min-height: 2.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 0.5rem;
+  background: var(--bg);
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+}
+
+.asrs-animation__controls button:disabled,
+.asrs-animation__controls select:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.asrs-animation__controls label {
+  display: inline-flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  padding-inline: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.asrs-animation__controls button:focus-visible,
+.asrs-animation__controls select:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.asrs-animation--simulator .asrs-ctl {
+  display: none;
+}
+
+.asrs-home-figure {
+  display: block;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.asrs-layout {
+  min-width: 0;
+  margin: 0;
+}
+
+.asrs-layout__drawing {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.asrs-layout__paper {
+  fill: var(--bg-subtle);
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.asrs-layout__floor,
+.asrs-layout__frame,
+.asrs-layout__beam,
+.asrs-layout__track,
+.asrs-layout__station,
+.asrs-layout__roller {
+  fill: none;
+  stroke: var(--border-strong);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 5;
+}
+
+.asrs-layout__aisle {
+  fill: var(--bg);
+  stroke: var(--border);
+  stroke-width: 2;
+}
+
+.asrs-layout__track {
+  stroke: var(--accent);
+  stroke-dasharray: 8 10;
+  stroke-width: 3;
+}
+
+.asrs-layout__bay {
+  fill: var(--bg);
+  stroke: var(--border-strong);
+  stroke-width: 2;
+}
+
+.asrs-layout__crane {
+  fill: var(--accent);
+  stroke: var(--accent-hover);
+  stroke-width: 3;
+}
+
+.asrs-layout__wheel {
+  fill: var(--text);
+}
+
+.asrs-layout__station {
+  fill: var(--accent-soft);
+  stroke: var(--accent);
+}
+
+.asrs-layout__roller {
+  stroke: var(--accent);
+  stroke-width: 2;
+}
+
+.asrs-layout__leaders {
+  fill: var(--accent);
+  stroke: var(--text-muted);
+  stroke-width: 2;
+}
+
+.asrs-layout__labels {
+  fill: var(--text);
+  font-family: var(--font-body);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.asrs-layout__part {
+  cursor: pointer;
+  transition: opacity 120ms ease;
+}
+
+.asrs-layout__part:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+
+.asrs-layout:has(.asrs-layout__part.is-active) .asrs-layout__part:not(.is-active) {
+  opacity: 0.55;
+}
+
+.asrs-layout__part.is-active .asrs-layout__frame,
+.asrs-layout__part.is-active .asrs-layout__beam,
+.asrs-layout__part.is-active .asrs-layout__bay,
+.asrs-layout__part.is-active .asrs-layout__aisle,
+.asrs-layout__part.is-active .asrs-layout__track,
+.asrs-layout__part.is-active .asrs-layout__station,
+.asrs-layout__part.is-active .asrs-layout__crane {
+  stroke: var(--accent);
+  stroke-width: 7;
+}
+
+.asrs-layout__legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+}
+
+.asrs-layout__legend button {
+  display: flex;
+  min-height: 2.75rem;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  background: var(--bg-subtle);
+  padding: 0.5rem 0.75rem;
+  color: var(--text);
+  font-size: 0.8125rem;
+  text-align: left;
+}
+
+.asrs-layout__legend button span {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.asrs-layout__legend button.is-active {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.asrs-layout__legend button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .asrs-animation__viewport {
+    min-height: 300px;
+  }
+
+  .asrs-animation--hero .asrs-animation__viewport {
+    min-height: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .asrs-animation__poster,
+  .asrs-animation__canvas {
+    transition: none;
+  }
+}

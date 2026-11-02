@@ -1,4 +1,4 @@
-import { AsrsFigure } from "@/components/asrs-figure";
+import { AsrsAnimation } from "@/components/asrs/AsrsAnimation";
 import { getProduct } from "@/lib/company";
 
 function factValue(slug: string, label: string) {
@@ -33,7 +33,12 @@ const TRUSTED_STATS = [
 export function AsrsHero() {
   return (
     <>
-      <AsrsFigure />
+      <section className="asrs-home-figure">
+        <h1 className="sr-only">
+          Automated Storage &amp; Retrieval Systems (ASRS) Manufacturer Pune India
+        </h1>
+        <AsrsAnimation mode="hero" />
+      </section>
       <section
         className="asrs-trusted-stats"
         aria-label="Product facts from the company brochure"
