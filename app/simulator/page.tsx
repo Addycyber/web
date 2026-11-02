@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { AsrsAnimation } from "@/components/asrs/AsrsAnimation";
+import { StorageLayoutIllustration } from "@/components/asrs-figure/StorageLayoutIllustration";
 import { constructMetadata } from "@/lib/metadata";
 import { getProduct } from "@/lib/company";
 
@@ -55,6 +56,17 @@ export default function SimulatorPage() {
           </aside>
         </div>
 
+        <section className="space-y-4" aria-labelledby="asrs-layout-title">
+          <div className="space-y-2">
+            <h2 id="asrs-layout-title" className="text-2xl font-bold">
+              ASRS storage layout
+            </h2>
+            <p className="text-sm text-[var(--text-secondary)]">
+              Main parts shown in a simplified side view.
+            </p>
+          </div>
+          <StorageLayoutIllustration />
+        </section>
       </div>
     </div>
   );
