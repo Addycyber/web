@@ -16,11 +16,11 @@ export function GalleryGrid({ items }: GalleryGridProps) {
   const searchParams = useSearchParams()
   const activeCategory = searchParams.get('category') || 'all'
 
-  // Deduplicate items with identical src or identical originalFilename
+  // Duplicate clips share a poster frame and category; keep only one of each.
   const uniqueItems = React.useMemo(() => {
     const seen = new Set<string>()
     return items.filter((item) => {
-      const key = `${item.category}_${item.src}_${item.originalFilename}`
+      const key = `${item.type}_${item.poster ?? item.src}_${item.categoryLabel}`
       if (seen.has(key)) return false
       seen.add(key)
       return true

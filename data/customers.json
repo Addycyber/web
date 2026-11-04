@@ -46,7 +46,7 @@
       ],
       "note": "",
       "logo": "customers/ashok-leyland.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -158,7 +158,7 @@
       ],
       "note": "5 entries merged into one company with 5 sites; Kandivali spelling corrected",
       "logo": "customers/mahindra-and-mahindra-ltd.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -222,12 +222,13 @@
       "locations": [],
       "note": "",
       "logo": "customers/shriram-piston.png",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
         "Shriram Piston"
-      ]
+      ],
+      "logoInvert": true
     },
     {
       "id": "tata-holset",
@@ -267,13 +268,14 @@
       ],
       "note": "2 entries merged (Jamshedpur listed twice)",
       "logo": "customers/tata-motors.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
         "TATA Motors - Jamshedpur",
         "Tata Motors Ltd. - Jamshedpur / Pune"
-      ]
+      ],
+      "logoInvert": true
     },
     {
       "id": "tata-toyo-radiators-ltd",
@@ -345,7 +347,7 @@
       ],
       "note": "3 entries merged (one had no location)",
       "logo": "customers/bharat-heavy-electricals-ltd.png",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -495,7 +497,7 @@
       "locations": [],
       "note": "",
       "logo": "customers/saraswat-bank.png",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -569,7 +571,7 @@
       ],
       "note": "",
       "logo": "customers/enercon.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -598,7 +600,7 @@
       "locations": [],
       "note": "",
       "logo": "customers/honeywell-automation.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -660,7 +662,7 @@
       ],
       "note": "",
       "logo": "customers/sandvik-asia.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -704,7 +706,7 @@
       ],
       "note": "Automotive",
       "logo": "customers/spicer.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -721,7 +723,7 @@
       ],
       "note": "2 entries merged (Hindupur was in the Other group)",
       "logo": "customers/wipro.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -782,7 +784,7 @@
       "locations": [],
       "note": "",
       "logo": "customers/pfizer-india.svg",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -1112,7 +1114,7 @@
       ],
       "note": "",
       "logo": "customers/lechler-india-ltd.png",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -1128,7 +1130,7 @@
       ],
       "note": "",
       "logo": "customers/mach-aero.png",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [
@@ -1266,7 +1268,7 @@
       ],
       "note": "",
       "logo": "customers/tvs-electronics.png",
-      "approved": false,
+      "approved": true,
       "needsReview": false,
       "reviewReason": "",
       "original": [

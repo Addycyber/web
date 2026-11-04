@@ -3,9 +3,8 @@ import path from 'node:path'
 import { constructMetadata } from '@/lib/metadata'
 import { HeroSlider } from '@/components/home/HeroSlider'
 import { ProofStrip } from '@/components/home/ProofStrip'
+import { CustomerLogos } from '@/components/home/CustomerLogos'
 import { WhatWeSell } from '@/components/home/WhatWeSell'
-import { AsrsInMotionSection } from '@/components/home/AsrsInMotionSection'
-import { TotalStoreManagement } from '@/components/home/TotalStoreManagement'
 import { GalleryStrip } from '@/components/gallery/GalleryStrip'
 import { HomeCtaSection } from '@/components/home/HomeCtaSection'
 import type { GalleryManifestItem } from '@/scripts/build-gallery'
@@ -33,14 +32,11 @@ export default function HomePage() {
       {/* 2. Proof strip (Single full-width row with 4 brochure-sourced figures) */}
       <ProofStrip />
 
-      {/* 3. What we sell (Product showcase with 6 cards and rhythmic sizing) */}
+      {/* 3. Customer logo wall (approved companies with supplied logos) */}
+      <CustomerLogos />
+
+      {/* 4. What we sell (Product showcase with 6 cards and rhythmic sizing) */}
       <WhatWeSell />
-
-      {/* 4. ASRS in motion (Full-bleed dark section with Anatomy figure and 3 callouts) */}
-      <AsrsInMotionSection />
-
-      {/* 5. Total Store Management (data-sourced sticky horizontal timeline) */}
-      <TotalStoreManagement />
 
       {/* Gallery & videos (Mixed grid with real WebP video posters and photography) */}
       <GalleryStrip

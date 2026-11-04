@@ -35,6 +35,7 @@ export default function CustomersPage() {
     sector: customer.sector,
     locations: customer.locations,
     logoSrc: getCustomerLogoSrc(customer),
+    logoInvert: customer.logoInvert === true,
     preview: !customer.approved || customer.needsReview,
   }))
 

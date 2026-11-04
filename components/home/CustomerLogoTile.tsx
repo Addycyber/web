@@ -5,6 +5,7 @@ export interface CustomerLogoTileData {
   name: string
   locations: string[]
   logoSrc: string | null
+  logoInvert?: boolean
   preview: boolean
 }
 
@@ -26,8 +27,14 @@ export function CustomerLogoTile({
             alt={customer.name}
             width={200}
             height={80}
-            loading={eager ? 'eager' : 'lazy'}
-            className="max-h-full w-full object-contain grayscale opacity-70 transition duration-300 group-hover:grayscale-0 group-hover:opacity-100 group-focus-within:grayscale-0 group-focus-within:opacity-100"
+            loading="eager"
+            fetchPriority={eager ? 'high' : 'auto'}
+            unoptimized={customer.logoSrc.endsWith('.svg')}
+            className={`max-h-full w-full object-contain opacity-70 transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100 ${
+              customer.logoInvert
+                ? 'invert group-hover:invert-0 group-focus-within:invert-0'
+                : 'grayscale group-hover:grayscale-0 group-focus-within:grayscale-0'
+            }`}
           />
         ) : (
           <span className="line-clamp-2 text-center font-heading text-sm font-semibold text-slate-500">

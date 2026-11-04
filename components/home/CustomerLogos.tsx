@@ -20,6 +20,7 @@ function getDisplayCustomers(): CustomerLogoTileData[] {
     name: customer.name,
     locations: customer.locations,
     logoSrc: getCustomerLogoSrc(customer),
+    logoInvert: customer.logoInvert === true,
     preview: !customer.approved || customer.needsReview,
   }))
 }
@@ -39,20 +40,33 @@ export function CustomerLogos() {
   return (
     <section
       aria-labelledby="customer-logos-heading"
-      className="overflow-hidden border-y border-[var(--border)] bg-[var(--bg)] py-12 md:py-14"
+      className="overflow-hidden border-b border-[var(--border)] bg-[var(--bg)] py-16 md:py-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2
-          id="customer-logos-heading"
-          className="mb-7 text-center text-xl font-bold text-[var(--text)] sm:text-2xl"
-        >
-          Our customers
-        </h2>
+        <div className="mb-8 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+          <div>
+            <div className="mb-2 inline-flex items-center gap-2">
+              <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+              <span className="font-mono text-xs font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+                Trusted by Indian industry
+              </span>
+            </div>
+            <h2
+              id="customer-logos-heading"
+              className="text-2xl font-black uppercase tracking-tight text-[var(--text)] sm:text-4xl"
+            >
+              Companies we have built for
+            </h2>
+          </div>
+          <p className="max-w-md text-sm leading-relaxed text-[var(--text-secondary)] md:text-right">
+            A selection of the organisations whose stores and warehouses carry Space Magnum
+            systems.
+          </p>
+        </div>
         {process.env.NODE_ENV === 'development' &&
           !hasPublicCustomerWall(approvedCustomers.length) && (
             <p className="mb-5 text-center font-mono text-xs font-bold uppercase tracking-wide text-amber-800">
-              Development preview — customer names are not approved for
-              publication
+              Development preview — customer names are not approved for publication
             </p>
           )}
       </div>

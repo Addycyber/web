@@ -18,6 +18,7 @@ const CustomerSchema = z.object({
     .string()
     .regex(/^customers\/[a-z0-9-]+\.(?:svg|png|webp|jpe?g)$/i)
     .nullable(),
+  logoInvert: z.boolean().optional(),
   approved: z.boolean(),
   needsReview: z.boolean(),
   reviewReason: z.string(),

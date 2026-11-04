@@ -129,7 +129,7 @@ export function HeroSlider() {
           {/* Eyebrow: Mono small-caps */}
           <div className="inline-flex items-center gap-2">
             <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
-            <span className="font-mono text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-[var(--accent)]">
+            <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-sm sm:tracking-[0.25em]">
               SPACE MAGNUM · PUNE
             </span>
           </div>
