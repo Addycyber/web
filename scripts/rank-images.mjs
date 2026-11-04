@@ -6,7 +6,7 @@ import sharp from "sharp";
 const publicDir = path.resolve("public");
 const excludedPath = /(?:^|[\\/])(?:brochure|customers|factory|facility|home-hero|icons?|logos?|screenshots?|diagrams?)(?:[\\/._-]|$)/i;
 const excludedName = /(?:^|[_\-. ])(?:logo|icon|favicon|screenshot|screen|diagram|wireframe|poster)(?:[_\-. ]|$)/i;
-const extensions = new Set([".jpg", ".jpeg", ".png", ".webp"]);
+const extensions = new Set([".jpg", ".jpeg", ".png", ".webp", ".avif"]);
 const chosenFiles = new Set([
   "/images/hero/hero-5.jpg",
   "/gallery/img_asrs_13_1600w.webp",
@@ -110,6 +110,7 @@ async function inspect(filePath) {
 
   return {
     file: `/${path.relative(publicDir, filePath).replaceAll(path.sep, "/")}`,
+    sourcePath: filePath,
     width: metadata.width,
     height: metadata.height,
     bytes: (await fs.stat(filePath)).size,
@@ -138,8 +139,20 @@ function formatBytes(bytes) {
 }
 
 async function main() {
-  const paths = await imagePaths(publicDir);
+  const directoryArg = process.argv.find((arg) => arg.startsWith("--directory="));
+  const inputDir = directoryArg ? path.resolve(directoryArg.slice("--directory=".length)) : publicDir;
+  const jsonOutput = process.argv.includes("--json");
+  const paths = await imagePaths(inputDir);
   const inspected = await Promise.all(paths.map(inspect));
+  if (jsonOutput) {
+    console.log(JSON.stringify(
+      inspected
+        .sort((a, b) => b.score - a.score || a.file.localeCompare(b.file))
+        .map(({ sourcePath, width, height, score }) => ({ sourcePath, width, height, score })),
+    ));
+    return;
+  }
+
   const eligible = inspected
     .filter((image) => image.width >= 1280 && image.orientation > 0)
     .sort((a, b) => b.score - a.score || a.file.localeCompare(b.file));

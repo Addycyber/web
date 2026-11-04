@@ -26,6 +26,8 @@
 
 # debug
 npm-debug.log*
+/.gallery-build-state.json
+/.slider-build-state.json
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*

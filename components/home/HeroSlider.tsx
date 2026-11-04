@@ -3,55 +3,106 @@
 import * as React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
-import {
-  ArrowRight,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  Pause,
-  Play,
-} from 'lucide-react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from 'lucide-react'
+import companyData from '@/data/company-data.json'
+import sliderManifest from '@/content/slider.manifest.json'
 
-const SLIDES = [
-  {
-    src: '/gallery/img_asrs_10_1600w.webp',
-    alt: 'High-bay automated storage and retrieval racks at a Pune installation',
-    caption: 'ASRS High-Bay Racks',
-  },
-  {
-    src: '/images/hero/hero-6.jpg',
-    alt: 'Operator using the control panel of a Space Magnum storage system',
-    caption: 'Operator Workstation',
-  },
-  {
-    src: '/gallery/img_stolift_128_1600w.webp',
-    alt: 'STOLIFT vertical lift module with shuttle carrier',
-    caption: 'Vertical Lift Shuttle Systems',
-  },
-  {
-    src: '/gallery/img_storder_132_1600w.webp',
-    alt: 'STORDER automated multi-axis vertical picking system',
-    caption: 'Multi-Axis Order Picking',
-  },
-  {
-    src: '/gallery/img_compactors_74_1600w.webp',
-    alt: 'Mobile shelving units with mechanical handwheel drives',
-    caption: 'Mobile Compactor Storage',
-  },
-  {
-    src: '/gallery/img_carousel_50_1600w.webp',
-    alt: 'STOMAT vertical carousel trays at the access opening',
-    caption: 'Vertical Carousel Systems',
-  },
-] as const
+type SlideCopy = {
+  line1: string
+  line2: string
+  text: string
+  cta: string
+  href: string
+}
+
+type SliderSlide = SlideCopy & {
+  type: 'image' | 'video'
+  src: string
+  sources?: { webp: Record<string, string>; avif: Record<string, string> }
+  poster?: string
+  width: number
+  height: number
+  blurDataURL?: string
+  objectPosition?: string
+  alt?: string
+}
 
 const SLIDE_DURATION_MS = 6000
+const SLIDE_COPY = companyData.heroSlides as SlideCopy[]
+
+const FALLBACK_MEDIA: SliderSlide[] = [
+  {
+    type: 'image',
+    src: '/gallery/img_asrs_10_1600w.webp',
+    width: 1600,
+    height: 900,
+    alt: 'Automated storage and retrieval racks at an industrial installation',
+    ...SLIDE_COPY[0],
+  },
+  {
+    type: 'image',
+    src: '/images/hero/hero-6.jpg',
+    width: 1920,
+    height: 1080,
+    alt: 'Industrial storage equipment at a Space Magnum installation',
+    ...SLIDE_COPY[1],
+  },
+  {
+    type: 'image',
+    src: '/gallery/img_stolift_128_1600w.webp',
+    width: 1600,
+    height: 900,
+    alt: 'STOLIFT vertical lift storage system',
+    ...SLIDE_COPY[2],
+  },
+  {
+    type: 'image',
+    src: '/gallery/img_storder_132_1600w.webp',
+    width: 1600,
+    height: 900,
+    alt: 'Automated multi-axis vertical picking system',
+    ...SLIDE_COPY[3],
+  },
+  {
+    type: 'image',
+    src: '/gallery/img_compactors_74_1600w.webp',
+    width: 1600,
+    height: 900,
+    alt: 'Mobile shelving units with mechanical handwheel drives',
+    ...SLIDE_COPY[4],
+  },
+  {
+    type: 'image',
+    src: '/gallery/img_carousel_50_1600w.webp',
+    width: 1600,
+    height: 900,
+    alt: 'Vertical carousel trays at the access opening',
+    ...SLIDE_COPY[5],
+  },
+]
+
+const SLIDES = (sliderManifest.length ? sliderManifest : FALLBACK_MEDIA) as SliderSlide[]
+
+function sourceSet(sources: Record<string, string> | undefined): string | undefined {
+  if (!sources) return undefined
+  return Object.entries(sources)
+    .sort(([a], [b]) => Number(a) - Number(b))
+    .map(([width, src]) => `${src} ${width}w`)
+    .join(', ')
+}
 
 export function HeroSlider() {
   const [activeIndex, setActiveIndex] = React.useState(0)
   const [isPaused, setIsPaused] = React.useState(false)
+  const [isHovered, setIsHovered] = React.useState(false)
+  const [isFocused, setIsFocused] = React.useState(false)
+  const [isVisible, setIsVisible] = React.useState(false)
+  const [isDocumentVisible, setIsDocumentVisible] = React.useState(true)
   const [reducedMotion, setReducedMotion] = React.useState(false)
+  const sectionRef = React.useRef<HTMLElement>(null)
   const touchStart = React.useRef<{ x: number; y: number } | null>(null)
+  const autoplay = !isPaused && !isHovered && !isFocused && isVisible && isDocumentVisible && !reducedMotion
 
   React.useEffect(() => {
     const query = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -62,206 +113,260 @@ export function HeroSlider() {
   }, [])
 
   React.useEffect(() => {
-    if (isPaused) return
-    const timer = window.setTimeout(() => {
-      setActiveIndex((prev) => (prev + 1) % SLIDES.length)
-    }, SLIDE_DURATION_MS)
+    const section = sectionRef.current
+    if (!section) return
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsVisible(entry.isIntersecting),
+      { threshold: 0.1 },
+    )
+    observer.observe(section)
+    return () => observer.disconnect()
+  }, [])
+
+  React.useEffect(() => {
+    const update = () => setIsDocumentVisible(!document.hidden)
+    update()
+    document.addEventListener('visibilitychange', update)
+    return () => document.removeEventListener('visibilitychange', update)
+  }, [])
+
+  React.useEffect(() => {
+    if (!autoplay) return
+    const timer = window.setTimeout(
+      () => setActiveIndex((index) => (index + 1) % SLIDES.length),
+      SLIDE_DURATION_MS,
+    )
     return () => window.clearTimeout(timer)
-  }, [activeIndex, isPaused])
+  }, [activeIndex, autoplay])
 
   const goToSlide = React.useCallback((index: number) => {
     setActiveIndex((index + SLIDES.length) % SLIDES.length)
     setIsPaused(false)
   }, [])
 
-  const showPrevious = () => goToSlide(activeIndex - 1)
-  const showNext = () => goToSlide(activeIndex + 1)
+  const showPrevious = React.useCallback(() => goToSlide(activeIndex - 1), [activeIndex, goToSlide])
+  const showNext = React.useCallback(() => goToSlide(activeIndex + 1), [activeIndex, goToSlide])
+  const activeSlide = SLIDES[activeIndex]
 
   return (
     <section
-      className="hero-bleed relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-[#0B1220]"
+      ref={sectionRef}
+      className="hero-bleed hero-slider relative h-[100svh] min-h-[600px] w-full overflow-hidden bg-[#080d15] text-white"
       role="region"
       aria-roledescription="carousel"
       aria-label="Space Magnum industrial storage systems showcase"
-      aria-live="off"
+      onPointerEnter={(event) => {
+        if (event.pointerType === 'mouse') setIsHovered(true)
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType === 'mouse') setIsHovered(false)
+        sectionRef.current?.style.setProperty('--hero-parallax-x', '0px')
+        sectionRef.current?.style.setProperty('--hero-parallax-y', '0px')
+      }}
+      onPointerMove={(event) => {
+        if (event.pointerType !== 'mouse' || window.innerWidth < 1024) return
+        const bounds = event.currentTarget.getBoundingClientRect()
+        const x = ((event.clientX - bounds.left) / bounds.width - 0.5) * 24
+        const y = ((event.clientY - bounds.top) / bounds.height - 0.5) * 24
+        sectionRef.current?.style.setProperty('--hero-parallax-x', `${-x}px`)
+        sectionRef.current?.style.setProperty('--hero-parallax-y', `${-y}px`)
+      }}
+      onFocusCapture={() => setIsFocused(true)}
+      onBlurCapture={(event) => {
+        if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
+          setIsFocused(false)
+        }
+      }}
       onTouchStart={(event) => {
         const touch = event.touches[0]
+        if (!touch) return
         touchStart.current = { x: touch.clientX, y: touch.clientY }
+        setIsPaused(true)
       }}
       onTouchEnd={(event) => {
         const start = touchStart.current
-        if (!start) return
         const touch = event.changedTouches[0]
+        touchStart.current = null
+        if (!start || !touch) return
         const deltaX = touch.clientX - start.x
         const deltaY = touch.clientY - start.y
-        touchStart.current = null
         if (Math.abs(deltaX) < 50 || Math.abs(deltaX) < Math.abs(deltaY)) return
         goToSlide(activeIndex + (deltaX < 0 ? 1 : -1))
       }}
+      onKeyDown={(event) => {
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault()
+          showPrevious()
+        } else if (event.key === 'ArrowRight') {
+          event.preventDefault()
+          showNext()
+        }
+      }}
     >
-      {/* Background Slides with Slow Ken-Burns & Crossfade */}
       <div className="absolute inset-0">
         {SLIDES.map((slide, index) => {
           const isActive = index === activeIndex
+          const distance = Math.min(
+            (index - activeIndex + SLIDES.length) % SLIDES.length,
+            (activeIndex - index + SLIDES.length) % SLIDES.length,
+          )
+          if (distance > 1) return null
+
           return (
             <div
               key={slide.src}
-              className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-                isActive ? 'opacity-100 z-10' : 'opacity-0 z-0'
-              }`}
+              className={`hero-slide-layer absolute inset-0 ${isActive ? 'is-active' : ''} ${index % 2 ? 'hero-slide-layer--reverse' : ''}`}
               aria-hidden={!isActive}
             >
-              <div
-                className={`relative h-full w-full transition-transform duration-[7000ms] ease-out ${
-                  isActive && !reducedMotion ? 'scale-105' : 'scale-100'
-                }`}
-              >
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  priority={index === 0}
-                  loading={index < 2 ? 'eager' : 'lazy'}
-                  quality={85}
-                  sizes="100vw"
-                  className="object-cover object-center"
-                />
+              <div className={`hero-slide-photo ${isActive && !reducedMotion ? 'is-moving' : ''}`}>
+                <div className="hero-slide-parallax">
+                  {slide.type === 'video' ? (
+                    <video
+                      className="absolute inset-0 h-full w-full object-cover"
+                      src={slide.src}
+                      poster={slide.poster}
+                      autoPlay={isActive && !reducedMotion}
+                      muted
+                      loop
+                      playsInline
+                      preload={isActive ? 'auto' : 'none'}
+                      aria-hidden="true"
+                      style={{ objectPosition: slide.objectPosition ?? '50% 50%' }}
+                    />
+                  ) : (
+                    <picture className="absolute inset-0 block">
+                      {sourceSet(slide.sources?.avif) && (
+                        <source type="image/avif" srcSet={sourceSet(slide.sources?.avif)} sizes="100vw" />
+                      )}
+                      {sourceSet(slide.sources?.webp) && (
+                        <source type="image/webp" srcSet={sourceSet(slide.sources?.webp)} sizes="100vw" />
+                      )}
+                      <Image
+                        src={slide.sources?.webp?.['1920'] ?? slide.src}
+                        alt={slide.alt ?? ''}
+                        fill
+                        sizes="100vw"
+                        {...(index === 0 && activeIndex === 0
+                          ? { preload: true }
+                          : {
+                              loading: isActive ? 'eager' as const : 'lazy' as const,
+                              fetchPriority: isActive ? 'high' as const : 'auto' as const,
+                            })}
+                        placeholder={slide.blurDataURL ? 'blur' : 'empty'}
+                        blurDataURL={slide.blurDataURL}
+                        className="object-cover"
+                        style={{ objectPosition: slide.objectPosition ?? '50% 50%' }}
+                      />
+                    </picture>
+                  )}
+                </div>
               </div>
             </div>
           )
         })}
       </div>
 
-      {/* Cinematic Scrims for Legibility over bright and dark slides */}
-      <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-t from-[#0B1220] via-[#0B1220]/55 to-black/45" />
-      <div className="pointer-events-none absolute inset-0 z-20 bg-gradient-to-r from-[#0B1220]/85 via-[#0B1220]/35 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-t from-[#080d15]/95 via-[#080d15]/45 to-[#080d15]/25" />
+      <div className="pointer-events-none absolute inset-0 z-10 bg-gradient-to-r from-[#080d15]/80 via-[#080d15]/30 to-transparent" />
 
-      {/* Hero Content Overlay (Huge Headline + Mono Eyebrow + CTAs) */}
-      <div className="relative z-30 mx-auto flex h-full max-w-7xl flex-col justify-end px-4 pb-36 sm:px-6 sm:pb-24 md:pb-28 lg:px-8">
-        <div className="max-w-4xl space-y-4">
-          {/* Eyebrow: Mono small-caps */}
-          <div className="inline-flex items-center gap-2">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)] animate-pulse" />
-            <span className="font-mono text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--accent)] sm:text-sm sm:tracking-[0.25em]">
-              SPACE MAGNUM · PUNE
-            </span>
-          </div>
-
-          {/* Huge Uppercase Headline (clamp scale, tight tracking) */}
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black uppercase tracking-tight text-white leading-[1.02]">
-            Capacity² Efficiency² Safety²
-          </h1>
-
-          {/* Subline from verified company data */}
-          <p className="text-lg sm:text-xl md:text-2xl font-medium text-zinc-300 max-w-2xl leading-relaxed">
-            Automated storage, built in Pune. High-density ASRS, vertical carousels, and
-            mobile shelving engineered for Indian industry.
-          </p>
-
-          {/* Active slide caption */}
-          <div
+      <div className="relative z-20 mx-auto flex h-full max-w-7xl items-end px-5 pb-36 sm:px-8 sm:pb-32 lg:px-12 lg:pb-36">
+        <AnimatePresence mode="wait" initial={false}>
+          <motion.div
             key={activeIndex}
-            className="hero-slide-caption flex items-center gap-3 font-mono text-[10px] font-bold uppercase tracking-[0.2em] text-white/80 sm:text-xs"
+            className="max-w-4xl"
+            initial={{ opacity: 0, y: 22 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -24 }}
+            transition={{ duration: reducedMotion ? 0 : 0.35, ease: 'easeOut' }}
           >
-            <span className="text-[var(--accent)]">
-              {String(activeIndex + 1).padStart(2, '0')}
-            </span>
-            <span className="h-px w-6 bg-white/40" aria-hidden="true" />
-            <span>{SLIDES[activeIndex].caption}</span>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="flex flex-wrap items-center gap-4 pt-4">
+            <p className="mb-5 font-mono text-xs font-semibold uppercase tracking-[0.3em] text-[var(--accent)] sm:text-sm">
+              Space Magnum <span className="mx-2 text-white/40">/</span> Pune, India
+            </p>
+            <h1 className="mb-6 max-w-4xl text-[clamp(2.5rem,7.2vw,6.8rem)] font-black uppercase leading-[0.94] tracking-[-0.045em] text-white">
+              <span className="hero-line-mask">
+                <span className="hero-headline-line">{activeSlide.line1}</span>
+              </span>
+              <span className="hero-line-mask">
+                <span className="hero-headline-line hero-headline-line--accent">{activeSlide.line2}</span>
+              </span>
+            </h1>
+            <p className="hero-body-in max-w-2xl text-base leading-relaxed text-white/80 sm:text-lg lg:text-xl">
+              {activeSlide.text}
+            </p>
             <Link
-              href="#what-we-sell"
-              className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition-all hover:bg-[var(--accent-hover)] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+              href={activeSlide.href}
+              className="hero-cta-in mt-7 inline-flex min-h-12 items-center gap-3 rounded-sm bg-[var(--accent)] px-6 py-3 text-sm font-bold uppercase tracking-[0.1em] text-white transition-colors hover:bg-[var(--accent-hover)] focus-visible:outline-2 focus-visible:outline-white sm:mt-9"
             >
-              <span>Explore systems</span>
+              {activeSlide.cta}
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Link>
-            <Link
-              href="/get-a-quote"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/25 bg-black/40 px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-white backdrop-blur-md transition-all hover:border-white/50 hover:bg-white/10 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
-            >
-              <span>Get a quote</span>
-            </Link>
-          </div>
-        </div>
+          </motion.div>
+        </AnimatePresence>
       </div>
 
-      {/* Bottom Controls: Pause, animated progress bars */}
-      <div className="absolute bottom-24 left-4 z-30 flex items-center gap-2 sm:bottom-8 sm:left-6 lg:left-8">
+      <div className="absolute bottom-6 left-5 z-30 flex items-center gap-4 sm:bottom-8 sm:left-8 lg:left-12">
         <button
           type="button"
           onClick={() => setIsPaused((paused) => !paused)}
           aria-label={isPaused ? 'Play slideshow' : 'Pause slideshow'}
           aria-pressed={isPaused}
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur transition hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-white"
         >
-          {isPaused ? (
-            <Play className="h-4 w-4" aria-hidden="true" />
-          ) : (
-            <Pause className="h-4 w-4" aria-hidden="true" />
-          )}
+          {isPaused ? <Play className="h-4 w-4" aria-hidden="true" /> : <Pause className="h-4 w-4" aria-hidden="true" />}
         </button>
-        {SLIDES.map((slide, index) => {
-          const isActive = index === activeIndex
-          return (
+        <div className="flex items-center gap-1.5" role="group" aria-label="Choose slide">
+          {SLIDES.map((slide, index) => (
             <button
               key={slide.src}
               type="button"
               onClick={() => goToSlide(index)}
-              aria-label={`Go to slide ${index + 1}: ${slide.caption}`}
-              aria-current={isActive ? 'true' : undefined}
-              className="group relative h-6 w-12 flex items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--focus-ring)]"
+              aria-label={`Go to slide ${index + 1}`}
+              aria-current={index === activeIndex ? 'true' : undefined}
+              className="group flex h-10 w-8 items-center focus-visible:outline-2 focus-visible:outline-white"
             >
-              <span className="relative h-[3px] w-full overflow-hidden rounded-full bg-white/20 transition-colors group-hover:bg-white/40">
-                {isActive && (
+              <span className="relative h-0.5 w-full overflow-hidden bg-white/35">
+                {index === activeIndex && (
                   <span
-                    key={activeIndex}
-                    className="hero-progress-fill block h-full w-full bg-[var(--accent)]"
+                    key={`${activeIndex}-${isPaused}`}
+                    className="hero-progress-fill absolute inset-0 origin-left bg-[var(--accent)]"
                     style={{
                       animationDuration: `${SLIDE_DURATION_MS}ms`,
-                      animationPlayState: isPaused ? 'paused' : 'running',
+                      animationPlayState: autoplay ? 'running' : 'paused',
                     }}
                   />
                 )}
               </span>
             </button>
-          )
-        })}
+          ))}
+        </div>
+        <span className="font-mono text-xs tracking-[0.12em] text-white/75" aria-label={`Slide ${activeIndex + 1} of ${SLIDES.length}`}>
+          <span className="text-white">{String(activeIndex + 1).padStart(2, '0')}</span>
+          <span className="mx-2 text-white/40">—</span>
+          {String(SLIDES.length).padStart(2, '0')}
+        </span>
       </div>
 
-      {/* Arrow controls */}
-      <div className="absolute bottom-24 right-4 z-30 flex items-center gap-2 sm:bottom-8 sm:right-6 lg:right-8">
+      <div className="absolute bottom-6 right-5 z-30 flex items-center gap-2 sm:bottom-8 sm:right-8 lg:right-12">
         <button
           type="button"
           onClick={showPrevious}
           aria-label="Previous slide"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+          className="hero-arrow flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur focus-visible:outline-2 focus-visible:outline-white"
         >
-          <ChevronLeft className="h-4 w-4" aria-hidden="true" />
+          <ChevronLeft className="h-5 w-5" aria-hidden="true" />
         </button>
         <button
           type="button"
           onClick={showNext}
           aria-label="Next slide"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-md transition-colors hover:bg-white/15 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+          className="hero-arrow flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black/25 text-white backdrop-blur focus-visible:outline-2 focus-visible:outline-white"
         >
-          <ChevronRight className="h-4 w-4" aria-hidden="true" />
+          <ChevronRight className="h-5 w-5" aria-hidden="true" />
         </button>
       </div>
 
-      {/* Scroll Cue Bottom-Center */}
-      <div className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 hidden flex-col items-center gap-1 text-zinc-400 pointer-events-none sm:flex sm:bottom-6">
-        <span className="font-mono text-[10px] uppercase tracking-widest text-zinc-400">
-          Scroll
-        </span>
-        <ChevronDown className="h-4 w-4 animate-bounce text-[var(--accent)]" aria-hidden="true" />
-      </div>
-
       <p className="sr-only" aria-live="polite">
-        Slide {activeIndex + 1} of {SLIDES.length}: {SLIDES[activeIndex].caption}
+        Slide {activeIndex + 1} of {SLIDES.length}: {activeSlide.line1} {activeSlide.line2}
       </p>
     </section>
   )
