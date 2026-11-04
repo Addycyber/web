@@ -11,8 +11,8 @@ test.describe('Space Magnum — Smoke Navigation Tests', () => {
     const skipLink = page.locator('a[href="#main-content"]')
     await expect(skipLink).toBeDefined()
 
-    // Brand logo exists in header
-    await expect(page.locator('header').getByText('Space Magnum').first()).toBeVisible()
+    // The logo is visible even when the wordmark is hidden on mobile.
+    await expect(page.locator('header img[alt*="Space Magnum"]')).toBeVisible()
   })
 
   test('Calculators and CTA buttons are reachable', async ({ page }) => {
