@@ -9,7 +9,7 @@ const getClientMounted = () => true
 const getServerMounted = () => false
 
 export function ThemeToggle({ className = '' }: { className?: string }) {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
   const mounted = React.useSyncExternalStore(
     subscribeToMount,
     getClientMounted,
@@ -26,7 +26,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
     )
   }
 
-  const isDark = theme === 'dark'
+  const isDark = resolvedTheme === 'dark'
   const nextTheme = isDark ? 'light' : 'dark'
   const label = isDark ? 'Switch to light theme' : 'Switch to dark theme'
 
@@ -35,6 +35,7 @@ export function ThemeToggle({ className = '' }: { className?: string }) {
       type="button"
       onClick={() => setTheme(nextTheme)}
       aria-label={label}
+      aria-pressed={isDark}
       title={label}
       className={`relative inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border)] bg-[var(--bg-subtle)] text-[var(--text-secondary)] hover:text-[var(--text)] hover:border-[var(--border-strong)] hover:bg-[var(--bg-muted)] transition-all duration-150 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-2 shrink-0 ${className}`}
     >

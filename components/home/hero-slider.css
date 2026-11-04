@@ -134,9 +134,49 @@
   }
 }
 
+.hero-progress-fill {
+  transform-origin: left center;
+  animation-name: hero-progress;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hero-progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.hero-slide-caption {
+  animation: hero-caption 500ms ease-out both;
+}
+
+@keyframes hero-caption {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .home-hero-slider__viewport {
     scroll-behavior: auto;
+  }
+
+  .hero-progress-fill {
+    animation: none;
+    transform: scaleX(1);
+  }
+
+  .hero-slide-caption {
+    animation: none;
   }
 
   .home-hero-slider__dots button span {

@@ -12,6 +12,8 @@
    ============================================================ */
 
 :root {
+  color-scheme: light;
+
   /* --- Light Theme Tokens (Default) --- */
   --bg: #FFFFFF;
   --bg-subtle: #F5F7FA;
@@ -43,6 +45,8 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
+
   /* --- Dark Theme Tokens --- */
   --bg: #0B1220;
   --bg-subtle: #111B2E;

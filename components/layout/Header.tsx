@@ -30,6 +30,13 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
   const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null)
   const [isSearchOpen, setIsSearchOpen] = React.useState(false)
   const mobileMenuButtonRef = React.useRef<HTMLButtonElement>(null)
+  const navRef = React.useRef<HTMLElement>(null)
+  const isSolidHeader = isScrolled || !isHome
+  const navLinkClass = `rounded-lg px-3 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] ${
+    isSolidHeader
+      ? 'text-[var(--text-secondary)] hover:bg-[var(--bg-subtle)] hover:text-[var(--text)]'
+      : 'text-zinc-300 hover:bg-white/10 hover:text-white'
+  }`
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -38,6 +45,16 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close an open dropdown when clicking outside the desktop nav
+  React.useEffect(() => {
+    if (!activeDropdown) return
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!navRef.current?.contains(event.target as Node)) setActiveDropdown(null)
+    }
+    document.addEventListener('pointerdown', handlePointerDown)
+    return () => document.removeEventListener('pointerdown', handlePointerDown)
+  }, [activeDropdown])
 
   // Global Cmd+K / Ctrl+K listener
   React.useEffect(() => {
@@ -57,8 +74,8 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled || !isHome
-            ? 'bg-[#0B1220]/95 backdrop-blur-md border-b border-white/10 py-2.5 shadow-lg text-white'
+          isSolidHeader
+            ? 'bg-[var(--bg)]/95 backdrop-blur-md border-b border-[var(--border)] py-2.5 shadow-lg text-[var(--text)]'
             : 'bg-transparent border-b border-transparent py-3 text-white'
         }`}
       >
@@ -81,17 +98,17 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 />
               </div>
               <div className="hidden xl:flex flex-col">
-                <span className="font-heading font-bold text-sm tracking-tight text-white">
+                <span className={`font-heading font-bold text-sm tracking-tight ${isSolidHeader ? 'text-[var(--text)]' : 'text-white'}`}>
                   Space Magnum
                 </span>
-                <span className="font-mono text-[9px] uppercase tracking-wider text-zinc-400">
+                <span className={`font-mono text-[9px] uppercase tracking-wider ${isSolidHeader ? 'text-[var(--text-muted)]' : 'text-zinc-400'}`}>
                   Automated Storage Systems
                 </span>
               </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav ref={navRef} className="hidden lg:flex items-center gap-1">
               
               {/* Products Dropdown */}
               <div 
@@ -116,15 +133,20 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                   type="button"
                   onClick={() => setActiveDropdown('products')}
                   aria-expanded={activeDropdown === 'products'}
+                  aria-haspopup="true"
                   aria-controls={activeDropdown === 'products' ? 'products-menu' : undefined}
-                  className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                  className={`flex items-center gap-1.5 ${navLinkClass}`}
                 >
                   Products
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'products' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
                 </button>
 
                 {activeDropdown === 'products' && (
-                  <div id="products-menu" className="absolute top-full left-0 w-96 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div
+                    id="products-menu"
+                    onClick={() => setActiveDropdown(null)}
+                    className="absolute top-full left-0 w-96 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150"
+                  >
                     <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)] flex justify-between items-center">
                       <span>ASRS & Storage Systems</span>
                       <Link href="/products" className="text-[var(--accent)] hover:underline">View All &rarr;</Link>
@@ -152,7 +174,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
 
               <Link
                 href="/solutions"
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className={navLinkClass}
               >
                 Solutions
               </Link>
@@ -180,15 +202,20 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                   type="button"
                   onClick={() => setActiveDropdown('resources')}
                   aria-expanded={activeDropdown === 'resources'}
+                  aria-haspopup="true"
                   aria-controls={activeDropdown === 'resources' ? 'resources-menu' : undefined}
-                  className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                  className={`flex items-center gap-1.5 ${navLinkClass}`}
                 >
                   Resources
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'resources' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
                 </button>
 
                 {activeDropdown === 'resources' && (
-                  <div id="resources-menu" className="absolute top-full left-0 w-80 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div
+                    id="resources-menu"
+                    onClick={() => setActiveDropdown(null)}
+                    className="absolute top-full left-0 w-80 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150"
+                  >
                     <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)]">
                       Technical Tools & Media
                     </div>
@@ -266,7 +293,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               {/* About Link */}
               <Link 
                 href="/about" 
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className={navLinkClass}
               >
                 About
               </Link>
@@ -274,7 +301,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               {/* Contact Link */}
               <Link 
                 href="/contact" 
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className={navLinkClass}
               >
                 Contact
               </Link>
@@ -288,7 +315,11 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 type="button"
                 onClick={() => setIsSearchOpen(true)}
                 aria-label="Search site (Press Command + K)"
-                className="hidden sm:inline-flex items-center gap-2 rounded-lg border border-white/20 bg-black/30 px-3 py-1.5 text-xs text-zinc-300 transition-all hover:border-white/40 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className={`hidden sm:inline-flex items-center gap-2 rounded-lg border px-3 py-1.5 text-xs transition-all focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] ${
+                  isSolidHeader
+                    ? 'border-[var(--border)] bg-[var(--bg-subtle)] text-[var(--text-secondary)] hover:border-[var(--border-strong)] hover:text-[var(--text)]'
+                    : 'border-white/20 bg-black/30 text-zinc-300 hover:border-white/40 hover:text-white'
+                }`}
               >
                 <Search className="w-3.5 h-3.5 text-[var(--accent)]" />
                 <span>Search...</span>
@@ -330,7 +361,11 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={mobileMenuOpen}
                 aria-controls={mobileMenuOpen ? 'mobile-navigation' : undefined}
-                className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 bg-black/30 text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] lg:hidden"
+                className={`inline-flex h-11 w-11 items-center justify-center rounded-lg border focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] lg:hidden ${
+                  isSolidHeader
+                    ? 'border-[var(--border)] bg-[var(--bg-subtle)] text-[var(--text)]'
+                    : 'border-white/20 bg-black/30 text-white'
+                }`}
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>

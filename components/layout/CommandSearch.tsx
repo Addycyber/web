@@ -36,7 +36,7 @@ const SEARCH_REGISTRY: SearchItem[] = [
 
   // Resources
   { id: 'gallery', title: 'Product & Installation Gallery', category: 'Resources', keywords: 'gallery photos product videos pictures installations', href: '/gallery', icon: ImageIcon },
-  { id: 'downloads', title: 'Technical Downloads & Spec Sheets Centre', category: 'Resources', keywords: 'downloads brochures pdf technical specs cad catalog', href: '/resources/downloads', icon: Download },
+  { id: 'downloads', title: 'Technical Downloads & Spec Sheets Centre', category: 'Resources', keywords: 'downloads brochures pdf technical specs cad catalog', href: '/brochure', icon: Download },
   { id: 'brochure', title: 'Digital Brochure', category: 'Resources', keywords: 'brochure pages catalogue snapshots', href: '/brochure', icon: Download },
   { id: 'solutions', title: 'Solutions', category: 'Resources', keywords: 'solutions products storage planning', href: '/solutions', icon: Boxes },
 
