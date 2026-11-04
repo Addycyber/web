@@ -1,3 +1,4 @@
+import { createHash } from 'node:crypto'
 import fs from 'node:fs'
 import path from 'node:path'
 import sharp from 'sharp'
@@ -51,6 +52,7 @@ const outputPublicDir = path.resolve(process.cwd(), 'public/gallery')
 const manifestDir = path.resolve(process.cwd(), 'content')
 const manifestPath = path.resolve(manifestDir, 'gallery.manifest.json')
 const reportPath = path.resolve(process.cwd(), 'gallery-report.md')
+const buildStatePath = path.resolve(process.cwd(), '.gallery-build-state.json')
 
 if (!fs.existsSync(outputPublicDir)) {
   fs.mkdirSync(outputPublicDir, { recursive: true })
@@ -128,6 +130,7 @@ function walkDir(dir: string, currentCategory: string = 'general'): DiscoveredFi
     }
 
     if (entry.isDirectory()) {
+      if (dir === assetsRoot && entry.name.toLowerCase() === 'slider') continue
       results = results.concat(walkDir(fullPath, entry.name))
     } else if (entry.isFile()) {
       const ext = path.extname(entry.name).toLowerCase()
@@ -306,6 +309,50 @@ async function run() {
     selectedMedia.push(...taken)
   }
 
+  const fingerprint = createHash('sha256')
+    .update(allFiles
+      .map((file) => {
+        const stats = fs.statSync(file.fullPath)
+        return `${path.relative(assetsRoot, file.fullPath)}\0${stats.size}\0${stats.mtimeMs}`
+      })
+      .sort()
+      .join('\n'))
+    .digest('hex')
+
+  if (fs.existsSync(manifestPath)) {
+    const existingManifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as GalleryManifestItem[]
+    const existingReferences = existingManifest.flatMap((item) => [
+      item.src,
+      ...Object.values(item.sources.webp),
+      ...Object.values(item.sources.avif),
+      ...(item.poster ? [item.poster] : []),
+    ])
+    const expectedItems = selectedMedia
+      .map((file) => `${file.categoryKey}\0${file.filename}\0${SUPPORTED_IMAGE_EXTS.has(file.ext) ? 'image' : 'video'}`)
+      .sort()
+    const manifestItems = existingManifest
+      .map((item) => `${item.category}\0${item.originalFilename}\0${item.type}`)
+      .sort()
+    const manifestMatches = JSON.stringify(manifestItems) === JSON.stringify(expectedItems)
+    const outputsExist = existingReferences.every((assetPath) =>
+      fs.existsSync(path.resolve(process.cwd(), 'public', assetPath.slice(1))),
+    )
+    const newestSourceTime = Math.max(0, ...allFiles.map((file) => fs.statSync(file.fullPath).mtimeMs))
+    const outputsAreCurrent = fs.statSync(manifestPath).mtimeMs >= newestSourceTime
+    const currentBuild = manifestMatches && outputsExist && outputsAreCurrent
+    const previousState = fs.existsSync(buildStatePath)
+      ? JSON.parse(fs.readFileSync(buildStatePath, 'utf-8')) as { fingerprint?: string }
+      : null
+
+    if (currentBuild && (previousState?.fingerprint === fingerprint || !previousState)) {
+      if (!previousState) {
+        fs.writeFileSync(buildStatePath, JSON.stringify({ fingerprint }))
+      }
+      console.log('[Gallery Build] Sources unchanged; using the existing manifest and derivatives.')
+      return
+    }
+  }
+
   console.log(`Discovered ${allFiles.length} files across ${Object.keys(categoryBuckets).length} categories.`)
   console.log(`Selected ${selectedMedia.length} top photographic and video items for optimized gallery.`)
 
@@ -366,6 +413,7 @@ async function run() {
   ]
 
   fs.writeFileSync(reportPath, reportLines.join('\n'), 'utf-8')
+  fs.writeFileSync(buildStatePath, JSON.stringify({ fingerprint }))
   console.log(`Report written to ${reportPath}`)
   console.log('Gallery build completed successfully!\n')
 }

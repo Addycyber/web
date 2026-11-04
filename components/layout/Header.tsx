@@ -22,12 +22,136 @@ import { SiWhatsapp } from '@icons-pack/react-simple-icons'
 import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { CommandSearch } from '@/components/layout/CommandSearch'
 
+type NavDropdownProps = {
+  id: string
+  label: string
+  expanded: boolean
+  linkClassName: string
+  onOpen: () => void
+  onToggle: () => void
+  onClose: () => void
+  children: React.ReactNode
+}
+
+function NavDropdown({
+  id,
+  label,
+  expanded,
+  linkClassName,
+  onOpen,
+  onToggle,
+  onClose,
+  children,
+}: NavDropdownProps) {
+  const wrapperRef = React.useRef<HTMLDivElement>(null)
+  const buttonRef = React.useRef<HTMLButtonElement>(null)
+  const closeTimer = React.useRef<number | null>(null)
+  const [focusedWithin, setFocusedWithin] = React.useState(false)
+
+  React.useEffect(() => () => {
+    if (closeTimer.current !== null) window.clearTimeout(closeTimer.current)
+  }, [])
+
+  const clearCloseTimer = () => {
+    if (closeTimer.current !== null) window.clearTimeout(closeTimer.current)
+    closeTimer.current = null
+  }
+
+  return (
+    <div
+      ref={wrapperRef}
+      className="relative"
+      onPointerEnter={(event) => {
+        if (event.pointerType !== 'mouse') return
+        clearCloseTimer()
+        closeTimer.current = window.setTimeout(onOpen, 120)
+      }}
+      onPointerLeave={(event) => {
+        if (event.pointerType !== 'mouse') return
+        if (focusedWithin) return
+        clearCloseTimer()
+        closeTimer.current = window.setTimeout(onClose, 150)
+      }}
+      onFocusCapture={() => setFocusedWithin(true)}
+      onBlurCapture={(event) => {
+        if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
+          setFocusedWithin(false)
+          onClose()
+        }
+      }}
+      onKeyDown={(event) => {
+        if (event.key !== 'Escape') return
+        event.preventDefault()
+        clearCloseTimer()
+        onClose()
+        buttonRef.current?.focus()
+      }}
+    >
+      <button
+        ref={buttonRef}
+        type="button"
+        onClick={() => {
+          clearCloseTimer()
+          onToggle()
+        }}
+        onKeyDown={(event) => {
+          if (event.key !== 'ArrowDown') return
+          event.preventDefault()
+          clearCloseTimer()
+          onOpen()
+          window.requestAnimationFrame(() => {
+            wrapperRef.current
+              ?.querySelector<HTMLElement>(`#${id} a, #${id} button, #${id} [tabindex]:not([tabindex="-1"])`)
+              ?.focus()
+          })
+        }}
+        aria-expanded={expanded}
+        aria-controls={expanded ? id : undefined}
+        className={`flex items-center gap-1.5 ${linkClassName}`}
+      >
+        {label}
+        <ChevronDown className={`w-3.5 h-3.5 transition-transform ${expanded ? 'rotate-180 text-[var(--accent)]' : ''}`} />
+      </button>
+      {expanded && (
+        <div className="absolute left-0 top-full z-50 pt-2">
+          <div id={id} onClick={onClose}>
+            {children}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export function Header({ showCustomerLink = false }: { showCustomerLink?: boolean }) {
   const pathname = usePathname()
   const isHome = pathname === '/'
   const [isScrolled, setIsScrolled] = React.useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
-  const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null)
+  const [mobileMenuState, setMobileMenuState] = React.useState({ pathname, open: false })
+  const [dropdownState, setDropdownState] = React.useState<{ pathname: string; value: string | null }>({
+    pathname,
+    value: null,
+  })
+  const mobileMenuOpen = mobileMenuState.pathname === pathname && mobileMenuState.open
+  const activeDropdown = dropdownState.pathname === pathname ? dropdownState.value : null
+  const setMobileMenuOpen = React.useCallback<React.Dispatch<React.SetStateAction<boolean>>>(
+    (value) => setMobileMenuState((previous) => ({
+      pathname,
+      open: typeof value === 'function'
+        ? value(previous.pathname === pathname ? previous.open : false)
+        : value,
+    })),
+    [pathname],
+  )
+  const setActiveDropdown = React.useCallback<React.Dispatch<React.SetStateAction<string | null>>>(
+    (value) => setDropdownState((previous) => ({
+      pathname,
+      value: typeof value === 'function'
+        ? value(previous.pathname === pathname ? previous.value : null)
+        : value,
+    })),
+    [pathname],
+  )
   const [isSearchOpen, setIsSearchOpen] = React.useState(false)
   const mobileMenuButtonRef = React.useRef<HTMLButtonElement>(null)
   const navRef = React.useRef<HTMLElement>(null)
@@ -46,6 +170,15 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  React.useEffect(() => {
+    if (!mobileMenuOpen) return
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = previousOverflow
+    }
+  }, [mobileMenuOpen])
+
   // Close an open dropdown when clicking outside the desktop nav
   React.useEffect(() => {
     if (!activeDropdown) return
@@ -54,7 +187,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
     }
     document.addEventListener('pointerdown', handlePointerDown)
     return () => document.removeEventListener('pointerdown', handlePointerDown)
-  }, [activeDropdown])
+  }, [activeDropdown, setActiveDropdown])
 
   // Global Cmd+K / Ctrl+K listener
   React.useEffect(() => {
@@ -94,7 +227,8 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                   width={128}
                   height={64}
                   className="object-contain drop-shadow-sm brightness-110"
-                  priority
+                  style={{ width: 128, height: 'auto' }}
+                  loading="eager"
                 />
               </div>
               <div className="hidden xl:flex flex-col">
@@ -111,42 +245,16 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
             <nav ref={navRef} className="hidden lg:flex items-center gap-1">
               
               {/* Products Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setActiveDropdown('products')}
-                onMouseLeave={(event) => {
-                  if (!event.currentTarget.contains(document.activeElement)) setActiveDropdown(null)
-                }}
-                onFocusCapture={() => setActiveDropdown('products')}
-                onBlurCapture={(event) => {
-                  if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
-                    setActiveDropdown(null)
-                  }
-                }}
-                onKeyDown={(event) => {
-                  if (event.key !== 'Escape') return
-                  setActiveDropdown(null)
-                  event.currentTarget.querySelector<HTMLButtonElement>('button')?.focus()
-                }}
+              <NavDropdown
+                id="products-menu"
+                label="Products"
+                expanded={activeDropdown === 'products'}
+                linkClassName={navLinkClass}
+                onOpen={() => setActiveDropdown('products')}
+                onToggle={() => setActiveDropdown((current) => current === 'products' ? null : 'products')}
+                onClose={() => setActiveDropdown((current) => current === 'products' ? null : current)}
               >
-                <button
-                  type="button"
-                  onClick={() => setActiveDropdown('products')}
-                  aria-expanded={activeDropdown === 'products'}
-                  aria-haspopup="true"
-                  aria-controls={activeDropdown === 'products' ? 'products-menu' : undefined}
-                  className={`flex items-center gap-1.5 ${navLinkClass}`}
-                >
-                  Products
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'products' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
-                </button>
-
-                {activeDropdown === 'products' && (
-                  <div
-                    id="products-menu"
-                    onClick={() => setActiveDropdown(null)}
-                    className="absolute top-full left-0 w-96 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150"
-                  >
+                <div className="w-96 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
                     <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)] flex justify-between items-center">
                       <span>ASRS & Storage Systems</span>
                       <Link href="/products" className="text-[var(--accent)] hover:underline">View All &rarr;</Link>
@@ -168,9 +276,8 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                         </div>
                       </Link>
                     ))}
-                  </div>
-                )}
-              </div>
+                </div>
+              </NavDropdown>
 
               <Link
                 href="/solutions"
@@ -180,42 +287,16 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               </Link>
 
               {/* Resources Dropdown */}
-              <div 
-                className="relative"
-                onMouseEnter={() => setActiveDropdown('resources')}
-                onMouseLeave={(event) => {
-                  if (!event.currentTarget.contains(document.activeElement)) setActiveDropdown(null)
-                }}
-                onFocusCapture={() => setActiveDropdown('resources')}
-                onBlurCapture={(event) => {
-                  if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
-                    setActiveDropdown(null)
-                  }
-                }}
-                onKeyDown={(event) => {
-                  if (event.key !== 'Escape') return
-                  setActiveDropdown(null)
-                  event.currentTarget.querySelector<HTMLButtonElement>('button')?.focus()
-                }}
+              <NavDropdown
+                id="resources-menu"
+                label="Resources"
+                expanded={activeDropdown === 'resources'}
+                linkClassName={navLinkClass}
+                onOpen={() => setActiveDropdown('resources')}
+                onToggle={() => setActiveDropdown((current) => current === 'resources' ? null : 'resources')}
+                onClose={() => setActiveDropdown((current) => current === 'resources' ? null : current)}
               >
-                <button
-                  type="button"
-                  onClick={() => setActiveDropdown('resources')}
-                  aria-expanded={activeDropdown === 'resources'}
-                  aria-haspopup="true"
-                  aria-controls={activeDropdown === 'resources' ? 'resources-menu' : undefined}
-                  className={`flex items-center gap-1.5 ${navLinkClass}`}
-                >
-                  Resources
-                  <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'resources' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
-                </button>
-
-                {activeDropdown === 'resources' && (
-                  <div
-                    id="resources-menu"
-                    onClick={() => setActiveDropdown(null)}
-                    className="absolute top-full left-0 w-80 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150"
-                  >
+                <div className="w-80 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
                     <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)]">
                       Technical Tools & Media
                     </div>
@@ -286,9 +367,8 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                       </div>
                     </Link>
 
-                  </div>
-                )}
-              </div>
+                </div>
+              </NavDropdown>
 
               {/* About Link */}
               <Link 
@@ -384,7 +464,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               setMobileMenuOpen(false)
               mobileMenuButtonRef.current?.focus()
             }}
-            className="fixed inset-x-0 top-full max-h-[80vh] space-y-4 overflow-y-auto border-b border-[var(--border)] bg-[var(--bg)] p-4 shadow-2xl animate-in slide-in-from-top-4 duration-150 lg:hidden"
+            className="absolute inset-x-0 top-full max-h-[80vh] space-y-4 overflow-y-auto border-b border-[var(--border)] bg-[var(--bg)] p-4 shadow-2xl animate-in slide-in-from-top-4 duration-150 lg:hidden"
           >
             <div className="space-y-1">
               <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1">

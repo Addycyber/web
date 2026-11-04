@@ -11,6 +11,50 @@
     "emails": ["admin@spacemagnum.com", "enquire@spacemagnum.com"],
     "brochurePage": 20
   },
+  "heroSlides": [
+    {
+      "line1": "AUTOMATED STORAGE,",
+      "line2": "ENGINEERED IN PUNE.",
+      "text": "Capacity² Efficiency² Safety² — storage systems made in Pune since 1992.",
+      "cta": "Explore systems",
+      "href": "#what-we-sell"
+    },
+    {
+      "line1": "RECLAIM",
+      "line2": "40% OF THE FLOOR.",
+      "text": "STOMAT and STOLIFT save 40% floor space, as stated in our brochure.",
+      "cta": "See STOMAT",
+      "href": "/products/stomat"
+    },
+    {
+      "line1": "REACH UP TO 16 M,",
+      "line2": "RETRIEVE ON CYCLE.",
+      "text": "STOPICK AS/RS: 24 to 40 dual cycles per hour.",
+      "cta": "See STOPICK",
+      "href": "/products/stopick"
+    },
+    {
+      "line1": "LONG LOADS,",
+      "line2": "UP TO 25 M.",
+      "text": "STOLONG: up to 50 double cycles per hour for bars, profiles and sheet metal.",
+      "cta": "See STOLONG",
+      "href": "/products/stolong"
+    },
+    {
+      "line1": "ONE AISLE,",
+      "line2": "EVERY SHELF.",
+      "text": "STOMAT Compactors open a single aisle to all shelves.",
+      "cta": "See Compactors",
+      "href": "/products/compactors-racking"
+    },
+    {
+      "line1": "BUILT IN PUNE,",
+      "line2": "TRIALLED WITH YOU.",
+      "text": "Every system is trialled in your presence at our plant before dispatch.",
+      "cta": "Get a quote",
+      "href": "/get-a-quote"
+    }
+  ],
   "pageMap": [
     { "page": 1, "title": "Cover" },
     { "page": 2, "title": "Product range overview" },

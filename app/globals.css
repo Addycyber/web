@@ -4,6 +4,23 @@
 @import "../components/asrs/asrs-animation.css";
 @import "../components/home/hero-slider.css";
 
+@keyframes enter {
+  from {
+    opacity: var(--tw-enter-opacity, 1);
+    transform: translateY(var(--tw-enter-translate-y, 0)) scale(var(--tw-enter-scale, 1));
+  }
+}
+
+.animate-in { animation: enter 150ms both; }
+.fade-in { --tw-enter-opacity: 0; }
+.slide-in-from-top-2 { --tw-enter-translate-y: -0.5rem; }
+.slide-in-from-top-4 { --tw-enter-translate-y: -1rem; }
+.slide-in-from-bottom-5 { --tw-enter-translate-y: 1.25rem; }
+.zoom-in-95 { --tw-enter-scale: 0.95; }
+.animate-in.duration-150 { animation-duration: 150ms; }
+.animate-in.duration-200 { animation-duration: 200ms; }
+.animate-in.duration-300 { animation-duration: 300ms; }
+
 /* ============================================================
    SPACE MAGNUM DESIGN SYSTEM — v3
    Concept: "Precision Industrial Engineering"

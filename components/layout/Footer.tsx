@@ -25,7 +25,7 @@ export function Footer({ showCustomerLink = false }: { showCustomerLink?: boolea
                   src="/SMlogo.png"
                   alt="Space Magnum Equipments Pvt. Ltd."
                   width={120}
-                  height={40}
+                  height={60}
                   className="object-contain"
                   style={{ width: '120px', height: 'auto' }}
                 />

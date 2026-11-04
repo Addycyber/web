@@ -2,6 +2,7 @@ import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  allowedDevOrigins: ['127.0.0.1'],
   images: {
     formats: ['image/avif', 'image/webp'],
     qualities: [75, 80, 85],
@@ -20,12 +21,16 @@ const nextConfig: NextConfig = {
 
       { source: '/index.html',            destination: '/',                        permanent: true },
       { source: '/about.htm',             destination: '/about',                   permanent: true },
+      { source: '/aboutus.html',          destination: '/about',                   permanent: true },
       { source: '/services.htm',          destination: '/about',                   permanent: true },
       { source: '/solutions.htm',         destination: '/solutions',               permanent: true },
       { source: '/solutions.html',        destination: '/solutions',               permanent: true },
       { source: '/stomat.htm',            destination: '/products/stomat',         permanent: true },
+      { source: '/stomat.html',           destination: '/products/stomat',         permanent: true },
       { source: '/stolift.htm',           destination: '/products/stolift',        permanent: true },
+      { source: '/stolift.html',          destination: '/products/stolift',        permanent: true },
       { source: '/storder.htm',           destination: '/products/storder',        permanent: true },
+      { source: '/storder.html',          destination: '/products/storder',        permanent: true },
       { source: '/stopick.htm',           destination: '/products/stopick',       permanent: true },
       { source: '/stopick.html',          destination: '/products/stopick',       permanent: true },
       { source: '/stomat-compactors.htm', destination: '/products/compactors-racking', permanent: true },
@@ -34,8 +39,9 @@ const nextConfig: NextConfig = {
       { source: '/other-products.htm',    destination: '/products',                permanent: true },
       { source: '/customer.htm',          destination: '/about',                   permanent: true },
       { source: '/contact.htm',           destination: '/contact',                 permanent: true },
+      { source: '/contactus.html',        destination: '/contact',                 permanent: true },
       { source: '/enquiry.htm',           destination: '/get-a-quote',             permanent: true },
-      { source: '/download.htm',          destination: '/resources',               permanent: true },
+      { source: '/download.htm',          destination: '/resources/downloads',    permanent: true },
       { source: '/sitemap.htm',           destination: '/sitemap.xml',             permanent: true },
     ]
   },

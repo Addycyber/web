@@ -12,9 +12,15 @@ test.describe('Legacy 301 Redirect Smoke Tests', () => {
   for (const r of redirects) {
     test(`Redirects ${r.from} to ${r.to}`, async ({ page }) => {
       await page.goto(r.from)
-      await expect(page).toHaveURL(new RegExp(r.to))
+      await expect(page).toHaveURL(new RegExp(`${r.to}$`))
     })
   }
+
+  test('Redirects legacy downloads directly to the downloads route', async ({ request }) => {
+    const response = await request.get('/download.htm', { maxRedirects: 0 })
+    expect(response.status()).toBe(308)
+    expect(response.headers().location).toContain('/resources/downloads')
+  })
 
   test('Redirects the former simulator route with a 301 status', async ({ request }) => {
     const response = await request.get('/tools/simulator', { maxRedirects: 0 })
