@@ -1,9 +1,9 @@
 # Space Magnum Gallery Processing Report
 
-Generated at: 2026-10-26T04:42:56.231Z
-Total Assets Discovered: 1853
-Curated Media Items in Gallery: 138
-Categories Included: asrs, general, cantilever, carousel, compactors, pallet-racks, mezzanine, stolift, facility, storder
+Generated at: 2026-11-04T06:32:56.112Z
+Total Assets Discovered: 1873
+Curated Media Items in Gallery: 132
+Categories Included: asrs, general, cantilever, carousel, compactors, pallet-racks, mezzanine, stolift, storder
 
 ## Captions & Alt Text Status
 Per client requirement, no captions or alt texts are fabricated. You can supply them by creating an `assets/<category>/captions.json` or `assets/captions.json` with structure:
@@ -17,8 +17,6 @@ Per client requirement, no captions or alt texts are fabricated. You can supply 
 ```
 
 ### Media Awaiting Captions:
-- [ ] `asrs/VID-20160702-WA0008.mp4`
-- [ ] `asrs/VID-20160702-WA0008.mp4`
 - [ ] `asrs/sasewadi asrs 2.jpg`
 - [ ] `asrs/sasewadi asrs 1.jpg`
 - [ ] `asrs/sasewadi asrs 4.jpg`
@@ -33,22 +31,6 @@ Per client requirement, no captions or alt texts are fabricated. You can supply 
 - [ ] `asrs/Photo0028.jpg`
 - [ ] `asrs/Photo0027.jpg`
 - [ ] `asrs/DSCN1038.JPG`
-- [ ] `general/22022012039.mp4`
-- [ ] `general/VID_20260219_160754548.mp4`
-- [ ] `general/12082011002.mp4`
-- [ ] `general/3 AXIS PLATFORM.mp4`
-- [ ] `general/VID-20140208-WA0007.mp4`
-- [ ] `general/bdl powerised compactor 1.mp4`
-- [ ] `general/bdl powerised compactor 1.mp4`
-- [ ] `general/WhatsApp Video 2022-07-29 at 7.04.47 PM.mp4`
-- [ ] `general/WhatsApp Video 2022-07-29 at 7.03.03 PM (1).mp4`
-- [ ] `general/WhatsApp Video 2022-07-29 at 7.03.02 PM.mp4`
-- [ ] `general/WhatsApp Video 2022-07-29 at 7.03.00 PM.mp4`
-- [ ] `general/12082011004.mp4`
-- [ ] `general/video-2011-12-29-13-52-35.mp4`
-- [ ] `general/WhatsApp Video 2022-07-29 at 7.03.05 PM.mp4`
-- [ ] `general/STOLIFT VIDEO.mp4`
-- [ ] `general/VID-20180512-WA0061.mp4`
 - [ ] `cantilever/IMG_20150701_122119.jpg`
 - [ ] `cantilever/IMG_20160406_134358.jpg`
 - [ ] `cantilever/IMG_20160406_134434.jpg`
@@ -65,7 +47,6 @@ Per client requirement, no captions or alt texts are fabricated. You can supply 
 - [ ] `cantilever/tn_b.jpg`
 - [ ] `cantilever/Cantilever_Racks 1.jpg`
 - [ ] `cantilever/Image0125.jpg`
-- [ ] `carousel/CAROUSEL SYSTEM.mp4`
 - [ ] `carousel/DSC00043.JPG`
 - [ ] `carousel/DSC00040.JPG`
 - [ ] `carousel/DSC00045.JPG`
@@ -81,13 +62,6 @@ Per client requirement, no captions or alt texts are fabricated. You can supply 
 - [ ] `carousel/18082010016.jpg`
 - [ ] `carousel/18082010029.jpg`
 - [ ] `carousel/18082010015.jpg`
-- [ ] `compactors/22022012039.mp4`
-- [ ] `compactors/VID20141223140435.mp4`
-- [ ] `compactors/VID20141223134656.mp4`
-- [ ] `compactors/VID-20160705-WA0028.mp4`
-- [ ] `compactors/VID-20160705-WA0027.mp4`
-- [ ] `compactors/small compactor video.mp4`
-- [ ] `compactors/VID-20160722-WA0034.mp4`
 - [ ] `compactors/DSCN4250.jpg`
 - [ ] `compactors/20220405_110727.jpg`
 - [ ] `compactors/DSCN4246.jpg`
@@ -129,10 +103,6 @@ Per client requirement, no captions or alt texts are fabricated. You can supply 
 - [ ] `mezzanine/IMG-20170724-WA0046.jpg`
 - [ ] `mezzanine/IMG-20170724-WA0047.jpg`
 - [ ] `mezzanine/IMG-20170722-WA0041.jpg`
-- [ ] `stolift/VID-20140208-WA0007.mp4`
-- [ ] `stolift/VID-20190702-WA0107.mp4`
-- [ ] `stolift/STOLIFT- KRD COPY.mp4`
-- [ ] `stolift/VID-20180313-WA0080.mp4`
 - [ ] `stolift/IMG_0760.JPG`
 - [ ] `stolift/IMG_0754.JPG`
 - [ ] `stolift/IMG_0758.JPG`
@@ -145,12 +115,6 @@ Per client requirement, no captions or alt texts are fabricated. You can supply 
 - [ ] `stolift/IMG_0762.JPG`
 - [ ] `stolift/IMG_0757.JPG`
 - [ ] `stolift/stolift with automatic tray extractor.jpg`
-- [ ] `facility/WhatsApp Image 2017-01-07 at 3.25.35 PM.jpeg`
-- [ ] `facility/1d749d09-f1b9-44cd-87da-9f3f865f8374.jpg`
-- [ ] `facility/WhatsApp Image 2017-01-07 at 3.25.24 PM.jpeg`
-- [ ] `facility/2469746c-0c36-46e2-8de6-955e1382d5e1.jpg`
-- [ ] `facility/877e5978-8485-4d0c-bd78-79bd6e2be327.jpg`
-- [ ] `facility/7d07e856-2062-4999-87a9-061b017d5432.jpg`
 - [ ] `storder/091220091041.jpg`
 - [ ] `storder/091220091039.jpg`
 - [ ] `storder/091220091040.jpg`

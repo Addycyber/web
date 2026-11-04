@@ -96,10 +96,10 @@
   --color-danger: var(--danger);
   --color-focus: var(--focus-ring);
 
-  /* Fonts mapped to next/font variables */
-  --font-heading: var(--font-heading), "Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-body: var(--font-body), "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: var(--font-mono), "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  /* Font stacks with no external network dependency */
+  --font-heading: "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
 
   /* Radii */
   --radius-sm: 0.375rem;
@@ -117,36 +117,47 @@
   box-sizing: border-box;
 }
 
-html {
-  font-size: 16px;
-  scroll-behavior: smooth;
-  -webkit-text-size-adjust: 100%;
+/* Inner pages clear the fixed header; a full-bleed hero sits under it. */
+main {
+  padding-top: 5rem;
 }
 
-body {
-  font-family: var(--font-body);
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.65;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+main:has(.hero-bleed) {
+  padding-top: 0;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  color: var(--text);
-  line-height: 1.15;
-}
+/* Base element styles live in the layer so component utilities can override them. */
+@layer base {
+  html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
 
-h1 {
-  letter-spacing: -0.02em;
-}
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
+  }
 
-h2 {
-  letter-spacing: -0.015em;
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.15;
+  }
+
+  h1 {
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    letter-spacing: -0.015em;
+  }
 }
 
 /* Monospace text & numbers */
@@ -193,6 +204,28 @@ code, kbd, samp, pre, .font-mono, .tabular-nums {
   top: 0;
   outline: 2px solid var(--focus-ring);
   outline-offset: 2px;
+}
+
+/* ASRS anatomy figure: lift the isometric palette so parts read on the dark card. */
+.anatomy-figure .iso {
+  --anatomy-paper: #142138;
+  --anatomy-card: #0b1220;
+  --anatomy-face: #1e2f4a;
+  --anatomy-top: #2b4364;
+  --anatomy-shade-0: #0d1728;
+  --anatomy-shade-1: #111d31;
+  --anatomy-shade-2: #16243c;
+  --anatomy-shade-3: #1b2c47;
+  --anatomy-lit-top: #35527a;
+  --anatomy-lit-shade: #263c5b;
+  --anatomy-hi: #eaf0f7;
+  --anatomy-mid: #b3c0d2;
+  --anatomy-lo: #6c819c;
+  --anatomy-faint: #2c3e5a;
+  --anatomy-lit: #ffffff;
+  --anatomy-halo: #000000;
+  --anatomy-halo-opacity: 0.55;
+  --anatomy-red: #ff8a4c;
 }
 
 /* Engineering Drawing Accents */

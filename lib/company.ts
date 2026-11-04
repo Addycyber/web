@@ -38,7 +38,8 @@ const productSchema = z.object({
   specs: z.array(factSchema),
   otherRange: z.array(z.string()),
   brochurePages: z.array(z.number().int().positive()),
-  heroImage: z.string(),
+  heroImage: z.string().nullable(),
+  heroImageAlt: z.string().nullable(),
   galleryImages: z.array(z.string()),
   accentColor: z.string(),
 });

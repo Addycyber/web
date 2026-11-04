@@ -18,6 +18,7 @@ export interface GalleryManifestItem {
   aspectRatio: number
   blurDataURL: string
   src: string
+  poster?: string
   sources: {
     webp: { [width: number]: string }
     avif: { [width: number]: string }
@@ -227,7 +228,10 @@ async function processVideo(file: DiscoveredFile, id: string): Promise<GalleryMa
     fs.copyFileSync(file.fullPath, targetVideoPath)
   }
 
-  const defaultPoster = `data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540"><rect width="100%" height="100%" fill="%230B1220"/><polygon points="440,230 440,310 520,270" fill="%23FF8A4C"/></svg>`
+  const baseVideoName = `vid_${id}`;
+  const posterPath = `/posters/${baseVideoName}.webp`;
+  const catCaptions = captionsMap[file.categoryKey] || captionsMap['root'] || {};
+  const captionEntry = catCaptions[file.filename] || {};
 
   return {
     id,
@@ -238,11 +242,12 @@ async function processVideo(file: DiscoveredFile, id: string): Promise<GalleryMa
     width: 960,
     height: 540,
     aspectRatio: 16 / 9,
-    blurDataURL: defaultPoster,
+    blurDataURL: posterPath,
     src: `/gallery/${targetVideoName}`,
+    poster: posterPath,
     sources: { webp: {}, avif: {} },
-    alt: '',
-    caption: '',
+    alt: captionEntry.alt || `${file.categoryLabel} video demonstration`,
+    caption: captionEntry.caption || '',
   }
 }
 

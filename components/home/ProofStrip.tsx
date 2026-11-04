@@ -1,75 +1,136 @@
-import Image from 'next/image'
-import { Boxes, CalendarDays, Package, Warehouse } from 'lucide-react'
-import { company, getProduct } from '@/lib/company'
-import type { GalleryManifestItem } from '@/scripts/build-gallery'
+'use client'
 
-const stomat = getProduct('stomat')
-const stolift = getProduct('stolift')
-if (!stomat || !stolift) throw new Error('Brochure data must include STOMAT and STOLIFT.')
+import * as React from 'react'
 
-function requiredFact(product: NonNullable<typeof stomat>, label: string) {
-  const value = product.facts.find((fact) => fact.label === label)?.value
-  if (!value) throw new Error(`Brochure data is missing "${label}" for ${product.name}.`)
-  return value
+const REDUCED_MOTION_QUERY = '(prefers-reduced-motion: reduce)'
+const subscribeToMotionPreference = (onChange: () => void) => {
+  const query = window.matchMedia(REDUCED_MOTION_QUERY)
+  query.addEventListener('change', onChange)
+  return () => query.removeEventListener('change', onChange)
 }
+const getReducedMotion = () => window.matchMedia(REDUCED_MOTION_QUERY).matches
+const getServerReducedMotion = () => true
 
-const stats = [
-  { icon: CalendarDays, title: `Founded ${company.founded}`, subtitle: company.name },
+const PROOF_STATS = [
   {
-    icon: Warehouse,
-    title: `${requiredFact(stomat, 'Floor-space saving')} floor-space saving`,
-    subtitle: 'STOMAT brochure statement',
+    targetNum: 40,
+    prefix: '',
+    suffix: '%',
+    label: 'Floor-Space Saving',
+    detail: 'STOMAT & STOLIFT brochure statement',
   },
   {
-    icon: Package,
-    title: requiredFact(stolift, 'Tray load classes'),
-    subtitle: 'STOLIFT tray load classes',
+    staticVal: '250 / 500 kg',
+    label: 'Tray Load Classes',
+    detail: 'STOLIFT tray load classes',
   },
   {
-    icon: Boxes,
-    title: requiredFact(stolift, 'Designed machine capacity'),
-    subtitle: 'STOLIFT designed machine capacity',
+    staticVal: 'Up to 16 m',
+    label: 'Machine Height',
+    detail: 'STOPICK AS/RS machine height',
   },
-]
+  {
+    staticVal: 'Up to 25 m',
+    label: 'Storage Height',
+    detail: 'STOLONG high-bay storage height',
+  },
+] as const
 
-export function ProofStrip({ items }: { items: GalleryManifestItem[] }) {
-  const photos = items.filter((item) => item.type === 'image').slice(0, 5)
+export function ProofStrip() {
+  const containerRef = React.useRef<HTMLDivElement>(null)
+  const [inView, setInView] = React.useState(false)
+  const [count, setCount] = React.useState(0)
+  const reducedMotion = React.useSyncExternalStore(
+    subscribeToMotionPreference,
+    getReducedMotion,
+    getServerReducedMotion,
+  )
+  const displayedCount = reducedMotion && inView ? 40 : count
+
+  React.useEffect(() => {
+    const el = containerRef.current
+    if (!el) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.2 }
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
+
+  // Smooth count-up for 40%
+  React.useEffect(() => {
+    if (!inView || reducedMotion) return
+
+    const start = performance.now()
+    const duration = 900
+    let frame = 0
+
+    const step = (now: number) => {
+      const progress = Math.min((now - start) / duration, 1)
+      const current = Math.floor(progress * 40)
+      setCount(current)
+      if (progress < 1) {
+        frame = requestAnimationFrame(step)
+      } else {
+        setCount(40)
+      }
+    }
+    frame = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(frame)
+  }, [inView, reducedMotion])
 
   return (
-    <section className="overflow-hidden border-b border-[var(--border)] bg-[var(--bg-subtle)] transition-colors">
-      {photos.length > 0 && (
-        <div className="flex h-36 overflow-hidden border-b border-[var(--border)] sm:h-44">
-          {photos.map((photo) => (
-          <div key={photo.id} className="relative flex-1 overflow-hidden bg-[var(--bg-muted)]">
-            <Image
-              src={photo.src}
-              alt={photo.alt || 'Space Magnum product imagery'}
-              fill
-              className="object-cover transition-transform duration-500 hover:scale-105"
-              sizes="(max-width: 768px) 50vw, 20vw"
-            />
-          </div>
-          ))}
+    <section
+      ref={containerRef}
+      data-theme="dark"
+      className="w-full border-y border-white/10 bg-[#070D18] py-8 text-white sm:py-10"
+      aria-label="Brochure-stated product specifications"
+    >
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Source badge header */}
+        <div className="mb-4 flex items-center justify-between">
+          <span className="font-mono text-[11px] font-bold uppercase tracking-[0.2em] text-[var(--accent)]">
+            Brochure-stated figures
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-wider text-zinc-400">
+            Source: Space Magnum Product Catalogue
+          </span>
         </div>
-      )}
 
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-          {stats.map(({ icon: Icon, title, subtitle }) => (
+        {/* Single Full-Width Row with Hairline Dividers */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+          {PROOF_STATS.map((stat, idx) => (
             <div
-              key={title}
-              className="flex items-center gap-3.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] p-4 shadow-xs"
+              key={stat.label}
+              className={`py-4 sm:py-2 ${
+                idx === 0
+                  ? 'sm:pr-6 lg:pr-8'
+                  : idx === 3
+                  ? 'sm:pl-6 lg:pl-8'
+                  : 'sm:px-6 lg:px-8'
+              }`}
             >
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-soft)] text-[var(--accent)]">
-                <Icon className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />
+              <div className="font-mono text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-white">
+                {'targetNum' in stat ? `${displayedCount}${stat.suffix}` : stat.staticVal}
               </div>
-              <div>
-                <div className="text-sm font-bold text-[var(--text)]">{title}</div>
-                <div className="mt-0.5 text-xs text-[var(--text-muted)]">{subtitle}</div>
+              <div className="mt-2 text-sm font-bold text-zinc-200">
+                {stat.label}
+              </div>
+              <div className="mt-0.5 font-mono text-xs text-zinc-400">
+                {stat.detail}
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   )

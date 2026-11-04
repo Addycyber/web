@@ -20,7 +20,7 @@ export function ProductDetail({ product, id }: { product: Product; id?: string }
     <article id={id} className="min-h-screen scroll-mt-24 bg-[var(--bg)] text-[var(--text)]">
       <header className="border-b border-[var(--border)] bg-[var(--bg-subtle)] py-12 md:py-16">
         <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 sm:px-6 lg:grid-cols-12 lg:px-8">
-          <div className="space-y-5 lg:col-span-7">
+          <div className={`space-y-5 ${product.heroImage ? "lg:col-span-7" : "lg:col-span-12"}`}>
             <nav className="flex items-center gap-2 text-xs text-[var(--text-muted)]" aria-label="Breadcrumb">
               <Link href="/" className="hover:text-[var(--text)]">Home</Link>
               <span aria-hidden="true">/</span>
@@ -52,16 +52,18 @@ export function ProductDetail({ product, id }: { product: Product; id?: string }
               </Link>
             </div>
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-muted)] lg:col-span-5">
-            <Image
-              src={product.heroImage}
-              alt={`${product.name} – brochure page ${product.brochurePages[0]}`}
-              fill
-              priority
-              sizes="(max-width: 1024px) 100vw, 42vw"
-              className="object-contain"
-            />
-          </div>
+          {product.heroImage && (
+            <div className="relative aspect-[4/3] overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-muted)] lg:col-span-5">
+              <Image
+                src={product.heroImage}
+                alt={product.heroImageAlt ?? ''}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                className="object-cover"
+              />
+            </div>
+          )}
         </div>
       </header>
 
@@ -139,7 +141,9 @@ export function ProductDetail({ product, id }: { product: Product; id?: string }
           </section>
         )}
 
-        <BrochureViewer pages={product.brochurePages} productName={product.name} />
+        {product.brochurePages.length > 0 && (
+          <BrochureViewer pages={product.brochurePages} productName={product.name} />
+        )}
 
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-[var(--border)] pt-8">
           <p className="text-sm text-[var(--text-secondary)]">

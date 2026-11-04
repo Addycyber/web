@@ -56,18 +56,20 @@ export function ProductGateway() {
                 className="group relative rounded-2xl overflow-hidden bg-[var(--bg-subtle)] border border-[var(--border)] hover:border-[var(--border-strong)] transition-all duration-200 hover:shadow-md flex flex-col"
               >
                 {/* Product Photo with subtle border */}
-                <div className="relative h-52 overflow-hidden bg-[var(--bg-muted)] border-b border-[var(--border)] shrink-0">
-                  <Image
-                    src={product.heroImage}
-                    alt={`${product.name} – brochure page ${product.brochurePages[0]}`}
-                    fill
-                    className="object-contain transition-transform duration-300 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
-                  />
-                  <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-[var(--bg)]/90 backdrop-blur-md border border-[var(--border)] text-[var(--accent)] flex items-center justify-center">
-                    <Icon className="w-4 h-4" />
+                {product.heroImage && (
+                  <div className="relative h-52 overflow-hidden bg-[var(--bg-muted)] border-b border-[var(--border)] shrink-0">
+                    <Image
+                      src={product.heroImage}
+                      alt={product.heroImageAlt ?? ''}
+                      fill
+                      className="object-contain transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                    <div className="absolute top-3 left-3 w-8 h-8 rounded-lg bg-[var(--bg)]/90 backdrop-blur-md border border-[var(--border)] text-[var(--accent)] flex items-center justify-center">
+                      <Icon className="w-4 h-4" />
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* Card Content */}
                 <div className="p-5 flex-1 flex flex-col justify-between space-y-4">

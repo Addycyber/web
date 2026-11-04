@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
 import type { GalleryManifestItem } from '@/scripts/build-gallery'
+import { VideoCard } from '@/components/gallery/VideoCard'
 
 interface GalleryStripProps {
   title?: string
@@ -21,7 +22,15 @@ export function GalleryStrip({
   viewAllHref = '/gallery',
 }: GalleryStripProps) {
   const filtered = category ? items.filter((item) => item.category === category) : items
-  const displayItems = (filtered.length > 0 ? filtered : items).slice(0, limit)
+  const seen = new Set<string>()
+  const displayItems = (filtered.length > 0 ? filtered : items)
+    .filter((item) => {
+      const key = `${item.type}:${item.poster ?? item.src}:${item.categoryLabel}`
+      if (seen.has(key)) return false
+      seen.add(key)
+      return true
+    })
+    .slice(0, limit)
 
   if (displayItems.length === 0) return null
 
@@ -46,24 +55,16 @@ export function GalleryStrip({
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {displayItems.map((item) => (
-            <article
-              key={item.id}
-              className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg)] shadow-sm transition-all hover:border-[var(--border-strong)] hover:shadow-md"
-            >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[var(--bg-muted)]">
-                {item.type === 'video' ? (
-                  <video
-                    src={item.src}
-                    poster={item.blurDataURL}
-                    controls
-                    playsInline
-                    preload="none"
-                    aria-label={item.alt || `${item.categoryLabel} video`}
-                    className="h-full w-full object-contain"
-                  />
-                ) : (
-                  <Link href={`/gallery?category=${item.category}`} aria-label={`View ${item.categoryLabel} image in gallery`}>
+          {displayItems.map((item) =>
+            item.type === 'video' ? (
+              <VideoCard key={item.id} item={item} className="self-start" />
+            ) : (
+              <article
+                key={item.id}
+                className="overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg)] shadow-sm transition-all hover:border-[var(--border-strong)] hover:shadow-md"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-[var(--bg-muted)]">
+                  <Link href={`/gallery?category=${item.category}`} aria-label={`View ${item.categoryLabel} image in gallery`} className="relative block h-full w-full">
                     <Image
                       src={item.src}
                       alt={item.alt || `${item.categoryLabel} image`}
@@ -74,20 +75,20 @@ export function GalleryStrip({
                       className="object-cover transition-transform duration-300 hover:scale-105"
                     />
                   </Link>
-                )}
-              </div>
-              <div className="bg-[var(--bg)] p-3.5">
-                <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[var(--accent)]">
-                  {item.categoryLabel}
-                </span>
-                {item.caption && (
-                  <p className="mt-1 line-clamp-2 text-xs font-medium text-[var(--text-secondary)]">
-                    {item.caption}
-                  </p>
-                )}
-              </div>
-            </article>
-          ))}
+                </div>
+                <div className="bg-[var(--bg)] p-3.5">
+                  <span className="font-mono text-[11px] font-bold uppercase tracking-wider text-[var(--accent)]">
+                    {item.categoryLabel}
+                  </span>
+                  {item.caption && (
+                    <p className="mt-1 line-clamp-2 text-xs font-medium text-[var(--text-secondary)]">
+                      {item.caption}
+                    </p>
+                  )}
+                </div>
+              </article>
+            ),
+          )}
         </div>
       </div>
     </section>

@@ -8,13 +8,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_asrs_1.webp",
     "src": "/gallery/vid_asrs_1.mp4",
+    "poster": "/posters/vid_asrs_1.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "ASRS High-Bay video demonstration",
     "caption": ""
   },
   {
@@ -26,13 +27,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_asrs_2.webp",
     "src": "/gallery/vid_asrs_2.mp4",
+    "poster": "/posters/vid_asrs_2.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "ASRS High-Bay video demonstration",
     "caption": ""
   },
   {
@@ -408,13 +410,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_17.webp",
     "src": "/gallery/vid_general_17.mp4",
+    "poster": "/posters/vid_general_17.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -426,13 +429,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_18.webp",
     "src": "/gallery/vid_general_18.mp4",
+    "poster": "/posters/vid_general_18.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -444,13 +448,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_19.webp",
     "src": "/gallery/vid_general_19.mp4",
+    "poster": "/posters/vid_general_19.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -462,13 +467,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_20.webp",
     "src": "/gallery/vid_general_20.mp4",
+    "poster": "/posters/vid_general_20.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -480,13 +486,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_21.webp",
     "src": "/gallery/vid_general_21.mp4",
+    "poster": "/posters/vid_general_21.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -498,13 +505,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_22.webp",
     "src": "/gallery/vid_general_22.mp4",
+    "poster": "/posters/vid_general_22.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -516,13 +524,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_23.webp",
     "src": "/gallery/vid_general_23.mp4",
+    "poster": "/posters/vid_general_23.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -534,13 +543,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_24.webp",
     "src": "/gallery/vid_general_24.mp4",
+    "poster": "/posters/vid_general_24.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -552,13 +562,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_25.webp",
     "src": "/gallery/vid_general_25.mp4",
+    "poster": "/posters/vid_general_25.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -570,13 +581,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_26.webp",
     "src": "/gallery/vid_general_26.mp4",
+    "poster": "/posters/vid_general_26.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -588,13 +600,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_27.webp",
     "src": "/gallery/vid_general_27.mp4",
+    "poster": "/posters/vid_general_27.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -606,13 +619,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_28.webp",
     "src": "/gallery/vid_general_28.mp4",
+    "poster": "/posters/vid_general_28.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -624,13 +638,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_29.webp",
     "src": "/gallery/vid_general_29.mp4",
+    "poster": "/posters/vid_general_29.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -642,13 +657,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_30.webp",
     "src": "/gallery/vid_general_30.mp4",
+    "poster": "/posters/vid_general_30.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -660,13 +676,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_31.webp",
     "src": "/gallery/vid_general_31.mp4",
+    "poster": "/posters/vid_general_31.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -678,13 +695,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_general_32.webp",
     "src": "/gallery/vid_general_32.mp4",
+    "poster": "/posters/vid_general_32.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "General Installations video demonstration",
     "caption": ""
   },
   {
@@ -1112,13 +1130,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_carousel_49.webp",
     "src": "/gallery/vid_carousel_49.mp4",
+    "poster": "/posters/vid_carousel_49.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Vertical Carousels video demonstration",
     "caption": ""
   },
   {
@@ -1520,13 +1539,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_65.webp",
     "src": "/gallery/vid_compactors_65.mp4",
+    "poster": "/posters/vid_compactors_65.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -1538,13 +1558,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_66.webp",
     "src": "/gallery/vid_compactors_66.mp4",
+    "poster": "/posters/vid_compactors_66.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -1556,13 +1577,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_67.webp",
     "src": "/gallery/vid_compactors_67.mp4",
+    "poster": "/posters/vid_compactors_67.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -1574,13 +1596,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_68.webp",
     "src": "/gallery/vid_compactors_68.mp4",
+    "poster": "/posters/vid_compactors_68.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -1592,13 +1615,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_69.webp",
     "src": "/gallery/vid_compactors_69.mp4",
+    "poster": "/posters/vid_compactors_69.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -1610,13 +1634,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_70.webp",
     "src": "/gallery/vid_compactors_70.mp4",
+    "poster": "/posters/vid_compactors_70.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -1628,13 +1653,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_compactors_71.webp",
     "src": "/gallery/vid_compactors_71.mp4",
+    "poster": "/posters/vid_compactors_71.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "Compactors & Racks video demonstration",
     "caption": ""
   },
   {
@@ -2712,13 +2738,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_stolift_113.webp",
     "src": "/gallery/vid_stolift_113.mp4",
+    "poster": "/posters/vid_stolift_113.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "STOLIFT Vertical Lift video demonstration",
     "caption": ""
   },
   {
@@ -2730,13 +2757,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_stolift_114.webp",
     "src": "/gallery/vid_stolift_114.mp4",
+    "poster": "/posters/vid_stolift_114.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "STOLIFT Vertical Lift video demonstration",
     "caption": ""
   },
   {
@@ -2748,13 +2776,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_stolift_115.webp",
     "src": "/gallery/vid_stolift_115.mp4",
+    "poster": "/posters/vid_stolift_115.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "STOLIFT Vertical Lift video demonstration",
     "caption": ""
   },
   {
@@ -2766,13 +2795,14 @@
     "width": 960,
     "height": 540,
     "aspectRatio": 1.7777777777777777,
-    "blurDataURL": "data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"960\" height=\"540\" viewBox=\"0 0 960 540\"><rect width=\"100%\" height=\"100%\" fill=\"%230B1220\"/><polygon points=\"440,230 440,310 520,270\" fill=\"%23FF8A4C\"/></svg>",
+    "blurDataURL": "/posters/vid_stolift_116.webp",
     "src": "/gallery/vid_stolift_116.mp4",
+    "poster": "/posters/vid_stolift_116.webp",
     "sources": {
       "webp": {},
       "avif": {}
     },
-    "alt": "",
+    "alt": "STOLIFT Vertical Lift video demonstration",
     "caption": ""
   },
   {

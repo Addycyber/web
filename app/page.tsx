@@ -3,21 +3,17 @@ import path from 'node:path'
 import { constructMetadata } from '@/lib/metadata'
 import { HeroSlider } from '@/components/home/HeroSlider'
 import { ProofStrip } from '@/components/home/ProofStrip'
-import { ReclaimFloorSection } from '@/components/home/ReclaimFloorSection'
-import { ProductGateway } from '@/components/home/ProductGateway'
-import { ProductComparisonTable } from '@/components/features/ProductComparisonTable'
-import { IndustrySelector } from '@/components/home/IndustrySelector'
-import { CustomerLogos } from '@/components/home/CustomerLogos'
+import { WhatWeSell } from '@/components/home/WhatWeSell'
+import { AsrsInMotionSection } from '@/components/home/AsrsInMotionSection'
+import { TotalStoreManagement } from '@/components/home/TotalStoreManagement'
 import { GalleryStrip } from '@/components/gallery/GalleryStrip'
-import { FaqSection } from '@/components/features/FaqSection'
-import { SimulatorTeaser } from '@/components/home/SimulatorTeaser'
 import { HomeCtaSection } from '@/components/home/HomeCtaSection'
 import type { GalleryManifestItem } from '@/scripts/build-gallery'
 
 export const metadata = constructMetadata({
   title: 'Automated Storage & Retrieval Systems (ASRS) Manufacturer Pune India',
   description:
-    'Space Magnum Equipments designs automated storage and retrieval systems, tray-based STOLIFT storage, and industrial mobile shelving in Pune, India.',
+    'Space Magnum Equipments Pvt. Ltd. manufactures automated storage and retrieval systems, vertical carousels, STOLIFT vertical lifts, and mobile compactor shelving in Pune, India.',
 })
 
 function getGalleryItems(): GalleryManifestItem[] {
@@ -26,68 +22,35 @@ function getGalleryItems(): GalleryManifestItem[] {
   return JSON.parse(fs.readFileSync(manifestPath, 'utf-8')) as GalleryManifestItem[]
 }
 
-const HOME_FAQS = [
-  {
-    question: 'How does STOLIFT retrieve a stored tray?',
-    answer:
-      'The PLC-controlled retrieval platform travels to the selected storage location, retrieves the carrier tray, and brings it to the operating window.',
-  },
-  {
-    question: 'What is STORDER?',
-    answer:
-      'STORDER is a modular multi-axis storage and retrieval system using X, Y, and Z movement.',
-  },
-  {
-    question: 'What can STOMAT store?',
-    answer:
-      'The brochure lists office files, documents, machined components, electronic parts, CDs and cassettes, medicines, tools, hardware, and components.',
-  },
-]
-
 export default function HomePage() {
   const galleryItems = getGalleryItems()
 
   return (
-    <div className="flex flex-col w-full overflow-hidden">
-      {/* 1. Hero */}
+    <div className="flex w-full flex-col overflow-x-clip bg-[var(--bg)] text-[var(--text)]">
+      {/* 1. Hero (100svh, full-bleed cinematic slider) */}
       <HeroSlider />
 
-      {/* 2. Product proof */}
-      <ProofStrip items={galleryItems} />
+      {/* 2. Proof strip (Single full-width row with 4 brochure-sourced figures) */}
+      <ProofStrip />
 
-      {/* 3. Products Architecture */}
-      <ProductGateway />
+      {/* 3. What we sell (Product showcase with 6 cards and rhythmic sizing) */}
+      <WhatWeSell />
 
-      {/* 4. Floor Space Savings with Before/After Slider */}
-      <ReclaimFloorSection />
+      {/* 4. ASRS in motion (Full-bleed dark section with Anatomy figure and 3 callouts) */}
+      <AsrsInMotionSection />
 
-      {/* 5. Product Comparison Matrix (Priority 1 Feature) */}
-      <ProductComparisonTable />
+      {/* 5. Total Store Management (data-sourced sticky horizontal timeline) */}
+      <TotalStoreManagement />
 
-      {/* 6. Industry Applications */}
-      <IndustrySelector />
-
-      {/* Customer logo wall (hidden publicly until the approval threshold is met) */}
-      <CustomerLogos />
-
-      {/* 7. Company gallery */}
+      {/* Gallery & videos (Mixed grid with real WebP video posters and photography) */}
       <GalleryStrip
-        title="Company gallery"
+        title="Gallery & Plant Demonstrations"
+        subtitle="Operational photographs and video captures from Pune installations."
         items={galleryItems}
-        limit={4}
+        limit={8}
       />
 
-      {/* 8. Interactive 3D Simulator Teaser */}
-      <SimulatorTeaser />
-
-      {/* 9. Operational FAQ Accordions (Priority 1 Feature) */}
-      <FaqSection
-        title="Frequently Asked Questions"
-        subtitle="Answers based on the company brochure."
-        faqs={HOME_FAQS}
-      />
-
-      {/* 10. Final Call to Action Band (Single deep-navy band) */}
+      {/* 7. Closing CTA (Full-bleed photo, bold proposition, direct contact details) */}
       <HomeCtaSection />
     </div>
   )

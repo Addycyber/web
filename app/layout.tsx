@@ -56,7 +56,7 @@ export default function RootLayout({
           {/* Global Header */}
           <Header showCustomerLink={showCustomerLink} />
           
-          <main id="main-content" className="flex-1 pt-20">
+          <main id="main-content" className="flex-1 overflow-x-clip">
             {children}
           </main>
 

@@ -6,9 +6,6 @@ import { MotionStage } from "./motion-stage";
 export function AsrsFigure() {
   return (
     <figure className="asrs-home-figure">
-      <h1 className="sr-only">
-        Automated Storage &amp; Retrieval Systems (ASRS) Manufacturer Pune India
-      </h1>
       <MotionStage>
         <AsrsArt />
       </MotionStage>

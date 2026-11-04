@@ -27,7 +27,7 @@
     { "page": 13, "title": "STOPICK AS/RS overview" },
     { "page": 14, "title": "STOPICK construction and safety" },
     { "page": 15, "title": "STOPICK concept, uses and benefits" },
-    { "page": 16, "title": "STOLONG long-section retrieval" },
+    { "page": 16, "title": "STOMAT Compactors mobile rack storage system" },
     { "page": 17, "title": "Mobile rack storage system" },
     { "page": 18, "title": "Compactor drives and capacity example" },
     { "page": 19, "title": "Other product range" },
@@ -85,7 +85,8 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [4, 5, 6, 7, 8],
-      "heroImage": "/brochure/p04.webp",
+      "heroImage": "/products/stomat-hero.webp",
+      "heroImageAlt": "Vertical carousel storage cabinet with a tray extended at the access opening.",
       "galleryImages": [
         "/brochure/p04.webp",
         "/brochure/p05.webp",
@@ -150,7 +151,8 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [9, 10, 11],
-      "heroImage": "/brochure/p09.webp",
+      "heroImage": "/products/stolift-hero.webp",
+      "heroImageAlt": "Enclosed vertical lift storage unit with its lower retrieval opening visible.",
       "galleryImages": [
         "/brochure/p09.webp",
         "/brochure/p10.webp",
@@ -195,7 +197,8 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [12],
-      "heroImage": "/brochure/p12.webp",
+      "heroImage": "/products/storder-hero.webp",
+      "heroImageAlt": "Industrial high-bay rack structure with orange beams and blue uprights.",
       "galleryImages": [
         "/brochure/p12.webp"
       ],
@@ -262,7 +265,8 @@
       "specs": [],
       "otherRange": [],
       "brochurePages": [13, 14, 15],
-      "heroImage": "/brochure/p13.webp",
+      "heroImage": "/products/stopick-hero.webp",
+      "heroImageAlt": "High-bay automated storage racks with a stacker crane in an industrial warehouse.",
       "galleryImages": [
         "/brochure/p13.webp",
         "/brochure/p14.webp",
@@ -312,11 +316,10 @@
       ],
       "specs": [],
       "otherRange": [],
-      "brochurePages": [16],
-      "heroImage": "/brochure/p16.webp",
-      "galleryImages": [
-        "/brochure/p16.webp"
-      ],
+      "brochurePages": [],
+      "heroImage": null,
+      "heroImageAlt": null,
+      "galleryImages": [],
       "accentColor": "#1D5FA8"
     },
     {
@@ -373,9 +376,10 @@
         "Two-tier racking",
         "Drawer-type die storage"
       ],
-      "brochurePages": [17, 18, 19],
-      "heroImage": "/brochure/p17.webp",
-      "galleryImages": ["/brochure/p17.webp", "/brochure/p18.webp", "/brochure/p19.webp"],
+      "brochurePages": [16, 17, 18, 19],
+      "heroImage": "/products/compactors-racking-hero.webp",
+      "heroImageAlt": "Mobile storage shelving rows with manual drive handwheels in an archive room.",
+      "galleryImages": ["/brochure/p16.webp", "/brochure/p17.webp", "/brochure/p18.webp", "/brochure/p19.webp"],
       "accentColor": "#66758A"
     }
   ]

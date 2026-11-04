@@ -3,6 +3,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 import { SITE_CONFIG } from '@/config/site'
 import { PRODUCTS } from '@/config/products'
 import { 
@@ -22,10 +23,13 @@ import { ThemeToggle } from '@/components/theme/ThemeToggle'
 import { CommandSearch } from '@/components/layout/CommandSearch'
 
 export function Header({ showCustomerLink = false }: { showCustomerLink?: boolean }) {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
   const [isScrolled, setIsScrolled] = React.useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const [activeDropdown, setActiveDropdown] = React.useState<string | null>(null)
   const [isSearchOpen, setIsSearchOpen] = React.useState(false)
+  const mobileMenuButtonRef = React.useRef<HTMLButtonElement>(null)
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -52,36 +56,35 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
-          isScrolled
-            ? 'bg-[var(--bg)]/95 backdrop-blur-md border-b border-[var(--border)] py-2.5 shadow-sm'
-            : 'bg-[var(--bg)]/80 backdrop-blur-sm border-b border-[var(--border)]/50 py-3.5'
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+          isScrolled || !isHome
+            ? 'bg-[#0B1220]/95 backdrop-blur-md border-b border-white/10 py-2.5 shadow-lg text-white'
+            : 'bg-transparent border-b border-transparent py-3 text-white'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between">
             
-            {/* Brand Logo with Dark-Mode Chip */}
+            {/* Brand Logo without boxed outline */}
             <Link 
               href="/" 
-              className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] rounded-lg p-1"
+              className="group flex items-center gap-3 focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] rounded-lg"
             >
-              <div className="p-1 rounded-md bg-white border border-[var(--border)] shadow-xs transition-opacity group-hover:opacity-95">
+              <div className="transition-opacity group-hover:opacity-90">
                 <Image
                   src="/SMlogo.png"
                   alt="Space Magnum Equipments Pvt. Ltd. Logo"
-                  width={110}
-                  height={36}
-                  className="object-contain"
-                  style={{ width: '110px', height: 'auto' }}
+                  width={128}
+                  height={64}
+                  className="object-contain drop-shadow-sm brightness-110"
                   priority
                 />
               </div>
               <div className="hidden xl:flex flex-col">
-                <span className="font-heading font-bold text-sm tracking-tight text-[var(--brand)]">
+                <span className="font-heading font-bold text-sm tracking-tight text-white">
                   Space Magnum
                 </span>
-                <span className="font-mono text-[9px] uppercase tracking-wider text-[var(--text-muted)]">
+                <span className="font-mono text-[9px] uppercase tracking-wider text-zinc-400">
                   Automated Storage Systems
                 </span>
               </div>
@@ -94,18 +97,34 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <div 
                 className="relative"
                 onMouseEnter={() => setActiveDropdown('products')}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseLeave={(event) => {
+                  if (!event.currentTarget.contains(document.activeElement)) setActiveDropdown(null)
+                }}
+                onFocusCapture={() => setActiveDropdown('products')}
+                onBlurCapture={(event) => {
+                  if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
+                    setActiveDropdown(null)
+                  }
+                }}
+                onKeyDown={(event) => {
+                  if (event.key !== 'Escape') return
+                  setActiveDropdown(null)
+                  event.currentTarget.querySelector<HTMLButtonElement>('button')?.focus()
+                }}
               >
                 <button
                   type="button"
-                  className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] transition-colors rounded-lg hover:bg-[var(--bg-subtle)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                  onClick={() => setActiveDropdown('products')}
+                  aria-expanded={activeDropdown === 'products'}
+                  aria-controls={activeDropdown === 'products' ? 'products-menu' : undefined}
+                  className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
                 >
                   Products
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'products' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
                 </button>
 
                 {activeDropdown === 'products' && (
-                  <div className="absolute top-full left-0 w-96 p-3 rounded-2xl bg-[var(--bg)] border border-[var(--border)] shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div id="products-menu" className="absolute top-full left-0 w-96 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
                     <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)] flex justify-between items-center">
                       <span>ASRS & Storage Systems</span>
                       <Link href="/products" className="text-[var(--accent)] hover:underline">View All &rarr;</Link>
@@ -133,7 +152,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
 
               <Link
                 href="/solutions"
-                className="rounded-lg px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] transition-colors hover:bg-[var(--bg-subtle)] hover:text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
               >
                 Solutions
               </Link>
@@ -142,18 +161,34 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <div 
                 className="relative"
                 onMouseEnter={() => setActiveDropdown('resources')}
-                onMouseLeave={() => setActiveDropdown(null)}
+                onMouseLeave={(event) => {
+                  if (!event.currentTarget.contains(document.activeElement)) setActiveDropdown(null)
+                }}
+                onFocusCapture={() => setActiveDropdown('resources')}
+                onBlurCapture={(event) => {
+                  if (!(event.relatedTarget instanceof Node) || !event.currentTarget.contains(event.relatedTarget)) {
+                    setActiveDropdown(null)
+                  }
+                }}
+                onKeyDown={(event) => {
+                  if (event.key !== 'Escape') return
+                  setActiveDropdown(null)
+                  event.currentTarget.querySelector<HTMLButtonElement>('button')?.focus()
+                }}
               >
                 <button
                   type="button"
-                  className="flex items-center gap-1.5 px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] transition-colors rounded-lg hover:bg-[var(--bg-subtle)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                  onClick={() => setActiveDropdown('resources')}
+                  aria-expanded={activeDropdown === 'resources'}
+                  aria-controls={activeDropdown === 'resources' ? 'resources-menu' : undefined}
+                  className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
                 >
                   Resources
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${activeDropdown === 'resources' ? 'rotate-180 text-[var(--accent)]' : ''}`} />
                 </button>
 
                 {activeDropdown === 'resources' && (
-                  <div className="absolute top-full left-0 w-80 p-3 rounded-2xl bg-[var(--bg)] border border-[var(--border)] shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
+                  <div id="resources-menu" className="absolute top-full left-0 w-80 rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-3 shadow-xl grid gap-1.5 animate-in fade-in slide-in-from-top-2 duration-150">
                     <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1.5 border-b border-[var(--border)]">
                       Technical Tools & Media
                     </div>
@@ -231,7 +266,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               {/* About Link */}
               <Link 
                 href="/about" 
-                className="px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] transition-colors rounded-lg hover:bg-[var(--bg-subtle)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
               >
                 About
               </Link>
@@ -239,7 +274,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               {/* Contact Link */}
               <Link 
                 href="/contact" 
-                className="px-3 py-2 text-sm font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] transition-colors rounded-lg hover:bg-[var(--bg-subtle)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className="rounded-lg px-3 py-2 text-sm font-semibold text-zinc-300 transition-colors hover:bg-white/10 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
               >
                 Contact
               </Link>
@@ -253,11 +288,11 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 type="button"
                 onClick={() => setIsSearchOpen(true)}
                 aria-label="Search site (Press Command + K)"
-                className="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-[var(--border)] bg-[var(--bg-subtle)] text-xs text-[var(--text-muted)] hover:text-[var(--text)] hover:border-[var(--border-strong)] transition-all focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                className="hidden sm:inline-flex items-center gap-2 rounded-lg border border-white/20 bg-black/30 px-3 py-1.5 text-xs text-zinc-300 transition-all hover:border-white/40 hover:text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
               >
                 <Search className="w-3.5 h-3.5 text-[var(--accent)]" />
                 <span>Search...</span>
-                <kbd className="px-1.5 py-0.5 rounded bg-[var(--bg)] border border-[var(--border)] font-mono text-[10px]">
+                <kbd className="rounded border border-white/15 bg-black/30 px-1.5 py-0.5 font-mono text-[10px]">
                   ⌘K
                 </kbd>
               </button>
@@ -290,9 +325,12 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               {/* Mobile Menu Hamburger */}
               <button
                 type="button"
+                ref={mobileMenuButtonRef}
                 onClick={() => setMobileMenuOpen(prev => !prev)}
                 aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
-                className="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-[var(--border)] bg-[var(--bg-subtle)] text-[var(--text)] focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)]"
+                aria-expanded={mobileMenuOpen}
+                aria-controls={mobileMenuOpen ? 'mobile-navigation' : undefined}
+                className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-white/20 bg-black/30 text-white focus-visible:outline-2 focus-visible:outline-[var(--focus-ring)] lg:hidden"
               >
                 {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -303,7 +341,16 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="lg:hidden fixed inset-x-0 top-full bg-[var(--bg)] border-b border-[var(--border)] shadow-2xl p-4 space-y-4 max-h-[80vh] overflow-y-auto animate-in slide-in-from-top-4 duration-150">
+          <nav
+            id="mobile-navigation"
+            aria-label="Mobile navigation"
+            onKeyDown={(event) => {
+              if (event.key !== 'Escape') return
+              setMobileMenuOpen(false)
+              mobileMenuButtonRef.current?.focus()
+            }}
+            className="fixed inset-x-0 top-full max-h-[80vh] space-y-4 overflow-y-auto border-b border-[var(--border)] bg-[var(--bg)] p-4 shadow-2xl animate-in slide-in-from-top-4 duration-150 lg:hidden"
+          >
             <div className="space-y-1">
               <div className="text-[11px] font-mono uppercase tracking-wider text-[var(--text-muted)] px-3 py-1">
                 Products
@@ -313,7 +360,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                   key={product.slug}
                   href={`/products/${product.slug}`}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="block px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)] rounded-lg hover:bg-[var(--bg-subtle)]"
+                  className="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-subtle)] hover:text-[var(--accent)]"
                 >
                   {product.name}
                 </Link>
@@ -323,7 +370,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
             <Link
               href="/solutions"
               onClick={() => setMobileMenuOpen(false)}
-              className="block rounded-lg px-3 py-2 text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-subtle)] hover:text-[var(--accent)]"
+              className="flex min-h-11 items-center rounded-lg px-3 py-2 text-sm font-semibold text-[var(--text)] hover:bg-[var(--bg-subtle)] hover:text-[var(--accent)]"
             >
               Solutions
             </Link>
@@ -335,7 +382,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <Link
                 href="/gallery"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
+                className="flex min-h-11 items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <ImageIcon className="w-4 h-4 text-[var(--accent)]" />
                 <span>Installation Gallery</span>
@@ -344,7 +391,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 <Link
                   href="/customers"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
+                  className="flex min-h-11 items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
                 >
                   <Boxes className="w-4 h-4 text-[var(--accent)]" />
                   <span>Our Customers</span>
@@ -353,7 +400,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <Link
                 href="/brochure"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
+                className="flex min-h-11 items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <FileText className="w-4 h-4 text-[var(--accent)]" />
                 <span>Digital Brochure</span>
@@ -361,7 +408,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <Link
                 href="/tools/calculator"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
+                className="flex min-h-11 items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <Calculator className="w-4 h-4 text-[var(--accent)]" />
                 <span>Floor-Space Illustration</span>
@@ -369,7 +416,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <Link
                 href="/simulator"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
+                className="flex min-h-11 items-center gap-2 px-3 py-2 text-sm font-semibold text-[var(--text)] hover:text-[var(--accent)]"
               >
                 <Play className="w-4 h-4 text-[var(--accent)]" />
                 <span>ASRS Simulation</span>
@@ -380,14 +427,14 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
               <Link
                 href="/about"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 text-sm font-semibold text-[var(--text)]"
+                className="flex min-h-11 items-center px-3 py-2 text-sm font-semibold text-[var(--text)]"
               >
                 About Space Magnum
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-3 py-2 text-sm font-semibold text-[var(--text)]"
+                className="flex min-h-11 items-center px-3 py-2 text-sm font-semibold text-[var(--text)]"
               >
                 Contact Pune Office
               </Link>
@@ -407,7 +454,7 @@ export function Header({ showCustomerLink = false }: { showCustomerLink?: boolea
                 Request Quotation
               </Link>
             </div>
-          </div>
+          </nav>
         )}
       </header>
 

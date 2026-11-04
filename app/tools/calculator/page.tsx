@@ -1,6 +1,5 @@
-import { Suspense } from 'react'
 import { constructMetadata } from '@/lib/metadata'
-import { CalculatorWizard } from '@/components/calculator/CalculatorWizard'
+import { AsrsAnatomyFigure } from '@/components/anatomy'
 import { Calculator } from 'lucide-react'
 
 export const metadata = constructMetadata({
@@ -12,28 +11,23 @@ export const metadata = constructMetadata({
 
 export default function CalculatorPage() {
   return (
-    <div className="py-12 md:py-16 bg-[var(--bg)] min-h-screen text-[var(--text)] transition-colors">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        
-        {/* Header */}
-        <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] font-mono text-xs font-bold uppercase tracking-wider">
-            <Calculator className="w-3.5 h-3.5" />
+    <div className="min-h-screen bg-[var(--bg)] py-12 text-[var(--text)] transition-colors md:py-16">
+      <div className="mx-auto max-w-7xl space-y-10 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-3xl space-y-3 text-center">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-[var(--accent-soft)] px-3 py-1 font-mono text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
+            <Calculator className="h-3.5 w-3.5" aria-hidden="true" />
             <span>Brochure-Based Illustration</span>
           </div>
-          <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-[var(--text)]">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[var(--text)] sm:text-5xl">
             Floor-Space Saving Illustration
           </h1>
-          <p className="text-base sm:text-lg text-[var(--text-secondary)] font-body leading-relaxed">
-            Apply a brochure-stated floor-space saving to an area you enter. This does not estimate a site layout, cost, or payback.
+          <p className="font-body text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
+            Apply the brochure-stated floor-space saving to an area you enter. This does not
+            estimate a site layout, cost, or payback.
           </p>
         </div>
 
-        {/* Interactive illustration */}
-        <Suspense fallback={<div className="text-center font-mono text-xs text-[var(--text-muted)] py-12">Loading Space Calculator...</div>}>
-          <CalculatorWizard />
-        </Suspense>
-
+        <AsrsAnatomyFigure mode="interactive" initialArea={1000} />
       </div>
     </div>
   )

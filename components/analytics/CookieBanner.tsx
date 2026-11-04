@@ -59,7 +59,7 @@ export function CookieBanner() {
             <button
               type="button"
               onClick={handleDecline}
-              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-[var(--text-muted)] hover:text-[var(--text)] bg-[var(--bg-subtle)] border border-[var(--border)] rounded-md transition-colors"
+              className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text)] bg-[var(--bg-subtle)] border border-[var(--border)] rounded-md transition-colors"
             >
               <X className="w-3.5 h-3.5" />
               Decline

@@ -172,10 +172,11 @@ export function Footer({ showCustomerLink = false }: { showCustomerLink?: boolea
             &copy; {currentYear} {SITE_CONFIG.legalName}. All rights reserved. Pune, Maharashtra, India.
             <div className="text-[10px] tracking-wide text-[#A2B9D4]">{company.tagline}</div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center gap-6">
             <Link href="/legal/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link href="/legal/terms" className="hover:text-white transition-colors">Terms of Service</Link>
             <Link href="/legal/cookies" className="hover:text-white transition-colors">Cookie Notice</Link>
+            <a href="/ASSET-CREDITS.md" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Asset Credits</a>
           </div>
         </div>
 
